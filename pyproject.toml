@@ -9,6 +9,7 @@ license = "MIT"
 python = "^3.9"
 addict = "^2.4.0"
 attrs = "^19.3.0"
+cx-oracle = "^8.0.1"
 dotenv_switch = {url = "https://github.com/UMNLibraries/dotenv_switch/raw/master/dist/dotenv_switch-0.1.2.tar.gz"}
 requests = "^2.20.0"
 tenacity = "^8.0.1"
