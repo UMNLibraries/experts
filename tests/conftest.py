@@ -2,6 +2,8 @@ from pathlib import Path
 import pytest
 import sys
 
+import dotenv_switch.auto
+
 package_path = Path(__file__).parents[1]
 sys.path.append(str(package_path))
 

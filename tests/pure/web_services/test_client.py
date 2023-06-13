@@ -1,6 +1,3 @@
-from dotenv import load_dotenv, find_dotenv
-load_dotenv(find_dotenv())
-
 from datetime import date, timedelta
 import importlib
 import json
