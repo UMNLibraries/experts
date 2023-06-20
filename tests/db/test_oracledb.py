@@ -1,6 +1,3 @@
-from dotenv import load_dotenv, find_dotenv
-load_dotenv(find_dotenv())
-
 from experts.db import oracledb
 
 def test_connection():
