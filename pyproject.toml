@@ -2,7 +2,7 @@
 name = "experts"
 version = "0.0.0"
 description = "Integration applications for Experts@Minnesota"
-authors = ["David Naughton"]
+authors = ["David Naughton","John Barneson"]
 license = "MIT"
 
 [tool.poetry.dependencies]
