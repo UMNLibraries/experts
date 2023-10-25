@@ -1,0 +1,1671 @@
+{
+  "search-results": {
+    "opensearch:totalResults": "8767488",
+    "opensearch:startIndex": "0",
+    "opensearch:itemsPerPage": "25",
+    "opensearch:Query": {
+      "@role": "request",
+      "@searchTerms": "all(gene)",
+      "@startPage": "0"
+    },
+    "link": [
+      {
+        "@_fa": "true",
+        "@ref": "self",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=all%28gene%29&apiKey=7f59af901d2d86f78a1fd60c1bf9426a",
+        "@type": "application/json"
+      },
+      {
+        "@_fa": "true",
+        "@ref": "first",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=all%28gene%29&apiKey=7f59af901d2d86f78a1fd60c1bf9426a",
+        "@type": "application/json"
+      },
+      {
+        "@_fa": "true",
+        "@ref": "next",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=25&count=25&query=all%28gene%29&apiKey=7f59af901d2d86f78a1fd60c1bf9426a",
+        "@type": "application/json"
+      },
+      {
+        "@_fa": "true",
+        "@ref": "last",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=4975&count=25&query=all%28gene%29&apiKey=7f59af901d2d86f78a1fd60c1bf9426a",
+        "@type": "application/json"
+      }
+    ],
+    "entry": [
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172410696"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172410696?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172410696&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172410696&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S277256692300068X"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172410696",
+        "dc:identifier": "SCOPUS_ID:85172410696",
+        "eid": "2-s2.0-85172410696",
+        "dc:title": "Tetramethylpyrazine and paeoniflorin combination (TMP-PF) inhibits angiogenesis in atherosclerosis via miR-126/VEGF/VEGFR2 signaling pathway",
+        "dc:creator": "Yuan Y.",
+        "prism:publicationName": "Journal of Future Foods",
+        "prism:eIssn": "27725669",
+        "prism:volume": "4",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "280-287",
+        "prism:coverDate": "2024-09-01",
+        "prism:coverDisplayDate": "September 2024",
+        "prism:doi": "10.1016/j.jfutfo.2023.07.010",
+        "pii": "S277256692300068X",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Xiyuan Hospital",
+            "affiliation-city": "Beijing",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101097033",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfullgold"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Gold"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172410175"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172410175?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172410175&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172410175&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2772566923000629"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172410175",
+        "dc:identifier": "SCOPUS_ID:85172410175",
+        "eid": "2-s2.0-85172410175",
+        "dc:title": "A review of the interaction between diet composition and gut microbiota and its impact on associated disease",
+        "dc:creator": "Liu Z.",
+        "prism:publicationName": "Journal of Future Foods",
+        "prism:eIssn": "27725669",
+        "prism:volume": "4",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "221-232",
+        "prism:coverDate": "2024-09-01",
+        "prism:coverDisplayDate": "September 2024",
+        "prism:doi": "10.1016/j.jfutfo.2023.07.004",
+        "pii": "S2772566923000629",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Shandong University",
+            "affiliation-city": "Jinan",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "source-id": "21101097033",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfullgold"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Gold"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172385828"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172385828?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172385828&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172385828&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2772566923000617"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172385828",
+        "dc:identifier": "SCOPUS_ID:85172385828",
+        "eid": "2-s2.0-85172385828",
+        "dc:title": "Progress in the preparation, identification and biological activity of walnut peptides",
+        "dc:creator": "Liu C.",
+        "prism:publicationName": "Journal of Future Foods",
+        "prism:eIssn": "27725669",
+        "prism:volume": "4",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "205-220",
+        "prism:coverDate": "2024-09-01",
+        "prism:coverDisplayDate": "September 2024",
+        "prism:doi": "10.1016/j.jfutfo.2023.07.003",
+        "pii": "S2772566923000617",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Beijing Technology and Business University",
+            "affiliation-city": "Beijing",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "source-id": "21101097033",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfullgold"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Gold"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172356239"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172356239?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172356239&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172356239&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2772566923000605"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172356239",
+        "dc:identifier": "SCOPUS_ID:85172356239",
+        "eid": "2-s2.0-85172356239",
+        "dc:title": "Classification and antioxidant assays of polyphenols: a review",
+        "dc:creator": "Lang Y.",
+        "prism:publicationName": "Journal of Future Foods",
+        "prism:eIssn": "27725669",
+        "prism:volume": "4",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "193-204",
+        "prism:coverDate": "2024-09-01",
+        "prism:coverDisplayDate": "September 2024",
+        "prism:doi": "10.1016/j.jfutfo.2023.07.002",
+        "pii": "S2772566923000605",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Shenyang Agricultural University",
+            "affiliation-city": "Shenyang",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "source-id": "21101097033",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfullgold"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Gold"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172350453"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172350453?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172350453&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172350453&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2772566923000599"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172350453",
+        "dc:identifier": "SCOPUS_ID:85172350453",
+        "eid": "2-s2.0-85172350453",
+        "dc:title": "A review: the mechanism of plant-derived polysaccharides on osteoblasts and osteoclasts",
+        "dc:creator": "Ren M.",
+        "prism:publicationName": "Journal of Future Foods",
+        "prism:eIssn": "27725669",
+        "prism:volume": "4",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "183-192",
+        "prism:coverDate": "2024-09-01",
+        "prism:coverDisplayDate": "September 2024",
+        "prism:doi": "10.1016/j.jfutfo.2023.07.001",
+        "pii": "S2772566923000599",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Henan University",
+            "affiliation-city": "Kaifeng",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "source-id": "21101097033",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfullgold"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Gold"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172341009"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172341009?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172341009&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172341009&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2772566923000678"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172341009",
+        "dc:identifier": "SCOPUS_ID:85172341009",
+        "eid": "2-s2.0-85172341009",
+        "dc:title": "Identification of novel targets and mechanisms of wogonin on lung cancer, bladder cancer, and colon cancer",
+        "dc:creator": "Zhou L.",
+        "prism:publicationName": "Journal of Future Foods",
+        "prism:eIssn": "27725669",
+        "prism:volume": "4",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "267-279",
+        "prism:coverDate": "2024-09-01",
+        "prism:coverDisplayDate": "September 2024",
+        "prism:doi": "10.1016/j.jfutfo.2023.07.009",
+        "pii": "S2772566923000678",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Medical School of Nanjing University",
+            "affiliation-city": "Nanjing",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101097033",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfullgold"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Gold"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172315110"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172315110?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172315110&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172315110&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2772566923000654"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172315110",
+        "dc:identifier": "SCOPUS_ID:85172315110",
+        "eid": "2-s2.0-85172315110",
+        "dc:title": "Antioxidant and anti-HepG2 cell activities of a novel bioactive peptide from cowhide collagen in vitro",
+        "dc:creator": "Xie Z.",
+        "prism:publicationName": "Journal of Future Foods",
+        "prism:eIssn": "27725669",
+        "prism:volume": "4",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "248-257",
+        "prism:coverDate": "2024-09-01",
+        "prism:coverDisplayDate": "September 2024",
+        "prism:doi": "10.1016/j.jfutfo.2023.07.007",
+        "pii": "S2772566923000654",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Shandong University of Technology",
+            "affiliation-city": "Zibo",
+            "affiliation-country": "China"
+          },
+          {
+            "@_fa": "true",
+            "affilname": "Nanchang University",
+            "affiliation-city": "Nanchang",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101097033",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfullgold"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Gold"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172293894"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172293894?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172293894&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172293894&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2772566923000666"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172293894",
+        "dc:identifier": "SCOPUS_ID:85172293894",
+        "eid": "2-s2.0-85172293894",
+        "dc:title": "Influences of Lactiplantibacillus plantarum and Saccharomyces cerevisiae fermentation on the nutritional components, flavor property and lipid-lowering effect of highland barley",
+        "dc:creator": "Bai J.",
+        "prism:publicationName": "Journal of Future Foods",
+        "prism:eIssn": "27725669",
+        "prism:volume": "4",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "258-266",
+        "prism:coverDate": "2024-09-01",
+        "prism:coverDisplayDate": "September 2024",
+        "prism:doi": "10.1016/j.jfutfo.2023.07.008",
+        "pii": "S2772566923000666",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Jiangsu University",
+            "affiliation-city": "Zhenjiang",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101097033",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfullgold"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Gold"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172027954"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172027954?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172027954&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172027954&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2772566923000642"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172027954",
+        "dc:identifier": "SCOPUS_ID:85172027954",
+        "eid": "2-s2.0-85172027954",
+        "dc:title": "Chemical constituents and anticoagulant activity from Delphinium brunonianum Royle",
+        "dc:creator": "Ma C.",
+        "prism:publicationName": "Journal of Future Foods",
+        "prism:eIssn": "27725669",
+        "prism:volume": "4",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "241-247",
+        "prism:coverDate": "2024-09-01",
+        "prism:coverDisplayDate": "September 2024",
+        "prism:doi": "10.1016/j.jfutfo.2023.07.006",
+        "pii": "S2772566923000642",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Henan University",
+            "affiliation-city": "Kaifeng",
+            "affiliation-country": "China"
+          },
+          {
+            "@_fa": "true",
+            "affilname": "Henan Province",
+            "affiliation-city": "Kaifeng",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101097033",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfullgold"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Gold"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85171567563"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85171567563?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85171567563&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85171567563&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2772566923000630"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85171567563",
+        "dc:identifier": "SCOPUS_ID:85171567563",
+        "eid": "2-s2.0-85171567563",
+        "dc:title": "Protective effects and microarray-based mechanism of sea cucumber hydrolysates against high-glucose induced nephrotoxicity in mouse glomerulus mesangial cells",
+        "dc:creator": "Geng L.",
+        "prism:publicationName": "Journal of Future Foods",
+        "prism:eIssn": "27725669",
+        "prism:volume": "4",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "233-240",
+        "prism:coverDate": "2024-09-01",
+        "prism:coverDisplayDate": "September 2024",
+        "prism:doi": "10.1016/j.jfutfo.2023.07.005",
+        "pii": "S2772566923000630",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Ningbo University",
+            "affiliation-city": "Ningbo",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101097033",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfullgold"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Gold"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85166153826"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85166153826?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85166153826&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85166153826&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85166153826",
+        "dc:identifier": "SCOPUS_ID:85166153826",
+        "eid": "2-s2.0-85166153826",
+        "dc:title": "Dhatura: Nutritional, phytochemical, and pharmacological properties",
+        "dc:creator": "Manju K.M.",
+        "prism:publicationName": "Harvesting Food from Weeds",
+        "prism:isbn": [
+          {
+            "@_fa": "true",
+            "$": "9781119793007"
+          },
+          {
+            "@_fa": "true",
+            "$": "9781119791973"
+          }
+        ],
+        "prism:pageRange": "327-349",
+        "prism:coverDate": "2024-08-20",
+        "prism:coverDisplayDate": "20 August 2024",
+        "prism:doi": "10.1002/9781119793007.ch9",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "CCS Haryana Agricultural University",
+            "affiliation-city": "Hisar",
+            "affiliation-country": "India"
+          }
+        ],
+        "prism:aggregationType": "Book",
+        "subtype": "ch",
+        "subtypeDescription": "Book Chapter",
+        "source-id": "21101167940",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85166127348"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85166127348?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85166127348&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85166127348&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85166127348",
+        "dc:identifier": "SCOPUS_ID:85166127348",
+        "eid": "2-s2.0-85166127348",
+        "dc:title": "Corchorus species: Health benefits and industrial importance",
+        "dc:creator": "Ganthal K.",
+        "prism:publicationName": "Harvesting Food from Weeds",
+        "prism:isbn": [
+          {
+            "@_fa": "true",
+            "$": "9781119793007"
+          },
+          {
+            "@_fa": "true",
+            "$": "9781119791973"
+          }
+        ],
+        "prism:pageRange": "385-406",
+        "prism:coverDate": "2024-08-20",
+        "prism:coverDisplayDate": "20 August 2024",
+        "prism:doi": "10.1002/9781119793007.ch11",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Lovely Professional University",
+            "affiliation-city": "Phagwara",
+            "affiliation-country": "India"
+          }
+        ],
+        "prism:aggregationType": "Book",
+        "subtype": "ch",
+        "subtypeDescription": "Book Chapter",
+        "source-id": "21101167940",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85166085176"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85166085176?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85166085176&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85166085176&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85166085176",
+        "dc:identifier": "SCOPUS_ID:85166085176",
+        "eid": "2-s2.0-85166085176",
+        "dc:title": "Hibiscus cannabinus",
+        "dc:creator": "Shikha D.",
+        "prism:publicationName": "Harvesting Food from Weeds",
+        "prism:isbn": [
+          {
+            "@_fa": "true",
+            "$": "9781119793007"
+          },
+          {
+            "@_fa": "true",
+            "$": "9781119791973"
+          }
+        ],
+        "prism:pageRange": "267-326",
+        "prism:coverDate": "2024-08-20",
+        "prism:coverDisplayDate": "20 August 2024",
+        "prism:doi": "10.1002/9781119793007.ch8",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Sant Longowal Institute of Engineering and Technology",
+            "affiliation-city": "Longowal",
+            "affiliation-country": "India"
+          }
+        ],
+        "prism:aggregationType": "Book",
+        "subtype": "ch",
+        "subtypeDescription": "Book Chapter",
+        "source-id": "21101167940",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85166074535"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85166074535?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85166074535&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85166074535&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85166074535",
+        "dc:identifier": "SCOPUS_ID:85166074535",
+        "eid": "2-s2.0-85166074535",
+        "dc:title": "Herbs of asteraceae family: Nutritional profile, bioactive compounds, and potentials in therapeutics",
+        "dc:creator": "Awuchi C.G.",
+        "prism:publicationName": "Harvesting Food from Weeds",
+        "prism:isbn": [
+          {
+            "@_fa": "true",
+            "$": "9781119793007"
+          },
+          {
+            "@_fa": "true",
+            "$": "9781119791973"
+          }
+        ],
+        "prism:pageRange": "21-78",
+        "prism:coverDate": "2024-08-20",
+        "prism:coverDisplayDate": "20 August 2024",
+        "prism:doi": "10.1002/9781119793007.ch2",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Western Campus, Ishaka, Bushenyi",
+            "affiliation-city": "Kampala",
+            "affiliation-country": "Uganda"
+          }
+        ],
+        "prism:aggregationType": "Book",
+        "subtype": "ch",
+        "subtypeDescription": "Book Chapter",
+        "source-id": "21101167940",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172382666"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172382666?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172382666&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172382666&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172382666",
+        "dc:identifier": "SCOPUS_ID:85172382666",
+        "eid": "2-s2.0-85172382666",
+        "dc:title": "Overexpression of SMAD4 interferes with the expression of iron metabolism related proteins in osteoporotic rats",
+        "dc:creator": "Ting Y.",
+        "prism:publicationName": "Chinese Journal of Tissue Engineering Research",
+        "prism:issn": "20954344",
+        "prism:volume": "28",
+        "prism:issueIdentifier": "23",
+        "prism:pageRange": "3648-3653",
+        "prism:coverDate": "2024-08-18",
+        "prism:coverDisplayDate": "18 August 2024",
+        "prism:doi": "10.12307/2024.413",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Chengdu Medical College",
+            "affiliation-city": "Chengdu",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "6200180182",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172343808"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172343808?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172343808&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172343808&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172343808",
+        "dc:identifier": "SCOPUS_ID:85172343808",
+        "eid": "2-s2.0-85172343808",
+        "dc:title": "Osteoprotegerin/receptor activator of nuclear factor kappa-B/receptor activator of nuclear factor kappa-B ligand and the application of relevant target therapy in oral medicine",
+        "dc:creator": "Jing Z.",
+        "prism:publicationName": "Chinese Journal of Tissue Engineering Research",
+        "prism:issn": "20954344",
+        "prism:volume": "28",
+        "prism:issueIdentifier": "23",
+        "prism:pageRange": "3736-3742",
+        "prism:coverDate": "2024-08-18",
+        "prism:coverDisplayDate": "18 August 2024",
+        "prism:doi": "10.12307/2024.341",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Hebei Medical University",
+            "affiliation-city": "Shijiazhuang",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "source-id": "6200180182",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172031810"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172031810?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172031810&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172031810&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172031810",
+        "dc:identifier": "SCOPUS_ID:85172031810",
+        "eid": "2-s2.0-85172031810",
+        "dc:title": "The causal relationship between blood lipids and muscle atrophy based on Mendelian randomization analysis of two samples",
+        "dc:creator": "Zhihua P.",
+        "prism:publicationName": "Chinese Journal of Tissue Engineering Research",
+        "prism:issn": "20954344",
+        "prism:volume": "28",
+        "prism:issueIdentifier": "23",
+        "prism:pageRange": "3699-3703",
+        "prism:coverDate": "2024-08-18",
+        "prism:coverDisplayDate": "18 August 2024",
+        "prism:doi": "10.12307/2024.417",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Guangzhou Medical University",
+            "affiliation-city": "Guangzhou",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "6200180182",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172031496"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172031496?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172031496&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172031496&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172031496",
+        "dc:identifier": "SCOPUS_ID:85172031496",
+        "eid": "2-s2.0-85172031496",
+        "dc:title": "Effects of icariin on proliferation and differentiation of MC3T3-E1 cells in an inflammatory environment",
+        "dc:creator": "Yue H.",
+        "prism:publicationName": "Chinese Journal of Tissue Engineering Research",
+        "prism:issn": "20954344",
+        "prism:volume": "28",
+        "prism:issueIdentifier": "23",
+        "prism:pageRange": "3709-3714",
+        "prism:coverDate": "2024-08-18",
+        "prism:coverDisplayDate": "18 August 2024",
+        "prism:doi": "10.12307/2024.455",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Dalian Medical University",
+            "affiliation-city": "Dalian",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "6200180182",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172029128"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172029128?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172029128&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172029128&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172029128",
+        "dc:identifier": "SCOPUS_ID:85172029128",
+        "eid": "2-s2.0-85172029128",
+        "dc:title": "Protective effect and mechanism of icariin against carbon tetrachloride-induced acute liver injury in mice",
+        "dc:creator": "Xiao D.Y.",
+        "prism:publicationName": "Chinese Journal of Tissue Engineering Research",
+        "prism:issn": "20954344",
+        "prism:volume": "28",
+        "prism:issueIdentifier": "23",
+        "prism:pageRange": "3654-3660",
+        "prism:coverDate": "2024-08-18",
+        "prism:coverDisplayDate": "18 August 2024",
+        "prism:doi": "10.12307/2024.347",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Zunyi Medical and Pharmaceutical College",
+            "affiliation-city": "Zunyi",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "6200180182",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172009966"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172009966?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172009966&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172009966&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172009966",
+        "dc:identifier": "SCOPUS_ID:85172009966",
+        "eid": "2-s2.0-85172009966",
+        "dc:title": "Mechanisms by which baicalein protects against steriod-induced osteonecrosis of the femoral head in rats",
+        "dc:creator": "Ma W.L.",
+        "prism:publicationName": "Chinese Journal of Tissue Engineering Research",
+        "prism:issn": "20954344",
+        "prism:volume": "28",
+        "prism:issueIdentifier": "23",
+        "prism:pageRange": "3661-3668",
+        "prism:coverDate": "2024-08-18",
+        "prism:coverDisplayDate": "18 August 2024",
+        "prism:doi": "10.12307/2024.391",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "First Affiliated Hospital Chengdu",
+            "affiliation-city": "Chengdu",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "6200180182",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85171997416"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85171997416?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85171997416&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85171997416&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85171997416",
+        "dc:identifier": "SCOPUS_ID:85171997416",
+        "eid": "2-s2.0-85171997416",
+        "dc:title": "Blood flow restriction training interventions for sarcopenia in older adults: biological mechanisms and proposed application protocols",
+        "dc:creator": "Jianda K.",
+        "prism:publicationName": "Chinese Journal of Tissue Engineering Research",
+        "prism:issn": "20954344",
+        "prism:volume": "28",
+        "prism:issueIdentifier": "23",
+        "prism:pageRange": "3743-3750",
+        "prism:coverDate": "2024-08-18",
+        "prism:coverDisplayDate": "18 August 2024",
+        "prism:doi": "10.12307/2024.351",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Qufu Normal University",
+            "affiliation-city": "Qufu",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "6200180182",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85171978268"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85171978268?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85171978268&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85171978268&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85171978268",
+        "dc:identifier": "SCOPUS_ID:85171978268",
+        "eid": "2-s2.0-85171978268",
+        "dc:title": "Active ingredients of Panax notoginseng regulate signaling pathways related to steroid-induced necrosis of the femoral head",
+        "dc:creator": "Jie H.",
+        "prism:publicationName": "Chinese Journal of Tissue Engineering Research",
+        "prism:issn": "20954344",
+        "prism:volume": "28",
+        "prism:issueIdentifier": "23",
+        "prism:pageRange": "3751-3758",
+        "prism:coverDate": "2024-08-18",
+        "prism:coverDisplayDate": "18 August 2024",
+        "prism:doi": "10.12307/2024.381",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Ruikang Hospital Affiliated to Guangxi University of Chinese Medicine",
+            "affiliation-city": "Nanning",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "source-id": "6200180182",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85171971842"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85171971842?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85171971842&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85171971842&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85171971842",
+        "dc:identifier": "SCOPUS_ID:85171971842",
+        "eid": "2-s2.0-85171971842",
+        "dc:title": "Effect of warm-needling moxibustion on anterior cruciate ligament injury repair and related growth factors in rabbits with knee osteoarthritis",
+        "dc:creator": "Li C.",
+        "prism:publicationName": "Chinese Journal of Tissue Engineering Research",
+        "prism:issn": "20954344",
+        "prism:volume": "28",
+        "prism:issueIdentifier": "23",
+        "prism:pageRange": "3621-3626",
+        "prism:coverDate": "2024-08-18",
+        "prism:coverDisplayDate": "18 August 2024",
+        "prism:doi": "10.12307/2024.415",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Ningxia Medical University",
+            "affiliation-city": "Yinchuan",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "6200180182",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85170234249"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85170234249?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85170234249&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85170234249&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85170234249",
+        "dc:identifier": "SCOPUS_ID:85170234249",
+        "eid": "2-s2.0-85170234249",
+        "dc:title": "Immune evasion mechanisms of porcine epidemic diarrhea virus: A comprehensive review",
+        "dc:creator": "Orosco F.L.",
+        "prism:publicationName": "Veterinary Integrative Sciences",
+        "prism:eIssn": "26299968",
+        "prism:volume": "22",
+        "prism:issueIdentifier": "1",
+        "prism:pageRange": "171-192",
+        "prism:coverDate": "2024-08-08",
+        "prism:coverDisplayDate": "8 August 2024",
+        "prism:doi": "10.12982/VIS.2024.014",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Philippines Programme",
+            "affiliation-city": "Quezon City",
+            "affiliation-country": "Philippines"
+          },
+          {
+            "@_fa": "true",
+            "affilname": "S&amp;T Fellows Program",
+            "affiliation-city": "Taguig City",
+            "affiliation-country": "Philippines"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "source-id": "21101021174",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172013295"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85172013295?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85172013295&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85172013295&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85172013295",
+        "dc:identifier": "SCOPUS_ID:85172013295",
+        "eid": "2-s2.0-85172013295",
+        "dc:title": "4-Amino-3-hydrazino-5-mercapto-1,2,4,-triazole (PURPALD) in organic chemicals analysis: Distinguishing aldehydes and ketones",
+        "dc:creator": "Kandpal B.M.",
+        "prism:publicationName": "Journal of Integrated Science and Technology",
+        "prism:eIssn": "23214635",
+        "prism:volume": "12",
+        "prism:issueIdentifier": "1",
+        "prism:pageRange": null,
+        "prism:coverDate": "2024-08-04",
+        "prism:coverDisplayDate": "4 August 2024",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Shivaji College",
+            "affiliation-city": "New Delhi",
+            "affiliation-country": "India"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "709",
+        "source-id": "21101065486",
+        "openaccess": "0",
+        "openaccessFlag": false
+      }
+    ]
+  }
+}
