@@ -13,6 +13,8 @@ import uuid
 
 import addict
 import attr
+import attrs
+from attrs import Factory, field, frozen
 
 from pyrsistent import freeze, thaw, m, pmap, v, pvector
 from pyrsistent.typing import PMap, PVector
@@ -20,6 +22,8 @@ from pyrsistent.typing import PMap, PVector
 import requests
 from requests import PreparedRequest, Response
 from requests.exceptions import RequestException, HTTPError, ConnectionError, ConnectTimeout, ReadTimeout
+
+import httpx
 
 import returns
 from returns.pipeline import is_successful
@@ -245,7 +249,7 @@ class PureAPIRequestException(RequestException, PureAPIClientException):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-@attr.s(auto_attribs=True, frozen=True)
+@frozen(kw_only=True)
 class Config:
     '''Common client configuration settings. Used by most functions.
 
@@ -265,64 +269,41 @@ class Config:
         Config(protocol='https', domain='test.example.com', base_path='ws/api', version='518', key='456-def', headers={'Accept': 'application/json', 'Accept-Charset': 'utf-8', 'api-key': '456-def'}, retryer=<Retrying object at 0x7fec3454d828 (stop=<tenacity.stop._stop_never object at 0x7fec34a76908>, wait=<tenacity.wait.wait_exponential object at 0x7fec3454d860>, sleep=<built-in function sleep>, retry=<tenacity.retry.retry_if_exception_type object at 0x7fec34a82ba8>, before=<function before_nothing at 0x7fec34a6d950>, after=<function after_nothing at 0x7fec34a85378>)>, base_url='https://test.example.com/ws/api/518/')
     '''
 
-    requests_session: Callable = attr.ib(
-        default=default_requests_session,
-        validator=attr.validators.instance_of(Callable)
-    )
+    requests_session: Callable = default_requests_session
     '''A requests.Session object. Default: ``requests.Session()``.'''
 
-    timeout: Tuple[int, int] = attr.ib(
-        default=(3, 60),
-        validator=attr.validators.instance_of(tuple)
-    )
+    httpx_client: httpx.Client = httpx.Client()
+    '''An httpx.Client object. Default: ``httpx.Client()``.'''
+
+    timeout: Tuple[int, int] = (3, 60)
     '''A (connect timeout, read timeout) tuple. Required. Default: ``(3, 60)``.'''
 
-    max_attempts: int = attr.ib(
-        default=10,
-        validator=attr.validators.instance_of(int)
-    )
+    max_attempts: int = 10
     '''An integet maximum number of times to retry a request. Required. Default: ``10``.'''
 
-    retryable: Callable = attr.ib(
-        factory=default_retryable,
-        validator=attr.validators.instance_of(Callable)
-    )
+    retryable: Callable = Factory(default_retryable)
     '''A function that takes a returns.Result and returns a boolean. Required. Default: Return value of ``default_retryable``.'''
 
-    next_wait_interval: Callable = attr.ib(
-        default=default_next_wait_interval,
-        validator=attr.validators.instance_of(Callable)
-    )
+    next_wait_interval: Callable = default_next_wait_interval
     '''A function that takes an integer number of seconds to wait and returns a new interval. Required. Default: Return value of ``default_next_wait_interval``.'''
 
-    protocol: str = attr.ib(
+    protocol: str = field(
         factory=default_protocol,
         validator=[
-            attr.validators.instance_of(str),
+            attrs.validators.instance_of(str),
             attr.validators.in_(['http','https']),
         ]
     )
     '''HTTP protocol. Must be either ``https`` or ``http``. Default: ``https``'''
 
-    domain: str = attr.ib(
-        factory=env_domain,
-        validator=attr.validators.instance_of(str)
-    )
+    domain: str = Factory(env_domain)
     '''Domain of a Pure API server. Required. Default: Return value of ``env_domain()``.'''
 
-    base_path: str = attr.ib(
-        factory=default_base_path,
-        validator=[
-            attr.validators.instance_of(str),
-        ]
-    )
+    base_path: str = Factory(default_base_path)
     '''Base path of the Pure API URL entry point, without the version number segment.
     Default: Return value of ``default_base_path()``.'''
 
-    version: str = attr.ib(
-        factory=default_version,
-        validator=attr.validators.instance_of(str)
-    )
+    version: str = field(factory=default_version)
     '''Pure API version, without the decimal point. For example, ``517`` for version 5.17.
     Default: Return value of ``default_version()``.'''
     @version.validator
@@ -330,34 +311,21 @@ class Config:
         if not valid_version(value):
             raise PureAPIInvalidVersionError(value)
 
-    key: str = attr.ib(
-        factory=env_key,
-        validator=attr.validators.instance_of(str)
-    )
+    key: str = Factory(env_key)
     '''Pure API key. Required. Default: Return value of ``env_key()``.'''
 
-    headers: MutableMapping = attr.ib(
-        factory=default_headers,
-        validator=attr.validators.instance_of(MutableMapping)
-    )
+    headers: MutableMapping = Factory(default_headers)
     '''HTTP headers. Default: Return value of ``default_headers()``. The
     constructor automatically adds an ``api-key`` header, using the value of
     the ``key`` attribute.'''
 
-    records_per_request: int = attr.ib(
-        factory=default_records_per_request,
-        validator=attr.validators.instance_of(int)
-    )
+    records_per_request: int = Factory(default_records_per_request)
 
-    request_page_params_parser: RequestPageParamsParser = attr.ib(
-        default=PureRequestPageParamsParser
-    )
+    request_page_params_parser: RequestPageParamsParser = PureRequestPageParamsParser
 
-    response_page_parser: ResponsePageParser = attr.ib(
-        default=PureResponsePageParser
-    )
+    response_page_parser: ResponsePageParser = PureResponsePageParser
 
-    base_url: str = attr.ib(init=False)
+    base_url: str = field(init=False)
     '''Pure API entrypoint URL. Should not be included in constructor
     parameters. The constructor generates this automatically based on
     other attributes.'''
@@ -457,10 +425,6 @@ def manage_request_attempts(
 def get(resource_path:str, params:PMap=m(), config:Config=Config()) -> Result[Response, Exception]:
     '''Makes an HTTP GET request for Pure API resources.
 
-    Note that many collections likely contain more resources than can be
-    practically downloaded in a single request. To get all resources
-    in a collection, see ``get_all()``.
-
     Args:
         resource_path: URL path to a Pure API resource, to be appended to the
             ``Config.base_url``. Do not include a leading forward slash (``/``).
@@ -478,13 +442,25 @@ def get(resource_path:str, params:PMap=m(), config:Config=Config()) -> Result[Re
     prepared_request.headers = {**prepared_request.headers, **config.headers}
     return manage_request_attempts(prepared_request, attempts_id=uuid.uuid4(), config=config)
 
-def ensure_offset_and_records_per_request(params:PMap=m(), config:Config=Config()) -> PMap:
-    offset = params['offset'] if 'offset' in params else 0
-    size = params['size'] if 'size' in params else config.records_per_request
-    return params.update({'offset':offset, 'size':size})
+def post(resource_path:str, params:PMap=m(), config:Config=Config()) -> Result[Response, Exception]:
+    '''Makes an HTTP POST request for Pure API resources.
 
-def find_item_count(response_json) -> int:
-    return int(response_json['count'])
+    Args:
+        resource_path: URL path to a Pure API resource, to be appended to the
+            ``Config.base_url``. Do not include a leading forward slash (``/``).
+        params: A PMap representing payload data. Default: ``{}``.
+        config: An instance of Config. If not provided, this function attempts
+            to automatically instantiate a Config based on environment variables
+            and default values.
+
+    Returns:
+        An Result object, which may contain either a Response or an error/exception.
+    '''
+    prepared_request = config.requests_session().prepare_request(
+        requests.Request('POST', config.base_url + resource_path, json=thaw(params))
+    )
+    prepared_request.headers = {**prepared_request.headers, **config.headers}
+    return manage_request_attempts(prepared_request, attempts_id=uuid.uuid4(), config=config)
 
 def request_pages_by_offset(
     request_by_offset_function,
@@ -493,23 +469,7 @@ def request_pages_by_offset(
     items_per_page:int=1000,
     max_workers:int=4
 ) -> Iterator[Result[Response, Exception]]:
-    '''Makes as many HTTP GET requests as necessary to get all resources in a
-    collection, possibly restricted by the ``params``.
-
-    Conveniently calculates the offset for each request, based on the desired
-    number of records per request, as given by ``params['size']``.
-
-    Args:
-        resource_path: URL path to a Pure API resource, to be appended to the
-            ``Config.base_url``. Do not include a leading forward slash (``/``).
-        params: A mapping representing URL query string params. Default:
-            ``{'size': 100}``
-        config: An instance of Config. If not provided, this function attempts
-            to automatically instantiate a Config based on environment variables
-            and default values.
-
-    Yields:
-        Result objects, which may contain either a requests.Response or an error/exception.
+    '''
     '''
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -522,29 +482,10 @@ def request_pages_by_offset(
         for future in concurrent.futures.as_completed(results):
             yield future.result()
 
-def build_get_by_offset_function(resource_path:str, params:PMap, config:Config):
-    thread_safe_config = attr.evolve(config, requests_session=requests_session_thread_safe)
-    adjusted_params = ensure_offset_and_records_per_request(params, config)
-    partial_get = partial(get, resource_path=resource_path, config=thread_safe_config)
-    def get_by_offset(offset:int):
-        return partial_get(params=adjusted_params.update({'offset':offset}))
-    return get_by_offset
-
-def all_get_responses_by_offset(resource_path:str, params:PMap=m(), config:Config=Config()) -> Iterator[Result[Response, Exception]]:
-    adjusted_params = ensure_offset_and_records_per_request(params, config)
-    first_result = get(resource_path, adjusted_params, config)
-    yield first_result
-    if not is_successful(first_result):
-        return
-    item_count = find_item_count(first_result.unwrap().json())
-    if item_count <= adjusted_params['size']:
-        return
-    get_by_offset = build_get_by_offset_function(resource_path=resource_path, params=adjusted_params, config=config)
-    yield from request_pages_by_offset(get_by_offset, item_count=item_count, start_item_offset=adjusted_params['size'])
-
 def build_request_by_offset_function(request_function:Callable, resource_path:str, *args, params:PMap, config:Config, **kwargs):
     # TODO: How to make this more generic?
-    # Probably just include functions to return both thread-safe and thread-unsafe sessions in the config
+    # Probably just include functions to return both thread-safe and thread-unsafe sessions in the config.
+    # Actually, no! Because we may not always know whether we need/want a thread-safe session.
     thread_safe_config = attr.evolve(config, requests_session=requests_session_thread_safe)
     partial_request = partial(request_function, resource_path, *args, config=thread_safe_config, **kwargs)
     def request_by_offset(offset:int):
@@ -562,6 +503,18 @@ def all_responses_by_offset(request_function:Callable, resource_path:str, *args,
         return
     request_by_offset_function = build_request_by_offset_function(request_function, resource_path, *args, params=params, config=config, **kwargs)
     yield from request_pages_by_offset(request_by_offset_function, item_count=item_count, start_item_offset=items_per_page, items_per_page=items_per_page)
+
+def all_items_by_offset(request_function:Callable, resource_path:str, *args, params:PMap=m(), config=Config(), **kwargs) -> Iterator[Result[Response, Exception]]:
+    for result in all_responses_by_offset(request_function, resource_path, *args, params=params, config=config, **kwargs):
+        if is_successful(result):
+            for item in config.response_page_parser.items(result.unwrap().json()):
+                yield item
+        else:
+            # log failure
+            print(f'Failed! {result}')
+            continue
+
+## old functions from here to the end:
 
 def get_all(resource_path:str, params:PMap=m(), config:Config=Config()) -> Iterator[Result[Response, Exception]]:
     '''Makes as many HTTP GET requests as necessary to get all resources in a
@@ -597,19 +550,6 @@ def get_all(resource_path:str, params:PMap=m(), config:Config=Config()) -> Itera
             'size': window_size,
         })
         yield get(resource_path, window_params, config)
-
-def continue_paging(result:Result[Response, Exception]) -> bool:
-    if not is_successful(result):
-        return False
-    page = result.unwrap().json()
-    total_record_count = int(page['count'])
-    page_size = int(page['size'])
-    if ((page_size >= total_record_count) or
-        ('navigationLinks' not in page) or
-        (not next((link for link in page['navigationLinks'] if link['ref'] == 'next'), None))
-    ):
-        return False
-    return True
 
 def get_all_transformed(
     resource_path:str,
