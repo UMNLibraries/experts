@@ -349,6 +349,7 @@ class Config:
         finally:
             # TODO: Does this make sense anymore?
             self.requests_session().close()
+            self.httpx_client.close()
 
 def preconfig(config:Config, *args:Callable) -> PVector[Callable]:
     '''Preconfigures functions that require a Config parameter.
@@ -372,14 +373,13 @@ def preconfig(config:Config, *args:Callable) -> PVector[Callable]:
 
 @safe
 def attempt_request(
-    requests_session: requests.Session,
-    prepared_request: requests.PreparedRequest,
-    timeout: Tuple[int, int]
-) -> Result[Response, Exception]:
-    return requests_session.send(prepared_request, timeout=timeout)
+    httpx_client: httpx.Client,
+    prepared_request: httpx.Request,
+) -> Result[httpx.Response, Exception]:
+    return httpx_client.send(prepared_request)
 
 def manage_request_attempts(
-    prepared_request:requests.PreparedRequest,
+    prepared_request:httpx.Request,
     attempts_id:str,
     wait_interval:int=2,
     attempt_number:int=1,
@@ -397,7 +397,7 @@ def manage_request_attempts(
             #'params': params,
         })
  
-    result = attempt_request(config.requests_session(), prepared_request, config.timeout)
+    result = attempt_request(config.httpx_client, prepared_request)
  
     end_time = time.perf_counter()
     if __debug__:
@@ -422,7 +422,7 @@ def manage_request_attempts(
     else:
         return result       
 
-def get(resource_path:str, params:PMap=m(), config:Config=Config()) -> Result[Response, Exception]:
+def get(resource_path:str, params:PMap=m(), config:Config=Config()) -> Result[httpx.Response, Exception]:
     '''Makes an HTTP GET request for Pure API resources.
 
     Args:
@@ -436,13 +436,12 @@ def get(resource_path:str, params:PMap=m(), config:Config=Config()) -> Result[Re
     Returns:
         An Result object, which may contain either a Response or an error/exception.
     '''
-    prepared_request = config.requests_session().prepare_request(
-        requests.Request('GET', config.base_url + resource_path, params=thaw(params))
+    prepared_request = config.httpx_client.build_request(
+        'GET', config.base_url + resource_path, params=thaw(params), timeout=config.timeout, headers=config.headers
     )
-    prepared_request.headers = {**prepared_request.headers, **config.headers}
     return manage_request_attempts(prepared_request, attempts_id=uuid.uuid4(), config=config)
 
-def post(resource_path:str, params:PMap=m(), config:Config=Config()) -> Result[Response, Exception]:
+def post(resource_path:str, params:PMap=m(), config:Config=Config()) -> Result[httpx.Response, Exception]:
     '''Makes an HTTP POST request for Pure API resources.
 
     Args:
@@ -456,10 +455,9 @@ def post(resource_path:str, params:PMap=m(), config:Config=Config()) -> Result[R
     Returns:
         An Result object, which may contain either a Response or an error/exception.
     '''
-    prepared_request = config.requests_session().prepare_request(
-        requests.Request('POST', config.base_url + resource_path, json=thaw(params))
+    prepared_request = config.httpx_client.build_request(
+        'POST', config.base_url + resource_path, json=thaw(params), timeout=config.timeout, headers=config.headers
     )
-    prepared_request.headers = {**prepared_request.headers, **config.headers}
     return manage_request_attempts(prepared_request, attempts_id=uuid.uuid4(), config=config)
 
 def request_pages_by_offset(
@@ -483,11 +481,7 @@ def request_pages_by_offset(
             yield future.result()
 
 def build_request_by_offset_function(request_function:Callable, resource_path:str, *args, params:PMap, config:Config, **kwargs):
-    # TODO: How to make this more generic?
-    # Probably just include functions to return both thread-safe and thread-unsafe sessions in the config.
-    # Actually, no! Because we may not always know whether we need/want a thread-safe session.
-    thread_safe_config = attr.evolve(config, requests_session=requests_session_thread_safe)
-    partial_request = partial(request_function, resource_path, *args, config=thread_safe_config, **kwargs)
+    partial_request = partial(request_function, resource_path, *args, config=config, **kwargs)
     def request_by_offset(offset:int):
         return partial_request(params=config.request_page_params_parser.update_offset(params, new_offset=offset))
     return request_by_offset
