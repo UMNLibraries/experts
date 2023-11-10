@@ -48,11 +48,11 @@ def attempt_request(
     return httpx_client.send(prepared_request)
 
 def manage_request_attempts(
-    prepared_request:httpx.Request,
-    attempts_id:str,
-    context:Context,
-    wait_interval:int=2,
-    attempt_number:int=1
+    prepared_request: httpx.Request,
+    attempts_id: str,
+    context: Context,
+    wait_interval: int = 2,
+    attempt_number: int = 1
 ) -> Result[httpx.Response, Exception]:
     start_time = time.perf_counter()
     if __debug__:
@@ -91,7 +91,7 @@ def manage_request_attempts(
     else:
         return result       
 
-def get(resource_path:str, context:Context, params:PMap=m()) -> Result[httpx.Response, Exception]:
+def get(resource_path: str, context: Context, params: PMap = m()) -> Result[httpx.Response, Exception]:
     '''Makes an HTTP GET request for Pure API resources.
 
     Args:
@@ -104,11 +104,18 @@ def get(resource_path:str, context:Context, params:PMap=m()) -> Result[httpx.Res
         An Result object, which may contain either a Response or an error/exception.
     '''
     prepared_request = context.httpx_client.build_request(
-        'GET', resource_path, params=thaw(params), timeout=context.timeout
+        'GET',
+        resource_path,
+        params=thaw(params),
+        timeout=context.timeout
     )
-    return manage_request_attempts(prepared_request, attempts_id=uuid.uuid4(), context=context)
+    return manage_request_attempts(
+        prepared_request,
+        attempts_id=uuid.uuid4(),
+        context=context
+    )
 
-def post(resource_path:str, context:Context, params:PMap=m()) -> Result[httpx.Response, Exception]:
+def post(resource_path: str, context: Context, params: PMap = m()) -> Result[httpx.Response, Exception]:
     '''Makes an HTTP POST request for Pure API resources.
 
     Args:
@@ -121,16 +128,23 @@ def post(resource_path:str, context:Context, params:PMap=m()) -> Result[httpx.Re
         An Result object, which may contain either a Response or an error/exception.
     '''
     prepared_request = context.httpx_client.build_request(
-        'POST', resource_path, json=thaw(params), timeout=context.timeout
+        'POST',
+        resource_path,
+        json=thaw(params),
+        timeout=context.timeout
     )
-    return manage_request_attempts(prepared_request, attempts_id=uuid.uuid4(), context=context)
+    return manage_request_attempts(
+        prepared_request,
+        attempts_id=uuid.uuid4(),
+        context=context
+    )
 
 def request_pages_by_offset(
     request_by_offset_function,
-    item_count:int,
-    start_item_offset:int=0,
-    items_per_page:int=1000,
-    max_workers:int=4
+    item_count: int,
+    start_item_offset: int = 0,
+    items_per_page: int = 1000,
+    max_workers: int = 4
 ) -> Iterator[Result[httpx.Response, Exception]]:
     '''
     '''
@@ -145,28 +159,88 @@ def request_pages_by_offset(
         for future in concurrent.futures.as_completed(results):
             yield future.result()
 
-def build_request_by_offset_function(request_function:Callable, resource_path:str, *args, params:PMap, context:Context, **kwargs):
-    partial_request = partial(request_function, resource_path, *args, context=context, **kwargs)
-    def request_by_offset(offset:int):
-        return partial_request(params=context.request_page_params_parser.update_offset(params, new_offset=offset))
+def build_request_by_offset_function(
+    request_function: Callable,
+    resource_path: str, *args,
+    params: PMap,
+    context: Context,
+    **kwargs
+):
+    partial_request = partial(
+        request_function,
+        resource_path,
+        *args,
+        context=context,
+        **kwargs
+    )
+    def request_by_offset(offset: int):
+        return partial_request(
+            params=context.request_page_params_parser.update_offset(
+                params,
+                new_offset=offset
+            )
+        )
     return request_by_offset
 
-def all_responses_by_offset(request_function:Callable, resource_path:str, *args, params:PMap=m(), context:Context, **kwargs) -> Iterator[Result[httpx.Response, Exception]]:
-    first_result = request_function(resource_path, *args, params=params, context=context, **kwargs)
+def all_responses_by_offset(
+    request_function: Callable,
+    resource_path: str,
+    *args,
+    params: PMap = m(),
+    context: Context,
+    **kwargs
+) -> Iterator[Result[httpx.Response, Exception]]:
+    first_result = request_function(
+        resource_path,
+        *args,
+        params=params,
+        context=context,
+        **kwargs
+    )
     yield first_result
     if not is_successful(first_result):
         return
-    item_count = context.response_page_parser.count(first_result.unwrap().json())
+    item_count = context.response_page_parser.count(
+        first_result.unwrap().json()
+    )
     items_per_page = context.request_page_params_parser.size(params)
     if item_count <= items_per_page:
         return
-    request_by_offset_function = build_request_by_offset_function(request_function, resource_path, *args, params=params, context=context, **kwargs)
-    yield from request_pages_by_offset(request_by_offset_function, item_count=item_count, start_item_offset=items_per_page, items_per_page=items_per_page)
+    request_by_offset_function = build_request_by_offset_function(
+        request_function,
+        resource_path,
+        *args,
+        params=params,
+        context=context,
+        **kwargs
+    )
+    yield from request_pages_by_offset(
+        request_by_offset_function,
+        item_count=item_count,
+        start_item_offset=items_per_page,
+        items_per_page=items_per_page
+    )
 
-def all_items_by_offset(request_function:Callable, resource_path:str, *args, params:PMap=m(), context:Context, **kwargs) -> Iterator[Result[httpx.Response, Exception]]:
-    for result in all_responses_by_offset(request_function, resource_path, *args, params=params, context=context, **kwargs):
+def all_items_by_offset(
+    request_function: Callable,
+    resource_path: str,
+    *args,
+    params: PMap = m(),
+    context: Context,
+    **kwargs
+) -> Iterator[Result[httpx.Response, Exception]]:
+    for result in all_responses_by_offset(
+        request_function,
+        resource_path,
+        *args,
+        params=params,
+        context=context,
+        **kwargs
+    ):
         if is_successful(result):
-            for item in context.response_page_parser.items(result.unwrap().json()):
+            for item in context.response_page_parser.items(
+                result.unwrap().json()
+            ):
                 yield item
         else:
             # log failure
