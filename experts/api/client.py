@@ -7,7 +7,7 @@ from inspect import getmembers, getmodule, isfunction, signature
 import os
 import threading
 import time
-from typing import Callable, Iterator
+from typing import Callable, Iterator, Protocol
 import uuid
 
 import attrs
@@ -23,7 +23,14 @@ from returns.pipeline import is_successful
 from returns.result import Result, Success, Failure, safe
 
 # Is there a better way to do this when all we went is the Context type?
-from experts.api.context import Context
+from experts.api.context import Context, RequestPageParams
+
+RequestParams = PMap
+
+class RequestFunction(Protocol):
+    '''Request functions defined by this module, e.g., ``get`` and ``post``.'''
+    def __call__(resource_path: str, context: Context, params: RequestParams = m()) -> Result[httpx.Response, Exception]:
+        ...
 
 @contextmanager
 def session(context: Context):
@@ -91,17 +98,17 @@ def manage_request_attempts(
     else:
         return result       
 
-def get(resource_path: str, context: Context, params: PMap = m()) -> Result[httpx.Response, Exception]:
+def get(resource_path: str, context: Context, params: RequestParams = m()) -> Result[httpx.Response, Exception]:
     '''Makes an HTTP GET request for Pure API resources.
 
     Args:
         resource_path: URL path to a Pure API resource, to be appended to the
-            ``Config.base_url``. Do not include a leading forward slash (``/``).
-        params: A PMap representing URL query string params. Default: ``{}``.
+            ``Context.base_url``. Do not include a leading forward slash (``/``).
+        params: A RequestParams PMap representing URL query string params. Default: ``m()``.
         context: An instance of an experts.api.context.Context.
 
     Returns:
-        An Result object, which may contain either a Response or an error/exception.
+        An Result object, which may contain either an httpx.Response or an error/exception.
     '''
     prepared_request = context.httpx_client.build_request(
         'GET',
@@ -115,17 +122,17 @@ def get(resource_path: str, context: Context, params: PMap = m()) -> Result[http
         context=context
     )
 
-def post(resource_path: str, context: Context, params: PMap = m()) -> Result[httpx.Response, Exception]:
+def post(resource_path: str, context: Context, params: RequestParams = m()) -> Result[httpx.Response, Exception]:
     '''Makes an HTTP POST request for Pure API resources.
 
     Args:
         resource_path: URL path to a Pure API resource, to be appended to the
-            ``Config.base_url``. Do not include a leading forward slash (``/``).
-        params: A PMap representing payload data. Default: ``{}``.
+            ``Context.base_url``. Do not include a leading forward slash (``/``).
+        params: A RequestParams PMap representing payload data. Default: ``m()``.
         context: An instance of experts.api.context.Context.
 
     Returns:
-        An Result object, which may contain either a Response or an error/exception.
+        An Result object, which may contain either an httpx.Response or an error/exception.
     '''
     prepared_request = context.httpx_client.build_request(
         'POST',
@@ -160,9 +167,10 @@ def request_pages_by_offset(
             yield future.result()
 
 def build_request_by_offset_function(
-    request_function: Callable,
-    resource_path: str, *args,
-    params: PMap,
+    request_function: RequestFunction,
+    resource_path: str,
+    *args,
+    params: RequestPageParams,
     context: Context,
     **kwargs
 ):
@@ -183,7 +191,7 @@ def build_request_by_offset_function(
     return request_by_offset
 
 def all_responses_by_offset(
-    request_function: Callable,
+    request_function: RequestFunction,
     resource_path: str,
     *args,
     params: PMap = m(),
@@ -222,7 +230,7 @@ def all_responses_by_offset(
     )
 
 def all_items_by_offset(
-    request_function: Callable,
+    request_function: RequestFunction,
     resource_path: str,
     *args,
     params: PMap = m(),
