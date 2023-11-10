@@ -11,35 +11,35 @@ from pyrsistent.typing import PMap, PVector
 
 from experts.api.context import default_retryable, default_next_wait_interval
 
-RequestPageParams = PMap
+OffsetRequestParams = PMap
 
-class RequestPageParamsParser:
+class OffsetRequestParamsParser:
     @staticmethod
-    def size(params:RequestPageParams) -> int:
+    def size(params:OffsetRequestParams) -> int:
         return params.size
     
     @staticmethod
-    def offset(params:RequestPageParams) -> int:
+    def offset(params:OffsetRequestParams) -> int:
         return params.offset
     
     @staticmethod
-    def update_offset(params:RequestPageParams, new_offset:int) -> RequestPageParams:
+    def update_offset(params:OffsetRequestParams, new_offset:int) -> OffsetRequestParams:
         return params.set('offset', new_offset)
     
 # WSDataSetListResult in the Pure Web Services Swagger JSON schema
-class ResponsePage(TypedDict):
+class OffsetResponse(TypedDict):
     count: int
     pageInformation: Mapping
     navigationLinks: Iterable
     items: Iterable[Mapping]
 
-class ResponsePageParser:
+class OffsetResponseParser:
     @staticmethod
-    def count(response:ResponsePage) -> int:
+    def count(response:OffsetResponse) -> int:
         return response['count']
     
     @staticmethod
-    def items(response:ResponsePage) -> Iterator[Mapping]:
+    def items(response:OffsetResponse) -> Iterator[Mapping]:
         for item in response['items']:
             yield item
 
@@ -104,9 +104,9 @@ class Context:
     records_per_request: int = 1000
     '''An integer number of records to return for each request of many records.'''
 
-    request_page_params_parser = RequestPageParamsParser
+    offset_request_params_parser = OffsetRequestParamsParser
 
-    response_page_parser = ResponsePageParser
+    offset_response_parser = OffsetResponseParser
 
     base_url: str = field(init=False)
     '''Pure Web Services API entrypoint URL. Should not be included in constructor

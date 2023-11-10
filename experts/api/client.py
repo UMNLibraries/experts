@@ -23,7 +23,7 @@ from returns.pipeline import is_successful
 from returns.result import Result, Success, Failure, safe
 
 # Is there a better way to do this when all we went is the Context type?
-from experts.api.context import Context, RequestPageParams
+from experts.api.context import Context, OffsetRequestParams
 
 RequestParams = PMap
 
@@ -170,7 +170,7 @@ def build_request_by_offset_function(
     request_function: RequestFunction,
     resource_path: str,
     *args,
-    params: RequestPageParams,
+    params: OffsetRequestParams,
     context: Context,
     **kwargs
 ):
@@ -183,7 +183,7 @@ def build_request_by_offset_function(
     )
     def request_by_offset(offset: int):
         return partial_request(
-            params=context.request_page_params_parser.update_offset(
+            params=context.offset_request_params_parser.update_offset(
                 params,
                 new_offset=offset
             )
@@ -208,10 +208,10 @@ def all_responses_by_offset(
     yield first_result
     if not is_successful(first_result):
         return
-    item_count = context.response_page_parser.count(
+    item_count = context.offset_response_parser.count(
         first_result.unwrap().json()
     )
-    items_per_page = context.request_page_params_parser.size(params)
+    items_per_page = context.offset_request_params_parser.size(params)
     if item_count <= items_per_page:
         return
     request_by_offset_function = build_request_by_offset_function(
@@ -246,7 +246,7 @@ def all_items_by_offset(
         **kwargs
     ):
         if is_successful(result):
-            for item in context.response_page_parser.items(
+            for item in context.offset_response_parser.items(
                 result.unwrap().json()
             ):
                 yield item

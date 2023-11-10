@@ -10,31 +10,31 @@ import returns
 from returns.pipeline import is_successful
 from returns.result import Result
 
-RequestPageParams = PMap
+OffsetRequestParams = PMap
 
-class RequestPageParamsParser(Protocol):
+class OffsetRequestParamsParser(Protocol):
     @staticmethod
-    def size(params:RequestPageParams) -> int:
+    def size(params:OffsetRequestParams) -> int:
         ...
 
     @staticmethod
-    def offset(params:RequestPageParams) -> int:
+    def offset(params:OffsetRequestParams) -> int:
         ...
 
     @staticmethod
-    def update_offset(params:RequestPageParams, new_offset:int) -> RequestPageParams:
+    def update_offset(params:OffsetRequestParams, new_offset:int) -> OffsetRequestParams:
         ...
 
-ResponsePage = Mapping
-ResponsePage_contra = TypeVar('ResponsePage_contra', bound=ResponsePage, contravariant=True)
+OffsetResponse = Mapping
+OffsetResponse_contra = TypeVar('OffsetResponsee_contra', bound=OffsetResponse, contravariant=True)
 
-class ResponsePageParser(Protocol, Generic[ResponsePage_contra]):
+class OffsetResponseParser(Protocol, Generic[OffsetResponse_contra]):
     @staticmethod
-    def count(response:ResponsePage_contra) -> int:
+    def count(response:OffsetResponse_contra) -> int:
         ...
 
     @staticmethod
-    def items(response:ResponsePage_contra) -> Iterator[Mapping]:
+    def items(response:OffsetResponse_contra) -> Iterator[Mapping]:
         ...
 
 def retryable(
@@ -111,9 +111,9 @@ class Context(Protocol):
 
     records_per_request: int
 
-    request_page_params_parser: RequestPageParamsParser
+    offset_request_params_parser: OffsetRequestParamsParser
 
-    response_page_parser: ResponsePageParser
+    offset_response_parser: OffsetResponseParser
 
     base_url: str
     '''Pure API entrypoint URL. Should not be included in constructor
