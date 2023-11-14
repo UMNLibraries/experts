@@ -15,7 +15,7 @@ OffsetRequestParams = PMap
 
 class OffsetRequestParamsParser:
     @staticmethod
-    def size(params:OffsetRequestParams) -> int:
+    def items_per_page(params:OffsetRequestParams) -> int:
         return params.count
     
     @staticmethod
@@ -41,7 +41,7 @@ OffsetResponse = TypedDict('OffsetResponse', {'search-results': SearchResults})
 
 class OffsetResponseParser:
     @staticmethod
-    def count(response:OffsetResponse) -> int:
+    def total_items(response:OffsetResponse) -> int:
         return int(response['search-results']['opensearch:totalResults'])
     
     @staticmethod

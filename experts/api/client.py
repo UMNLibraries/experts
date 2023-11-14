@@ -148,9 +148,9 @@ def post(resource_path: str, context: Context, params: RequestParams = m()) -> R
 
 def request_pages_by_offset(
     request_by_offset_function,
-    item_count: int,
-    start_item_offset: int = 0,
+    total_items: int,
     items_per_page: int = 1000,
+    starting_offset: int = 0,
     max_workers: int = 4
 ) -> Iterator[Result[httpx.Response, Exception]]:
     '''
@@ -161,7 +161,7 @@ def request_pages_by_offset(
             executor.submit(
                 request_by_offset_function,
                 offset
-            ) for offset in range(start_item_offset, item_count, items_per_page)
+            ) for offset in range(starting_offset, total_items, items_per_page)
         ]
         for future in concurrent.futures.as_completed(results):
             yield future.result()
@@ -208,11 +208,11 @@ def all_responses_by_offset(
     yield first_result
     if not is_successful(first_result):
         return
-    item_count = context.offset_response_parser.count(
+    total_items = context.offset_response_parser.total_items(
         first_result.unwrap().json()
     )
-    items_per_page = context.offset_request_params_parser.size(params)
-    if item_count <= items_per_page:
+    items_per_page = context.offset_request_params_parser.items_per_page(params)
+    if total_items <= items_per_page:
         return
     request_by_offset_function = build_request_by_offset_function(
         request_function,
@@ -224,9 +224,12 @@ def all_responses_by_offset(
     )
     yield from request_pages_by_offset(
         request_by_offset_function,
-        item_count=item_count,
-        start_item_offset=items_per_page,
+        total_items=total_items,
         items_per_page=items_per_page
+
+        # In the first_result above, we got items 0 to items_per_page - 1,
+        # so the next offset is equal to items per page:
+        starting_offset=items_per_page,
     )
 
 def all_items_by_offset(
@@ -251,7 +254,7 @@ def all_items_by_offset(
             ):
                 yield item
         else:
-            # log failure
+            # TODO: log failure
             print(f'Failed! {result}')
             continue
 
