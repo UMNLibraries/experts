@@ -45,6 +45,14 @@ class OffsetResponseParser:
         return int(response['search-results']['opensearch:totalResults'])
     
     @staticmethod
+    def items_per_page(response:OffsetResponse) -> int:
+        return int(response['search-results']['opensearch:itemsPerPage'])
+
+    @staticmethod
+    def offset(response:OffsetResponse) -> int:
+        return int(response['search-results']['opensearch:startIndex'])
+
+    @staticmethod
     def items(response:OffsetResponse) -> Iterator[Mapping]:
         for item in response['search-results']['entry']:
             yield item

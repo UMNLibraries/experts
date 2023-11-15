@@ -37,6 +37,14 @@ class OffsetResponseParser:
     @staticmethod
     def total_items(response:OffsetResponse) -> int:
         return response['count']
+
+    @staticmethod
+    def items_per_page(response:OffsetResponse) -> int:
+        return int(response['size'])
+
+    @staticmethod
+    def offset(response:OffsetResponse) -> int:
+        return int(response['offset'])
     
     @staticmethod
     def items(response:OffsetResponse) -> Iterator[Mapping]:
