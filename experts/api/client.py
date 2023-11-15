@@ -211,7 +211,7 @@ def all_responses_by_offset(
     total_items = context.offset_response_parser.total_items(
         first_result.unwrap().json()
     )
-    items_per_page = context.offset_request_params_parser.items_per_page(params)
+    items_per_page = context.offset_response_parser.items_per_page(params)
     if total_items <= items_per_page:
         return
     request_by_offset_function = build_request_by_offset_function(
@@ -225,10 +225,10 @@ def all_responses_by_offset(
     yield from request_pages_by_offset(
         request_by_offset_function,
         total_items=total_items,
-        items_per_page=items_per_page
+        items_per_page=items_per_page,
 
-        # In the first_result above, we got items 0 to items_per_page - 1,
-        # so the next offset is equal to items per page:
+        # In the first_result above, we got items 0 through items_per_page - 1,
+        # so the next offset is equal to items_per_page:
         starting_offset=items_per_page,
     )
 
