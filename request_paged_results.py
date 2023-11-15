@@ -8,6 +8,12 @@ import returns
 from returns.pipeline import is_successful
 from returns.result import Result, Success, Failure, safe
 
+items_per_page = Context().offset_request_params_parser.items_per_page(m())
+print(f'{items_per_page=}')
+params = m()
+new_params = params.set('offset', 10)
+print(f'{new_params=}')
+
 def report_result(result):
     print(result)
     if is_successful(result):
@@ -28,8 +34,8 @@ with client.session(Context()) as session:
           'uuids': [ '830a7383-b7a2-445c-8ff5-34816b6eadee' ] # Nature
         }
     })
-#    for result in session.all_responses_by_offset(post, 'research-outputs', params=params):
-#        report_result(result)
+##    for result in session.all_responses_by_offset(post, 'research-outputs', params=params):
+##        report_result(result)
     returned_items_count = 0
     for item in session.all_items_by_offset(post, 'research-outputs', params=params):
         if returned_items_count == 0:
