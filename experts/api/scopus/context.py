@@ -16,11 +16,11 @@ OffsetRequestParams = PMap
 class OffsetRequestParamsParser:
     @staticmethod
     def items_per_page(params:OffsetRequestParams) -> int:
-        return params.count
+        return params.get('count')
     
     @staticmethod
     def offset(params:OffsetRequestParams) -> int:
-        return params.start
+        return params.get('start')
 
     @staticmethod
     def update_offset(params:OffsetRequestParams, new_offset:int) -> OffsetRequestParams:
