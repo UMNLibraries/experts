@@ -51,7 +51,24 @@ def test_scopus_offset_request_params_parser():
     assert parser.offset(empty_params) == None
     assert empty_params.get('start') == None
 
-        
+def test_pure_ws_offset_response_parser():
+    response = {
+        'count': 1271,
+        'pageInformation': {
+            'offset': 0,
+            'size': 10,
+        },
+        'items': [
+            {'foo': 1},
+            {'bar': 2},
+            {'baz': 3},
+        ]
+    }        
+    parser = pure_ws_context.OffsetResponseParser
+    assert parser.total_items(response) == response['count']
+    assert parser.offset(response) == response['pageInformation']['offset']
+    assert parser.items_per_page(response) == response['pageInformation']['size']
+    assert parser.items(response) == response['items']
 
 #def test_valid_version():
 #    versions = common.versions

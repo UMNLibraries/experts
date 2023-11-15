@@ -42,7 +42,7 @@ class OffsetResponseParser(Protocol, Generic[OffsetResponse_contra]):
         ...
 
     @staticmethod
-    def items(response:OffsetResponse_contra) -> Iterator[Mapping]:
+    def items(response:OffsetResponse_contra) -> list[Mapping]:
         ...
 
 def retryable(

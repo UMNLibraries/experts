@@ -1,5 +1,5 @@
 import os
-from typing import Callable, Iterable, Iterator, List, Mapping, Tuple, TypedDict 
+from typing import Callable, Iterable, Iterator, Mapping, Tuple, TypedDict 
 
 import attrs
 from attrs import Factory, field, frozen, validators
@@ -26,12 +26,16 @@ class OffsetRequestParamsParser:
     def update_offset(params:OffsetRequestParams, new_offset:int) -> OffsetRequestParams:
         return params.set('offset', new_offset)
     
+class PageInformation(TypedDict):
+    size: int
+    offset: int
+
 # WSDataSetListResult in the Pure Web Services Swagger JSON schema
 class OffsetResponse(TypedDict):
     count: int
-    pageInformation: Mapping
-    navigationLinks: Iterable
-    items: Iterable[Mapping]
+    pageInformation: PageInformation
+    navigationLinks: list[Mapping]
+    items: list[Mapping]
 
 class OffsetResponseParser:
     @staticmethod
@@ -40,16 +44,15 @@ class OffsetResponseParser:
 
     @staticmethod
     def items_per_page(response:OffsetResponse) -> int:
-        return int(response['size'])
+        return int(response['pageInformation']['size'])
 
     @staticmethod
     def offset(response:OffsetResponse) -> int:
-        return int(response['offset'])
+        return int(response['pageInformation']['offset'])
     
     @staticmethod
-    def items(response:OffsetResponse) -> Iterator[Mapping]:
-        for item in response['items']:
-            yield item
+    def items(response:OffsetResponse) -> list[Mapping]:
+        return response['items']
 
 @frozen(kw_only=True)
 class Context:

@@ -208,11 +208,13 @@ def all_responses_by_offset(
     yield first_result
     if not is_successful(first_result):
         return
-    total_items = context.offset_response_parser.total_items(
-        first_result.unwrap().json()
-    )
-    items_per_page = context.offset_response_parser.items_per_page(params)
-    offset = context.offset_response_parser.offset(params)
+
+    first_response = first_result.unwrap().json()
+    parser = context.offset_response_parser
+
+    total_items = parser.total_items(first_response)
+    items_per_page = parser.items_per_page(first_response)
+    offset = parser.offset(first_response)
 
     # The following assumes an ascending order of offsets,
     # in which case increasing the offset will result in 
