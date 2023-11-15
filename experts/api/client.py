@@ -194,7 +194,7 @@ def all_responses_by_offset(
     request_function: RequestFunction,
     resource_path: str,
     *args,
-    params: PMap = m(),
+    params: RequestParams = m(),
     context: Context,
     **kwargs
 ) -> Iterator[Result[httpx.Response, Exception]]:
@@ -212,8 +212,14 @@ def all_responses_by_offset(
         first_result.unwrap().json()
     )
     items_per_page = context.offset_response_parser.items_per_page(params)
-    if total_items <= items_per_page:
+    offset = context.offset_response_parser.offset(params)
+
+    # The following assumes an ascending order of offsets,
+    # in which case increasing the offset will result in 
+    # zero items in the next response:
+    if total_items <= items_per_page or total_items <= offset:
         return
+
     request_by_offset_function = build_request_by_offset_function(
         request_function,
         resource_path,
@@ -227,9 +233,8 @@ def all_responses_by_offset(
         total_items=total_items,
         items_per_page=items_per_page,
 
-        # In the first_result above, we got items 0 through items_per_page - 1,
-        # so the next offset is equal to items_per_page:
-        starting_offset=items_per_page,
+        # In the first_result above, we got items offset through items_per_page - 1
+        starting_offset=(offset + items_per_page),
     )
 
 def all_items_by_offset(
