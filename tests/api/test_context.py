@@ -13,42 +13,42 @@ import experts.api.scopus.context as scopus_context
 
 def test_pure_ws_offset_request_params_parser():
     params = m(size=1000, offset=0)
-    pure_ws_params_parser = pure_ws_context.OffsetRequestParamsParser
-    assert pure_ws_params_parser.items_per_page(params) == params.get('size')
-    assert pure_ws_params_parser.offset(params) == params.get('offset')
+    parser = pure_ws_context.OffsetRequestParamsParser
+    assert parser.items_per_page(params) == params.get('size')
+    assert parser.offset(params) == params.get('offset')
 
     empty_params = m()
-    assert pure_ws_params_parser.items_per_page(empty_params) == None
-    assert pure_ws_params_parser.offset(empty_params) == None
+    assert parser.items_per_page(empty_params) == None
+    assert parser.offset(empty_params) == None
 
     new_offset = 10
 
-    updated_params = pure_ws_params_parser.update_offset(empty_params, new_offset)
-    assert pure_ws_params_parser.offset(updated_params) == new_offset
+    updated_params = parser.update_offset(empty_params, new_offset)
+    assert parser.offset(updated_params) == new_offset
     assert updated_params.get('offset') == new_offset
 
     # Original params should be unchanged:
-    assert pure_ws_params_parser.offset(empty_params) == None
+    assert parser.offset(empty_params) == None
     assert empty_params.get('offset') == None
 
 def test_scopus_offset_request_params_parser():
     params = m(count=1000, start=0)
-    scopus_params_parser = scopus_context.OffsetRequestParamsParser
-    assert scopus_params_parser.items_per_page(params) == params.get('count')
-    assert scopus_params_parser.offset(params) == params.get('start')
+    parser = scopus_context.OffsetRequestParamsParser
+    assert parser.items_per_page(params) == params.get('count')
+    assert parser.offset(params) == params.get('start')
 
     empty_params = m()
-    assert scopus_params_parser.items_per_page(empty_params) == None
-    assert scopus_params_parser.offset(empty_params) == None
+    assert parser.items_per_page(empty_params) == None
+    assert parser.offset(empty_params) == None
 
     new_offset = 10
 
-    updated_params = scopus_params_parser.update_offset(empty_params, new_offset)
-    assert scopus_params_parser.offset(updated_params) == new_offset
+    updated_params = parser.update_offset(empty_params, new_offset)
+    assert parser.offset(updated_params) == new_offset
     assert updated_params.get('start') == new_offset
 
     # Original params should be unchanged:
-    assert scopus_params_parser.offset(empty_params) == None
+    assert parser.offset(empty_params) == None
     assert empty_params.get('start') == None
 
         
