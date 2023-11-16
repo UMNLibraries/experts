@@ -42,10 +42,8 @@ def session(context: Context):
         )
     }
     Session = namedtuple('Session', configured_functions.keys())
-    try:
-        yield Session(**configured_functions)
-    finally:
-        context.httpx_client.close()
+    yield Session(**configured_functions)
+    context.httpx_client.close()
 
 @safe
 def attempt_request(
