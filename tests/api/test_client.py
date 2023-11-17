@@ -18,49 +18,58 @@ def test_pure_ws():
     parser = pure_ws_context.OffsetResponseParser
     with client.session(pure_ws_context.Context()) as session:
 
-        total_persons : int
-        total_persons_received : int = 0
-        person_params = m(offset=0, size=1000)
-        for result in session.all_results_by_offset(get, 'persons', params=person_params):
-            if is_successful(result):
-                response = result.unwrap().json()
-                if parser.offset(response) == 0:
-                    total_persons = parser.total_items(response)
-                total_persons_received += len(parser.items(response))
-        assert total_persons_received == total_persons
+        total_persons_result = session.get('persons', params=m(offset=0, size=1))
+        if not is_successful(total_persons_result):
+            raise total_persons_result.failure()
+        total_persons= parser.total_items(
+            total_persons_result.unwrap().json()
+        )
 
-        total_person_items_received : int = 0
-        for item in session.all_items(
-            session.all_responses(
-                session.all_results_by_offset(get, 'persons', params=person_params)
+        persons_params = m(offset=0, size=1000)
+
+        assert sum(
+            len(parser.items(response)) for response in (
+                # This may fail, because we do not ensure a successful result:
+                result.unwrap().json() for result in session.all_results_by_offset(get, 'persons', params=persons_params)
             )
-        ):
-            total_person_items_received += 1
-        assert total_person_items_received == total_persons
+        ) == total_persons
+        
+        assert sum(
+            [1 for item in session.all_items(
+                # This will not fail, because all_responses handles unsuccessful results:
+                session.all_responses(
+                    session.all_results_by_offset(get, 'persons', params=persons_params)
+                )
+            )]
+        ) == total_persons
 
-        total_ros : int
-        total_ros_received : int = 0
-        ro_params = pmap({
+        ros_params = pmap({
             'offset': 0,
             'size': 200,
             'forJournals': {
               'uuids': [ '830a7383-b7a2-445c-8ff5-34816b6eadee' ] # Nature
             }
         })
-        for result in session.all_results_by_offset(post, 'research-outputs', params=ro_params):
-            if is_successful(result):
-                response = result.unwrap().json()
-                if parser.offset(response) == 0:
-                    total_ros = parser.total_items(response)
-                total_ros_received += len(parser.items(response))
-        assert total_ros_received == total_ros
 
-        total_ro_items_received : int = 0
-        for item in session.all_items(
-            session.all_responses(
-                session.all_results_by_offset(post, 'research-outputs', params=ro_params)
+        total_ros_result = session.post('research-outputs', params=ros_params)
+        if not is_successful(total_ros_result):
+            raise total_ros_result.failure()
+        total_ros= parser.total_items(
+            total_ros_result.unwrap().json()
+        )
+
+        assert sum(
+            len(parser.items(response)) for response in (
+                # This may fail, because we do not ensure a successful result:
+                result.unwrap().json() for result in session.all_results_by_offset(post, 'research-outputs', params=ros_params)
             )
-        ):
-            total_ro_items_received += 1
-        assert total_ro_items_received == total_ros
-
+        ) == total_ros
+        
+        assert sum(
+            [1 for item in session.all_items(
+                # This will not fail, because all_responses handles unsuccessful results:
+                session.all_responses(
+                    session.all_results_by_offset(post, 'research-outputs', params=ros_params)
+                )
+            )]
+        ) == total_ros

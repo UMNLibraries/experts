@@ -275,7 +275,7 @@ def all_responses(results: Iterator[Result[httpx.Response, Exception]], context:
             print(f'Failed! {result}')
             continue
 
-def all_items(responses: Iterator[ResponseJson], context: Context) -> Iterator[Mapping]:
+def all_items(responses: Iterator[ResponseJson], context: Context) -> Iterator[ResponseItem]:
     for response in responses:
         for item in context.offset_response_parser.items(response):
             yield item
