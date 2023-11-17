@@ -21,8 +21,7 @@ def test_pure_ws():
         total_persons : int
         total_persons_received : int = 0
         person_params = m(offset=0, size=1000)
-
-        for result in session.all_responses_by_offset(get, 'persons', params=person_params):
+        for result in session.all_results_by_offset(get, 'persons', params=person_params):
             if is_successful(result):
                 response = result.unwrap().json()
                 if parser.offset(response) == 0:
@@ -31,7 +30,11 @@ def test_pure_ws():
         assert total_persons_received == total_persons
 
         total_person_items_received : int = 0
-        for item in session.all_items_by_offset(get, 'persons', params=person_params):
+        for item in session.all_items(
+            session.all_responses(
+                session.all_results_by_offset(get, 'persons', params=person_params)
+            )
+        ):
             total_person_items_received += 1
         assert total_person_items_received == total_persons
 
@@ -44,8 +47,7 @@ def test_pure_ws():
               'uuids': [ '830a7383-b7a2-445c-8ff5-34816b6eadee' ] # Nature
             }
         })
-
-        for result in session.all_responses_by_offset(post, 'research-outputs', params=ro_params):
+        for result in session.all_results_by_offset(post, 'research-outputs', params=ro_params):
             if is_successful(result):
                 response = result.unwrap().json()
                 if parser.offset(response) == 0:
@@ -54,7 +56,11 @@ def test_pure_ws():
         assert total_ros_received == total_ros
 
         total_ro_items_received : int = 0
-        for item in session.all_items_by_offset(post, 'research-outputs', params=ro_params):
+        for item in session.all_items(
+            session.all_responses(
+                session.all_results_by_offset(post, 'research-outputs', params=ro_params)
+            )
+        ):
             total_ro_items_received += 1
         assert total_ro_items_received == total_ros
 

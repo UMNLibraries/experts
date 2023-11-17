@@ -7,7 +7,7 @@ from inspect import getmembers, getmodule, isfunction, signature
 import os
 import threading
 import time
-from typing import Callable, Iterator, Protocol
+from typing import Callable, Iterator, Mapping, Protocol
 import uuid
 
 import attrs
@@ -26,6 +26,8 @@ from returns.result import Result, Success, Failure, safe
 from experts.api.context import Context, OffsetRequestParams
 
 RequestParams = PMap
+ResponseJson = Mapping
+ResponseItem = Mapping
 
 class RequestFunction(Protocol):
     '''Request functions defined by this module, e.g., ``get`` and ``post``.'''
@@ -188,7 +190,7 @@ def build_request_by_offset_function(
         )
     return request_by_offset
 
-def all_responses_by_offset(
+def all_results_by_offset(
     request_function: RequestFunction,
     resource_path: str,
     *args,
@@ -237,31 +239,46 @@ def all_responses_by_offset(
         starting_offset=(offset + items_per_page),
     )
 
-def all_items_by_offset(
+def all_results_by_token(
     request_function: RequestFunction,
     resource_path: str,
     *args,
-    params: PMap = m(),
+    token: str,
+    params: RequestParams = m(),
     context: Context,
     **kwargs
 ) -> Iterator[Result[httpx.Response, Exception]]:
-    for result in all_responses_by_offset(
-        request_function,
-        resource_path,
-        *args,
-        params=params,
-        context=context,
-        **kwargs
-    ):
+    while(True):
+        result = request_function(
+            resource_path + '/' + token,
+            *args,
+            params=params,
+            context=context,
+            **kwargs
+        )
+        yield result
+        if not is_successful(result):
+            return
+        response = result.unwrap().json()
+        parser = context.token_response_parser
+        if parser.is_last_page(response):
+            return
+        # Hate this ugly resetting of token!
+        token = parser.token(response)
+
+def all_responses(results: Iterator[Result[httpx.Response, Exception]], context: Context) -> Iterator[ResponseJson]:
+    for result in results:
         if is_successful(result):
-            for item in context.offset_response_parser.items(
-                result.unwrap().json()
-            ):
-                yield item
+            yield result.unwrap().json()
         else:
-            # TODO: log failure
+            # TODO: log failure, probably relying on context
             print(f'Failed! {result}')
             continue
+
+def all_items(responses: Iterator[ResponseJson], context: Context) -> Iterator[Mapping]:
+    for response in responses:
+        for item in context.offset_response_parser.items(response):
+            yield item
 
 ## old functions from here to the end:
 #
