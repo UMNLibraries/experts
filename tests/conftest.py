@@ -7,6 +7,15 @@ import dotenv_switch.auto
 package_path = Path(__file__).parents[1]
 sys.path.append(str(package_path))
 
+import experts.api.client as client
+import experts.api.pure.web_services.context as pure_ws_context
+import experts.api.scopus.context as scopus_context
+
+@pytest.fixture(scope="module")
+def pure_ws_session():
+    with client.session(pure_ws_context.Context()) as session:
+        yield session
+
 def pytest_addoption(parser):
     parser.addoption(
         '--integration',
