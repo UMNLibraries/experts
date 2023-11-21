@@ -49,6 +49,7 @@ TokenResponse = Mapping
 TokenResponse_contra = TypeVar('TokenResponsee_contra', bound=TokenResponse, contravariant=True)
 
 class TokenResponseParser(Protocol, Generic[TokenResponse_contra]):
+# Not all APIs more have this:
 #    @staticmethod
 #    def total_items(response:TokenResponse_contra) -> int:
 #        ...
