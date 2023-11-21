@@ -14,36 +14,40 @@ import experts.api.pure.web_services.context as pure_ws_context
 import experts.api.scopus.context as scopus_context
 
 @pytest.mark.integration
-def test_pure_ws(pure_ws_session):
+def test_get_with_pure_ws(pure_ws_session):
     session = pure_ws_session
     parser = pure_ws_context.OffsetResponseParser
+    params = m(offset=0, size=1000)
 
-    total_persons_result = session.get('persons', params=m(offset=0, size=1))
-    if not is_successful(total_persons_result):
-        raise total_persons_result.failure()
-    total_persons= parser.total_items(
-        total_persons_result.unwrap().json()
+    total_result = session.get('persons', params=params)
+
+    if not is_successful(total_result):
+        raise total_result.failure()
+    total = parser.total_items(
+        total_result.unwrap().json()
     )
-
-    persons_params = m(offset=0, size=1000)
 
     assert sum(
         len(parser.items(response)) for response in (
-            # This may fail, because we do not ensure a successful result:
-            result.unwrap().json() for result in session.all_results_by_offset(get, 'persons', params=persons_params)
+            session.all_responses_by_offset(get, 'persons', params=params)
         )
-    ) == total_persons
+    ) == total
     
     assert sum(
-        [1 for item in session.all_items(
-            # This will not fail, because all_responses handles unsuccessful results:
-            session.all_responses(
-                session.all_results_by_offset(get, 'persons', params=persons_params)
-            )
+        [1 for item in session.all_items_by_offset(
+            session.all_responses_by_offset(get, 'persons', params=params)
         )]
-    ) == total_persons
+    ) == total
 
-    ros_params = pmap({
+    assert sum(
+        [1 for item in session.all_items(get, 'persons', params=params)]
+    ) == total
+
+@pytest.mark.integration
+def test_post_with_pure_ws(pure_ws_session):
+    session = pure_ws_session
+    parser = pure_ws_context.OffsetResponseParser
+    params = pmap({
         'offset': 0,
         'size': 200,
         'forJournals': {
@@ -51,25 +55,27 @@ def test_pure_ws(pure_ws_session):
         }
     })
 
-    total_ros_result = session.post('research-outputs', params=ros_params)
-    if not is_successful(total_ros_result):
-        raise total_ros_result.failure()
-    total_ros= parser.total_items(
-        total_ros_result.unwrap().json()
+    total_result = session.post('research-outputs', params=params)
+
+    if not is_successful(total_result):
+        raise total_result.failure()
+    total = parser.total_items(
+        total_result.unwrap().json()
     )
 
     assert sum(
         len(parser.items(response)) for response in (
-            # This may fail, because we do not ensure a successful result:
-            result.unwrap().json() for result in session.all_results_by_offset(post, 'research-outputs', params=ros_params)
+            session.all_responses_by_offset(post, 'research-outputs', params=params)
         )
-    ) == total_ros
+    ) == total
     
     assert sum(
-        [1 for item in session.all_items(
-            # This will not fail, because all_responses handles unsuccessful results:
-            session.all_responses(
-                session.all_results_by_offset(post, 'research-outputs', params=ros_params)
-            )
+        [1 for item in session.all_items_by_offset(
+            session.all_responses_by_offset(post, 'research-outputs', params=params)
         )]
-    ) == total_ros
+    ) == total
+
+    assert sum(
+        [1 for item in session.all_items(post, 'research-outputs', params=params)]
+    ) == total
+

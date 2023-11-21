@@ -146,7 +146,7 @@ def post(resource_path: str, context: Context, params: RequestParams = m()) -> R
         context=context
     )
 
-def request_pages_by_offset(
+def all_results_by_offset(
     request_by_offset_function,
     total_items: int,
     items_per_page: int = 1000,
@@ -190,14 +190,14 @@ def build_request_by_offset_function(
         )
     return request_by_offset
 
-def all_results_by_offset(
+def all_responses_by_offset(
     request_function: RequestFunction,
     resource_path: str,
     *args,
     params: RequestParams = m(),
     context: Context,
     **kwargs
-) -> Iterator[Result[httpx.Response, Exception]]:
+) -> Iterator[ResponseJson]:
     first_result = request_function(
         resource_path,
         *args,
@@ -205,13 +205,14 @@ def all_results_by_offset(
         context=context,
         **kwargs
     )
-    yield first_result
     if not is_successful(first_result):
+        # TODO: log failure, probably relying on context
+        print(f'Failed! {result}')
         return
-
     first_response = first_result.unwrap().json()
-    parser = context.offset_response_parser
+    yield first_response
 
+    parser = context.offset_response_parser
     total_items = parser.total_items(first_response)
     items_per_page = parser.items_per_page(first_response)
     offset = parser.offset(first_response)
@@ -230,16 +231,21 @@ def all_results_by_offset(
         context=context,
         **kwargs
     )
-    yield from request_pages_by_offset(
+    for result in all_results_by_offset(
         request_by_offset_function,
         total_items=total_items,
         items_per_page=items_per_page,
-
         # In the first_result above, we got items offset through items_per_page - 1
         starting_offset=(offset + items_per_page),
-    )
+     ):
+        if is_successful(result):
+            yield result.unwrap().json()
+        else:
+            # TODO: log failure, probably relying on context
+            print(f'Failed! {result}')
+            continue
 
-def all_results_by_token(
+def all_responses_by_token(
     request_function: RequestFunction,
     resource_path: str,
     *args,
@@ -247,7 +253,7 @@ def all_results_by_token(
     params: RequestParams = m(),
     context: Context,
     **kwargs
-) -> Iterator[Result[httpx.Response, Exception]]:
+) -> Iterator[ResponseJson]:
     while(True):
         result = request_function(
             resource_path + '/' + token,
@@ -256,29 +262,63 @@ def all_results_by_token(
             context=context,
             **kwargs
         )
-        yield result
         if not is_successful(result):
+            # TODO: log failure, probably relying on context
+            print(f'Failed! {result}')
             return
         response = result.unwrap().json()
+        yield response
         parser = context.token_response_parser
-        if parser.is_last_page(response):
+        if not parser.more_pages(response):
             return
         # Hate this ugly resetting of token!
         token = parser.token(response)
 
-def all_responses(results: Iterator[Result[httpx.Response, Exception]], context: Context) -> Iterator[ResponseJson]:
-    for result in results:
-        if is_successful(result):
-            yield result.unwrap().json()
-        else:
-            # TODO: log failure, probably relying on context
-            print(f'Failed! {result}')
-            continue
-
-def all_items(responses: Iterator[ResponseJson], context: Context) -> Iterator[ResponseItem]:
+def all_items_by_offset(responses: Iterator[ResponseJson], context: Context) -> Iterator[ResponseItem]:
     for response in responses:
         for item in context.offset_response_parser.items(response):
             yield item
+
+def all_items_by_token(responses: Iterator[ResponseJson], context: Context) -> Iterator[ResponseItem]:
+    for response in responses:
+        for item in context.token_response_parser.items(response):
+            yield item
+
+def all_items(
+    request_function: RequestFunction,
+    resource_path: str,
+    *args,
+    token: str = None,
+    params: RequestParams = m(),
+    context: Context,
+    **kwargs
+) -> Iterator[ResponseItem]:
+    if token:
+        return all_items_by_token(
+            all_responses_by_token(
+                request_function,    
+                resource_path,
+                *args,
+                token=token,
+                params=params,
+                context=context,
+                **kwargs
+            ),
+            context=context
+        )
+    else:
+        return all_items_by_offset(
+            all_responses_by_offset(
+                request_function,    
+                resource_path,
+                *args,
+                params=params,
+                context=context,
+                **kwargs
+            ),
+            context=context
+        )
+        
 
 ## old functions from here to the end:
 #
