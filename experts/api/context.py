@@ -45,6 +45,29 @@ class OffsetResponseParser(Protocol, Generic[OffsetResponse_contra]):
     def items(response:OffsetResponse_contra) -> list[Mapping]:
         ...
 
+TokenResponse = Mapping
+TokenResponse_contra = TypeVar('TokenResponsee_contra', bound=TokenResponse, contravariant=True)
+
+class TokenResponseParser(Protocol, Generic[TokenResponse_contra]):
+#    @staticmethod
+#    def total_items(response:TokenResponse_contra) -> int:
+#        ...
+
+    @staticmethod
+    def items_per_page(response:TokenResponse_contra) -> int:
+        ...
+
+    @staticmethod
+    def token(response:TokenResponse_contra) -> str:
+        ...
+
+    def more_items(response:TokenResponse_contra) -> bool:
+        ...
+
+    @staticmethod
+    def items(response:TokenResponse_contra) -> list[Mapping]:
+        ...
+
 def retryable(
     result:Result,
     retryable_status_codes:PVector[int],
@@ -130,6 +153,9 @@ class Context(Protocol):
 
     @property
     def offset_response_parser(self) -> OffsetResponseParser: ...
+
+    @property
+    def token_response_parser(self) -> TokenResponseParser: ...
 
     @property
     def base_url(self) -> str: ...

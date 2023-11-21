@@ -254,8 +254,10 @@ def all_responses_by_token(
     context: Context,
     **kwargs
 ) -> Iterator[ResponseJson]:
+    parser = context.token_response_parser
     while(True):
         result = request_function(
+            # TODO: The following will likely be different across APIs:
             resource_path + '/' + token,
             *args,
             params=params,
@@ -268,8 +270,7 @@ def all_responses_by_token(
             return
         response = result.unwrap().json()
         yield response
-        parser = context.token_response_parser
-        if not parser.more_pages(response):
+        if not parser.more_items(response):
             return
         # Hate this ugly resetting of token!
         token = parser.token(response)

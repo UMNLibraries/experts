@@ -54,6 +54,32 @@ class OffsetResponseParser:
     def items(response:OffsetResponse) -> list[Mapping]:
         return response['items']
 
+# WSDataSetListResult in the Pure Web Services Swagger JSON schema
+class TokenResponse(TypedDict):
+    count: int
+    resumptionToken: str
+    moreChanges: bool
+    navigationLinks: list[Mapping]
+    # Maynot have items!
+    #items: list[Mapping]
+
+class TokenResponseParser:
+    @staticmethod
+    def more_items(response:TokenResponse) -> bool:
+        return response['moreChanges']
+
+    @staticmethod
+    def items_per_page(response:TokenResponse) -> int:
+        return int(response['count'])
+
+    @staticmethod
+    def token(response:TokenResponse) -> int:
+        return response['resumptionToken']
+    
+    @staticmethod
+    def items(response:TokenResponse) -> list[Mapping]:
+        return [] if 'items' not in response else response['items']
+
 @frozen(kw_only=True)
 class Context:
     '''Common client configuration and behavior. Used by most functions.
@@ -116,8 +142,8 @@ class Context:
     '''An integer number of records to return for each request of many records.'''
 
     offset_request_params_parser = OffsetRequestParamsParser
-
     offset_response_parser = OffsetResponseParser
+    token_response_parser = TokenResponseParser
 
     base_url: str = field(init=False)
     '''Pure Web Services API entrypoint URL. Should not be included in constructor
