@@ -274,51 +274,21 @@ def all_responses_by_token(
         # Hate this ugly resetting of token!
         token = parser.token(response)
 
-def all_items_by_offset(responses: Iterator[ResponseJson], context: Context) -> Iterator[ResponseItem]:
-    for response in responses:
-        for item in context.offset_response_parser.items(response):
-            yield item
-
-def all_items_by_token(responses: Iterator[ResponseJson], context: Context) -> Iterator[ResponseItem]:
-    for response in responses:
-        for item in context.token_response_parser.items(response):
-            yield item
-
 def all_items(
-    request_function: RequestFunction,
-    resource_path: str,
     *args,
-    token: str = None,
-    params: RequestParams = m(),
     context: Context,
     **kwargs
 ) -> Iterator[ResponseItem]:
-    if token:
-        return all_items_by_token(
-            all_responses_by_token(
-                request_function,    
-                resource_path,
-                *args,
-                token=token,
-                params=params,
-                context=context,
-                **kwargs
-            ),
-            context=context
+    requestor, parser = (
+            all_responses_by_token,
+            context.token_response_parser
+        ) if ('token' in kwargs and kwargs['token'] is not None) else (
+            all_responses_by_offset,
+            context.offset_response_parser
         )
-    else:
-        return all_items_by_offset(
-            all_responses_by_offset(
-                request_function,    
-                resource_path,
-                *args,
-                params=params,
-                context=context,
-                **kwargs
-            ),
-            context=context
-        )
-        
+    for response in requestor(*args, context=context, **kwargs):
+        for item in parser.items(response):
+            yield item
 
 ## old functions from here to the end:
 #

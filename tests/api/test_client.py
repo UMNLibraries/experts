@@ -34,12 +34,6 @@ def test_get_with_pure_ws(pure_ws_session):
     ) == total
     
     assert sum(
-        [1 for item in session.all_items_by_offset(
-            session.all_responses_by_offset(get, 'persons', params=params)
-        )]
-    ) == total
-
-    assert sum(
         [1 for item in session.all_items(get, 'persons', params=params)]
     ) == total
 
@@ -69,12 +63,6 @@ def test_post_with_pure_ws(pure_ws_session):
         )
     ) == total
     
-    assert sum(
-        [1 for item in session.all_items_by_offset(
-            session.all_responses_by_offset(post, 'research-outputs', params=params)
-        )]
-    ) == total
-
     assert sum(
         [1 for item in session.all_items(post, 'research-outputs', params=params)]
     ) == total
