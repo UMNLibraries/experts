@@ -54,7 +54,7 @@ class OffsetResponseParser:
     def items(response:OffsetResponse) -> list[Mapping]:
         return response['items']
 
-# WSDataSetListResult in the Pure Web Services Swagger JSON schema
+# WSChangeListResult in the Pure Web Services Swagger JSON schema
 class TokenResponse(TypedDict):
     count: int
     resumptionToken: str
