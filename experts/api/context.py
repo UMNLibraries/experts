@@ -147,8 +147,6 @@ class Context(Protocol):
     '''HTTP headers. The constructor automatically adds an ``api-key`` header, using the value of
     the ``key`` attribute.'''
 
-    #records_per_request: int
-
     @property
     def offset_request_params_parser(self) -> OffsetRequestParamsParser: ...
 

@@ -138,13 +138,11 @@ class Context:
     '''HTTP headers to be sent on every request. The constructor automatically adds
     an ``api-key`` header, using the value of the ``key`` attribute.'''
 
-    records_per_request: int = 1000
-    '''An integer number of records to return for each request of many records.'''
-
     offset_request_params_parser = OffsetRequestParamsParser
     offset_response_parser = OffsetResponseParser
     token_response_parser = TokenResponseParser
 
+    # TODO: We may not need this, because now we pass a base_url to httpx.Client().
     base_url: str = field(init=False)
     '''Pure Web Services API entrypoint URL. Should not be included in constructor
     parameters. The constructor generates this automatically based on
