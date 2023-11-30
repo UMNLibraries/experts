@@ -155,9 +155,3 @@ class Context(Protocol):
 
     @property
     def token_response_parser(self) -> TokenResponseParser: ...
-
-    @property
-    def base_url(self) -> str: ...
-    '''Pure API entrypoint URL. Should not be included in constructor
-    parameters. The constructor generates this automatically based on
-    other attributes.'''

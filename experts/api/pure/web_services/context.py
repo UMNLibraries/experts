@@ -142,12 +142,6 @@ class Context:
     offset_response_parser = OffsetResponseParser
     token_response_parser = TokenResponseParser
 
-    # TODO: We may not need this, because now we pass a base_url to httpx.Client().
-    base_url: str = field(init=False)
-    '''Pure Web Services API entrypoint URL. Should not be included in constructor
-    parameters. The constructor generates this automatically based on
-    other attributes.'''
-
     def __attrs_post_init__(self) -> None:
         object.__setattr__(
             self,
