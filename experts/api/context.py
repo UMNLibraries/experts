@@ -1,12 +1,12 @@
 from functools import partial
-from typing import Callable, Generic, Iterator, Mapping, Protocol, Tuple, Type, TypeVar, Union
+from typing import Callable, Generic, Mapping, Protocol, Tuple, Type, TypeVar
 
 import httpx
 
 from pyrsistent import v
 from pyrsistent.typing import PMap, PVector
 
-import returns
+#import returns
 from returns.pipeline import is_successful
 from returns.result import Result
 
