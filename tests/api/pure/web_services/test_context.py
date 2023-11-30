@@ -1,19 +1,15 @@
-from dotenv import load_dotenv, find_dotenv
-load_dotenv(find_dotenv())
-
-import importlib
-import os
+#import importlib
+#import os
 
 import pytest
-from pyrsistent import m, pmap
+from pyrsistent import m
 
 #from pureapi import common
-import experts.api.pure.web_services.context as pure_ws_context
-import experts.api.scopus.context as scopus_context
+import experts.api.pure.web_services.context as context
 
-def test_pure_ws_offset_request_params_parser():
+def test_offset_request_params_parser():
     params = m(size=1000, offset=0)
-    parser = pure_ws_context.OffsetRequestParamsParser
+    parser = context.OffsetRequestParamsParser
     assert parser.items_per_page(params) == params.get('size')
     assert parser.offset(params) == params.get('offset')
 
@@ -31,27 +27,7 @@ def test_pure_ws_offset_request_params_parser():
     assert parser.offset(empty_params) == None
     assert empty_params.get('offset') == None
 
-def test_scopus_offset_request_params_parser():
-    params = m(count=1000, start=0)
-    parser = scopus_context.OffsetRequestParamsParser
-    assert parser.items_per_page(params) == params.get('count')
-    assert parser.offset(params) == params.get('start')
-
-    empty_params = m()
-    assert parser.items_per_page(empty_params) == None
-    assert parser.offset(empty_params) == None
-
-    new_offset = 10
-
-    updated_params = parser.update_offset(empty_params, new_offset)
-    assert parser.offset(updated_params) == new_offset
-    assert updated_params.get('start') == new_offset
-
-    # Original params should be unchanged:
-    assert parser.offset(empty_params) == None
-    assert empty_params.get('start') == None
-
-def test_pure_ws_offset_response_parser():
+def test_offset_response_parser():
     response = {
         'count': 1271,
         'pageInformation': {
@@ -64,14 +40,14 @@ def test_pure_ws_offset_response_parser():
             {'baz': 3},
         ]
     }        
-    parser = pure_ws_context.OffsetResponseParser
+    parser = context.OffsetResponseParser
     assert parser.total_items(response) == response['count']
     assert parser.offset(response) == response['pageInformation']['offset']
     assert parser.items_per_page(response) == response['pageInformation']['size']
     assert parser.items(response) == response['items']
 
-def test_pure_ws_token_response_parser():
-    parser = pure_ws_context.TokenResponseParser
+def test_token_response_parser():
+    parser = context.TokenResponseParser
     response1 = {
         "count": 3,
         "resumptionToken": "eyJzZXF1ZW5jZU51bWJlciI6MTk0MTM1MzcyfQ==",

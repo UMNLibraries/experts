@@ -1,23 +1,17 @@
-import dotenv_switch.auto
-
 from datetime import datetime
 import importlib
 import os
 
 import pytest
 from pyrsistent import m, pmap
-import returns
 from returns.pipeline import is_successful
 
-import experts.api.client as client
 from experts.api.client import get, post
-import experts.api.pure.web_services.context as pure_ws_context
-import experts.api.scopus.context as scopus_context
+import experts.api.scopus.context as context
 
 @pytest.mark.integration
-def test_get_all_responses_by_token_with_pure_ws(pure_ws_session):
-    session = pure_ws_session
-    parser = pure_ws_context.TokenResponseParser
+def test_get_all_responses_by_token(session):
+    parser = context.TokenResponseParser
 
     token = datetime.now().isoformat()
 
@@ -56,9 +50,8 @@ def test_get_all_responses_by_token_with_pure_ws(pure_ws_session):
         assert item_elements_present_counts[element] > item_elements_missing_counts[element]
 
 @pytest.mark.integration
-def test_get_all_responses_by_offset_with_pure_ws(pure_ws_session):
-    session = pure_ws_session
-    parser = pure_ws_context.OffsetResponseParser
+def test_get_all_responses_by_offset(pure_ws_session):
+    parser = context.OffsetResponseParser
     params = m(offset=0, size=1000)
 
     total_result = session.get('persons', params=params)
@@ -80,9 +73,8 @@ def test_get_all_responses_by_offset_with_pure_ws(pure_ws_session):
     ) == total
 
 @pytest.mark.integration
-def test_post_all_responses_by_offset_with_pure_ws(pure_ws_session):
-    session = pure_ws_session
-    parser = pure_ws_context.OffsetResponseParser
+def test_post_all_responses_by_offset(pure_ws_session):
+    parser = context.OffsetResponseParser
     params = pmap({
         'offset': 0,
         'size': 200,
