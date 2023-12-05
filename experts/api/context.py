@@ -6,7 +6,6 @@ import httpx
 from pyrsistent import v
 from pyrsistent.typing import PMap, PVector
 
-#import returns
 from returns.pipeline import is_successful
 from returns.result import Result
 
@@ -106,8 +105,8 @@ class Context(Protocol):
     '''An httpx.Client object.'''
 
     @property
-    def timeout(self) -> Tuple[int, int]: ...
-    '''A (connect timeout, read timeout) tuple. Required.'''
+    def timeout(self) -> httpx.Timeout: ...
+    '''httpx client timeouts'''
 
     @property
     def max_attempts(self) -> int: ...

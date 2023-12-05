@@ -97,11 +97,11 @@ class Context:
     httpx_client: httpx.Client = field(init=False)
     '''An httpx.Client object. Default: ``httpx.Client()``.'''
 
-    timeout: Tuple[int, int] = (3, 60)
-    '''A (connect timeout, read timeout) tuple. Required. Default: ``(3, 60)``.'''
+    timeout: httpx.Timeout = httpx.Timeout(10.0, connect=3.0, read=60.0)
+    '''httpx client timeouts. Default: ``httpx.Timeout(10.0, connect=3.0, read=60.0)``.'''
 
     max_attempts: int = 10
-    '''An integet maximum number of times to retry a request. Required. Default: ``10``.'''
+    '''An integer maximum number of times to retry a request. Default: ``10``.'''
 
     retryable: Callable = Factory(default_retryable)
     '''A function that takes a returns.Result and returns a boolean. Required. Default: Return value of ``default_retryable``.'''
