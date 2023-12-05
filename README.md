@@ -20,7 +20,7 @@ For example, to run only the Scopus API tests:
 
 Similarly, to run only the Pure Web Services tests:
 
-`pytest tests/api/pure/web_services/test_*.py`
+`pytest tests/api/pure/ws/test_*.py`
 
 Or to run all tests: `pytest`
 

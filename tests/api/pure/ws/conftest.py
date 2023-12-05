@@ -1,7 +1,7 @@
 import pytest
 
 import experts.api.client as client
-import experts.api.pure.web_services.context as context
+import experts.api.pure.ws.context as context
 
 @pytest.fixture(scope="module")
 def session():

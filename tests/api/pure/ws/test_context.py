@@ -5,7 +5,7 @@ import pytest
 from pyrsistent import m
 
 #from pureapi import common
-import experts.api.pure.web_services.context as context
+import experts.api.pure.ws.context as context
 
 def test_offset_request_params_parser():
     params = m(size=1000, offset=0)

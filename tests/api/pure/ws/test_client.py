@@ -6,7 +6,7 @@ from pyrsistent import m, pmap
 from returns.pipeline import is_successful
 
 from experts.api.client import get, post
-import experts.api.pure.web_services.context as context
+import experts.api.pure.ws.context as context
 
 @pytest.mark.integration
 def test_get_all_responses_by_token(session):
