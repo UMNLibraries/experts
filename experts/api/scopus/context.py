@@ -54,8 +54,7 @@ class OffsetResponseParser:
 
     @staticmethod
     def items(response:OffsetResponse) -> Iterator[Mapping]:
-        for item in response['search-results']['entry']:
-            yield item
+        return response['search-results']['entry']
 
 @frozen(kw_only=True)
 class Context:
@@ -87,23 +86,23 @@ class Context:
     '''A function that takes an integer number of seconds to wait and returns a new interval. Required. Default: Return value of ``default_next_wait_interval``.'''
 
     domain: str = field(
-        default=os.environ.get('PURE_WS_DOMAIN'),
+        default=os.environ.get('SCOPUS_API_DOMAIN'),
         validator=validators.instance_of(str)
     )
     '''Domain of a Pure Web Services API server. Required. Default: environment variable PURE_WS_DOMAIN'''
 
     base_path: str = field(
-        default='ws/api',
+        default='content',
         validator=validators.instance_of(str)
     )
     '''Base path of the Pure Web Services API URL entry point, without the version number segment.'''
 
-    version: str = '524'
+    #version: str = '524'
     '''Pure Web Services version, without the decimal point. For example, ``524`` for version 5.24.
     The final and only valid version is now 5.24.'''
 
     key: str = field(
-        default=os.environ.get('PURE_WS_KEY'),
+        default=os.environ.get('SCOPUS_API_KEY'),
         validator=validators.instance_of(str)
     )
     '''Pure Web Services API key. Required. Default: environment variable PURE_WS_KEY'''
@@ -115,27 +114,22 @@ class Context:
     '''HTTP headers to be sent on every request. The constructor automatically adds
     an ``api-key`` header, using the value of the ``key`` attribute.'''
 
-    records_per_request: int = 1000
+    records_per_request: int = 200
     '''An integer number of records to return for each request of many records.'''
 
     offset_request_params_parser = OffsetRequestParamsParser
 
     offset_response_parser = OffsetResponseParser
 
-    base_url: str = field(init=False)
-    '''Pure Web Services API entrypoint URL. Should not be included in constructor
-    parameters. The constructor generates this automatically based on
-    other attributes.'''
-
     def __attrs_post_init__(self) -> None:
         object.__setattr__(
             self,
             'httpx_client',
             httpx.Client(
-                base_url=f'https://{self.domain}/{self.base_path}/{self.version}/',
+                base_url=f'https://{self.domain}/{self.base_path}/',
                 headers={
                     **thaw(self.headers),
-                    'api-key': self.key,
+                    'X-ELS-APIKey': self.key,
                 }
             )
         )

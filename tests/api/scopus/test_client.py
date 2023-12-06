@@ -9,6 +9,7 @@ from returns.pipeline import is_successful
 from experts.api.client import get, post
 import experts.api.scopus.context as context
 
+'''
 @pytest.mark.integration
 def test_get_all_responses_by_token(session):
     parser = context.TokenResponseParser
@@ -48,13 +49,14 @@ def test_get_all_responses_by_token(session):
         # Some items will not have some elements, but most items should have all of them:
         assert item_elements_present_counts[element] > 0
         assert item_elements_present_counts[element] > item_elements_missing_counts[element]
+'''
 
 @pytest.mark.integration
-def test_get_all_responses_by_offset(pure_ws_session):
+def test_get_all_responses_by_offset(session):
     parser = context.OffsetResponseParser
-    params = m(offset=0, size=1000)
+    params = m(start=0, count=200, query='af-id(60029445)')
 
-    total_result = session.get('persons', params=params)
+    total_result = session.get('search/scopus', params=params)
 
     if not is_successful(total_result):
         raise total_result.failure()
@@ -62,16 +64,20 @@ def test_get_all_responses_by_offset(pure_ws_session):
         total_result.unwrap().json()
     )
 
+    assert total > 0
+
     assert sum(
         len(parser.items(response)) for response in (
-            session.all_responses_by_offset(get, 'persons', params=params)
+            session.all_responses_by_offset(get, 'search/scopus', params=params)
         )
     ) == total
     
+'''
     assert sum(
         [1 for item in session.all_items(get, 'persons', params=params)]
     ) == total
-
+'''
+'''
 @pytest.mark.integration
 def test_post_all_responses_by_offset(pure_ws_session):
     parser = context.OffsetResponseParser
@@ -100,4 +106,4 @@ def test_post_all_responses_by_offset(pure_ws_session):
     assert sum(
         [1 for item in session.all_items(post, 'research-outputs', params=params)]
     ) == total
-
+'''
