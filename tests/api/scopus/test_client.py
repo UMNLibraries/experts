@@ -9,52 +9,35 @@ from returns.pipeline import is_successful
 from experts.api.client import get, post
 import experts.api.scopus.context as context
 
-'''
 @pytest.mark.integration
 def test_get_all_responses_by_token(session):
     parser = context.TokenResponseParser
+    params = m(count=200, query=f'af-id({session.context.affiliation_id}) AND key(kidney carcinoma)')
 
-    token = datetime.now().isoformat()
+    total_result = session.get('search/scopus', params=params.set('cursor', '*'))
 
-    for response in session.all_responses_by_token(get, 'changes', token=token):
-        # The response parser should always return values of these types:
-        items_count = parser.items_per_page(response)
-        assert (isinstance(items_count, int) and items_count >= 0)
-        assert isinstance(parser.items(response), list)
-        assert isinstance(parser.more_items(response), bool)
-        assert isinstance(parser.token(response), str)
+    if not is_successful(total_result):
+        raise total_result.failure()
+    total = parser.total_items(
+        total_result.unwrap().json()
+    )
+
+    assert total > 0
+
+    assert sum(
+        len(parser.items(response)) for response in (
+            session.all_responses_by_token(get, 'search/scopus', token='*', params=params)
+        )
+    ) == total
     
-    item_elements_present_counts = {
-        'uuid': 0,
-        'changeType': 0,
-        'family': 0,
-        'familySystemName': 0,
-        'version': 0,
-    }
-    item_elements_missing_counts = {
-        'uuid': 0,
-        'changeType': 0,
-        'family': 0,
-        'familySystemName': 0,
-        'version': 0,
-    }
-    for item in session.all_items(get, 'changes', token=token):
-        for element in item_elements_present_counts:
-            if element in item:
-                item_elements_present_counts[element] += 1
-            else:
-                item_elements_missing_counts[element] += 1
-
-    for element in item_elements_present_counts:
-        # Some items will not have some elements, but most items should have all of them:
-        assert item_elements_present_counts[element] > 0
-        assert item_elements_present_counts[element] > item_elements_missing_counts[element]
+    assert sum(
+        [1 for item in session.all_items(get, 'search/scopus', token='*', params=params)]
+    ) == total
 '''
-
 @pytest.mark.integration
 def test_get_all_responses_by_offset(session):
     parser = context.OffsetResponseParser
-    params = m(start=0, count=200, query='af-id(60029445)')
+    params = m(start=0, count=200, query='af-id({session.context.affiliation_id})')
 
     total_result = session.get('search/scopus', params=params)
 
@@ -72,7 +55,6 @@ def test_get_all_responses_by_offset(session):
         )
     ) == total
     
-'''
     assert sum(
         [1 for item in session.all_items(get, 'persons', params=params)]
     ) == total

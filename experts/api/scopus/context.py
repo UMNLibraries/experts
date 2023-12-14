@@ -1,5 +1,10 @@
+# See https://peps.python.org/pep-0655/#usage-in-python-3-11
+from __future__ import annotations
+from typing_extensions import NotRequired, TypedDict
+
 import os
-from typing import Callable, Iterable, Iterator, List, Mapping, Tuple, TypedDict 
+
+from typing import Callable, Iterable, Iterator, List, Mapping, Tuple
 
 import attrs
 from attrs import Factory, field, frozen, validators
@@ -26,7 +31,7 @@ class OffsetRequestParamsParser:
     def update_offset(params:OffsetRequestParams, new_offset:int) -> OffsetRequestParams:
         return params.set('start', new_offset)
     
-SearchResults = TypedDict(
+OffsetSearchResults = TypedDict(
     'SearchResults', {
         # Values for the next three keys are ints represented as strs:
         'opensearch:totalResults': str,
@@ -34,10 +39,10 @@ SearchResults = TypedDict(
         'opensearch:itemsPerPage': str,
         'opensearch:Query': Mapping,
         'link': Iterable,
-        'entry': Iterable[Mapping],
+        'entry': NotRequired[Iterable[Mapping]],
     }
 )
-OffsetResponse = TypedDict('OffsetResponse', {'search-results': SearchResults})
+OffsetResponse = TypedDict('OffsetResponse', {'search-results': OffsetSearchResults})
 
 class OffsetResponseParser:
     @staticmethod
@@ -54,7 +59,53 @@ class OffsetResponseParser:
 
     @staticmethod
     def items(response:OffsetResponse) -> Iterator[Mapping]:
-        return response['search-results']['entry']
+        return [] if 'entry' not in response['search-results'] else response['search-results']['entry']
+
+TokenCursor = TypedDict(
+    'TokenCursor', {
+        '@current': str,
+        '@next': str,
+    }
+)
+
+TokenSearchResults = TypedDict(
+    'TokenSearchResults', {
+        # Values for the next two keys are ints represented as strs:
+        'opensearch:totalResults': str,
+        'opensearch:itemsPerPage': str,
+        'opensearch:Query': Mapping,
+        'cursor': TokenCursor,
+        'link': Iterable,
+        'entry': NotRequired[Iterable[Mapping]],
+    }
+)
+TokenResponse = TypedDict('TokenResponse', {'search-results': TokenSearchResults})
+
+class TokenResponseParser:
+    @staticmethod
+    def more_items(response:TokenResponse) -> bool:
+        # We know for sure there are no more items when the '@current' and '@next' tokens are equal
+        # (and there is no 'entry' element in 'search-results').
+        return (response['search-results']['cursor']['@next'] != response['search-results']['cursor']['@current'])
+
+    @staticmethod
+    def items_per_page(response:TokenResponse) -> int:
+        return int(response['search-results']['opensearch:itemsPerPage'])
+
+    @staticmethod
+    def total_items(response:TokenResponse) -> int:
+        return int(response['search-results']['opensearch:totalResults'])
+
+    @staticmethod
+    def token(response:TokenResponse) -> int:
+        return response['search-results']['cursor']['@next']
+
+    @staticmethod
+    def items(response:TokenResponse) -> list[Mapping]:
+        return [] if 'entry' not in response['search-results'] else response['search-results']['entry']
+
+def update_token(token: str, resource_path: str, params: PMap):
+    return resource_path, params.set('cursor', token)
 
 @frozen(kw_only=True)
 class Context:
@@ -89,23 +140,29 @@ class Context:
         default=os.environ.get('SCOPUS_API_DOMAIN'),
         validator=validators.instance_of(str)
     )
-    '''Domain of a Pure Web Services API server. Required. Default: environment variable PURE_WS_DOMAIN'''
+    '''Domain of a Scopus API server. Required. Default: environment variable SCOPUS_API_DOMAIN'''
 
     base_path: str = field(
         default='content',
         validator=validators.instance_of(str)
     )
-    '''Base path of the Pure Web Services API URL entry point, without the version number segment.'''
+    '''Base path of the Scopus API URL entry point.'''
 
     #version: str = '524'
     '''Pure Web Services version, without the decimal point. For example, ``524`` for version 5.24.
     The final and only valid version is now 5.24.'''
 
+    affiliation_id: str = field(
+        default=os.environ.get('SCOPUS_API_AFFILIATION_ID'),
+        validator=validators.instance_of(str)
+    )
+    '''Scopus affiliation ID for our organization. Required. Default: environment variable SCOPUS_API_AFFILIATION_ID'''
+
     key: str = field(
         default=os.environ.get('SCOPUS_API_KEY'),
         validator=validators.instance_of(str)
     )
-    '''Pure Web Services API key. Required. Default: environment variable PURE_WS_KEY'''
+    '''Scopus API key. Required. Default: environment variable SCOPUS_API_KEY'''
 
     headers: PMap = pmap({
         'Accept': 'application/json',
@@ -120,6 +177,9 @@ class Context:
     offset_request_params_parser = OffsetRequestParamsParser
 
     offset_response_parser = OffsetResponseParser
+    token_response_parser = TokenResponseParser
+
+    update_token: Callable = update_token
 
     def __attrs_post_init__(self) -> None:
         object.__setattr__(

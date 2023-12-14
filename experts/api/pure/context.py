@@ -1,3 +1,7 @@
+# See https://peps.python.org/pep-0655/#usage-in-python-3-11
+from __future__ import annotations
+from typing_extensions import NotRequired, TypedDict
+
 from collections import namedtuple
 import concurrent.futures
 from contextlib import contextmanager
@@ -8,7 +12,7 @@ import os
 import threading
 import time
 #from collections.abc import Iterator # Causes this error: TypeError: 'ABCMeta' object is not subscriptable
-from typing import Callable, Generator, Generic, Iterable, Iterator, List, Mapping, MutableMapping, Protocol, Tuple, Type, TypedDict, TypeVar, Union
+from typing import Callable, Generator, Generic, Iterable, Iterator, List, Mapping, MutableMapping, Protocol, Tuple, Type, TypeVar, Union
 import uuid
 
 import addict

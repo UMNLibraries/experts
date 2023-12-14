@@ -1,5 +1,9 @@
+# See https://peps.python.org/pep-0655/#usage-in-python-3-11
+from __future__ import annotations
+from typing_extensions import NotRequired, TypedDict
+
 import os
-from typing import Callable, Iterable, Iterator, Mapping, Tuple, TypedDict 
+from typing import Callable, Iterable, Iterator, Mapping, Tuple
 
 import attrs
 from attrs import Factory, field, frozen, validators
@@ -34,8 +38,8 @@ class PageInformation(TypedDict):
 class OffsetResponse(TypedDict):
     count: int
     pageInformation: PageInformation
-    navigationLinks: list[Mapping]
-    items: list[Mapping]
+    navigationLinks: Iterable[Mapping]
+    items: NotRequired[Iterable[Mapping]]
 
 class OffsetResponseParser:
     @staticmethod
@@ -52,16 +56,15 @@ class OffsetResponseParser:
     
     @staticmethod
     def items(response:OffsetResponse) -> list[Mapping]:
-        return response['items']
+        return [] if 'items' not in response else response['items']
 
 # WSChangeListResult in the Pure Web Services Swagger JSON schema
 class TokenResponse(TypedDict):
     count: int
     resumptionToken: str
     moreChanges: bool
-    navigationLinks: list[Mapping]
-    # Maynot have items!
-    #items: list[Mapping]
+    navigationLinks: Iterable[Mapping]
+    items: NotRequired[Iterable[Mapping]]
 
 class TokenResponseParser:
     @staticmethod
@@ -79,6 +82,9 @@ class TokenResponseParser:
     @staticmethod
     def items(response:TokenResponse) -> list[Mapping]:
         return [] if 'items' not in response else response['items']
+
+def update_token(token: str, resource_path: str, params: PMap):
+    return resource_path + '/' + token, params
 
 @frozen(kw_only=True)
 class Context:
@@ -141,6 +147,7 @@ class Context:
     offset_request_params_parser = OffsetRequestParamsParser
     offset_response_parser = OffsetResponseParser
     token_response_parser = TokenResponseParser
+    update_token: Callable = update_token
 
     def __attrs_post_init__(self) -> None:
         object.__setattr__(

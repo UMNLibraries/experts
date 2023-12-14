@@ -43,8 +43,9 @@ def session(context: Context):
             'context' in signature(function).parameters
         )
     }
-    Session = namedtuple('Session', configured_functions.keys())
-    yield Session(**configured_functions)
+    session_attributes = {**configured_functions, 'context': context}
+    Session = namedtuple('Session', session_attributes.keys())
+    yield Session(**session_attributes)
     context.httpx_client.close()
 
 @safe
@@ -255,12 +256,12 @@ def all_responses_by_token(
     **kwargs
 ) -> Iterator[ResponseJson]:
     parser = context.token_response_parser
+    updated_resource_path, updated_params = context.update_token(token, resource_path, params)
     while(True):
         result = request_function(
-            # TODO: The following will likely be different across APIs:
-            resource_path + '/' + token,
+            updated_resource_path,
             *args,
-            params=params,
+            params=updated_params,
             context=context,
             **kwargs
         )
@@ -272,8 +273,8 @@ def all_responses_by_token(
         yield response
         if not parser.more_items(response):
             return
-        # Hate this ugly resetting of token!
-        token = parser.token(response)
+        # Hate this ugly resetting of resource_path and params!
+        updated_resource_path, updated_params = context.update_token(parser.token(response), resource_path, params)
 
 def all_items(
     *args,

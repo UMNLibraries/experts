@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date
 import importlib
 
 import pytest
@@ -11,7 +11,7 @@ import experts.api.pure.ws.context as context
 @pytest.mark.integration
 def test_get_all_responses_by_token(session):
     parser = context.TokenResponseParser
-    token = datetime.now().isoformat()
+    token = date.today().isoformat()
 
     for response in session.all_responses_by_token(get, 'changes', token=token):
         # The response parser should always return values of these types:

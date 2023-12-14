@@ -48,7 +48,7 @@ TokenResponse = Mapping
 TokenResponse_contra = TypeVar('TokenResponsee_contra', bound=TokenResponse, contravariant=True)
 
 class TokenResponseParser(Protocol, Generic[TokenResponse_contra]):
-# Not all APIs more have this:
+# Not all APIs have this:
 #    @staticmethod
 #    def total_items(response:TokenResponse_contra) -> int:
 #        ...
@@ -154,3 +154,9 @@ class Context(Protocol):
 
     @property
     def token_response_parser(self) -> TokenResponseParser: ...
+
+    # TODO: Make a protocol for this function
+    @property
+    def update_token(self) -> Callable: ...
+    '''  '''
+
