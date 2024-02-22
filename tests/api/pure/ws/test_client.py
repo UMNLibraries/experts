@@ -5,22 +5,33 @@ import pytest
 from pyrsistent import m, pmap
 from returns.pipeline import is_successful
 
-from experts.api.client import get, post
-import experts.api.pure.ws.context as context
+from experts.api.pure.ws import \
+    ResponseBodyParser, \
+    ResponseParser, \
+    OffsetResponseBodyParser, \
+    TokenResponseBodyParser, \
+    OffsetResponseParser, \
+    TokenResponseParser
+
+responses_to_items = ResponseParser.responses_to_items
 
 @pytest.mark.integration
-def test_get_all_responses_by_token(session):
-    parser = context.TokenResponseParser
+def test_request_many_by_token(session):
     token = date.today().isoformat()
 
-    for response in session.all_responses_by_token(get, 'changes', token=token):
-        # The response parser should always return values of these types:
-        items_count = parser.items_per_page(response)
-        assert (isinstance(items_count, int) and items_count >= 0)
-        assert isinstance(parser.items(response), list)
-        assert isinstance(parser.more_items(response), bool)
-        assert isinstance(parser.token(response), str)
-    
+    parser = TokenResponseParser
+    result = session.get(f'changes/{token}')
+    if not is_successful(result):
+        raise result.failure()
+    response = result.unwrap()
+
+    # The response parser should always return values of these types:
+    items_count = parser.items_per_page(response)
+    assert (isinstance(items_count, int) and items_count >= 0)
+    assert isinstance(parser.items(response), list)
+    assert isinstance(parser.more_items(response), bool)
+    assert isinstance(parser.token(response), str)
+
     item_elements_present_counts = {
         'uuid': 0,
         'changeType': 0,
@@ -35,7 +46,8 @@ def test_get_all_responses_by_token(session):
         'familySystemName': 0,
         'version': 0,
     }
-    for item in session.all_items(get, 'changes', token=token):
+
+    for item in session.request_many_by_token(session.get, 'changes', token=token) | responses_to_items:
         for element in item_elements_present_counts:
             if element in item:
                 item_elements_present_counts[element] += 1
@@ -48,31 +60,26 @@ def test_get_all_responses_by_token(session):
         assert item_elements_present_counts[element] > item_elements_missing_counts[element]
 
 @pytest.mark.integration
-def test_get_all_responses_by_offset(session):
-    parser = context.OffsetResponseParser
+def test_request_many_by_offset_get(session):
+    #parser = OffsetResponseBodyParser
+    parser = OffsetResponseParser
     params = m(offset=0, size=1000)
 
-    total_result = session.get('persons', params=params)
-
-    if not is_successful(total_result):
-        raise total_result.failure()
-    total = parser.total_items(
-        total_result.unwrap().json()
+    result = session.get('persons', params=params)
+    if not is_successful(result):
+        raise result.failure()
+    total_items = parser.total_items(
+        result.unwrap()
     )
 
-    assert sum(
-        len(parser.items(response)) for response in (
-            session.all_responses_by_offset(get, 'persons', params=params)
-        )
-    ) == total
-    
-    assert sum(
-        [1 for item in session.all_items(get, 'persons', params=params)]
-    ) == total
+    assert len(
+        list(session.request_many_by_offset(session.get, 'persons', params=params) | responses_to_items)
+    ) == total_items
 
 @pytest.mark.integration
-def test_post_all_responses_by_offset(session):
-    parser = context.OffsetResponseParser
+def test_request_many_by_offset_post(session):
+    #parser = OffsetResponseBodyParser
+    parser = OffsetResponseParser
     params = pmap({
         'offset': 0,
         'size': 200,
@@ -86,15 +93,9 @@ def test_post_all_responses_by_offset(session):
     if not is_successful(total_result):
         raise total_result.failure()
     total = parser.total_items(
-        total_result.unwrap().json()
+        total_result.unwrap()
     )
 
-    assert sum(
-        len(parser.items(response)) for response in (
-            session.all_responses_by_offset(post, 'research-outputs', params=params)
-        )
-    ) == total
-    
-    assert sum(
-        [1 for item in session.all_items(post, 'research-outputs', params=params)]
+    assert len(
+        list(session.request_many_by_offset(session.post, 'research-outputs', params=params) | responses_to_items)
     ) == total

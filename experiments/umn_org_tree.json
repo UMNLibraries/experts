@@ -1,0 +1,2926 @@
+{
+    "CROOKSTON": {
+        "UMC ACADEMIC AFFAIRS": {
+            "UMC ACADEMIC AFFAIRS": {
+                "UMC Academic Affairs": [
+                    "C Academic Assistance Center",
+                    "C Library",
+                    "C International Programs",
+                    "C Registrar's Office",
+                    "C Adult Learning, Center for",
+                    "C Academic Affairs, Ofc of"
+                ],
+                "UMC Ag and Natural Resources": [
+                    "C Ag & Natural Res, Dept of"
+                ],
+                "UMC Business Department": [
+                    "C Business Department"
+                ],
+                "UMC Humanities,Soc Sci/Educ": [
+                    "C Early Childhood Develop Ctr",
+                    "C Humanities,Soc Sci/Education"
+                ],
+                "UMC Math, Science, Technology": [
+                    "C Math, Sci, Tech Dept"
+                ]
+            }
+        },
+        "UMC CHANCELLOR'S OFFICE": {
+            "UMC CHANCELLOR'S OFFICE": {
+                "UMC Administration": [
+                    "C Development & Alumni Relatns",
+                    "C Business Affairs Office",
+                    "C University Relations",
+                    "C Human Resources",
+                    "C Technology Support Services",
+                    "C Media Services",
+                    "C Chancellor's Admin"
+                ],
+                "UMC Facilities Management": [
+                    "C Facilities & Operations"
+                ],
+                "UMC Intercollegiate Athletics": [
+                    "C Intercollegiate Athletics",
+                    "C Club Trap",
+                    "C Women's Cross Country",
+                    "C Men's Cross Country"
+                ]
+            }
+        },
+        "UMC STU AFFAIR/ENROLLMENT MGMT": {
+            "UMC STU AFFAIR/ENROLLMENT MGMT": {
+                "UMC Auxiliary Services": [
+                    "C Residential Life & Security",
+                    "C Health Services",
+                    "C Dining Services"
+                ],
+                "UMC Financial Aid Funds": [
+                    "C Financial Aid Funds"
+                ],
+                "UMC Student Affairs": [
+                    "C Wellness Center",
+                    "C Student Affairs",
+                    "C Retired Sr Vol Prog - RSVP",
+                    "C Financial Aid Administration",
+                    "C Career Services",
+                    "C Student & Family Experience",
+                    "C Admissions",
+                    "C Student Activities Office",
+                    "C Counseling Services"
+                ]
+            }
+        }
+    },
+    "DULUTH": {
+        "UMD ACADEMIC AFFAIRS": {
+            "UMD ACADEMIC AFFAIRS": {
+                "UMD Academic Affairs Admin": [
+                    "D America Reads",
+                    "D CED Admin",
+                    "D Academic Administration",
+                    "D Graduate School",
+                    "D MN Sea Grant",
+                    "D International Programs/Svcs",
+                    "D Sponsored Projects Admin",
+                    "D Acad Writing & Learning Ctr"
+                ],
+                "UMD Academic Affairs Exec VC": [
+                    "D Academic Affairs, Exec VC"
+                ],
+                "UMD Enrollment Services": [
+                    "D Registrar, Office of the",
+                    "D Financial Aid Admin",
+                    "D Admissions",
+                    "D Enroll Mgmt, AVC",
+                    "D Bulldog Resource Center",
+                    "D EM Mktg & Comm"
+                ]
+            },
+            "UMD BUS/ECON, LABOVITZ SCH OF": {
+                "UMD Labovitz Sch of Bus & Econ": [
+                    "D LSBE Advising/Academic Svcs",
+                    "D LSBE Dean's Office",
+                    "D Marketing Department",
+                    "D Economic Education, Ctr for",
+                    "D Finance and MIS Department",
+                    "D Management Studies Dept",
+                    "D Continuing Education",
+                    "D Bus & Econ Research, Bur of",
+                    "D Accounting and Finance Dept",
+                    "D Economics & Health Care Mgmt"
+                ]
+            },
+            "UMD EDUC/HUMAN SVC PROFESSIONS": {
+                "UMD Educ & Human Svc Prof": [
+                    "D Education",
+                    "D Comm Sci & Disorders",
+                    "D CEHSP Administration",
+                    "D Applied Human Sciences",
+                    "D Psychology",
+                    "D Amer Ind Lrng Resource Ctr",
+                    "D CEHSP Advising/Academic Svcs",
+                    "D Myers Ctr for Indigenous Ed",
+                    "D Upward Bound Program",
+                    "D CEHSP Academic Technology",
+                    "D Children's Place",
+                    "D Social Work",
+                    "D R-TRBL CHLD WelfareSTU, CTR",
+                    "D CEHSP Accrd, Licen/Field Exp"
+                ]
+            },
+            "UMD INFORMATION SERVICES": {
+                "UMD Info Tech Systems & Svcs": [
+                    "D Computing Systms & Srvcs",
+                    "D Network Services",
+                    "D Telephone Services",
+                    "D ITSS Dept Administration",
+                    "D Computer Maintenance Srvcs",
+                    "D Studnt Computing Lab Srvcs",
+                    "D Classroom Services",
+                    "D HelpDesk Support",
+                    "D Learning Technology Srvcs"
+                ]
+            },
+            "UMD LIBERAL ARTS, COLLEGE OF": {
+                "UMD Arts, Human, SocSci,Col of": [
+                    "D Marshall Performing Arts Ctr",
+                    "D Women,Gender & Sexuality Stu",
+                    "D Fine Arts, School of Admin",
+                    "D Tweed Museum of Art",
+                    "D Weber Music Hall",
+                    "D Fine Arts Academy",
+                    "D SFA Advising/Academic Svcs",
+                    "D Alworth Institute",
+                    "D American Indian Studies",
+                    "D Communication",
+                    "D English",
+                    "D History",
+                    "D Visual & Digital Image Lab",
+                    "D Philosophy",
+                    "D Community & Rgnl Res, Ctr",
+                    "D MA Adv & Pol Leader Prog",
+                    "D Engl Linguist & Wrt Studies",
+                    "D Art & Design, Dept of",
+                    "D World Languages & Cultures",
+                    "D Music, Department of",
+                    "D Theatre, Department of",
+                    "D CR Justice & Peacemaking",
+                    "D Hist, Pol Sci & Intnl Stdy",
+                    "D The Bark",
+                    "D Justice Culture Social Chng",
+                    "D Geography & Philosophy",
+                    "D CAHSS Advising/Academic Svcs",
+                    "D CAHSS Administration"
+                ]
+            },
+            "UMD LIBRARY": {
+                "UMD Library": [
+                    "D Library Admin Support"
+                ]
+            },
+            "UMD NAT RESOURCES RSRCH INST": {
+                "UMD Natural Rsrc Rsrch Inst": [
+                    "D NRRI Central Admin"
+                ]
+            },
+            "UMD SCI & ENG, SWENSON COLLEGE": {
+                "UMD Swenson Col of Sci & Eng": [
+                    "D Research Instrumentation Lab",
+                    "D Aerospace",
+                    "D Biology",
+                    "D Great Lakes Maritime Resrch",
+                    "D SCSE Advising/Academic Svcs",
+                    "D Math & Statistics",
+                    "D Civil Engineering",
+                    "D Large Lakes Observatory",
+                    "D Physics & Astronomy",
+                    "D SCSE Administration",
+                    "D Planetarium",
+                    "D Integrated Biosciences",
+                    "D Chemical Engineering",
+                    "D Chemistry & Biochemistry",
+                    "D Computer Science",
+                    "D Earth & Environmental Sci",
+                    "D Mechanical & Ind Engr",
+                    "D Electrical Engineering",
+                    "D Advanced Materials Center"
+                ]
+            }
+        },
+        "UMD CHANCELLOR'S OFFICE": {
+            "UMD CHANCELLOR'S OFFICE": {
+                "UMD Chancellor's Office": [
+                    "D KUMD Radio",
+                    "D University Marketing and PR",
+                    "D Glensheen Museum Shop",
+                    "D Chancellor's Office",
+                    "D Development",
+                    "D Glensheen"
+                ]
+            },
+            "UMD INTERCOLLEGIATE ATHLETICS": {
+                "UMD Athletics": [
+                    "D Ath Soccer",
+                    "D Ath Sports Medicine",
+                    "D Ath Baseball",
+                    "D Ath Football",
+                    "D Ath Compliance & Academics",
+                    "D Ath Operations",
+                    "D Ath Women's Track",
+                    "D Ath Development & Alumni",
+                    "D Ath Men's Basketball",
+                    "D Ath Softball",
+                    "D Ath Women's Hockey",
+                    "D Ath Bus & Ticket Sales",
+                    "D Ath Men's Track",
+                    "D Ath Women's Basketball",
+                    "D Ath Men's Hockey",
+                    "D Ath Women's Tennis",
+                    "D Ath Volleyball",
+                    "D Athletic Administration"
+                ]
+            }
+        },
+        "UMD FINANCE & OPERATIONS": {
+            "UMD FACILITIES MANAGEMENT": {
+                "UMD Facilities Management": [
+                    "D FM Custodial S",
+                    "D FM Refrigeration",
+                    "D FM Events",
+                    "D FM Office",
+                    "D FM Support",
+                    "D FM Recycle",
+                    "D FM Administration",
+                    "D FM Project Administration",
+                    "D FM Mailroom",
+                    "D FM Custodial A",
+                    "D FM Grounds",
+                    "D FM Ventilation",
+                    "D FM Plumbing",
+                    "D FM Purchasing",
+                    "D FM Paint Shop",
+                    "D FM Custodial C",
+                    "D FM Heat Plant",
+                    "D FM Custodial D",
+                    "D FM Fleet",
+                    "D FM General Construction",
+                    "D FM Engineer",
+                    "D FM  BSAC",
+                    "D FM Electrician",
+                    "D FM Sustainability"
+                ]
+            },
+            "UMD FINANCE & OPERATIONS": {
+                "UMD Finance & Operations": [
+                    "D Budget & Analysis, Office of",
+                    "D Cashiers",
+                    "D Student Financial Services",
+                    "D UMD Controller's Office",
+                    "D VCFO Office",
+                    "D Financial Collections",
+                    "D Police Admin"
+                ],
+                "UMD Human Resources": [
+                    "D Temp Office Staff",
+                    "D Human Resources"
+                ],
+                "UMD Police Department": [
+                    "D Police"
+                ]
+            }
+        },
+        "UMD STUDENT LIFE": {
+            "UMD AUXILIARY SERVICES": {
+                "UMD Auxiliary Services": [
+                    "D UCard Services",
+                    "D Stores Admin",
+                    "D Print Shop",
+                    "D Parking Services",
+                    "D Housing - General & Admin",
+                    "D SL Auxiliary Services"
+                ],
+                "UMD SL Aux Kronos Group": [
+                    "D Dining Center",
+                    "D Northern Shores Coffee Shop",
+                    "D Catering Services",
+                    "D Kirby Plaza Food Court",
+                    "D Dining Svcs Production",
+                    "D Dining Services Admin",
+                    "D Dining Services Custodial",
+                    "D Kiosk Operations",
+                    "D Custodial Housing",
+                    "D Vending Operations"
+                ]
+            },
+            "UMD STUDENT LIFE": {
+                "UMD Student Life": [
+                    "D Quick Care Clinic",
+                    "D VCSL Administration",
+                    "D Diversity/Inclusion, Ofc of",
+                    "D Knowledge Management Center",
+                    "D Health Services Counseling",
+                    "D Disability Services",
+                    "D Alumni Relations",
+                    "D Career Center"
+                ],
+                "UMD Student Life (Fees)": [
+                    "D Rec Sports/Outdoor Progs",
+                    "D Health Services Admin",
+                    "D Health Education",
+                    "D Kirby Student Center",
+                    "D Kirby Program Board",
+                    "D KSC New Student Activities",
+                    "D Student Association",
+                    "D Student Legisl Coalition",
+                    "D Stdnt Assoc Taxi"
+                ]
+            }
+        }
+    },
+    "MORRIS": {
+        "UMM-ACADEMIC AFFAIRS": {
+            "UMM-ACADEMIC AFFAIRS": {
+                "UMM Academic Affairs": [
+                    "M Acad Assist & Disability Svc",
+                    "M Briggs Library",
+                    "M Grants Management",
+                    "M Acad Dean's Admin",
+                    "M First Year Seminar",
+                    "M Small Towns, Center for",
+                    "M Career Services",
+                    "M Registrar, Office of the",
+                    "M Instructional & Media Tech",
+                    "M Online Learning, May/Summer",
+                    "M Enrichment, Academic Ctr for",
+                    "M Student Success Center"
+                ]
+            },
+            "UMM-ELEM & SCNDRY EDUC, DIV OF": {
+                "UMM Education Division": [
+                    "M Student Teacher Observation",
+                    "M Secondary Education",
+                    "M TREC Program",
+                    "M Sports Science & Athletics",
+                    "M Elementary Education",
+                    "M Education",
+                    "M Education Administration"
+                ]
+            },
+            "UMM-HUMANITIES, DIV OF": {
+                "UMM Humanities Division": [
+                    "M Medieval Studies",
+                    "M Art History",
+                    "M Philosophy",
+                    "M Theatre",
+                    "M German",
+                    "M Jazz",
+                    "M Orchestra",
+                    "M Music Dept.",
+                    "M Humanities Administration",
+                    "M English",
+                    "M Symphonic Winds",
+                    "M Studio Art",
+                    "M French",
+                    "M Spanish",
+                    "M Choir",
+                    "M Communication, Media, Rhet"
+                ]
+            },
+            "UMM-SCIENCE & MATH, DIV OF": {
+                "UMM Science & Math Division": [
+                    "M Chemistry",
+                    "M Mathematics",
+                    "M Biology",
+                    "M Statistics",
+                    "M Computer Science",
+                    "M Geology",
+                    "M Physics",
+                    "M Science & Math Admin"
+                ]
+            },
+            "UMM-SOCIAL SCIENCES, DIV OF": {
+                "UMM Social Science Division": [
+                    "M History",
+                    "M Political Science",
+                    "M Anthropology",
+                    "M Social Science Admin",
+                    "M Economics",
+                    "M Psychology",
+                    "M Sociology",
+                    "M Interdisciplinary Studies"
+                ]
+            }
+        },
+        "UMM-CHANCELLOR'S OFC": {
+            "UMM-CHANCELLOR'S OFC": {
+                "UMM Administration": [
+                    "M Communications & Marketing",
+                    "M Chancellor's Admin",
+                    "M Human Resources/Payroll"
+                ],
+                "UMM Enrollment Management": [
+                    "M Admissions",
+                    "M Financial Aid Admin",
+                    "M Transfer Student Services",
+                    "M One Stop Student Services"
+                ],
+                "UMM Financial Aid Funds": [
+                    "M Fin Aid Mgmt State",
+                    "M Student Employment",
+                    "M Financial Aid Funds"
+                ]
+            }
+        },
+        "UMM-EXTERNAL RELATIONS": {
+            "UMM-EXTERNAL RELATIONS": {
+                "UMM Advancement": [
+                    "M Development",
+                    "M Special Events",
+                    "M Alumni Relations"
+                ]
+            }
+        },
+        "UMM-FINANCE/OPERATIONS": {
+            "UMM-FINANCE/OPERATIONS": {
+                "UMM Facilities Management": [
+                    "M Facilities Management Admin",
+                    "M Building Trades",
+                    "M Heating Plant",
+                    "M Repairs and Betterments",
+                    "M Custodial Services",
+                    "M Grounds General",
+                    "M General Maintenance"
+                ],
+                "UMM Finance & Operations": [
+                    "M Finance Office",
+                    "M Information Technology",
+                    "M Business Office Admin"
+                ],
+                "UMM Finance & Ops (Compass)": [
+                    "M Duplicating Services",
+                    "M Food Service Admin",
+                    "M Post Office",
+                    "M Transportation Services",
+                    "M Public Safety"
+                ]
+            }
+        },
+        "UMM-STUDENT AFFAIRS": {
+            "UMM-STUDENT AFFAIRS": {
+                "UMM Auxiliary Services": [
+                    "M ORL Housing"
+                ],
+                "UMM Intercollegiate Athletics": [
+                    "M Men's Baseball",
+                    "M Men's Football",
+                    "M Men's Soccer",
+                    "M Women's Softball",
+                    "M Women's Swimming/Diving",
+                    "M Women's Golf",
+                    "M Athletics Administration",
+                    "M Women's Basketball",
+                    "M Men's Basketball",
+                    "M Women's Volleyball",
+                    "M Women's Track",
+                    "M Men's Swimming & Diving"
+                ],
+                "UMM Student Affairs": [
+                    "M Diversity,Equity,IntcultProg",
+                    "M ORL Administration",
+                    "M Student Affairs Office",
+                    "M Student Center",
+                    "M TRIO Student Support Svcs",
+                    "M Native American Stu Success",
+                    "M Wellbeing"
+                ]
+            }
+        }
+    },
+    "ROCHESTER": {
+        "UMR CHANCELLOR'S OFC": {
+            "UMR CHANCELLOR'S OFC": {
+                "UMR Academic Programs": [
+                    "R Technology",
+                    "R Bioscience/Biotechnology",
+                    "R Nursing",
+                    "R Health Professions"
+                ],
+                "UMR Administration": [
+                    "R Academic Affairs",
+                    "R Chancellor's Office",
+                    "R Student Services",
+                    "R Mktg/Communications",
+                    "R Learning Innovation, Ctr for"
+                ]
+            }
+        }
+    },
+    "TWIN CITIES": {
+        "ACADEMIC AFFAIRS/PROVOST,SR VP": {
+            "ACAD AFFAIRS/PROVOST, SR VP": {
+                "Advanced Study, Inst for": [
+                    "Advanced Study, Institute for"
+                ],
+                "Cognitive Sciences, Center for": [
+                    "Cognitive Sciences, Center for"
+                ],
+                "Exec VP and Provost, Ofc of": [
+                    "Exec VP and Provost, Ofc of",
+                    "Teaching&Learning, Ctr for",
+                    "Educational Innovation",
+                    "Community Engaged Lrn, Ctr for",
+                    "Public Engagement, Office for",
+                    "Fac&Acad Affairs, Vice Provost",
+                    "Urban Research Outreach/Engage",
+                    "Morrill Shared Services Team",
+                    "Distributed Learning"
+                ],
+                "Northrop Concerts & Lectures": [
+                    "Northrop Concerts & Lectures"
+                ],
+                "University Ticketing Services": [
+                    "University Ticketing Services"
+                ],
+                "Urban & Regional Affairs, Ctr": [
+                    "Urban & Regional Affairs, Ctr",
+                    "U Metropolitan Consortium"
+                ],
+                "Weisman Art Museum": [
+                    "Weisman Art Museum"
+                ]
+            },
+            "ACADEMIC AFFAIRS/PROVOST,SR VP": {
+                "ACAD AFFAIRS/PROVOST, SR VP": [
+                    "AAPRV Academic Ctr Admin"
+                ],
+                "LIBRARIES, UNIVERSITY": [
+                    "Libraries Data + Technology"
+                ]
+            },
+            "AGRICULTURE EXPERIMENT STATION": {
+                "AES Administration": [
+                    "AES Greenhouses",
+                    "AES Administration Operations",
+                    "AES Ag Services"
+                ]
+            },
+            "AHSCI ALLIED HEALTH CENTER": {
+                "AHSCI Academic Units": [
+                    "Interprofessional Ed, Ctr for",
+                    "Hlth Interprofess Prog (CHIP)",
+                    "1Health Ed Program"
+                ],
+                "AHSCI Support Units": [
+                    "Pre-Health Student Resource",
+                    "Academic Health Sci, Vice Prov",
+                    "Health Sciences Classroom Svcs"
+                ]
+            },
+            "BIOLOGICAL SCIENCES, COLL OF": {
+                "CBS Administration": [
+                    "CBS Human Resources",
+                    "CBS Communications",
+                    "CBS Computing Services",
+                    "CBS Development",
+                    "CBS Electronic Instrumentation",
+                    "CBS Admin Cluster",
+                    "CBS Finance & Accounting",
+                    "CBS Machine Shop",
+                    "CBS Student Services",
+                    "CBS Dean's Office Admin",
+                    "CBS Environment DRIVE"
+                ],
+                "CBS BioMADE": [
+                    "BioMADE Manufac Innov Inst"
+                ],
+                "CBS Biochemistry": [
+                    "CBS Microbial Bio & Biotech",
+                    "CBS Structural Biol/Bioph Dept",
+                    "CBS NMR Center",
+                    "CBS Regulatory Biochem Dept",
+                    "CBS Molecular Biology",
+                    "CBS BMBB Dept",
+                    "Metabolomics & Proteomics, Ctr"
+                ],
+                "CBS Biology Teaching/Learning": [
+                    "CBS Biology Program",
+                    "CBS Instructional Lab",
+                    "CBS Biology Teaching/Learning"
+                ],
+                "CBS Biotechnology Institute": [
+                    "CBS Biotechnology Inst Admin",
+                    "CBS Biotech Resource Center"
+                ],
+                "CBS Cedar Creek": [
+                    "Cedar Creek Ecosystems Sci Res"
+                ],
+                "CBS Ecology, Evolution & Behav": [
+                    "CBS Ecology, Evolution, Behavr"
+                ],
+                "CBS Genetics, Cell Bio, Dev": [
+                    "CBS GCD Education",
+                    "CBS Gen Cell Bio & Dev Dept",
+                    "CBS Beckman Center"
+                ],
+                "CBS Itasca Biological Station": [
+                    "CBS Itasca Biological Station"
+                ],
+                "CBS Plant/Microbial Biology": [
+                    "CBS Microbial & Plant Genomics",
+                    "CBS Plant & Microbial Biology"
+                ]
+            },
+            "BOYNTON HEALTH SERVICE": {
+                "Boynton Health Service": [
+                    "Boynton Building Services",
+                    "BHS Eye Clinic",
+                    "BHS Pharmacy",
+                    "BHS Mental Health",
+                    "BHS General Medical",
+                    "BHS Boynton Administration",
+                    "BHS IT Operations",
+                    "BHS Nursing",
+                    "BHS Laboratories",
+                    "BHS Radiology",
+                    "BHS Public Health/Hlth Promo",
+                    "BHS Dental",
+                    "BHS MCTC Health Services",
+                    "BHS Student Insurance"
+                ]
+            },
+            "CONT AND PROF STUDIES, COLL OF": {
+                "CCAPS Administration": [
+                    "CCAPS Dean's Office",
+                    "CCAPS Human Resources",
+                    "CCAPS Development",
+                    "CCAPS DEI"
+                ],
+                "CCAPS Continuing Ed/Conf Ctr": [
+                    "Continuing Ed/Conference Ctr"
+                ],
+                "CCAPS DCP Graduate Programs": [
+                    "CCAPS Graduate Programs Admin",
+                    "CCAPS Addiction Studies - IBH",
+                    "CCAPS Grad Programs Instruct"
+                ],
+                "CCAPS DCP Undergraduate Prog": [
+                    "CCAPS Individualized Degrees",
+                    "CCAPS College in the Schools",
+                    "CCAPS PSEO",
+                    "CCAPS Undergrad Programs",
+                    "CCAPS Applied Professional Std"
+                ],
+                "CCAPS Degree/Credit Programs": [
+                    "CCAPS DCP Administration",
+                    "CCAPS Online/Educational Svcs",
+                    "CCAPS Student Services"
+                ],
+                "CCAPS English Language Program": [
+                    "CCAPS MN English/Second Lan",
+                    "CCAPS Translation/Interpreting"
+                ],
+                "CCAPS Financial Mgmt/Payroll": [
+                    "CCAPS Financial Mgmt/Payroll"
+                ],
+                "CCAPS Information Center": [
+                    "CCAPS Information Center Admin"
+                ],
+                "CCAPS Information Technology": [
+                    "CCAPS Information Technology"
+                ],
+                "CCAPS Marketing": [
+                    "CCAPS Marketing"
+                ],
+                "CCAPS NonDegree/Summer Spec": [
+                    "CCAPS NonDegree/Summer Spec"
+                ],
+                "CCAPS Online/Distance Learng": [
+                    "CCAPS Online/Distance Learng"
+                ],
+                "CCAPS Osher Lifelong Learning": [
+                    "Osher Lifelong Learning Inst"
+                ],
+                "CCAPS PDL - LearningLife": [
+                    "Pro Dev - LearningLife",
+                    "CCAPS Learninglife Admin",
+                    "Prof Dev LearningLife Partner"
+                ],
+                "CCAPS PDL - Professional Devel": [
+                    "Pro Dev - Conference Services",
+                    "Pro Dev - Open Enrollment",
+                    "Pro Dev - Contract Learning",
+                    "CCAPS Prof Devel Admin"
+                ]
+            },
+            "DENTISTRY, SCHOOL OF": {
+                "DENT Administration": [
+                    "Dent Office of Finance",
+                    "Dent Communications/Marketing",
+                    "Dent Dean, Office of the",
+                    "Dent Dev & Alum Relations",
+                    "Dent Human Resources",
+                    "Dent Dental Engineer & Fac"
+                ],
+                "DENT Clncl Admin/Patient Care": [
+                    "Dent Patient Care Admin",
+                    "Dent Clinical System Oper",
+                    "Dent Info Tech Services"
+                ],
+                "DENT Dev & Surgical Science": [
+                    "Dent Dev & Surg Science Admin",
+                    "Dent Oral Max Surgery, Div of",
+                    "Dent Orthodontics, Div of",
+                    "Dent Pediatrics, Div of",
+                    "Dent Periodontology, Div of",
+                    "Dent Cleft Palate",
+                    "Dent Hospital & Special Care"
+                ],
+                "DENT Diagnostic & Bio Science": [
+                    "Dent Molecular Virology Prog",
+                    "Dent Oral Pathology, Div of",
+                    "Dent Basic Sciences, Div of",
+                    "Dent Diag & Bio Science Admin",
+                    "Dent TMD & Orofacial, Div of",
+                    "Dent OMD & Radiology, Div of",
+                    "Dent Oral Biology"
+                ],
+                "DENT Faculty Practice": [
+                    "Dent Faculty Practice Assoc",
+                    "Dent Oral Surgery Associates"
+                ],
+                "DENT Primary Care": [
+                    "Dent Primary Care Admin",
+                    "Dent Outreach Administration",
+                    "Dent Hibbing",
+                    "Dent UCare Mobile Dental",
+                    "Dental Public Health, Div of",
+                    "Dent Comphensive Care Div",
+                    "Dent Emergency, Div of",
+                    "Dent Contemp Dentistry, Div of",
+                    "Dent Dental Hygiene, Div of",
+                    "Dent Dental Therapy, Div of",
+                    "Dent Geriatrics, Div of"
+                ],
+                "DENT Restorative Sciences": [
+                    "Dent Operative, Div of",
+                    "Dent Restorative Science Admin",
+                    "Dent Endodontics, Div of",
+                    "Dent Implant Program",
+                    "Dent Biomaterials, Div of",
+                    "Dent Prosthodontics",
+                    "Dent MN Dental Research Ctr BB"
+                ],
+                "Dent Academic & Student Affair": [
+                    "Dent Learning Resource Center",
+                    "Dent Diversity& Admission, Ofc",
+                    "Dent PASS Program",
+                    "Dent Academic Affairs Admin",
+                    "Dent Student Affairs, Ofc of"
+                ],
+                "Dent Continuing Education": [
+                    "Dent Continuing Dental Edu"
+                ],
+                "Dent Research Management": [
+                    "Dent Oral Hlth Clinical Res Ct",
+                    "Dent Research Administration"
+                ]
+            },
+            "DESIGN, COLLEGE OF": {
+                "DESGN ALI": [
+                    "Architecture, School of",
+                    "Landscape Architecture, Sch of",
+                    "DESGN ALI Administration",
+                    "Interior Design"
+                ],
+                "DESGN Academic Resources": [
+                    "DESIGN Digital Coll & Archive",
+                    "DESIGN WI Hall Workshop",
+                    "DESIGN Imaging Lab"
+                ],
+                "DESGN Administration": [
+                    "DESIGN Human Resources",
+                    "DESIGN Budget & Finance",
+                    "DESIGN Dean's Office/Admin",
+                    "DESIGN Information Technology"
+                ],
+                "DESGN External Relations": [
+                    "DESIGN Alumni/Continuing Educ",
+                    "DESIGN External Relations",
+                    "DESIGN Development"
+                ],
+                "DESGN GARP": [
+                    "DHA MW Universities Radon Cons",
+                    "DHA Housing Studies",
+                    "Product Design",
+                    "User Experience Design",
+                    "Graphic Design",
+                    "Human Factors & Ergonomics",
+                    "Retail Merchandising",
+                    "DESGN GARP Administration",
+                    "Wearable Technology Lab",
+                    "Apparel Design",
+                    "Human Dimensioning Lab"
+                ],
+                "DESGN Goldstein Museum": [
+                    "DESGN Goldstein Museum"
+                ],
+                "DESGN Minnesota Design": [
+                    "DESGN Minnesota Design"
+                ],
+                "DESIGN Intrdiscp Instruction": [
+                    "DESIGN Intrdiscp Assoc Dean"
+                ],
+                "DESIGN Research & Outreach": [
+                    "DESGN Sustainable Bldg Rsrch",
+                    "DESGN Design in Health, Center",
+                    "DESGN Design Institute",
+                    "DESIGN Res & Outreach Assoc Dn",
+                    "DESGN Changing Landscapes",
+                    "Digital Design Center"
+                ],
+                "DESIGN Student Services": [
+                    "DESIGN Student Svc Operations"
+                ]
+            },
+            "EDUCATION & HUMAN DEVEL, COLL": {
+                "CEHD Administration": [
+                    "CEHD Undergraduate Programs",
+                    "CEHD External Relations",
+                    "CEHD Financial Services Office",
+                    "CEHD Events",
+                    "CEHD Facilities",
+                    "CEHD Communications/Marketing",
+                    "Teacher Education, Office of",
+                    "Education Technical Innovation",
+                    "CEHD Graduate Programs",
+                    "CEHD Research & Policy",
+                    "CEHD Human Resources",
+                    "CEHD Technology",
+                    "CEHD Dean's Office Admin",
+                    "CEHD International Initiatives",
+                    "Computer Sci Ed, Natl Ctr for",
+                    "CEHD Faculty Development",
+                    "CEHD Bus & Prof Development"
+                ],
+                "CEHD Applied Res & Educ Improv": [
+                    "CEHD Professional Devel, Ofc",
+                    "CEHD Center Administration",
+                    "Applied Res & Educ Improv, Ctr",
+                    "MN Ctr Read Res Admin",
+                    "Transl Rsrch Child Mental Hlth"
+                ],
+                "CEHD Child Development, Inst": [
+                    "Early Educ & Development, Ctr",
+                    "Child Development Admin, Inst",
+                    "Child Development Lab School"
+                ],
+                "CEHD Community Integration": [
+                    "Comm Integration Admin, Inst"
+                ],
+                "CEHD Curriculum & Instruction": [
+                    "STEM Education Center",
+                    "CEHD Learning Tech Media Lab",
+                    "Curriculum & Instruction Admin",
+                    "Multiple Pathways to Teaching",
+                    "America Reads",
+                    "Culture and Teaching"
+                ],
+                "CEHD Educational Psychology": [
+                    "Ed Psych Administration"
+                ],
+                "CEHD Family Social Science": [
+                    "FSoS Administration"
+                ],
+                "CEHD Kinesiology": [
+                    "Kinesiology Administration"
+                ],
+                "CEHD Org Leadership,Policy/Dev": [
+                    "Org Leadership, Policy & Dev"
+                ],
+                "CEHD Post Sec Teach & Learn": [
+                    "Academic Resource Center",
+                    "Post Sec Teachng & Learnng Adm"
+                ],
+                "CEHD Social Work, School of": [
+                    "Social Work Admin, School of",
+                    "Practice Transformation, Ctr"
+                ],
+                "CEHD Student Services": [
+                    "CEHD Student Services",
+                    "TRIO Upward Bound",
+                    "TRIO McNair Program",
+                    "TRIO Student Support Services"
+                ]
+            },
+            "EQUITY AND DIVERSITY": {
+                "DRC U Return Svcs,DisabRrscCtr": [
+                    "DRC U Return Services"
+                ],
+                "Disability Resource Ctr,Eq/Div": [
+                    "DRC Disability Resource Center"
+                ],
+                "EQDIV Compliance Units": [
+                    "Conflict Resolution, Ofc for",
+                    "Equal Opp & Title IX Ofc",
+                    "Supplier Diversity, Office for"
+                ],
+                "EQDIV Program Offices": [
+                    "Multicultural Ctr Acad Excell",
+                    "Gender and Sexuality Center",
+                    "Women's Center",
+                    "Circle of Indigenous Nations"
+                ],
+                "Equity & Diversity, VP for": [
+                    "TC America Reads",
+                    "Equity & Diversity Admin"
+                ]
+            },
+            "EXTENSION, U OF MN": {
+                "Agriculture/Natural Rsrc Syst": [
+                    "ANR Farmer Lender Mediation",
+                    "ANR Integrated Pest Management",
+                    "ANR Master Gardener",
+                    "ANR Water Resource Mgmt",
+                    "ANR Collegiate Partnerships",
+                    "ANR Crops",
+                    "ANR Administration",
+                    "ANR Livestock",
+                    "ANR Pesticide Safety Env Educ",
+                    "ANR Ag Business Mgmt",
+                    "ANR Environmental Sci Ed",
+                    "ANR Forestry",
+                    "ANR Local Educators",
+                    "ANR Food Systems",
+                    "ANR Horticulture",
+                    "ANR Climate"
+                ],
+                "Community, Development, Dept": [
+                    "CD Evaluation",
+                    "CD Community Economics",
+                    "CD Leadership/Civic Engagemnt",
+                    "CD Tourism Center",
+                    "CD Administration"
+                ],
+                "Family Health/Wellbeing, Dept": [
+                    "FHW Expanded Food Nutritn & Ed",
+                    "FHW Family Resiliency",
+                    "FHW Health & Nutrition",
+                    "FHW Administration",
+                    "FHW SNAP",
+                    "FHW Research & Evaluation"
+                ],
+                "MNEXT Administration": [
+                    "Extension IT Infrastructure",
+                    "Ext IT Support & Training",
+                    "Extension Finance & Planning",
+                    "Extension Human Resources",
+                    "MN Extension Global Initiative",
+                    "Ext Public Relations & Comm",
+                    "Extension Development Office",
+                    "Extension Operations Admin",
+                    "Ext ECommerce & Registration",
+                    "Extension Dean's Office Admin",
+                    "Ext Government Relations",
+                    "YD County 4-H",
+                    "Ext R&E Partnerships",
+                    "Ext Diversity & Inclusion",
+                    "Ext Learning Technologies",
+                    "Ext Amer Indian Affairs Prog",
+                    "Ext Conferences",
+                    "Ext R&E Administration"
+                ],
+                "MNEXT Field Operations": [
+                    "Extension Ramsey County Ofc",
+                    "Extension Cloquet Reg Ofc",
+                    "Extension Roseau Reg Ofc",
+                    "Ext Field Operations Admin",
+                    "Extension Hennepin County Ofc",
+                    "Extension Rochester Reg Ofc",
+                    "Extension Worthington Reg Ofc",
+                    "Extension Grand Rapids Reg Ofc",
+                    "Extension Moorhead Reg Ofc",
+                    "Extension Willmar Reg Ofc",
+                    "Extension Brainerd Reg Ofc",
+                    "Extension Crookston Reg Ofc",
+                    "Extension Andover Reg Ofc",
+                    "Extension Farmington Reg Ofc",
+                    "Extension Morris Reg Ofc",
+                    "Extension St. Cloud Reg Ofc",
+                    "Extension Mankato Reg Ofc",
+                    "Extension Marshall Reg Ofc"
+                ],
+                "MNEXT RSDP Regional Partnrshps": [
+                    "RSDP - Central Lakes",
+                    "RSDP - Statewide",
+                    "RSDP - Southwest",
+                    "RSDP - Northwest",
+                    "RSDP - Southeast",
+                    "RSDP - Northeast"
+                ],
+                "Youth Development, Dept of": [
+                    "YD State Events",
+                    "YD Operations",
+                    "YD Programs",
+                    "YD Systems of Support",
+                    "YD Local Programming"
+                ]
+            },
+            "FOOD, AGRI/NAT RSRC SCI, COLL": {
+                "CFANS Administration": [
+                    "CFANS Research",
+                    "CFANS Graduate Programs",
+                    "CFANS Alumni Relations",
+                    "CFANS Development",
+                    "CFANS SSO Administration",
+                    "CFANS Admissions",
+                    "CFANS Information Technology",
+                    "International Programs, CFANS",
+                    "CFANS Diversity & Inclusion",
+                    "CFANS MAST International",
+                    "CFANS Operations",
+                    "CFANS Human Resources",
+                    "CFANS Finance & Budget",
+                    "CFANS Data Management",
+                    "CFANS Communications",
+                    "CFANS Administration"
+                ],
+                "CFANS Agricultural Education": [
+                    "Ag, Food & Env Educ, Div of"
+                ],
+                "CFANS Agronomy/Plant Genetics": [
+                    "Agron&Plant Genetics, Dept of",
+                    "MN Inst Sustainable Agric"
+                ],
+                "CFANS Animal Science": [
+                    "Animal Science, Dept of"
+                ],
+                "CFANS Applied Economics": [
+                    "Applied Economics, Dept of",
+                    "Farm Financial Mgmt, Ctr for"
+                ],
+                "CFANS Bell Museum of Nat Hist": [
+                    "Bell Public Programs",
+                    "Bell Research Collection/Acad",
+                    "Bell External Relations/Devel",
+                    "Bell Administration"
+                ],
+                "CFANS Bioproducts & Biosys Eng": [
+                    "Bioprod&Biosys Eng, Dept of"
+                ],
+                "CFANS Cloquet Forestry Center": [
+                    "Cloquet Forestry Center"
+                ],
+                "CFANS Entomology": [
+                    "Entomology, Dept of"
+                ],
+                "CFANS Fish Wildlife & Cons Bio": [
+                    "Fish Wildlife & Cons Bio, Dept"
+                ],
+                "CFANS Food Sci & Nutrition": [
+                    "Food Sci & Nutr, Dept of"
+                ],
+                "CFANS Forest Resources": [
+                    "Forest Resources, Dept of"
+                ],
+                "CFANS Hlthy Foods, Hlthy Lives": [
+                    "Healthy Foods, Healthy Lives"
+                ],
+                "CFANS Horticultural Science": [
+                    "Horticultural Sci, Dept of"
+                ],
+                "CFANS Interdisciplinary Init": [
+                    "CFANS GEMS Informatics Center"
+                ],
+                "CFANS Landscape Arboretum": [
+                    "Arboretum Operations",
+                    "Arboretum Research",
+                    "Arboretum Exhibits",
+                    "Arboretum Educational Programs",
+                    "Arboretum Advancement"
+                ],
+                "CFANS MN AgEd Ldershp Council": [
+                    "MN Ag Ed Leadership Council"
+                ],
+                "CFANS MN Aq Inv Species Rsrch": [
+                    "MN Aq Invasive Species Res Ctr"
+                ],
+                "CFANS MN Terrest Inv Plant/Pst": [
+                    "MN Terrest Inv Plant Pests Ctr"
+                ],
+                "CFANS No Central ROC Grand Rap": [
+                    "No Central ROC, Grand Rapids"
+                ],
+                "CFANS Northwest ROC Crookston": [
+                    "Northwest ROC, Crookston"
+                ],
+                "CFANS Plant Pathology": [
+                    "Plant Pathology, Dept of"
+                ],
+                "CFANS ROC Management": [
+                    "CFANS ROC Management"
+                ],
+                "CFANS Rosemount ROC": [
+                    "Sand Plains Research Farm",
+                    "Rosemount ROC"
+                ],
+                "CFANS Rural Design, Ctr for": [
+                    "Rural Design, Ctr for"
+                ],
+                "CFANS Soil, Water & Climate": [
+                    "Soil, Water & Climate, Dept of"
+                ],
+                "CFANS Southern ROC Waseca": [
+                    "Southern ROC, Waseca"
+                ],
+                "CFANS Southwest ROC Lamberton": [
+                    "Southwest ROC, Lamberton"
+                ],
+                "CFANS Water Resources Center": [
+                    "Water Resources Center"
+                ],
+                "CFANS West Central ROC Morris": [
+                    "West Central ROC, Morris"
+                ]
+            },
+            "GLOBAL PRGMS/STRATEGY ALLIANCE": {
+                "GPS Global Programs & Strategy": [
+                    "Intl Student & Scholar Service",
+                    "Confucius Institute",
+                    "China Center",
+                    "Adv Res Language Acquis, Ctr",
+                    "DIS-Study Abroad Scandinavia",
+                    "Learning Abroad Center",
+                    "Global Prog & Strat Dean's Ofc",
+                    "Global Opportunities Minnesota",
+                    "Global Change, Interdisc Ctr"
+                ]
+            },
+            "GRADUATE SCHOOL, THE": {
+                "Graduate School, The": [
+                    "GRAD Student Services & Progs",
+                    "Interdisciplinary Init, Ofc of",
+                    "GRAD Dean's Office Admin",
+                    "Post-Doctoral Affairs, Ofc of",
+                    "GRAD Fellowship Office",
+                    "GRAD Admissions Office",
+                    "GRAD Mgmt Information Services",
+                    "Graduate Diversity Office"
+                ]
+            },
+            "HUMPHREY SCH OF PUBLIC AFFAIRS": {
+                "HHH Administration": [
+                    "HHH Human Resources",
+                    "HHH Communications",
+                    "HHH Financial Services",
+                    "HHH Information Technology",
+                    "HHH Conference Center",
+                    "HHH College Support Services",
+                    "HHH Dean's Office",
+                    "HHH Student Services",
+                    "HHH Career/Professional Dev",
+                    "HHH Development",
+                    "HHH Recruiting & Admissions"
+                ],
+                "HHH Global Policy": [
+                    "HHH Global Policy Acad Prog",
+                    "Freeman Center",
+                    "International Fellows Program"
+                ],
+                "HHH Leadership & Management": [
+                    "HHH Integrative Leadrship Ctr",
+                    "HHH Leadership & Mgmt Acad Pro",
+                    "Public & Nonprofit Ldrshp Ctr"
+                ],
+                "HHH Politics & Governance": [
+                    "HHH Politics & Govern Acad Pro",
+                    "Study of Politics, Center for",
+                    "Humphrey Forum"
+                ],
+                "HHH Sci, Tech & Environ Pol": [
+                    "Science & Technology, Ctr",
+                    "HHH Sci, Tech & Env Acad Prog"
+                ],
+                "HHH Soc Policy/Pol Analysis": [
+                    "HHH Social Policy Academic Pro",
+                    "Roy Wilkins Center",
+                    "Women and Public Policy",
+                    "Human Capital Rsrch Collabortv"
+                ],
+                "HHH Urban & Regional Planning": [
+                    "HHH Regional Plan & Pol Acad P",
+                    "State & Local Policy Program"
+                ]
+            },
+            "LAW SCHOOL": {
+                "Law School Academic Programs": [
+                    "Law Schl Joint Degree Program",
+                    "Law School Intell Prop Inst",
+                    "Law Clinic",
+                    "Law School Legal Writing Prog",
+                    "Law School Moot Court",
+                    "Law School Metro Opport Inst",
+                    "Law Computr Asst Legal Instrct",
+                    "Law S Crime & Pub Pol, Ctr for",
+                    "Law School General Academic",
+                    "Law School Human Rights Inst",
+                    "Law School Kommerstad Center",
+                    "Law School Cont Education",
+                    "Law School Trial Practice"
+                ],
+                "Law School Administration": [
+                    "Law School Admissions",
+                    "Law School Finance",
+                    "Law School Career Services",
+                    "Law School Deans Office",
+                    "Law Scholarly Jrnls & Pblctns",
+                    "Law School Student Services",
+                    "Law School International Prog",
+                    "Law School Scholarship",
+                    "Law School Building Management",
+                    "Law School Human Resources",
+                    "Law School Public Relations",
+                    "Law School IT Services",
+                    "Law School Advancement"
+                ],
+                "Law School Library": [
+                    "Law Library"
+                ]
+            },
+            "LIBERAL ARTS, COLLEGE OF": {
+                "CLA Administration": [
+                    "CLA Dean's Office",
+                    "CLA Faculty & Academic Affairs",
+                    "CLA Planning",
+                    "CLA Graduate Programs",
+                    "CLA Diversity, Equity/Incl"
+                ],
+                "CLA African Amer & Afr Studies": [
+                    "African-Amer & African Studies"
+                ],
+                "CLA American Indian Studies": [
+                    "American Indian Studies"
+                ],
+                "CLA American Studies": [
+                    "American Studies"
+                ],
+                "CLA Anthropology": [
+                    "Anthropology"
+                ],
+                "CLA Appl/Translational Sensory": [
+                    "Appl/Translational Sensory Sci"
+                ],
+                "CLA Art": [
+                    "Nash Gallery",
+                    "Art Department"
+                ],
+                "CLA Art History": [
+                    "Art History"
+                ],
+                "CLA Asian & Middle Eastern Stu": [
+                    "Asian & Middle Eastern Studies"
+                ],
+                "CLA Austrian Studies, Ctr for": [
+                    "Austrian Studies, Center for"
+                ],
+                "CLA Chicano & Latino Studies": [
+                    "Chicano & Latino Studies"
+                ],
+                "CLA Classical/Near Eastern R/C": [
+                    "Classical/Near Eastern Rel/Cul"
+                ],
+                "CLA Communication Studies": [
+                    "Communication Studies"
+                ],
+                "CLA Cultural Stdy & Comp Lit": [
+                    "Cultural Studies & Comp Lit"
+                ],
+                "CLA Economics": [
+                    "Economics"
+                ],
+                "CLA English Languages & Lit": [
+                    "Eng Languages & Literature"
+                ],
+                "CLA Fiscal Administration": [
+                    "CLA Financial Services Teams",
+                    "CLA Fiscal Administration"
+                ],
+                "CLA French & Italian": [
+                    "French & Italian"
+                ],
+                "CLA Gender, Women & Sexuality": [
+                    "Gender, Women & Sexuality"
+                ],
+                "CLA Geog, Environment &Society": [
+                    "Geography,Environment,Society",
+                    "Masters of Geographic Info Sci"
+                ],
+                "CLA German/Nordic/Slavic/Dutch": [
+                    "German, Nordic, Slavic & Dutch",
+                    "Slavic Languages & Literatures"
+                ],
+                "CLA Global Studies Institute": [
+                    "Student Proj Amity Amg Nations",
+                    "Global Studies Department",
+                    "Human Rights Program",
+                    "German & European Studies, Ctr"
+                ],
+                "CLA History": [
+                    "History Department",
+                    "Early Modern History, Ctr for"
+                ],
+                "CLA Holocaust/Genocide Studies": [
+                    "Holocaust & Genocide, Ctr for"
+                ],
+                "CLA Hubbard Schl Jrnl/MassComm": [
+                    "New Media Studies, Inst for",
+                    "Silha Center",
+                    "MN Journalism Center",
+                    "Hubbard Schl Journal/Mass Comm"
+                ],
+                "CLA Human Resources": [
+                    "CLA Human Resources"
+                ],
+                "CLA Immigration Hist Rsrch Ctr": [
+                    "Immigration Hist Research Ctr"
+                ],
+                "CLA Institutional Advancement": [
+                    "CLA OIA Development",
+                    "CLA OIA Communications"
+                ],
+                "CLA Jewish Studies, Center for": [
+                    "Jewish Studies, Center for"
+                ],
+                "CLA Language Ctr": [
+                    "CLA Language Center"
+                ],
+                "CLA Liberal Arts EngagementHub": [
+                    "Liberal Arts Engagement Hub"
+                ],
+                "CLA Linguistics, Institute of": [
+                    "Linguistics, Institute of"
+                ],
+                "CLA Music": [
+                    "Marching & Athletic Bands",
+                    "Music, School of"
+                ],
+                "CLA Philosophy": [
+                    "Philosophy Department"
+                ],
+                "CLA Philosophy of Science, Ctr": [
+                    "Philosophy of Science, Ctr for"
+                ],
+                "CLA Political Science": [
+                    "Political Psych, Center for",
+                    "Political Science Department"
+                ],
+                "CLA Premodern Studies, Ctr for": [
+                    "Premodern Studies, Center for"
+                ],
+                "CLA Psychology": [
+                    "Psychology"
+                ],
+                "CLA Race Indig Disab Gend/Sex": [
+                    "Race Indig Disab Gend/Sex St,C"
+                ],
+                "CLA Sociology": [
+                    "Sociology"
+                ],
+                "CLA Spanish & Portuguese": [
+                    "Spanish & Portuguese Studies"
+                ],
+                "CLA Speech, Language, Hearing": [
+                    "Speech-Language-Hearg Sci Dept",
+                    "Speech-Lang-Hearing Clinic"
+                ],
+                "CLA Statistics, School of": [
+                    "Statistics, School of"
+                ],
+                "CLA Tech Innov Svcs": [
+                    "LibArt Tech Innov Svcs",
+                    "CLA Academic Technologies"
+                ],
+                "CLA Theatre Arts & Dance": [
+                    "Theatre Arts & Dance Dept",
+                    "University Theatre"
+                ],
+                "CLA Undergraduate Education": [
+                    "CLA UGE Diversity, Equity/Incl",
+                    "CLA UGE Student Support",
+                    "CLA UGE Administration",
+                    "CLA UGE Career Services",
+                    "CLA UGE Advising"
+                ],
+                "CLA Writing Studies": [
+                    "Second Language Studies",
+                    "Writing, Center for",
+                    "Writing Studies Department"
+                ]
+            },
+            "LIBRARIES, UNIVERSITY": {
+                "Libraries Administrative Svcs": [
+                    "Library Facilities & Ops Mgmt",
+                    "Archives & Special Collections",
+                    "Lib Communications Office",
+                    "University Librarian, Ofc of",
+                    "Lib Development Office",
+                    "Library Human Resources",
+                    "Lib Information Technology"
+                ],
+                "Libraries Content/Collections": [
+                    "Library Collections Mgmt Ofc"
+                ],
+                "Libraries Research": [
+                    "Wangensteen Library",
+                    "Lib Arts & Humanities",
+                    "Health Science Libraries",
+                    "Lib Science, Ag, & Eng",
+                    "Lib Open Research & Publishing",
+                    "Lib Social Sciences",
+                    "Lib Research"
+                ],
+                "Libraries Student Success": [
+                    "Lib Access & Info Svcs",
+                    "Tutoring/Academic Success Ctr",
+                    "Lib Engagement Outreach & Comm",
+                    "Lib Student Success"
+                ],
+                "Minitex": [
+                    "Minitex"
+                ]
+            },
+            "MGMT, CURTIS L CARLSON SCH OF": {
+                "CSOM Accounting": [
+                    "CSOM Accounting Department"
+                ],
+                "CSOM Administration": [
+                    "CSOM Communications",
+                    "CSOM Dean, Office of the",
+                    "CSOM Faculty Support Admin"
+                ],
+                "CSOM Executive Education": [
+                    "CSOM Executive Education"
+                ],
+                "CSOM Finance": [
+                    "CSOM Finance & Insurance"
+                ],
+                "CSOM Global Institute": [
+                    "CSOM Global Institute",
+                    "CSOM Global MBA Programs",
+                    "CSOM Global DBA Programs"
+                ],
+                "CSOM Human Rsrc/Labor Studies": [
+                    "CSOM Labor Education Svcs",
+                    "CSOM Work & Organizations",
+                    "CSOM M-HRIR Program"
+                ],
+                "CSOM Information/Decision Sci": [
+                    "CSOM Information &Decision Sci",
+                    "CSOM MIS Research Center",
+                    "CSOM MIS Quarterly"
+                ],
+                "CSOM Institutional Advancement": [
+                    "CSOM Individual Giving",
+                    "CSOM Corporate/Alumni Relatns"
+                ],
+                "CSOM Interdisiplinary Centers": [
+                    "CSOM DiversityEquity/Inclusion",
+                    "CSOM Business Advance Health"
+                ],
+                "CSOM MBA/MS Programs": [
+                    "CSOM MBA & GBCC Admin",
+                    "CSOM MS Finance",
+                    "CSOM MBA Grad Bus Career Ctr",
+                    "CSOM MS Business Analytics",
+                    "CSOM Executive MBA Program",
+                    "CSOM MS Supply Chain",
+                    "CSOM MBA Student Affairs",
+                    "CSOM MBA Recruit & Admission",
+                    "CSOM MS Marketing",
+                    "CSOM Masters Business Taxation",
+                    "CSOM Masters of Accountancy"
+                ],
+                "CSOM Marketing": [
+                    "CSOM Marketing",
+                    "CSOM Res in Mkt, Institute for"
+                ],
+                "CSOM Operations": [
+                    "CSOM Information Technology",
+                    "CSOM Building Services",
+                    "CSOM Financial Services",
+                    "CSOM Human Resources"
+                ],
+                "CSOM PhD Programs": [
+                    "CSOM PhD-Mgmt Program"
+                ],
+                "CSOM Strategic Mgmt & Entrepre": [
+                    "CSOM Holmes Ctr for Entreprshp",
+                    "CSOM Strategic Mgmt & Entrepre"
+                ],
+                "CSOM Supply Chain & Operations": [
+                    "CSOM Juran Center in Quality",
+                    "CSOM Supply Chain & Operations"
+                ],
+                "CSOM Undergraduate Program": [
+                    "CSOM Undergraduate Admin",
+                    "CSOM Undergrad Career Ctr"
+                ]
+            },
+            "NURSING, SCHOOL OF": {
+                "NURSG Academic Programs": [
+                    "SoN Student Services",
+                    "SoN Academic Programs"
+                ],
+                "NURSG Admin & Support": [
+                    "SoN Nursing Research, Ofc of",
+                    "SoN Dean's Office",
+                    "SoN Development & Foundation",
+                    "SoN Business Services",
+                    "SoN Diversity Office",
+                    "SoN Admin and Acad Support"
+                ],
+                "NURSG Co-ops & Centers": [
+                    "SoN Adult Gero Health Co-op",
+                    "SoN Adolescent Nursing Ctr",
+                    "SoN Children/Spec Hlth Care Nd",
+                    "SoN Densford Center",
+                    "SoN Child Family Health Co-op",
+                    "SoN Aging Science/Care,Ctr for",
+                    "SoN Population Hlth Sys Co-op"
+                ],
+                "NURSG Practice & Partnerships": [
+                    "SoN Faculty Practice",
+                    "SoN Continuing Ed & Outreach"
+                ],
+                "NURSG Spirituality & Healing": [
+                    "Spirituality and Healing, Ctr"
+                ]
+            },
+            "PHARMACY, COLLEGE OF": {
+                "PHARM Administration": [
+                    "CoP Fiscal Administration",
+                    "CoP Residency Program",
+                    "CoP Prof & External Rel",
+                    "CoP Tech Support",
+                    "CoP Clinical Affairs, Office",
+                    "CoP Facilities Support",
+                    "CoP Dean's Office",
+                    "Leading Healthcare Change, Ctr",
+                    "CoP Grad Education Office"
+                ],
+                "PHARM Allied Health Center": [
+                    "TC CAHP Student Affairs",
+                    "TC CAHP Administration",
+                    "Rochester CAHP Administration",
+                    "TC CAHP Faculty Affairs",
+                    "Rochester CAHP Student Affairs",
+                    "Rochester Respirator Care CAHP",
+                    "Rochester CAHP Learn Platform",
+                    "TC Radiation Therapy CAHP",
+                    "Rochester Radiation Ther CAHP",
+                    "Rochester CAHP Faculty Affairs",
+                    "TC Respiratory Care CAHP",
+                    "TC CAHP Learn Platform",
+                    "TC CAHP Technology",
+                    "Rochester CAHP Technology"
+                ],
+                "PHARM CAHP Medical Lab Sci": [
+                    "Roch Medical Lab Sciences CAHP",
+                    "TC Medical Lab Sciences CAHP",
+                    "Duluth Med Lab Sciences CAHP"
+                ],
+                "PHARM CAHP Occ Therapy": [
+                    "TC Occupational  Therapy CAHP",
+                    "Roch Occupational Therapy CAHP",
+                    "Dul Occupational Therapy CAHP"
+                ],
+                "PHARM Drug Design, Ctr for": [
+                    "Drug Design, Center for"
+                ],
+                "PHARM Experimental&Clin Pharm": [
+                    "Experimental & Clinical Pharm",
+                    "Exp & Clin Pharm Core Lab"
+                ],
+                "PHARM Medicinal Chemistry": [
+                    "Medicinal Chemistry",
+                    "Therapeutics Disc & Devl, Inst"
+                ],
+                "PHARM Pharm Care & Hlth Syst": [
+                    "Pharmaceuticl Care & Hlth Syst"
+                ],
+                "PHARM Pharm Prac Pharm Sci": [
+                    "Pharm Practice Pharm Sciences"
+                ],
+                "PHARM Pharmaceutics": [
+                    "CoP Pharmaceutics"
+                ],
+                "PHARM Professional Education": [
+                    "CoP Professional Educ Div",
+                    "Pharm Learning Collaborative",
+                    "Pharm Care Learning Ctr & Tech",
+                    "CoP Student Services",
+                    "PharmD Curriculum Mgmt",
+                    "CoP Experiential Education",
+                    "CoP Research Office"
+                ]
+            },
+            "PUBLIC HEALTH, SCHOOL OF": {
+                "PUBHL Administration": [
+                    "SPH CPHEO Admin",
+                    "SPH Advancement",
+                    "SPH Student Svc Adm",
+                    "SPH Rothenberger Institute",
+                    "SPH Public Health Practice",
+                    "SPH Dean's Office"
+                ],
+                "PUBHL Biostatistics Division": [
+                    "SPH Biostatistics Division",
+                    "SPH Biostat Computer Svcs Ctr"
+                ],
+                "PUBHL Environmental Hlth Sci": [
+                    "SPH EnHS Division",
+                    "SPH MN Technical Assist Prog",
+                    "SPH Health Studies"
+                ],
+                "PUBHL Epi & Comm Hlth": [
+                    "SPH EpiCH Nutrition Coding Ctr",
+                    "SPH EpiCH Division",
+                    "Healthy Weight Research Center"
+                ],
+                "PUBHL Health Policy Mgmt": [
+                    "SPH Health Policy & Mgmt Div"
+                ]
+            },
+            "SCIENCE & ENGINEERING, COL OF": {
+                "CSENG AI-CLIMATE Institute": [
+                    "CSENG AI-CLIMATE Institute"
+                ],
+                "CSENG ATP-Bio": [
+                    "CSENG AdvTechPresBioSystms"
+                ],
+                "CSENG Administration": [
+                    "CSENG Dean's Office Admin",
+                    "CSENG CSE-IT",
+                    "CSENG Student Services Admin",
+                    "CSENG Anderson Labs"
+                ],
+                "CSENG Aerospace Eng & Mechanic": [
+                    "CSENG Aerospace Eng & Mech Adm"
+                ],
+                "CSENG Biomedical Engineering": [
+                    "CSENG Biomedical Eng Admin"
+                ],
+                "CSENG Characterization Facil": [
+                    "CSENG Characterization Fac Adm",
+                    "CSENG Electron Microscope Fac"
+                ],
+                "CSENG Chemical Eng & Mat Sci": [
+                    "CSENG Chem Eng & Mat Sci Admin",
+                    "CSENG Sust Energy Catalysis,Ct"
+                ],
+                "CSENG Chemistry": [
+                    "CSENG Sustainable Polymers, Ct",
+                    "CSENG Chemistry Administration"
+                ],
+                "CSENG Civil, Envrn & Geo- Eng": [
+                    "CSENG Civil, Envrn & Geo- Eng"
+                ],
+                "CSENG Collegiate Shops": [
+                    "CSENG Collegiate Shops"
+                ],
+                "CSENG Computer Science & Eng": [
+                    "CSENG CS&E NetworksSystm&Secur",
+                    "CSENG CS&E Administration"
+                ],
+                "CSENG Data Science Initiative": [
+                    "CSENG Data Science Initiative"
+                ],
+                "CSENG Digital Technology Ctr": [
+                    "CSENG DTC Admin"
+                ],
+                "CSENG Earth Sciences, Dept of": [
+                    "CSENG Earth Sciences, Dept of"
+                ],
+                "CSENG Electrical & Computr Eng": [
+                    "CSENG ECE Control Engineering",
+                    "CSENG ECE Admin",
+                    "CSENG Spin Mtls for AdvInfoTec"
+                ],
+                "CSENG History of Sci & Tech": [
+                    "CSENG Hist of Sci & Tech, Prog",
+                    "CSENG Charles Babbage Inst"
+                ],
+                "CSENG IPRIME": [
+                    "CSENG IPRIME Administration"
+                ],
+                "CSENG Industrial&Systems Eng": [
+                    "CSENG Industrial & Systems Eng"
+                ],
+                "CSENG MN Geological Survey": [
+                    "CSENG MN Geological Survey Adm",
+                    "CSENG MN Geologicl Survey Maps"
+                ],
+                "CSENG MN Nano Center": [
+                    "CSENG MN Nano Center"
+                ],
+                "CSENG MN Robotics Institute": [
+                    "CSENG MN Robotics Institute"
+                ],
+                "CSENG Mat Rsrch Sci & Eng Ctr": [
+                    "CSENG Mat Res Sci&EngCtr MRSEC"
+                ],
+                "CSENG Mathematics, School of": [
+                    "CSENG Math Localization",
+                    "CSENG Mathematics Ctr Ed Prgm",
+                    "CSENG Mathematics Admin",
+                    "CSENG Masters of Financl Math",
+                    "CSENG Math & It's Applic, Inst",
+                    "CSENG UMTYMP"
+                ],
+                "CSENG Mechanical Engineering": [
+                    "CSENG Mech Engineering Admin"
+                ],
+                "CSENG Physics & Astronomy": [
+                    "CSENG Physics & Astron,Schl of",
+                    "CSENG Astrophysics,MN Inst for",
+                    "CSENG Fine Theoretical Physics",
+                    "CSENG Experimental Labs & Ops"
+                ],
+                "CSENG St. Anthony Falls Lab": [
+                    "CSENG Nat'l Ctr Earth Surf Dyn",
+                    "CSENG St Anth Falls Lab-SAFL"
+                ],
+                "CSENG Tech Leadership Inst": [
+                    "CSENG Technological Leadership",
+                    "CSENG TLI MS Med Device Innov",
+                    "CSENG Med Dev Cybersec,Ctr for"
+                ],
+                "CSENG UNITE": [
+                    "CSENG UNITE Administration",
+                    "CSENG UNITE Services",
+                    "CSENG UNITE Technical Ops"
+                ]
+            },
+            "STUDENT AFFAIRS,VICE PRESIDENT": {
+                "Bolstad Golf Course": [
+                    "Bolstad Golf Course"
+                ],
+                "Radio K": [
+                    "Radio K"
+                ],
+                "Stu Affairs Admin, VP/Dean": [
+                    "Student Affairs Administration"
+                ],
+                "Stu Affairs, Advocacy/Support": [
+                    "Community Standards, Ofc for",
+                    "Parent and Family Program",
+                    "Student Parent Help Center"
+                ],
+                "Student Affairs, Aurora Center": [
+                    "Aurora Center"
+                ],
+                "Student Affairs, Counseling": [
+                    "Student Counseling Services"
+                ],
+                "Student Affairs, Student Life": [
+                    "Career & Internship Services",
+                    "LEAD-UP",
+                    "Central Career Services",
+                    "Fraternity and Sorority Life",
+                    "Multicultural Stdt Engagement",
+                    "Student Life, Asst Vice Prov",
+                    "Off-Campus Living"
+                ],
+                "Student Conflict Resolution": [
+                    "Student Conflict Resolution"
+                ],
+                "Student Unions & Activities": [
+                    "SUA Marketing & Design",
+                    "SUA Programs & Activities",
+                    "SUA Student Group Services",
+                    "SUA Administration",
+                    "SUA Retail",
+                    "SUA Facilities & Operations"
+                ],
+                "Univ Recreation & Wellness": [
+                    "DRS Twin Cities Swim Team",
+                    "DRS Sports Clubs Admin",
+                    "DRS Youth/Community",
+                    "URWC Fresh Season Caf\u00e9",
+                    "URW Facility Support",
+                    "DRS Climbing/Adventure",
+                    "DRS Fitness",
+                    "DRS Minneapolis Facilities",
+                    "DRS St. Paul Facilities",
+                    "Recreational Sports Gen Admin",
+                    "DRS Intramural/Lifetime Sports",
+                    "DRS Aquatic Events/Programs",
+                    "DRS Advancement & Marketing"
+                ],
+                "University Student Legal Svc": [
+                    "Student Legal Service"
+                ]
+            },
+            "UNDERGRADUATE EDUCATION": {
+                "Academic Support Resources": [
+                    "ASR Student Finance Admin",
+                    "Acad Suppt Resource Adm",
+                    "ASR One Stop Student Services",
+                    "ASR Information Technology",
+                    "ASR Student Academic Records",
+                    "ASR Clsrm Mgmt Operations",
+                    "ASR Clsrm Technical Services"
+                ],
+                "Admissions, Office of": [
+                    "Freshman Recruitment & Adm",
+                    "Transfer Recruitment & Adm",
+                    "Admissn Admin & Support Serv",
+                    "International Adm & Recruit"
+                ],
+                "Lindahl Academic Center": [
+                    "Lindahl Academic Center"
+                ],
+                "Orientation/Transition Exper": [
+                    "Orientation/Transition Exper"
+                ],
+                "ROTC": [
+                    "Military Sciences (Army ROTC)",
+                    "Aerospace Studies (AF ROTC)",
+                    "Naval Sciences (Naval ROTC)"
+                ],
+                "Ugrad Educ, Vice Provost/Dean": [
+                    "Undergrad Ed, V Provost&Dean",
+                    "College Readiness Consortium"
+                ],
+                "Undergrad Ed - Student Success": [
+                    "Student Success Undergrad Ed"
+                ],
+                "Undergrad Research, Office of": [
+                    "Undergrad Research, Office of"
+                ],
+                "University Honors Program": [
+                    "University Honors Program"
+                ]
+            },
+            "VETERINARY MEDICINE, COLL OF": {
+                "VETMD Administration": [
+                    "CVM Finance",
+                    "CVM Research Office",
+                    "CVM Facility Services",
+                    "CVM Clinical Investigation Ctr",
+                    "CVM Vet Med Acad & Student Aff",
+                    "CVM Advancement",
+                    "CVM Graduate Program Office",
+                    "CVM Veterinary Med Dean's Ofc",
+                    "CVM Human Resources",
+                    "CVM Veterinary Continuing Educ"
+                ],
+                "VETMD Animal Health Food Sfty": [
+                    "Animal Hlth Food Safety, Ctr"
+                ],
+                "VETMD Raptor Center": [
+                    "Raptor Center"
+                ],
+                "VETMD Vet Biomedical Science": [
+                    "Veterinary Biomedical Science"
+                ],
+                "VETMD Vet Clinical Sciences": [
+                    "Veterinary Clinical Sciences"
+                ],
+                "VETMD Vet Diagnostic Lab": [
+                    "Veterinary Diagnostic Lab"
+                ],
+                "VETMD Vet Population Med": [
+                    "VPM Swine Disease Eradication",
+                    "VPM Dairy Hlth,Mgmt,Food Qual",
+                    "Veterinary Population Medicine",
+                    "VPM Equine Medicine",
+                    "VPM Prof Education & Outreach"
+                ],
+                "VETMD Veterinary Medical Ctr": [
+                    "VMC Veterinary Medical Ctr Adm",
+                    "VMC Large Animal Core",
+                    "VMC Labs",
+                    "VMC Small Animal Core",
+                    "VMC Medical Imaging",
+                    "VMC Preventative Health",
+                    "VMC Specialties",
+                    "VMC Anesthesia",
+                    "VMC Pharmacy",
+                    "VMC SA Hospital Services",
+                    "VMC South Metro Practice"
+                ]
+            }
+        },
+        "GENERAL COUNSEL": {
+            "GENERAL COUNSEL, OFFICE OF THE": {
+                "OGC General Counsel": [
+                    "General Counsel (OGC General)",
+                    "Athletic Compliance, Office of",
+                    "OGC Data Access and Privacy"
+                ]
+            }
+        },
+        "HEALTH SCIENCES, VP": {
+            "ACADEMIC CLINICAL AFFAIRS, OFC": {
+                "AHCSH Administration": [
+                    "Mobile Health Initiative"
+                ],
+                "AHCSH BioMed Hlth Informatics": [
+                    "BioMedical Health Informatics",
+                    "Health Informatics, ACA Inst"
+                ],
+                "AHCSH Bioethics, Center For": [
+                    "Bioethics, Center for"
+                ],
+                "AHCSH CUHCC": [
+                    "CUHCC Dental",
+                    "CUHCC Administration",
+                    "CUHCC Medical",
+                    "CUHCC Behavioral Health"
+                ],
+                "AHCSH Cancer Center": [
+                    "CancerCenter Clinical Research",
+                    "Prevention & EtiologyCC",
+                    "Genetics Mechanisms of CancrCC",
+                    "Carcinogenesis ChemopreventnCC",
+                    "Cancer Center Management",
+                    "Clinical Trials OfficeCC",
+                    "MCC Biostatistics",
+                    "Cancer Progression MetastsisCC",
+                    "GenomicsCC",
+                    "ImmunologyCC",
+                    "Analytical BiochemistryCC",
+                    "HistopathologyCC",
+                    "InformaticsCC",
+                    "Laboratory ServicesCC",
+                    "Translational Cell TherapyCC",
+                    "CTO Cell Gene Immunotherapy",
+                    "Global Cancer Prevention Rsrch",
+                    "Developmental Therapeutics"
+                ],
+                "AHCSH Cell Gene Immun, Inst": [
+                    "Cell Gene Immunotherapy, Inst"
+                ],
+                "AHCSH Clin Translatnl Sci Inst": [
+                    "CTSI Discovery & Translation",
+                    "CTSI Regulatory",
+                    "CTSI Education",
+                    "CTSI Biomedical Informatics",
+                    "CTSI Health Equity, Center for",
+                    "CTSI Clin Rsrch Infrastrc Svcs",
+                    "CTSI Biorepository & Lab Svc",
+                    "CTSI Research Project Managmnt",
+                    "CTSI Evaluation Monitoring",
+                    "CTSI Community & Populations",
+                    "CTSI Administration",
+                    "CTSI Biospecimen Repository",
+                    "CTSI Biostatistics",
+                    "CTSI Clinical Trials Fin Svcs"
+                ],
+                "AHCSH Education Office": [
+                    "Educ Svcs/Learning Commons",
+                    "M Simulation",
+                    "Urban Health Ed Ctr Management"
+                ],
+                "AHCSH Masonic Inst Dev Brain": [
+                    "Masonic Inst Developing Brain",
+                    "Neurobehavioral Dev,Ctr"
+                ],
+                "AHCSH MolecularCellular Therap": [
+                    "MolecularCellular Therapeutics"
+                ],
+                "AHCSH Mouse Genetics Lab": [
+                    "Mouse Genetics Laboratory"
+                ],
+                "AHCSH Translational Med, Ctr": [
+                    "Translational Med, Center for"
+                ],
+                "AHCSH Univ Flow Cytometry Rsrc": [
+                    "Univ Flow Cytometry Resource"
+                ]
+            },
+            "HEALTH SCIENCES ADMINISTRATION": {
+                "HLSCI ACA Support": [
+                    "Global Health Soc Respnsb, Ctr",
+                    "Sr Vice President Health Sci",
+                    "AHC Service Platform",
+                    "Privacy & Security, Office of",
+                    "ACA Admin Support Services",
+                    "ACA Communications",
+                    "ACA Finance, Office of",
+                    "ACA Legal",
+                    "ACA Human Resources",
+                    "Global Health Educ/Research",
+                    "Health Emergency Response Ofc",
+                    "AHC Data Analysis, Ofc of"
+                ],
+                "HLSCI Interprofessnl Hlth, Ctr": [
+                    "Interprofessional Hlth, Center"
+                ],
+                "HLSCI Research Units": [
+                    "AHC Asst VP of Research"
+                ]
+            },
+            "MEDICAL SCHOOL - DULUTH CAMPUS": {
+                "DMED Administration": [
+                    "DMed Dean's Office/Admin",
+                    "DMed Alumni Relations",
+                    "DMed Animal Services",
+                    "DMed Whiteside Institute",
+                    "DMed Student Affairs",
+                    "DMed AHC Graduate Program",
+                    "DMed Medical Examiners Facil",
+                    "MDT-AmerIndHlthEquityDMED",
+                    "DMed Research Dean/Admin",
+                    "DMed Educational Products/Svcs",
+                    "DMed Financial Aid Admin",
+                    "DMed Education and Curriculum",
+                    "DMed Admissions",
+                    "DMed Technology Services",
+                    "DMed Public Relations",
+                    "DMed Private/Professional Prac",
+                    "DMed Med Advancement/Comm"
+                ],
+                "DMED Biomedical Sciences": [
+                    "DMed Physiol/Pharmacol Dept",
+                    "DMed Integrated Biosciences",
+                    "DMed Toxicology",
+                    "DMed Physiology",
+                    "DMed Bridges Program",
+                    "DMed Biochem/Molec Biol Dept",
+                    "DMED Biomedical Sciences",
+                    "DMed Microbiology/Immunology",
+                    "DMed Pathology/Lab Medicine",
+                    "DMed Pharmacology",
+                    "DMed Anatomy"
+                ],
+                "DMED Family Med/Biobehav Hlth": [
+                    "DMED Family Med/CommHlth",
+                    "DMed Rural Mental Hlth Studies",
+                    "DMed Rural Health Office",
+                    "DMED Family Med/Biobehav Hlth",
+                    "DMED Family Medicine Residency"
+                ]
+            },
+            "MEDICAL SCHOOL - TC CAMPUS": {
+                "Anesthesiology": [
+                    "ANES  Admin"
+                ],
+                "Biochem,Molec Biol,Biophy MEDX": [
+                    "BMBB Med NMR Center",
+                    "BMBB Med Molecular Biology",
+                    "BMBB Med Mass Spec Proteomic",
+                    "BMBB Med Dept Administration",
+                    "BMBB Med Struct Bio/Biophysics",
+                    "MDT-Biology of Aging",
+                    "BMBB Med Regulatory Biochem",
+                    "BioGen Administrative Ctr",
+                    "Midwest AVIID Center"
+                ],
+                "Dermatology": [
+                    "DERM Dermatology Education",
+                    "DERM Direct Patient Care",
+                    "DERM Clinic Admin/Clinic Ops",
+                    "DERM Dermatology Dept Admin"
+                ],
+                "Emergency Medicine": [
+                    "EM Emergency Med Education",
+                    "EM Emergency Medicine Dept Adm"
+                ],
+                "Engineering in Med, Inst for": [
+                    "IEM Engineering In Med Adm",
+                    "Bakken Medical Devices Center"
+                ],
+                "Family Medicine & Cmty Health": [
+                    "FamMed Family Medicine Clinic",
+                    "FamMed Broadway Residency Prog",
+                    "FamMed Bethesda Residency Prog",
+                    "FamMed Mankato Residency Prog",
+                    "FamMed Smiley's Residency Prog",
+                    "FamMed Family Medicine Admin",
+                    "FamMed Phalen Residency Prog"
+                ],
+                "Genetics, Cell Biol, Dev MEDXX": [
+                    "GCD MS Beckman Center",
+                    "GCD MS Department Admin",
+                    "GCD MS Stem Cell Institute"
+                ],
+                "Integrative Biology/Physiology": [
+                    "IBP Physiology Administration",
+                    "MNPI Administrative Center",
+                    "IBP Physiology Education",
+                    "IBP Anatomy Division"
+                ],
+                "Lab Medicine & Pathology": [
+                    "LMP Administration",
+                    "ALRT Administrative Center"
+                ],
+                "MED Institutes/Centers": [
+                    "Art of Medicine, Center for",
+                    "Learning Health Sys, Ctr for",
+                    "Infectious Disease, UM Inst of",
+                    "Trauma Center",
+                    "IHG Human Genetics, Inst for",
+                    "Health Informatics, Inst for",
+                    "Immunology, Center for",
+                    "VA Research Center"
+                ],
+                "Medical School Admin, MEDXX": [
+                    "MS Rural Phys Assoc Prog",
+                    "MS Clinical Affairs",
+                    "MS Mortuary Science",
+                    "MS History of Medicine",
+                    "MS Graduate Med Education",
+                    "MS Med Educator Dev/Scholar",
+                    "MS Academic Affairs",
+                    "MS Information Technology",
+                    "MS Education Administration",
+                    "MS Research/Facilities",
+                    "MS MD/PHD Program",
+                    "MS Bequest",
+                    "Continuing Medical Education",
+                    "SimPORTAL",
+                    "MS Admissions",
+                    "MS Curriculum Affairs",
+                    "MS Minority Affairs/Diversity",
+                    "MS Student Affairs",
+                    "MS Finance",
+                    "MS Minnesota Future Doctors",
+                    "MS Dean's Office Admin",
+                    "MS Alumni Affairs",
+                    "MED Diversity,Equity/Inclusion",
+                    "MS Philips Neighborhood Clin",
+                    "MS Clinical Mission",
+                    "MS Marketing/Communications",
+                    "MS Facilities",
+                    "Amer Indian/Minority Hlth",
+                    "MS Human Resources",
+                    "MS Assessment & Evaluation"
+                ],
+                "Medicine": [
+                    "MED Cardiology Division",
+                    "MED Inf Disease & Internationl",
+                    "MED Endocrine & Diabetes Div",
+                    "MED Hema, Onc, Transplant Adm",
+                    "MED Gastro, Hepa, Nutrion Div",
+                    "MED Pulmonary, Allergy, Crit",
+                    "Molecular Medicine",
+                    "MED Renal & Hypertension Div",
+                    "MED Medicine Education",
+                    "MED Rheumatic & Autoimmune",
+                    "MED Veteran's Adm Medical Ctr",
+                    "MED Medicine Dept Admin",
+                    "MD Center Administration",
+                    "MED Hospital Medicine",
+                    "MED Geriatric,Palliative & PC"
+                ],
+                "Microbiology": [
+                    "MICRO MICaB Program",
+                    "MICRO Microbiology Admin"
+                ],
+                "Neurology": [
+                    "NEUR Neurology Education Prog",
+                    "NEUR Memory Clinic",
+                    "NEUR Neurology Dept Admin",
+                    "NEUR Pediatric Neurology",
+                    "NEUR Muscular Dystrophy Center",
+                    "NEUR Epilepsy Division",
+                    "NEUR NeuroMuscolar Division",
+                    "NEUR NeuroCritical Care Divsn",
+                    "NEUR General Dvsn",
+                    "NEUR Movement Disorders Dvsn",
+                    "NEUR Research Affairs",
+                    "Neurology Mutpl Sclerosis"
+                ],
+                "Neuroscience": [
+                    "University Imaging Center",
+                    "NSCI Neuroscience Admin",
+                    "NSCI Neuroscience Services",
+                    "MDT-Neuroscience - Addiction",
+                    "NSCI Neuroscience Education"
+                ],
+                "Neurosurgery": [
+                    "NSU Neurosurgery Dept Admin",
+                    "NSU Neurosurgery Education",
+                    "NSU Neurosurg Clinic Ops/Adm"
+                ],
+                "Obstetrics & Gynecology": [
+                    "OBGYN Gynecologic Oncology",
+                    "OBGYN Direct Patient Care",
+                    "OBGYN Reprodctve Endo & Infert",
+                    "OBGYN Pathology Lab",
+                    "OBGYN Gen Obstetrics & Gyn",
+                    "OBGYN Clinic Operations/Admin",
+                    "OBGYN Department Admin",
+                    "OBGYN Maternal Fetal Medicine",
+                    "OBGYN Education"
+                ],
+                "Ophthalmology": [
+                    "OPH Ophthalmology Education",
+                    "OPH Ophthlmolgy Clinic Ops/Adm",
+                    "OPH Ophthalmology Admin",
+                    "OPH Lions Gift of Sight"
+                ],
+                "Orthopaedic Surgery": [
+                    "ORSU Orthopaedic Clin Ops/Adm",
+                    "ORSU Orthopaedic Admin",
+                    "ORSU Ortho Biomechanics Lab",
+                    "ORSU Orthopaedic Education"
+                ],
+                "Otolaryngology": [
+                    "OTOL Otolaryngology Dept Admin",
+                    "OTOL Otolaryngology Educ Progs"
+                ],
+                "Pediatrics": [
+                    "PEDS Pediatrics Clinic Ops/Adm",
+                    "PEDS  Rheumatology Div",
+                    "PEDS Adolescent Health and Med",
+                    "PEDS Pediatrc Dir Patient Care",
+                    "PEDS Endocrine & Diabetes Div",
+                    "PEDS Neonatology",
+                    "PEDS Autism",
+                    "PEDS Healthy Youth Prevent Ctr",
+                    "PEDS Genetics & Metabolism Div",
+                    "Stem Cell Institute",
+                    "PEDS Oncology",
+                    "PEDS Global Pediatrics",
+                    "Pediatrics Obesity Center",
+                    "PEDS Pediatric Hospitalists",
+                    "PEDS Pediatric Critical Care",
+                    "PEDS Cell Based Medicine, Ctr",
+                    "PEDS Gastro, Hepa, Nutrit Div",
+                    "PEDS Emergency Medicine",
+                    "PEDS Blood/Marrow Transplant",
+                    "PEDS Infectious Disease Center",
+                    "PEDS Pediatrics Cardiology Div",
+                    "PEDS General Pediatrics Div",
+                    "PEDS Pediatrics Department Adm",
+                    "PEDS Pediatrics Education",
+                    "PEDS  Nephrology",
+                    "PEDS BMT, Hematology & Onc",
+                    "PEDS Pulmonary, Allergy Admin",
+                    "PEDS Infectious Disease Div",
+                    "PEDS Neuro Beh & Dev, Ctr for",
+                    "PEDS  Neuropsychology",
+                    "PEDS Pediatric Epidemiology",
+                    "PEDS Prevent Cardiac Ctr",
+                    "ICABH Pediatrics Research",
+                    "PEDS Adoption Medicine Clinic",
+                    "PEDS Hematology/Oncology"
+                ],
+                "Pharmacology": [
+                    "PHCL Pharmacology Admin",
+                    "PHCL Pharmacology Grad Educ"
+                ],
+                "Psychiatry": [
+                    "PSYCH Psychiatry Dept Admin",
+                    "CNC Clini Neuroscience Ctr Ops",
+                    "PSYCH Psychiatry Educ Prog",
+                    "PSYCH Psychiatry Clin Ops/Adm",
+                    "Behavior & Mental Disorders",
+                    "CAMH Research Core",
+                    "PSYCH Child Psychiatry",
+                    "PSYCH Adult Psychiatry"
+                ],
+                "Radiation Oncology": [
+                    "Radiation Oncology Administrat"
+                ],
+                "Radiology": [
+                    "Magnetic Resonance Res, Ctr Fr",
+                    "Radiology Administration",
+                    "MDT-Radiology - Imaging/Brain"
+                ],
+                "Rehabilitation Medicine": [
+                    "Physical Therapy",
+                    "RM Education",
+                    "RM Clinical Ops/Admin",
+                    "RM Administration",
+                    "Rehabilitation Science",
+                    "RM Neuropsychology"
+                ],
+                "St Cloud Medical School": [
+                    "SCMED Administration"
+                ],
+                "Surgery": [
+                    "Surgery Vascular",
+                    "Surgery Thoracic & Foregut",
+                    "Surgical Sciences Program",
+                    "Bariatric Surgery",
+                    "Pediatric Surgery",
+                    "Surgery Clinical Ops/Admin",
+                    "Plastic & Reconstructive Surg",
+                    "Experimental Surgical Services",
+                    "Surgery General Cardiovascular",
+                    "Surgery Diabetes Institute",
+                    "Surgery Transplant Info Svs",
+                    "Surgery Transplant Division",
+                    "Surgery Visible Heart Lab",
+                    "Surgery Administration",
+                    "Surgical Education Office",
+                    "Colon & Rectal Surgery",
+                    "Surgery Oncology",
+                    "Surgery Pediatric Cardiovascul",
+                    "SOUP Administrative Center",
+                    "Surgical Critical Care",
+                    "Surgical Outcome/Precision Med"
+                ],
+                "Translational Neurosci, Inst": [
+                    "Translational Neuroscience, In"
+                ],
+                "Urology": [
+                    "Urology Administration",
+                    "Urology Clinical Ops/Admin",
+                    "Research Educ/Simul Tech, Ctr",
+                    "Urology Education Office"
+                ]
+            }
+        },
+        "HUMAN RESOURCES, VP": {
+            "HUMAN RESOURCES, OFFICE OF": {
+                "Employee Relations": [
+                    "Employee Relations"
+                ],
+                "Leadership & Talent Devel": [
+                    "Leadership/Talent Development"
+                ],
+                "OHR Administration": [
+                    "OHR Administration",
+                    "OHR Communications"
+                ],
+                "OHR Operations": [
+                    "Payroll Services",
+                    "OHR Training Services",
+                    "OHR Contact Center",
+                    "HR Management Systems",
+                    "Benefits Administration",
+                    "OHR Operations Administration",
+                    "Workforce Data Management",
+                    "Leave of Absence Admin",
+                    "Staffing Operations",
+                    "Employee Information Mgmt"
+                ],
+                "OHR PEAK": [
+                    "PEAK"
+                ],
+                "OHR Special Circumstances": [
+                    "Retirement",
+                    "Non-University Employer",
+                    "HR Benefits Spec Circumstances",
+                    "HR NonResident/Ind Contractors",
+                    "Payroll Special Circumstances"
+                ],
+                "Talent Acquisition": [
+                    "Talent Acquisition"
+                ],
+                "Total Compensation": [
+                    "Total Compensation"
+                ]
+            }
+        },
+        "PRESIDENT, OFFICE OF THE": {
+            "INTERCOLLEGIATE ATHLETICS": {
+                "IA Financial Management": [
+                    "ATHLX Financial Management"
+                ],
+                "Intercollegiate Athletics": [
+                    "Athletic Equipment Rooms",
+                    "Men's Basketball",
+                    "Football",
+                    "Women's Gymnastics",
+                    "Rowing",
+                    "Women's Cross Country",
+                    "Volleyball",
+                    "Athletic Facilities Admin",
+                    "Ice Arenas",
+                    "Spirit Squad/Dance Team",
+                    "Baseline Center",
+                    "Athletic Administration",
+                    "Golden Gopher Fund",
+                    "Athletic Strength & Condition",
+                    "Licensing/Athletic Property",
+                    "Women's Basketball",
+                    "M Club Alumni Relations",
+                    "Athletic Marketing & Promotion",
+                    "Athletic Communications",
+                    "Athletic Ticket Office",
+                    "Men's Golf",
+                    "Men's Hockey",
+                    "Softball",
+                    "Women's Tennis",
+                    "Williams/Pavilion Complex",
+                    "Bierman Athletic Complex",
+                    "Athletic Tech Services",
+                    "Athletic Event Management",
+                    "Baseball",
+                    "Wrestling",
+                    "Rowing/Boathouse",
+                    "Student-Athlete Development",
+                    "Athletic Outdoor Facilities",
+                    "Athletic Training & Medicine",
+                    "Women's Golf",
+                    "Men's Gymnastics",
+                    "Women's Hockey",
+                    "Soccer",
+                    "Men's Swimming & Diving",
+                    "Men's Tennis",
+                    "Men's Track",
+                    "Swimming & Diving",
+                    "Huntington Bank Stadium",
+                    "Track & Field",
+                    "Gopher Digital Productions",
+                    "Athletic Creative Services"
+                ]
+            },
+            "PRESIDENT, OFFICE OF THE": {
+                "President, Office of the": [
+                    "Inst Compliance, Ofc of",
+                    "President, Office of the",
+                    "University Senate",
+                    "Government Relations",
+                    "Native American Affairs"
+                ]
+            },
+            "UNIVERSITY RELATIONS, OFC OF": {
+                "U of M Alumni Association": [
+                    "U of M Alumni Association"
+                ],
+                "UREL U Relations Office": [
+                    "URelations Admin",
+                    "URelations Marketing",
+                    "URelations Public Relations",
+                    "UR Creative Services"
+                ],
+                "University of MN Foundation": [
+                    "University of Minnesota Fdn"
+                ]
+            }
+        },
+        "REGENTS, BOARD OF": {
+            "BOARD OF REGENTS, OFFICE OF": {
+                "RGNTS Board of Regents": [
+                    "Board of Regents"
+                ]
+            },
+            "INTERNAL AUDIT, OFFICE OF": {
+                "Internal Audit, Office of": [
+                    "Internal Audit"
+                ]
+            }
+        },
+        "RESEARCH, VP": {
+            "RESEARCH, OFFICE OF VP FOR": {
+                "RSRCH Biomedical Genomics": [
+                    "Micro Chemical Family",
+                    "U of MN Genomics Center",
+                    "Biomedical Genomics Ctr Admin",
+                    "Micro Array Lab"
+                ],
+                "RSRCH Environment, Inst on the": [
+                    "Environment, Institute on the"
+                ],
+                "RSRCH Hormel Institute": [
+                    "The Hormel Institute Research",
+                    "The Hormel Inst Operations"
+                ],
+                "RSRCH Infectious Disease Rsrch": [
+                    "Influenza Res, MN Ctr fr Excel",
+                    "Infectious Disease Rsrch/Pol"
+                ],
+                "RSRCH Law & Values, Consortium": [
+                    "Law & Values, Consortium on"
+                ],
+                "RSRCH Research Animal Res": [
+                    "Research Animal Resources Mpls",
+                    "Research Animal Resources StPl",
+                    "Research Animal Res Hormel"
+                ],
+                "RSRCH Research Computing": [
+                    "U-Spatial",
+                    "U of MN Informatics Institute",
+                    "U-Spatial Duluth",
+                    "OVPR Research Computing",
+                    "OVPR Research Computing HCC"
+                ],
+                "RSRCH Soc Rsrch & Data Innov": [
+                    "Social Rsrch & Data Innovation",
+                    "Research Data Center",
+                    "Minnesota Population Center",
+                    "IPUMS Ctr for Data Integration"
+                ],
+                "RSRCH Strat Partner/Rsrch Coll": [
+                    "SPARC Food",
+                    "Strat Partnership/Rsrch Collab"
+                ],
+                "RSRCH Tech Commercialization": [
+                    "Technology Commercialization"
+                ],
+                "RSRCH Transportation Studies": [
+                    "Transportation Studies, Ctr"
+                ],
+                "RSRCH U of Minnesota Press": [
+                    "University of Minnesota Press"
+                ],
+                "RSRCH VP for Research": [
+                    "Institutional Biosafety Cmte",
+                    "Human Research Protection Prog",
+                    "OVPR-Communications",
+                    "VP for Research, Office of",
+                    "Univ Economic Development",
+                    "Inst Animal Care & Use Committ",
+                    "Cost Analysis, Office of",
+                    "OVPR Research Information Syst",
+                    "OVPR-Human Resources",
+                    "VPR Assoc/Finance & HR",
+                    "Research Advancement",
+                    "AHC BioSafety Level 3 Lab Mgmt",
+                    "RSRCH Risk Intel/Compliance"
+                ],
+                "Sponsored Projects Admin": [
+                    "Sponsored Projects Admin"
+                ]
+            }
+        },
+        "UNIVERSITY SERVICES, VP": {
+            "AUXILIARY SERVICES": {
+                "AUXSV Administration": [
+                    "AUX PSB Building",
+                    "Auxiliary Administration",
+                    "Auxiliary Svcs Finance/Payroll",
+                    "Auxiliary Services Technology"
+                ],
+                "AUXSV Bookstores": [
+                    "St Paul Bookstores",
+                    "Coffman Union Bookstore"
+                ],
+                "AUXSV Bookstores - Crookston": [
+                    "Crookston Bookstore"
+                ],
+                "AUXSV Bookstores - Morris": [
+                    "Morris Bookstore"
+                ],
+                "AUXSV Bookstores - Rochester": [
+                    "Rochester Bookstore"
+                ],
+                "AUXSV Contract Administration": [
+                    "Vending Administration",
+                    "Contract Admin-Auxiliary Svcs"
+                ],
+                "AUXSV Dining Services & Admin": [
+                    "Coffman Union Dining",
+                    "Nolte Dining",
+                    "Bailey Hall Dining",
+                    "17th Avenue Res Hall Dining",
+                    "Lind Hall Dining",
+                    "Moos Tower Cafe",
+                    "Blegen Hall Dining",
+                    "Walter Library Cafe",
+                    "Humphrey Dining",
+                    "Comstock Hall Dining",
+                    "Arboretum Cafe",
+                    "Education Sciences Cafe",
+                    "Philip Wangensteen Cafe",
+                    "Cont Educ Conf  Ctr Cafe",
+                    "Wilson Library Cafe",
+                    "Ben Pomeroy Cafe",
+                    "Middlebrook Hall Dining",
+                    "Bell Food Service",
+                    "Athletes Nutrition Center",
+                    "Carlson School Dining",
+                    "St Paul Terrace Cafe",
+                    "Law Cafe",
+                    "Centennial Hall Dining",
+                    "Sanford Hall Dining",
+                    "WBOB Dining",
+                    "Art School Cafe",
+                    "Cancer Cardio Dining",
+                    "URWC Dining",
+                    "Pioneer Hall Dining",
+                    "Health Sci Educ Ctr Dining",
+                    "Hanson Hall Dining",
+                    "ICA Dining",
+                    "Dining Partner Admin"
+                ],
+                "AUXSV Fleet Services": [
+                    "Fleet Shops",
+                    "Fleet Services Administration",
+                    "Fleet Rental"
+                ],
+                "AUXSV Housing & Resident Life": [
+                    "Comstock Hall",
+                    "Frontier Hall",
+                    "Pioneer Hall",
+                    "Centennial Hall",
+                    "Housing Administration",
+                    "Wilkins Hall",
+                    "Yudof Hall",
+                    "Conference & Event Services",
+                    "Residence Life",
+                    "Territorial Hall",
+                    "Radius Apartments",
+                    "Keeler Apartments",
+                    "Bailey Hall",
+                    "Sanford Hall",
+                    "University Village",
+                    "17th Avenue Residence Hall",
+                    "Faculty Housing",
+                    "Middlebrook Hall"
+                ],
+                "AUXSV Parking & Transportation": [
+                    "Minneapolis Lots",
+                    "PTS Alternative Transportation",
+                    "University Transit",
+                    "Parking Administration",
+                    "Parkway South Ramp"
+                ],
+                "AUXSV Printing & General Svcs": [
+                    "Campus Mail Sorting",
+                    "Bindery Services",
+                    "Printing Plant",
+                    "Addressing and Mailing",
+                    "Copier Leasing"
+                ],
+                "AUXSV U Card Office": [
+                    "U Card Office"
+                ],
+                "AUXSV U Market": [
+                    "U Market Services Logistics",
+                    "U Market Stock",
+                    "Campus Mail Distribution",
+                    "U Market Services Admin",
+                    "U Market eProcurement"
+                ]
+            },
+            "CAPITAL PLANNING/PROJECT MGMT": {
+                "CPPMX Capital Project Mgmt": [
+                    "CPM Small/Mid Proj Delivery",
+                    "CPM Construction",
+                    "CPM Construction Estimation",
+                    "CPM Project Delivery"
+                ]
+            },
+            "FACILITIES MANAGEMENT": {
+                "FM Administration": [
+                    "FM Administration"
+                ],
+                "FM Central Services": [
+                    "FM U Construction",
+                    "FM Locksmiths",
+                    "FM Technical Services",
+                    "FM Abatement of Haz Material",
+                    "FM Landcare",
+                    "FM Matl & Shops - Sign",
+                    "FM Waste Services",
+                    "FM Design",
+                    "FM Low Voltage",
+                    "FM Central Services Admin",
+                    "FM Cust & Waste Admin"
+                ],
+                "FM District Operations": [
+                    "FM District Management",
+                    "FM District Operations",
+                    "FM Matl & Shops - Stores",
+                    "FM Operations Support",
+                    "FM Elevator Maint Management",
+                    "FM Research Bldg Svcs"
+                ],
+                "FM East Bank District": [
+                    "FM East Bank Dist Team 2 Mtce",
+                    "FM East Bank Dist Team 3 Mtce",
+                    "FM East Bank Dist Team 3 Cust",
+                    "FM East Bank Dist Wide Mtce",
+                    "FM East Bank Dist Team 2 Cust",
+                    "FM East Bank Dist Wide Cust",
+                    "FM East Bank Dist Team 1 Cust",
+                    "FM East Bank Dist Admin",
+                    "FM East Bank Dist Team 1 Mtce",
+                    "FM East Bank Dist Team 4 Mtce",
+                    "FM East Bank Dist Team 4 Cust"
+                ],
+                "FM HRA District": [
+                    "FM HRA Dist Admin",
+                    "FM HRA Team 2 Mtce",
+                    "FM HRA Dist Wide Mtce",
+                    "FM HRA Dist Wide Cust",
+                    "FM HRA Team 1 Mtce",
+                    "FM HRA Team 2 Cust",
+                    "FM HRA Team 1 Cust"
+                ],
+                "FM Health Sciences District": [
+                    "FM Health Sci Dist Team 3 Mtce",
+                    "FM Health Sci Dist Wide Mtce",
+                    "FM Health Sci Dist Team 2 Mtce",
+                    "FM Health Sci Dist Team 3 Cust",
+                    "FM Health Sci Dist Wide Cust",
+                    "FM Health Sci Dist Team 1 Mtce",
+                    "FM Health Sci Dist Team 2 Cust",
+                    "FM Health Sci Dist Admin",
+                    "FM Health Sci Dist Team 1 Cust",
+                    "FM Health Sci Dist Team 4 Mtce",
+                    "FM Health Sci Dist Team 4 Cust"
+                ],
+                "FM St Paul District": [
+                    "FM St Paul Dist Team 1 Mtce",
+                    "FM St Paul Dist Team 2 Mtce",
+                    "FM St Paul Dist Wide Cust",
+                    "FM St Paul Dist Team 3 Mtce",
+                    "FM St Paul Dist Admin",
+                    "FM St Paul Dist Team 1 Cust",
+                    "FM St Paul Dist Eastcliff",
+                    "FM St Paul Dist Team 2 Cust",
+                    "FM St Paul Dist Team 3 Cust",
+                    "FM St Paul Dist Wide Mtce"
+                ],
+                "FM Utilities Engineering": [
+                    "FM BSAC Operations",
+                    "FM Steam Operations",
+                    "FM Chilled Water Operations",
+                    "FM Facilities Engineering",
+                    "FM Electricity Operations",
+                    "FM Energy Management",
+                    "FM Water and Sewer Operations",
+                    "FM Building Controls",
+                    "FM Stormwater"
+                ],
+                "FM West Bank District": [
+                    "FM West Bank Dist Team 1 Cust",
+                    "FM West Bank Dist Admin",
+                    "FM West Bank Dist Team 1 Mtce",
+                    "FM West Bank Dist Team 2 Mtce",
+                    "FM West Bank Dist Wide Mtce",
+                    "FM West Bank Dist Wide Cust",
+                    "FM West Bank Dist Team 2 Cust"
+                ]
+            },
+            "PLANNING,SPACE & REAL ESTATE": {
+                "PSRXX Managed Properties": [
+                    "PSRE Rosemount Research Ctr",
+                    "PSRE Managed Prop Admin",
+                    "PSRE Murphy WH Ops"
+                ],
+                "PSRXX Planning & Space Mgmt": [
+                    "PSRE Campus & Capital Planning",
+                    "PSRE Hlth Sci Fac Planning",
+                    "PSRE Space Management"
+                ],
+                "PSRXX Real Estate": [
+                    "PSRE Real Estate"
+                ]
+            },
+            "UNIVERSITY SERVICES": {
+                "USERV Finance and Payroll": [
+                    "U Serv Project Accounting",
+                    "U Serv Utility Accounting",
+                    "U Serv Finance",
+                    "U Serv Purchasing",
+                    "U Serv Public Safety Finance",
+                    "U Serv Payroll"
+                ],
+                "USERV Information & Systems": [
+                    "U Serv Strategy & Planning",
+                    "U Serv Information Services",
+                    "U Serv Analysis & Cont Improve",
+                    "U Serv Facility Info Systems",
+                    "U Serv Engineering Records",
+                    "U Serv Enterprise Asset Mgmt"
+                ],
+                "USERV Univ Sustainability": [
+                    "University Sustainability"
+                ],
+                "USERV University Svcs Admin": [
+                    "U Serv Human Resources",
+                    "U Serv Administration"
+                ]
+            }
+        },
+        "VP/CHIEF FIN OFFICER/TREASURER": {
+            "AVP/ASST CFO": {
+                "AVP/Asst CFO": [
+                    "University Tax Management Ofc",
+                    "Finance, AVP for",
+                    "Risk Management Administration",
+                    "University Finance HR"
+                ],
+                "CONTR Controller's Office": [
+                    "Internal/External Sales",
+                    "Inventory Services",
+                    "EFS Module Support Team",
+                    "Sponsored Financial Reporting",
+                    "Purchasing Services",
+                    "Disbursement Services",
+                    "Controller's Administration",
+                    "EFS Customer Support",
+                    "Financial Training",
+                    "Accounting Services",
+                    "Accounts Receivable/Billing",
+                    "Controller's Ofc Tech Support"
+                ],
+                "Financial Operations Center": [
+                    "FinOps Center Admin",
+                    "FinOps - Contracts",
+                    "FinOps - Purchasing",
+                    "FinOps - Accounts Payable",
+                    "FinOps - Accounting",
+                    "FinOps - Accounts Receivable"
+                ],
+                "Institutional Analysis": [
+                    "UPortal",
+                    "Measurement Services, Ofc of",
+                    "Univ Data & Inst Reporting",
+                    "Institutional Analysis",
+                    "SERU",
+                    "Enterprise Data Mgmt/Reporting"
+                ],
+                "UMORE Park": [
+                    "UMORE Park"
+                ]
+            },
+            "PUBLIC SAFETY": {
+                "PUBSF Public Safety": [
+                    "DPS Emergency Comm Ctr",
+                    "DPS Central Security",
+                    "DPS Administration",
+                    "DPS University Security",
+                    "DPS Police Department",
+                    "DPS Security Infrastructure"
+                ]
+            },
+            "UNIVERSITY FINANCE": {
+                "SVP Finance & Operations": [
+                    "Finance & Operations, Sr VP",
+                    "Investments & Banking, Ofc of",
+                    "University Budget Office",
+                    "MPact Healthcare Innovation"
+                ]
+            },
+            "UNIVERSITY HEALTH AND SAFETY": {
+                "HSRM Building Codes": [
+                    "HSRM Building Codes"
+                ],
+                "HSRM Health, Safety, RM": [
+                    "HSRM Biosafety & Occ Health",
+                    "HSRM Workplace Safety",
+                    "HSRM Research Safety",
+                    "HSRM Regulated Waste",
+                    "HSRM Administration",
+                    "HSRM Emergency Management",
+                    "HSRM Radiation Safety",
+                    "HSRM Environmental Compliance",
+                    "HSRM Industrial Hygiene",
+                    "HSRM Safety"
+                ]
+            }
+        },
+        "VP/CHIEF INFORMATION OFFICER": {
+            "ENTERPRISE SYSTEM UPGRADE PROJ": {
+                "ERP Enterprise Resource Planng": [
+                    "ERP Administration"
+                ]
+            },
+            "INFORMATION TECHNOLOGY": {
+                "OIT - Health Sciences": [
+                    "OIT Academic Clinical Affairs",
+                    "Health Sciences Technology"
+                ],
+                "OIT Academic Technology": [
+                    "OIT Academic Technology"
+                ],
+                "OIT Administration": [
+                    "VP & Chief Info Officer,Ofc of",
+                    "Univ Information Security"
+                ],
+                "OIT Application Development": [
+                    "OIT Software Dev/Rpt Data Mgmt",
+                    "OIT PeopleSoft Solutions",
+                    "OIT Analysis",
+                    "OIT Application Devel Admin"
+                ],
+                "OIT Business Office": [
+                    "OIT Finance & HR"
+                ],
+                "OIT End User Support Services": [
+                    "OIT Desktop Support",
+                    "OIT Support Services Admin",
+                    "OIT Provisioning & Requests",
+                    "OIT Svc/Compt Mgmt Svc Alignmt",
+                    "OIT Proactive Support",
+                    "OIT Desktop Support BAA"
+                ],
+                "OIT Identity Access Mgmt": [
+                    "Identity Access Management"
+                ],
+                "OIT Infrastructure &Production": [
+                    "OIT Microsoft Platform & Tools",
+                    "OIT Network & Design",
+                    "OIT Enterprise Application",
+                    "OIT Operations",
+                    "OIT Infra & Production Admin",
+                    "OIT Platforms",
+                    "OIT Core Infrastructure",
+                    "OIT Video",
+                    "OIT 24x7 Operations",
+                    "OIT SiteReliabilityEngineering"
+                ]
+            }
+        }
+    }
+}
