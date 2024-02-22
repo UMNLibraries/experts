@@ -195,10 +195,10 @@ def default_next_wait_interval(wait_interval: int):
     return wait_interval**2
 
 # TODO: This needs work. Need to remove the context, at least.
-class RequestFunction(Protocol):
-    '''Request functions defined by this module, e.g., ``get`` and ``post``.'''
-    def __call__(resource_path: str, context: Context, params: RequestParams = m()) -> Result[httpx.Response, Exception]:
-        ...
+#class RequestFunction(Protocol):
+#    '''Request functions defined by this module, e.g., ``get`` and ``post``.'''
+#    def __call__(resource_path: str, context: Context, params: RequestParams = m()) -> Result[httpx.Response, Exception]:
+#        ...
 
 @safe
 def attempt_request(
