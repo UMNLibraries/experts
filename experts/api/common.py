@@ -304,7 +304,7 @@ def request_many_by_offset(
     for result in request_many_by_identifier(
         request_by_offset_function,
         identifiers=remaining_offsets
-     ):
+    ):
         if is_successful(result):
             yield result.unwrap()
         else:
