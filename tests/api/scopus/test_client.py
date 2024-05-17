@@ -1,91 +1,94 @@
-from datetime import datetime
+from datetime import date
 import importlib
-import os
 
 import pytest
 from pyrsistent import m, pmap
 from returns.pipeline import is_successful
 
-from experts.api.client import get, post
-import experts.api.scopus.context as context
+from experts.api.scopus import \
+    ResponseParser as r_parser, \
+    AbstractResponseBodyParser as arb_parser
 
 @pytest.mark.integration
-def test_get_all_responses_by_token(session):
-    parser = context.TokenResponseParser
-    params = m(count=200, query=f'af-id({session.context.affiliation_id}) AND key(kidney carcinoma)')
+def test_basic_abstract_retrieval_and_parsing(session):
+    umn_article_scopus_id = '84924664029'
 
-    total_result = session.get('search/scopus', params=params.set('cursor', '*'))
+    # Test more generic functions first:
 
-    if not is_successful(total_result):
-        raise total_result.failure()
-    total = parser.total_items(
-        total_result.unwrap().json()
+    params = m(content='core', view='FULL')
+    result = session.get(f'abstract/scopus_id/{umn_article_scopus_id}', params=params)
+    if not is_successful(result):
+        raise result.failure()
+    umn_article_body = r_parser.body(result.unwrap())
+
+    # A few sanity check assertions while we gather some data:
+    assert arb_parser.scopus_id(umn_article_body) == umn_article_scopus_id
+    refcount = arb_parser.refcount(umn_article_body)
+    assert refcount > 50 # Should actually be 60, unless the metadata changes
+    reference_scopus_ids = sorted(arb_parser.reference_scopus_ids(umn_article_body))
+    assert len(reference_scopus_ids) == refcount
+
+    downloaded_reference_scopus_ids = []
+    for body in session.request_many_by_id(
+        session.get,
+        'abstract',
+        id_type='scopus_id',
+        ids=reference_scopus_ids,
+        params=params
+    ) | r_parser.responses_to_bodies:
+        scopus_id = arb_parser.scopus_id(body)
+        assert scopus_id in reference_scopus_ids
+        downloaded_reference_scopus_ids.append(scopus_id)
+
+    assert len(downloaded_reference_scopus_ids) <= refcount
+    # This _should_ be true; should be about 59. We don't test for equality because
+    # some cited articles are unavailable via the API.
+    assert len(downloaded_reference_scopus_ids) > (refcount - 5)
+
+    # Test abstract-specific functions making the same requests:
+
+    abstract_specific_result = session.get_abstract_by_scopus_id(umn_article_scopus_id)
+    if not is_successful(abstract_specific_result):
+        raise abstract_specific_result.failure()
+    abstract_specific_body = r_parser.body(abstract_specific_result.unwrap())
+
+    assert abstract_specific_body == umn_article_body
+
+    downloaded_abstract_specific_reference_scopus_ids = []
+    for body in session.get_many_abstracts_by_scopus_id(
+        scopus_ids=reference_scopus_ids,
+    ) | r_parser.responses_to_bodies:
+        downloaded_abstract_specific_reference_scopus_ids.append(
+            arb_parser.scopus_id(body)
+        )
+
+    assert sorted(downloaded_abstract_specific_reference_scopus_ids) == sorted(downloaded_reference_scopus_ids)
+
+def test_abstract_specific_pipes(session):
+    umn_article_scopus_ids = [
+        '84924664029',
+        '75149190029',
+        '49949145584',
+    ]
+    # Based on previously downloaded records in data/:
+    total_reference_scopus_ids = 167
+
+    two_pipe_multi_umn_article_reference_scopus_ids = list(
+        session.get_many_abstracts_by_scopus_id(
+            scopus_ids=umn_article_scopus_ids,
+        )
+        | r_parser.responses_to_bodies
+        | arb_parser.bodies_to_reference_scopus_ids
     )
 
-    assert total > 0
-
-    assert sum(
-        len(parser.items(response)) for response in (
-            session.all_responses_by_token(get, 'search/scopus', token='*', params=params)
+    one_pipe_multi_umn_article_reference_scopus_ids = list(
+        session.get_many_abstracts_by_scopus_id(
+            scopus_ids=umn_article_scopus_ids,
         )
-    ) == total
-    
-    assert sum(
-        [1 for item in session.all_items(get, 'search/scopus', token='*', params=params)]
-    ) == total
-'''
-@pytest.mark.integration
-def test_get_all_responses_by_offset(session):
-    parser = context.OffsetResponseParser
-    params = m(start=0, count=200, query='af-id({session.context.affiliation_id})')
-
-    total_result = session.get('search/scopus', params=params)
-
-    if not is_successful(total_result):
-        raise total_result.failure()
-    total = parser.total_items(
-        total_result.unwrap().json()
+        | arb_parser.responses_to_reference_scopus_ids
     )
 
-    assert total > 0
-
-    assert sum(
-        len(parser.items(response)) for response in (
-            session.all_responses_by_offset(get, 'search/scopus', params=params)
-        )
-    ) == total
-    
-    assert sum(
-        [1 for item in session.all_items(get, 'persons', params=params)]
-    ) == total
-'''
-'''
-@pytest.mark.integration
-def test_post_all_responses_by_offset(pure_ws_session):
-    parser = context.OffsetResponseParser
-    params = pmap({
-        'offset': 0,
-        'size': 200,
-        'forJournals': {
-          'uuids': [ '830a7383-b7a2-445c-8ff5-34816b6eadee' ] # Nature
-        }
-    })
-
-    total_result = session.post('research-outputs', params=params)
-
-    if not is_successful(total_result):
-        raise total_result.failure()
-    total = parser.total_items(
-        total_result.unwrap().json()
-    )
-
-    assert sum(
-        len(parser.items(response)) for response in (
-            session.all_responses_by_offset(post, 'research-outputs', params=params)
-        )
-    ) == total
-    
-    assert sum(
-        [1 for item in session.all_items(post, 'research-outputs', params=params)]
-    ) == total
-'''
+    assert sorted(one_pipe_multi_umn_article_reference_scopus_ids) == sorted(two_pipe_multi_umn_article_reference_scopus_ids)
+    assert len(one_pipe_multi_umn_article_reference_scopus_ids) <= total_reference_scopus_ids
+    # This _should_ be true. We don't test for equality because some cited articles are unavailable via the API.
+    assert len(one_pipe_multi_umn_article_reference_scopus_ids) > (total_reference_scopus_ids - 10)

@@ -1,122 +1,53 @@
+from datetime import date
+import json
 import pytest
 
-from experts.api.scopus import AbstractResponseBodyParser
+from experts.api.scopus import AbstractResponseBodyParser as parser
+
+def load_data(scopus_id: str):
+    with open(f'tests/api/scopus/data/abstract_{scopus_id}.json') as body_file, open(f'tests/api/scopus/data/abstract_{scopus_id}_ref_scopus_ids.json') as ref_scopus_ids_file:
+        return [json.load(body_file), json.load(ref_scopus_ids_file)]
 
 def test_abstract_response_body_parser():
-    response = {
-        'abstracts-retrieval-response': {
-            'item': {
-                'bibrecord': {
-                    'head': {
-                        'source': {
-                            'codencode': 'FORIE',
-                            'sourcetitle-abbrev': 'Food Res. Int.',
-                            '@country': 'gbr',
-                            'issn': {
-                                '$': '09639969',
-                                '@type': 'print'
-                            },
-                            'volisspag': {
-                                'voliss': {
-                                    '@volume': '43',
-                                    '@issue': '2'
-                                },
-                                'pagerange': {
-                                    '@first': '432',
-                                    '@last': '442'
-                                }
-                            },
-                            '@type': 'j',
-                            'publicationyear': {
-                                '@first': '2010'
-                            },
-                            'sourcetitle': 'Food Research International',
-                            '@srcid': '23180',
-                            'publicationdate': {
-                                'month': '03',
-                                'year': '2010',
-                                'date-text': {
-                                    '@xfab-added': 'true',
-                                    '$': 'March 2010'
-                                }
-                            }
-                        }
-                    },
-                    'tail': {
-                        'bibliography': {
-                            '@refcount': 3,
-                            'reference': [
-                                {
-                                    'ref-fulltext': 'Adsule R.N. In: Nwoloko E., and Smartt J. (Eds). Food and feed from legumes and oilseeds (1996), Chapman & Hall Pub. 84-110',
-                                    '@id': '1',
-                                    'ref-info': {
-                                        'ref-publicationyear': {
-                                            '@first': '1996'
-                                        },
-                                        'refd-itemidlist': {
-                                            'itemid': {
-                                                '$': '75149160193',
-                                                '@idtype': 'SGR'
-                                            }
-                                        },
-                                        'ref-volisspag': {
-                                            'pagerange': {
-                                                '@first': '84',
-                                                '@last': '110'
-                                            }
-                                        },
-                                        'ref-text': 'Nwoloko E., and Smartt J. (Eds), Chapman & Hall Pub.',
-                                        'ref-authors': {
-                                            'author': [
-                                                {
-                                                    '@seq': '1',
-                                                    'ce:initials': 'R.N.',
-                                                    '@_fa': 'true',
-                                                    'ce:surname': 'Adsule',
-                                                    'ce:indexed-name': 'Adsule R.N.'
-                                                }
-                                            ]
-                                        },
-                                        'ref-sourcetitle': 'Food and feed from legumes and oilseeds'
-                                    }
-                                },
-                                {
-                                    'ref-fulltext': 'Agriculture & Agri-Food Canada (2006). Chickpeas: Situation and outlook. Bi-weekly Bulletin, 19(13). <www.agr.gc.ca> Retrieved 20.08.08.',
-                                    '@id': '2',
-                                    'ref-info': {
-                                        'refd-itemidlist': {
-                                            'itemid': {
-                                                '$': '75149115900',
-                                                '@idtype': 'SGR'
-                                            }
-                                        },
-                                        'ref-text': 'Agriculture & Agri-Food Canada (2006). Chickpeas: Situation and outlook. Bi-weekly Bulletin, 19(13). <www.agr.gc.ca> Retrieved 20.08.08.'
-                                    }
-                                },
-                                {
-                                    'ref-fulltext': 'Agriculture & Agri-Food Canada (2006). Lentils: Situation and outlook. Bi-weekly Bulletin, 19(7). <www.agr.gc.ca> Retrieved 21.08.08.',
-                                    '@id': '3',
-                                    'ref-info': {
-                                        'refd-itemidlist': {
-                                            'itemid': {
-                                                '$': '75149191551',
-                                                '@idtype': 'SGR'
-                                            }
-                                        },
-                                        'ref-text': 'Agriculture & Agri-Food Canada (2006). Lentils: Situation and outlook. Bi-weekly Bulletin, 19(7). <www.agr.gc.ca> Retrieved 21.08.08.'
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                }
-            }
-        }
-    }
+    scopus_id = '75149190029'
+    body, reference_scopus_ids = load_data(scopus_id)
 
-    parser = AbstractResponseBodyParser
-    assert parser.issn(response) == response['abstracts-retrieval-response']['item']['bibrecord']['head']['source']['issn']['$']
-    assert parser.issn_type(response) == response['abstracts-retrieval-response']['item']['bibrecord']['head']['source']['issn']['@type']
-    assert parser.refcount(response) == response['abstracts-retrieval-response']['item']['bibrecord']['tail']['bibliography']['@refcount']
-    assert parser.refcount(response) == len(parser.reference_scopus_ids(response))
-    assert parser.reference_scopus_ids(response) == ['75149160193','75149115900','75149191551']
+    assert parser.scopus_id(body) == scopus_id
+    assert isinstance(parser.scopus_id(body), str)
+    assert parser.eid(body) == body['abstracts-retrieval-response']['coredata']['eid']
+    assert isinstance(parser.eid(body), str)
+
+    assert parser.date_created(body) == date.fromisoformat('2009-10-15')
+
+    assert parser.refcount(body) == int(body['abstracts-retrieval-response']['item']['bibrecord']['tail']['bibliography']['@refcount'])
+    assert isinstance(parser.refcount(body), int)
+    assert sorted(parser.reference_scopus_ids(body)) == sorted(reference_scopus_ids)
+
+def test_abstract_response_body_parser_mixed_reference_itemid_values():
+    '''The abstract under test here contains reference itemids that are mix of list and non-list values.'''
+    scopus_id = '84924664029'
+    body, reference_scopus_ids = load_data(scopus_id)
+
+    assert parser.scopus_id(body) == scopus_id
+    assert isinstance(parser.scopus_id(body), str)
+    assert parser.eid(body) == body['abstracts-retrieval-response']['coredata']['eid']
+    assert isinstance(parser.eid(body), str)
+
+    assert parser.date_created(body) == date.fromisoformat('2021-09-27')
+
+    assert sorted(parser.reference_scopus_ids(body)) == sorted(reference_scopus_ids)
+
+def test_abstract_response_body_parser_no_references():
+    scopus_id = '49949145584'
+    body, reference_scopus_ids = load_data(scopus_id)
+
+    assert parser.scopus_id(body) == scopus_id
+    assert isinstance(parser.scopus_id(body), str)
+    assert parser.eid(body) == body['abstracts-retrieval-response']['coredata']['eid']
+    assert isinstance(parser.eid(body), str)
+
+    assert parser.date_created(body) == date.fromisoformat('2017-09-18')
+
+    assert parser.refcount(body) == 0
+    assert isinstance(parser.refcount(body), int)
+    assert sorted(parser.reference_scopus_ids(body)) == sorted(reference_scopus_ids)

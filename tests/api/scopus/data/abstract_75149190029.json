@@ -1,0 +1,1057 @@
+{
+    "abstracts-retrieval-response": {
+        "item": {
+            "bibrecord": {
+                "item-info": {
+                  "history": {
+                    "date-created": {
+                      "@day": "15",
+                      "@year": "2009",
+                      "@month": "10"
+                    }
+                  }
+        	},
+                "tail": {
+                    "bibliography": {
+                        "@refcount": "103",
+                        "reference": [
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149160193",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+				}
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149115900",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149191551",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149193597",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0344097508",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "50649094650",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "38249026510",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "84855507947",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0029833141",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149165376",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0020362344",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0030749526",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0031983817",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0022967349",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0036981085",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149113747",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0016213578",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149145647",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0342831714",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0142190895",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0008254515",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0000229676",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "32344435383",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0030851358",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0041683074",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "51049097278",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0001390371",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "29844438773",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0000861325",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0032760778",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0030161855",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0028121297",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "32144434430",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149144078",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149115438",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "35449007166",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "34147123803",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0029958113",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "43049107998",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0009580310",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "35348862011",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149141059",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0036904545",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0027442756",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0028809235",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "13844322374",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0018873523",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149120759",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "3242774456",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "33644930319",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0003551413",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0033014549",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0002773005",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "3543100683",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "33746531279",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0343266523",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0042732573",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "34548162029",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "85122905075",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "34547323478",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0032839807",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0027426080",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0004918111",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "33745197770",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0028016014",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0019252614",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "33646816054",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0003634702",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "4243357029",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0036302694",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0030130380",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0034734223",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149164504",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149157713",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149118394",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0030486803",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0031941559",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "33747399034",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0000180578",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "33748065305",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "32144434430",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149117921",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149145191",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149187080",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "7244258916",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "27644495679",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0024229763",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "84985273189",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0001809347",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0017196510",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "35649020642",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149168974",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149119880",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "31344453213",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0029972849",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "33846781508",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0033957644",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0032957934",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "75149131091",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "38549151817",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0036219595",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0037169297",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "ref-info": {
+                                    "refd-itemidlist": {
+                                        "itemid": {
+                                            "$": "0037409169",
+                                            "@idtype": "SGR"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "coredata": {
+            "eid": "2-s2.0-75149190029"
+        }
+    }
+}
