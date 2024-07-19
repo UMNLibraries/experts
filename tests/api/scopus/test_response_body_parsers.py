@@ -5,7 +5,7 @@ import pytest
 from experts.api.scopus import AbstractResponseBodyParser as parser
 
 def load_data(scopus_id: str):
-    with open(f'tests/api/scopus/data/abstract_{scopus_id}.json') as body_file, open(f'tests/api/scopus/data/abstract_{scopus_id}_ref_scopus_ids.json') as ref_scopus_ids_file:
+    with open(f'tests/api/scopus/data/abstract_{scopus_id}/body.json') as body_file, open(f'tests/api/scopus/data/abstract_{scopus_id}/body_ref_scopus_ids.json') as ref_scopus_ids_file:
         return [json.load(body_file), json.load(ref_scopus_ids_file)]
 
 def test_abstract_response_body_parser():

@@ -1,12 +1,14 @@
-from datetime import date
+from datetime import date, datetime
 import importlib
 
+import httpx
 import pytest
 from pyrsistent import m, pmap
 from returns.pipeline import is_successful
 
 from experts.api.scopus import \
     ResponseParser as r_parser, \
+    ResponseHeadersParser as rh_parser, \
     AbstractResponseBodyParser as arb_parser
 
 @pytest.mark.integration
@@ -29,13 +31,14 @@ def test_basic_abstract_retrieval_and_parsing(session):
     assert len(reference_scopus_ids) == refcount
 
     downloaded_reference_scopus_ids = []
-    for body in session.request_many_by_id(
+    for headers, body in session.request_many_by_id(
         session.get,
         'abstract',
         id_type='scopus_id',
         ids=reference_scopus_ids,
         params=params
-    ) | r_parser.responses_to_bodies:
+    ) | r_parser.responses_to_headers_bodies:
+        assert isinstance(headers, httpx.Headers)
         scopus_id = arb_parser.scopus_id(body)
         assert scopus_id in reference_scopus_ids
         downloaded_reference_scopus_ids.append(scopus_id)

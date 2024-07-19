@@ -1,7 +1,7 @@
 # See https://peps.python.org/pep-0655/#usage-in-python-3-11
 from __future__ import annotations
 from typing_extensions import NotRequired, TypedDict
-from datetime import date
+from datetime import date, datetime
 from functools import partial
 import os
 import re
@@ -10,6 +10,8 @@ import uuid
 
 import attrs
 from attrs import Factory, field, frozen, validators
+
+import dateutil
 
 import httpx
 import jsonpath_ng.ext as jp
@@ -42,6 +44,25 @@ class ResponseParser:
     def responses_to_bodies(responses: Iterator[httpx.Response]) -> Iterator[ResponseBody]:
         for response in responses:
             yield ResponseParser.body(response)
+
+    @Pipe
+    def responses_to_headers_bodies(responses: Iterator[httpx.Response]) -> Iterator[Tuple[httpx.Headers, ResponseBody]]:
+        for response in responses:
+            yield (response.headers, response.json())
+
+class ResponseHeadersParser:
+    def ratelimit(headers:httpx.Headers) -> int:
+        return int(headers.get('x-ratelimit-limit'))
+
+    def ratelimit_remaining(headers:httpx.Headers) -> int:
+        return int(headers.get('x-ratelimit-remaining'))
+
+    def ratelimit_reset(headers:httpx.Headers) -> datetime:
+        return datetime.fromtimestamp(int(headers.get('x-ratelimit-reset')))
+
+    @staticmethod
+    def last_modified(headers:httpx.Headers) -> datetime:
+        return dateutil.parser.parse(headers.get('last-modified'))
 
 #class AbstractResponseBody(TypedDict):
 #    ...
