@@ -15,9 +15,14 @@ from experts.api.scopus import \
 scopus_id = sys.argv[1]
 
 with Client() as session:
-    params = m(content='core', view='FULL')
+    # Abstract Retrieval API
+    # content='core' excludes dummy records (404s), but not when retrieving
+    # abstracts by scopus ID, apparently.
+    #params = m(content='core', view='FULL')
+    params = m(view='FULL')
+    #params = m(content='core', view='REF')
     result = session.get(f'abstract/scopus_id/{scopus_id}', params=params)
-    
+
     if not is_successful(result):
         raise result.failure()
     response = result.unwrap()
