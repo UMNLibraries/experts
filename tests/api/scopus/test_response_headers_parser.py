@@ -13,7 +13,7 @@ all_scopus_ids = [
     '84924664029',
 ]
 headers_inputs = {
-    scopus_id: import_module(f'..data.abstract_{scopus_id}.headers', package=__name__)
+    scopus_id: import_module(f'..data.abstract.{scopus_id}.headers', package=__name__)
     for scopus_id in all_scopus_ids
 }
 

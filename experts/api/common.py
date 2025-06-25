@@ -7,7 +7,7 @@ from inspect import getmembers, getmodule, isfunction, signature
 import os
 import threading
 import time
-from typing import Callable, Generic, Iterator, Mapping, Protocol, Tuple, Type, TypeVar
+from typing import Callable, Generic, Iterator, Mapping, Protocol, Type, TypeVar
 import uuid
 
 import attrs
@@ -28,6 +28,7 @@ import immutable
 immutable.module(__name__)
 
 RequestParams = PMap
+RequestResult = Result[httpx.Response, Exception]
 ResponseBody = Mapping
 ResponseBodyItem = Mapping
 
@@ -133,7 +134,7 @@ class Client(Protocol):
     # TODO: Make a protocol for this function
     @property
     def retryable(self) -> Callable: ...
-    '''A function that takes a returns.Result and returns a boolean. Required. Default: Return value of ``default_retryable``.'''
+    '''A function that takes a RequestResult and returns a boolean. Required. Default: Return value of ``default_retryable``.'''
 
     # TODO: Make a protocol for this function
     @property
@@ -167,9 +168,9 @@ class Client(Protocol):
     # TODO: Add more methods? See experts.api.pure.ws
 
 def retryable(
-    result:Result,
+    result:RequestResult,
     retryable_status_codes:PVector[int],
-    retryable_errors:Tuple[Type[Exception]],
+    retryable_errors:tuple[Type[Exception]],
 ) -> bool:
     if is_successful(result):
         response = result.unwrap()
@@ -197,14 +198,14 @@ def default_next_wait_interval(wait_interval: int):
 # TODO: This needs work. Need to remove the context, at least.
 #class RequestFunction(Protocol):
 #    '''Request functions defined by this module, e.g., ``get`` and ``post``.'''
-#    def __call__(resource_path: str, context: Context, params: RequestParams = m()) -> Result[httpx.Response, Exception]:
+#    def __call__(resource_path: str, context: Context, params: RequestParams = m()) -> RequestResult:
 #        ...
 
 @safe
 def attempt_request(
     httpx_client: httpx.Client,
     prepared_request: httpx.Request,
-) -> Result[httpx.Response, Exception]:
+) -> RequestResult:
     return httpx_client.send(prepared_request)
 
 def manage_request_attempts(
@@ -216,7 +217,7 @@ def manage_request_attempts(
     attempts_id: str = uuid.uuid4(),
     attempt_number: int = 1,
     wait_interval: int = 2,
-) -> Result[httpx.Response, Exception]:
+) -> RequestResult:
     start_time = time.perf_counter()
     if __debug__:
         print({
@@ -261,7 +262,7 @@ def request_many_by_identifier(
     request_by_identifier_function,
     identifiers: Iterator,
     max_workers: int = 4
-) -> Iterator[Result[httpx.Response, Exception]]:
+) -> Iterator[RequestResult]:
     '''
     '''
 

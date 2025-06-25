@@ -1,0 +1,328 @@
+{
+  "abstracts-retrieval-response": {
+    "item": {
+      "ait:process-info": {
+        "ait:status": {
+          "@state": "update",
+          "@type": "core",
+          "@stage": "S300"
+        },
+        "ait:date-delivered": {
+          "@day": "13",
+          "@timestamp": "2020-05-13T13:14:21.000021-04:00",
+          "@year": "2020",
+          "@month": "05"
+        },
+        "ait:date-sort": {
+          "@day": "01",
+          "@year": "1966",
+          "@month": "01"
+        }
+      },
+      "bibrecord": {
+        "head": {
+          "author-group": {
+            "affiliation": {
+              "country": "United States",
+              "@afid": "60029445",
+              "@date-locked": "2020-05-13T13:03:37.641",
+              "@country": "usa",
+              "organization": {
+                "$": "University of Minnesota"
+              },
+              "affiliation-id": {
+                "@afid": "60029445"
+              }
+            },
+            "author": [
+              {
+                "ce:given-name": "Ernst",
+                "preferred-name": {
+                  "ce:given-name": "Ernst",
+                  "ce:initials": "E.",
+                  "ce:surname": "Simonson",
+                  "ce:indexed-name": "Simonson E."
+                },
+                "@seq": "1",
+                "ce:initials": "E.",
+                "@_fa": "true",
+                "@type": "auth",
+                "ce:surname": "Simonson",
+                "@auid": "7004729279",
+                "ce:indexed-name": "Simonson E."
+              },
+              {
+                "ce:given-name": "Naip",
+                "preferred-name": {
+                  "ce:given-name": "Naip",
+                  "ce:initials": "N.",
+                  "ce:surname": "Tuna",
+                  "ce:indexed-name": "Tuna N."
+                },
+                "@seq": "2",
+                "ce:initials": "N.",
+                "@date-locked": "2017-05-31T15:40:47.991",
+                "@_fa": "true",
+                "@type": "auth",
+                "ce:surname": "Tuna",
+                "@auid": "7004626314",
+                "ce:indexed-name": "Tuna N."
+              }
+            ]
+          },
+          "citation-title": "Reply",
+          "abstracts": null,
+          "correspondence": {
+            "affiliation": {
+              "country": "United States",
+              "@country": "usa",
+              "organization": {
+                "$": "University of Minnesota"
+              }
+            },
+            "person": {
+              "ce:initials": "E.",
+              "ce:degrees": "Dr.",
+              "ce:surname": "Simonson",
+              "ce:indexed-name": "Simonson E."
+            }
+          },
+          "citation-info": {
+            "citation-type": {
+              "@code": "le"
+            },
+            "citation-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            }
+          },
+          "source": {
+            "codencode": "AJCDA",
+            "sourcetitle-abbrev": "Am. J. Cardiol.",
+            "issn": {
+              "$": "00029149",
+              "@type": "print"
+            },
+            "volisspag": {
+              "voliss": {
+                "@volume": "18",
+                "@issue": "5"
+              },
+              "pagerange": {
+                "@first": "792",
+                "@last": "793"
+              }
+            },
+            "@type": "j",
+            "publicationyear": {
+              "@first": "1966"
+            },
+            "sourcetitle": "The American Journal of Cardiology",
+            "@srcid": "22415",
+            "publicationdate": {
+              "year": "1966",
+              "date-text": "November 1966"
+            }
+          },
+          "enhancement": {
+            "classificationgroup": {
+              "classifications": [
+                {
+                  "@type": "ASJC",
+                  "classification": "2705"
+                },
+                {
+                  "@type": "SUBJABBR",
+                  "classification": "MEDI"
+                }
+              ]
+            }
+          }
+        },
+        "item-info": {
+          "copyright": {
+            "$": "Copyright 2017 Elsevier B.V., All rights reserved.",
+            "@type": "Elsevier"
+          },
+          "dbcollection": [
+            {
+              "$": "ARCELS"
+            },
+            {
+              "$": "SCOPUS"
+            },
+            {
+              "$": "Scopusbase"
+            }
+          ],
+          "history": {
+            "date-created": {
+              "@day": "18",
+              "@timestamp": "BST 11:57:22",
+              "@year": "2017",
+              "@month": "09"
+            }
+          },
+          "itemidlist": {
+            "itemid": [
+              {
+                "$": "286147449",
+                "@idtype": "PUI"
+              },
+              {
+                "$": "2007957294",
+                "@idtype": "ARCELS"
+              },
+              {
+                "$": "40011616",
+                "@idtype": "CAR-ID"
+              },
+              {
+                "$": "49949145584",
+                "@idtype": "SCP"
+              },
+              {
+                "$": "49949145584",
+                "@idtype": "SGR"
+              }
+            ],
+            "ce:pii": "0002914966901032",
+            "ce:doi": "10.1016/0002-9149(66)90103-2"
+          }
+        },
+        "tail": null
+      }
+    },
+    "affiliation": {
+      "affiliation-city": "Minneapolis",
+      "@id": "60029445",
+      "affilname": "University of Minnesota Twin Cities",
+      "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029445",
+      "affiliation-country": "United States"
+    },
+    "coredata": {
+      "srctype": "j",
+      "prism:issueIdentifier": "5",
+      "eid": "2-s2.0-49949145584",
+      "prism:coverDate": "1966-01-01",
+      "prism:aggregationType": "Journal",
+      "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/49949145584",
+      "subtypeDescription": "Letter",
+      "dc:creator": {
+        "author": [
+          {
+            "ce:given-name": "Ernst",
+            "preferred-name": {
+              "ce:given-name": "Ernst",
+              "ce:initials": "E.",
+              "ce:surname": "Simonson",
+              "ce:indexed-name": "Simonson E."
+            },
+            "@seq": "1",
+            "ce:initials": "E.",
+            "@_fa": "true",
+            "affiliation": {
+              "@id": "60029445",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029445"
+            },
+            "ce:surname": "Simonson",
+            "@auid": "7004729279",
+            "author-url": "https://api.elsevier.com/content/author/author_id/7004729279",
+            "ce:indexed-name": "Simonson E."
+          }
+        ]
+      },
+      "link": [
+        {
+          "@_fa": "true",
+          "@rel": "self",
+          "@href": "https://api.elsevier.com/content/abstract/scopus_id/49949145584"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus",
+          "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=49949145584&origin=inward"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus-citedby",
+          "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=49949145584&origin=inward"
+        }
+      ],
+      "prism:publicationName": "The American Journal of Cardiology",
+      "source-id": "22415",
+      "pii": "0002914966901032",
+      "citedby-count": "0",
+      "prism:volume": "18",
+      "subtype": "le",
+      "prism:pageRange": "792-793",
+      "dc:title": "Reply",
+      "prism:endingPage": "793",
+      "openaccess": "0",
+      "openaccessFlag": "false",
+      "prism:doi": "10.1016/0002-9149(66)90103-2",
+      "prism:issn": "00029149",
+      "prism:startingPage": "792",
+      "dc:identifier": "SCOPUS_ID:49949145584"
+    },
+    "idxterms": null,
+    "language": {
+      "@xml:lang": "eng"
+    },
+    "authkeywords": null,
+    "subject-areas": {
+      "subject-area": [
+        {
+          "@_fa": "true",
+          "$": "Cardiology and Cardiovascular Medicine",
+          "@code": "2705",
+          "@abbrev": "MEDI"
+        }
+      ]
+    },
+    "authors": {
+      "author": [
+        {
+          "ce:given-name": "Ernst",
+          "preferred-name": {
+            "ce:given-name": "Ernst",
+            "ce:initials": "E.",
+            "ce:surname": "Simonson",
+            "ce:indexed-name": "Simonson E."
+          },
+          "@seq": "1",
+          "ce:initials": "E.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60029445",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029445"
+          },
+          "ce:surname": "Simonson",
+          "@auid": "7004729279",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7004729279",
+          "ce:indexed-name": "Simonson E."
+        },
+        {
+          "ce:given-name": "Naip",
+          "preferred-name": {
+            "ce:given-name": "Naip",
+            "ce:initials": "N.",
+            "ce:surname": "Tuna",
+            "ce:indexed-name": "Tuna N."
+          },
+          "@seq": "2",
+          "ce:initials": "N.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60029445",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029445"
+          },
+          "ce:surname": "Tuna",
+          "@auid": "7004626314",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7004626314",
+          "ce:indexed-name": "Tuna N."
+        }
+      ]
+    }
+  }
+}

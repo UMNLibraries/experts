@@ -2,10 +2,10 @@
 from __future__ import annotations
 from typing_extensions import NotRequired, TypedDict
 from datetime import date, datetime
-from functools import partial
+from functools import reduce, partial
 import os
 import re
-from typing import Callable, Iterable, Iterator, Mapping, Tuple
+from typing import Callable, Iterable, Iterator, Mapping
 import uuid
 
 import attrs
@@ -17,8 +17,8 @@ import httpx
 import jsonpath_ng.ext as jp
 from pipe import Pipe
 
-from pyrsistent import freeze, thaw, m, pmap, v, pvector
-from pyrsistent.typing import PMap, PVector
+from pyrsistent import CheckedPMap, CheckedPSet, PRecord, field as pfield, freeze, thaw, m, pmap, v, pvector
+from pyrsistent.typing import PMap, PSet
 
 import returns
 from returns.pipeline import is_successful
@@ -30,10 +30,73 @@ from experts.api.common import \
     default_next_wait_interval, \
     manage_request_attempts, \
     RequestParams, \
+    RequestResult, \
     ResponseBody, \
     ResponseBodyItem
 
 from experts.helpers.jsonpath import flatten_mixed_match_values
+
+Json = dict
+ScopusId = str # Are these always 11 digits?
+ScopusIdRequestResult = tuple[ScopusId, RequestResult]
+
+class SuccessResponse(PRecord):
+    headers = pfield(type=httpx.Headers)
+    body = pfield(type=Json)
+
+class SuccessResponses(CheckedPMap):
+    __key_type__ = ScopusId
+    __value_type__ = SuccessResponse
+
+class ScopusIds(CheckedPSet):
+    '''Used for sets of defunct scopus records, etc'''
+    __type__ = ScopusId
+
+class ErrorResult(PRecord):
+    exception = pfield(type=(Exception, type(None)))
+    response = pfield(type=(httpx.Response, type(None)))
+
+class ErrorResults(CheckedPMap):
+    __key_type__ = ScopusId
+    __value_type__ = ErrorResult
+
+# Final data structure of multiple results, e.g. concurrent requests for 1000 abstracts:
+class AssortedResults(PRecord):
+    success = pfield(type=SuccessResponses)
+    defunct = pfield(type=ScopusIds)
+    error = pfield(type=ErrorResults)
+
+    def scopus_ids(self):
+        return ScopusIds(list(self.success.keys()) + list(self.defunct) + list(self.error.keys()))
+
+class ScopusIdRequestResultAssorter:
+    @staticmethod
+    def classify(accumulator: dict, request_result: ScopusIdRequestResult) -> dict:
+        scopus_id, result = request_result
+        if is_successful(result):
+            response = result.unwrap()
+            if response.status_code == 200:
+                accumulator['success'][scopus_id] = SuccessResponse(headers=response.headers, body=response.json())
+            elif response.status_code == 404:
+                accumulator['defunct'].append(scopus_id)
+            else:
+                accumulator['error'][scopus_id] = ErrorResult(exception=None, response=response)
+        else:
+            accumulator['error'][scopus_id] = ErrorResult(exception=result.failure(), response=None)
+        return accumulator
+
+    @staticmethod
+    def assort(results: Iterator[ScopusIdRequestResult]) -> AssortedResults:
+        assorted = reduce(
+            ScopusIdRequestResultAssorter.classify,
+            results,
+            {'success': {}, 'defunct': [], 'error': {}}
+        )
+        return AssortedResults(
+            success=SuccessResponses(assorted['success']),
+            defunct=ScopusIds(assorted['defunct']),
+            error=ErrorResults(assorted['error']),
+        )
 
 class ResponseParser:
     @staticmethod
@@ -46,7 +109,7 @@ class ResponseParser:
             yield ResponseParser.body(response)
 
     @Pipe
-    def responses_to_headers_bodies(responses: Iterator[httpx.Response]) -> Iterator[Tuple[httpx.Headers, ResponseBody]]:
+    def responses_to_headers_bodies(responses: Iterator[httpx.Response]) -> Iterator[tuple[httpx.Headers, ResponseBody]]:
         for response in responses:
             yield (response.headers, response.json())
 
@@ -128,6 +191,67 @@ class AbstractResponseBodyParser():
 #            # TODO: Fix the line below!
 #            return None
 #        return body['abstracts-retrieval-response']['item']['bibrecord']['head']['source']['issn']['$']
+
+def single_citation_overview(*, identifiers, cite_info, column_heading):
+    return {
+        'abstract-citations-response': {
+            'h-index': '1',
+            'identifier-legend': {
+                'identifier': [identifiers],
+            },
+            'citeInfoMatrix': {
+                'citeInfoMatrixXML': {
+                    'citationMatrix': {
+                        'citeInfo': [cite_info],
+                    },
+                },
+            },
+            'citeColumnTotalXML': {
+                'citeCountHeader': {
+                    'prevColumnHeading': 'previous',
+                    'columnHeading': column_heading,
+                    'laterColumnHeading': 'later',
+                    'prevColumnTotal': cite_info['pcc'],
+                    'columnTotal': cite_info['cc'],
+                    'laterColumnTotal': cite_info['lcc'],
+                    'rangeColumnTotal': cite_info['rangeCount'],
+                    'grandTotal': cite_info['rowTotal'],
+                },
+            },
+        },
+    }
+
+class CitationOverviewResponseBodyParser():
+    @staticmethod
+    def identifier_subrecords(body: ResponseBody) -> Iterator:
+        return flatten_mixed_match_values(
+            jp.parse('$..identifier-legend.identifier').find(body)
+        )
+
+    @staticmethod
+    def cite_info_subrecords(body: ResponseBody) -> Iterator:
+        return flatten_mixed_match_values(
+            jp.parse('$..citeInfoMatrix.citeInfoMatrixXML.citationMatrix.citeInfo').find(body)
+        )
+
+    @staticmethod
+    def column_heading(body: ResponseBody) -> Iterator: # TODO: Find a better type for this!
+        return jp.parse('$..citeColumnTotalXML.citeCountHeader.columnHeading').find(body)[0].value
+
+    @staticmethod
+    def subrecords(body: ResponseBody) -> Iterator:
+        column_heading = CitationOverviewResponseBodyParser.column_heading(body)
+        return [
+            single_citation_overview(
+                identifiers=identifiers,
+                cite_info=cite_info,
+                column_heading=column_heading,
+            )
+            for identifiers, cite_info in list(zip(
+                CitationOverviewResponseBodyParser.identifier_subrecords(body),
+                CitationOverviewResponseBodyParser.cite_info_subrecords(body)
+            ))
+        ]
 
 @frozen(kw_only=True)
 class Client:
@@ -237,14 +361,16 @@ class Client:
         )
         return self.request(*args, prepared_request=prepared_request, **kwargs)
 
-    def get_abstract_by_scopus_id(self, scopus_id, *args, params=m(content='core', view='FULL'), **kwargs):
+    def get_abstract_by_scopus_id(self, scopus_id: ScopusId, *args, params=m(content='core', view='FULL'), **kwargs) -> tuple[ScopusId, RequestResult]:
         prepared_request = self.httpx_client.build_request(
             'GET',
             f'abstract/scopus_id/{scopus_id}',
             params=thaw(params),
             timeout=self.timeout # TODO: Change to default_timeout
         )
-        return self.request(*args, prepared_request=prepared_request, **kwargs)
+        #return self.request(*args, prepared_request=prepared_request, **kwargs)
+        # Return a tuple with the scopus ID and the result of the request, so we can associate the two later:
+        return (scopus_id, self.request(*args, prepared_request=prepared_request, **kwargs))
 
     def request_many_by_id(
         self,
@@ -284,27 +410,29 @@ class Client:
         self,
         scopus_ids: Iterator,
         params: RequestParams = m(content='core', view='FULL'),
-    ) -> Iterator[httpx.Response]:
+    #) -> Iterator[httpx.Response]:
+    ) -> Iterator[tuple[ScopusId, RequestResult]]:
         partial_request = partial(
             self.get_abstract_by_scopus_id,
             params=params,
         )
-        def request_by_scopus_id(scopus_id: str):
+        def request_by_scopus_id(scopus_id: ScopusId):
             # Pass an id-specific resource_path:
             return partial_request(scopus_id)
 
-        for result in common.request_many_by_identifier(
+        for scopus_id, result in common.request_many_by_identifier(
             request_by_identifier_function = request_by_scopus_id,
             identifiers = scopus_ids,
         ):
-            if is_successful(result):
-                response = result.unwrap()
-                if response.status_code == 200:
-                    yield response
-                else:
-                    print(f'Failed! {result}')
-                    continue
-            else:
-            # TODO: log failure. Maybe pass in a logger?
-                print(f'Failed! {result}')
-                continue
+            yield (scopus_id, result)
+#            if is_successful(result):
+#                response = result.unwrap()
+#                if response.status_code == 200:
+#                    yield response
+#                else:
+#                    print(f'Failed! {result}')
+#                    continue
+#            else:
+#            # TODO: log failure. Maybe pass in a logger?
+#                print(f'Failed! {result}')
+#                continue
