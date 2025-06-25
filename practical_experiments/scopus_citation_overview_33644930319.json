@@ -1,0 +1,98 @@
+{
+  "abstract-citations-response": {
+    "h-index": "1",
+    "identifier-legend": {
+      "identifier": [
+        {
+          "@_fa": "true",
+          "dc:identifier": "SCOPUS_ID:33644930319",
+          "prism:doi": "10.1007/s00217-005-0147-2",
+          "pii": null,
+          "scopus_id": "33644930319"
+        }
+      ]
+    },
+    "citeInfoMatrix": {
+      "citeInfoMatrixXML": {
+        "citationMatrix": {
+          "citeInfo": [
+            {
+              "@_fa": "true",
+              "dc:identifier": "SCOPUS_ID:33644930319",
+              "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/33644930319",
+              "dc:title": "Antihypertensive effect of alcalase generated mung bean protein hydrolysates in spontaneously hypertensive rats",
+              "author": [
+                {
+                  "@_fa": "true",
+                  "initials": null,
+                  "index-name": null,
+                  "surname": null,
+                  "authid": null,
+                  "author-url": "https://api.elsevier.com/content/author/author_id/"
+                }
+              ],
+              "citationType": {
+                "@code": "ar",
+                "$": "Article"
+              },
+              "sort-year": "2006",
+              "sortTitle": "European Food Research and Technology",
+              "prism:volume": "222",
+              "prism:issueIdentifier": "5-6",
+              "prism:startingPage": "733",
+              "prism:endingPage": "736",
+              "prism:issn": "1438-2377",
+              "pcc": "49",
+              "cc": [
+                {
+                  "$": "3"
+                },
+                {
+                  "$": "5"
+                },
+                {
+                  "$": "1"
+                }
+              ],
+              "lcc": "0",
+              "rangeCount": "9",
+              "rowTotal": "58"
+            }
+          ]
+        }
+      }
+    },
+    "citeColumnTotalXML": {
+      "citeCountHeader": {
+        "prevColumnHeading": "previous",
+        "columnHeading": [
+          {
+            "$": "2023"
+          },
+          {
+            "$": "2024"
+          },
+          {
+            "$": "2025"
+          }
+        ],
+        "laterColumnHeading": "later",
+        "prevColumnTotal": "49",
+        "columnTotal": [
+          {
+            "$": "3"
+          },
+          {
+            "$": "5"
+          },
+          {
+            "$": "1"
+          }
+        ],
+        "laterColumnTotal": "0",
+        "rangeColumnTotal": "9",
+        "grandTotal": "58"
+      }
+    }
+  }
+}

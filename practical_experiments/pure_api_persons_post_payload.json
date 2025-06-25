@@ -1,0 +1,107 @@
+{
+  "uuids": [
+    "string"
+  ],
+  "size": 0,
+  "offset": 0,
+  "linkingStrategy": "string",
+  "locales": [
+    "string"
+  ],
+  "fallbackLocales": [
+    "string"
+  ],
+  "renderings": [
+    "string"
+  ],
+  "fields": [
+    "string"
+  ],
+  "orderings": [
+    "string"
+  ],
+  "returnUsedContent": true,
+  "navigationLink": true,
+  "ids": [
+    "string"
+  ],
+  "idClassification": "string",
+  "idClassificationType": "string",
+  "modifiedAfter": "2025-01-29T15:10:29.260Z",
+  "modifiedBefore": "2025-01-29T15:10:29.260Z",
+  "createdAfter": "2025-01-29T15:10:29.260Z",
+  "createdBefore": "2025-01-29T15:10:29.260Z",
+  "employmentTypeUris": [
+    "string"
+  ],
+  "employmentStatus": "ACTIVE",
+  "employmentPeriod": {
+    "startDate": {
+      "year": 0,
+      "month": 0,
+      "day": 0
+    },
+    "endDate": {
+      "year": 0,
+      "month": 0,
+      "day": 0
+    }
+  },
+  "personOrganisationAssociationTypes": [
+    "STAFF"
+  ],
+  "forOrganisations": {
+    "uuids": [
+      "string"
+    ],
+    "size": 0,
+    "offset": 0,
+    "linkingStrategy": "string",
+    "locales": [
+      "string"
+    ],
+    "fallbackLocales": [
+      "string"
+    ],
+    "renderings": [
+      "string"
+    ],
+    "fields": [
+      "string"
+    ],
+    "orderings": [
+      "string"
+    ],
+    "returnUsedContent": true,
+    "navigationLink": true,
+    "ids": [
+      "string"
+    ],
+    "idClassification": "string",
+    "idClassificationType": "string",
+    "modifiedAfter": "2025-01-29T15:10:29.260Z",
+    "modifiedBefore": "2025-01-29T15:10:29.260Z",
+    "createdAfter": "2025-01-29T15:10:29.260Z",
+    "createdBefore": "2025-01-29T15:10:29.260Z",
+    "organisationalUnitTypeUris": [
+      "string"
+    ],
+    "organisationPeriodStatus": "ACTIVE",
+    "hierarchyDepth": 0,
+    "hierarchyStrategy": "string",
+    "keywordURIs": [
+      "string"
+    ],
+    "freeKeywords": [
+      "string"
+    ]
+  },
+  "academicStaff": true,
+  "keywordURIs": [
+    "string"
+  ],
+  "freeKeywords": [
+    "string"
+  ],
+  "searchString": "string"
+}

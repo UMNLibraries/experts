@@ -1,0 +1,4 @@
+{'attempts_id': UUID('b49de9b4-b67f-49a9-b834-ab86ef07fea3'), 'attempt_number': 1, 'attempt_stage': 'start', 'time': 753980.839213959, 'method': 'GET', 'url': URL('https://api.elsevier.com/content/abstract/scopus_id/75149190029?view=FULL')}
+{'attempts_id': UUID('b49de9b4-b67f-49a9-b834-ab86ef07fea3'), 'attempt_number': 1, 'attempt_stage': 'end', 'time': 753981.523077731, 'elapsed_time': 0.6838637719629332, 'result': <Success: <Response [200 OK]>>}
+umn_issn='09639969'
+umn_refcount='103'

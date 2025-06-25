@@ -1,0 +1,98 @@
+{
+  "abstract-citations-response": {
+    "h-index": "1",
+    "identifier-legend": {
+      "identifier": [
+        {
+          "@_fa": "true",
+          "dc:identifier": "SCOPUS_ID:85199124578",
+          "prism:doi": "10.7326/M23-2865",
+          "pii": null,
+          "scopus_id": "85199124578"
+        }
+      ]
+    },
+    "citeInfoMatrix": {
+      "citeInfoMatrixXML": {
+        "citationMatrix": {
+          "citeInfo": [
+            {
+              "@_fa": "true",
+              "dc:identifier": "SCOPUS_ID:85199124578",
+              "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85199124578",
+              "dc:title": "Computer-Aided Diagnosis for Leaving Colorectal Polyps In Situ A Systematic Review and Meta-analysis",
+              "author": [
+                {
+                  "@_fa": "true",
+                  "initials": null,
+                  "index-name": null,
+                  "surname": null,
+                  "authid": null,
+                  "author-url": "https://api.elsevier.com/content/author/author_id/"
+                }
+              ],
+              "citationType": {
+                "@code": "re",
+                "$": "Review"
+              },
+              "sort-year": "2024",
+              "sortTitle": "Annals of Internal Medicine",
+              "prism:volume": "177",
+              "prism:issueIdentifier": "7",
+              "prism:startingPage": "919",
+              "prism:endingPage": "928",
+              "prism:issn": "0003-4819",
+              "pcc": "0",
+              "cc": [
+                {
+                  "$": "0"
+                },
+                {
+                  "$": "2"
+                },
+                {
+                  "$": "6"
+                }
+              ],
+              "lcc": "0",
+              "rangeCount": "8",
+              "rowTotal": "8"
+            }
+          ]
+        }
+      }
+    },
+    "citeColumnTotalXML": {
+      "citeCountHeader": {
+        "prevColumnHeading": "previous",
+        "columnHeading": [
+          {
+            "$": "2023"
+          },
+          {
+            "$": "2024"
+          },
+          {
+            "$": "2025"
+          }
+        ],
+        "laterColumnHeading": "later",
+        "prevColumnTotal": "0",
+        "columnTotal": [
+          {
+            "$": "0"
+          },
+          {
+            "$": "2"
+          },
+          {
+            "$": "6"
+          }
+        ],
+        "laterColumnTotal": "0",
+        "rangeColumnTotal": "8",
+        "grandTotal": "8"
+      }
+    }
+  }
+}

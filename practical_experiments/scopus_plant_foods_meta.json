@@ -1,0 +1,71 @@
+{
+  "abstracts-retrieval-response": {
+    "affiliation": {
+      "affiliation-city": "London",
+      "affilname": "King's College London",
+      "affiliation-country": "United Kingdom"
+    },
+    "coredata": {
+      "srctype": "j",
+      "prism:issueIdentifier": "1",
+      "eid": "2-s2.0-0020362344",
+      "prism:coverDate": "1982-01-01",
+      "prism:aggregationType": "Journal",
+      "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/0020362344",
+      "subtypeDescription": "Article",
+      "dc:creator": {
+        "author": [
+          {
+            "preferred-name": {
+              "ce:given-name": "A. E.",
+              "ce:initials": "A.E.",
+              "ce:surname": "Bender",
+              "ce:indexed-name": "Bender A."
+            },
+            "@seq": "1",
+            "ce:initials": "A.E.",
+            "@_fa": "true",
+            "affiliation": {
+              "@id": "60011520",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60011520"
+            },
+            "ce:surname": "Bender",
+            "@auid": "23056909100",
+            "author-url": "https://api.elsevier.com/content/author/author_id/23056909100",
+            "ce:indexed-name": "Bender A.E."
+          }
+        ]
+      },
+      "link": [
+        {
+          "@_fa": "true",
+          "@rel": "self",
+          "@href": "https://api.elsevier.com/content/abstract/scopus_id/0020362344"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus",
+          "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=0020362344&origin=inward"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus-citedby",
+          "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=0020362344&origin=inward"
+        }
+      ],
+      "prism:publicationName": "J. PLANT FOODS",
+      "source-id": "83067",
+      "citedby-count": "45",
+      "prism:volume": "4",
+      "subtype": "ar",
+      "prism:pageRange": "15-22",
+      "dc:title": "Toxicity of kidney beans (Phaseolus vulgaris) with particular reference to lectins",
+      "prism:endingPage": "22",
+      "openaccess": "0",
+      "openaccessFlag": "false",
+      "prism:doi": "10.1080/0142968X.1982.11904243",
+      "prism:startingPage": "15",
+      "dc:identifier": "SCOPUS_ID:0020362344"
+    }
+  }
+}

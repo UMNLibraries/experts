@@ -1,0 +1,4214 @@
+{
+  "abstracts-retrieval-response": {
+    "item": {
+      "ait:process-info": {
+        "ait:status": {
+          "@state": "update",
+          "@type": "core",
+          "@stage": "S300"
+        },
+        "ait:date-delivered": {
+          "@day": "24",
+          "@year": "2024",
+          "@timestamp": "2024-08-24T00:31:30.000030-04:00",
+          "@month": "08"
+        },
+        "ait:date-sort": {
+          "@day": "01",
+          "@year": "2024",
+          "@month": "07"
+        }
+      },
+      "xocs:meta": {
+        "xocs:funding-list": {
+          "@pui-match": "primary",
+          "@has-funding-info": "1",
+          "xocs:funding": [
+            {
+              "xocs:funding-agency-matched-string": "Associazione Italiana per la Ricerca sul Cancro",
+              "xocs:funding-agency-acronym": "AIRC",
+              "xocs:funding-agency": "Associazione Italiana per la Ricerca sul Cancro",
+              "xocs:funding-id": [
+                {
+                  "$": "2022"
+                },
+                {
+                  "$": "27843"
+                }
+              ],
+              "xocs:funding-agency-id": "http://data.elsevier.com/vocabulary/SciValFunders/501100005010",
+              "xocs:funding-agency-country": "http://sws.geonames.org/3175395/"
+            },
+            {
+              "xocs:funding-agency-matched-string": "Associazione Italiana per la Ricerca sul Cancro",
+              "xocs:funding-agency-acronym": "AIRC",
+              "xocs:funding-agency": "Associazione Italiana per la Ricerca sul Cancro",
+              "xocs:funding-agency-id": "http://data.elsevier.com/vocabulary/SciValFunders/501100005010",
+              "xocs:funding-agency-country": "http://sws.geonames.org/3175395/"
+            },
+            {
+              "xocs:funding-agency-matched-string": "European Commission",
+              "xocs:funding-agency-acronym": "EC",
+              "xocs:funding-agency": "European Commission",
+              "xocs:funding-id": [
+                {
+                  "$": "CRD42023402197"
+                },
+                {
+                  "$": "101057099"
+                }
+              ],
+              "xocs:funding-agency-id": "http://data.elsevier.com/vocabulary/SciValFunders/501100000780",
+              "xocs:funding-agency-country": "http://sws.geonames.org/6695072/"
+            },
+            {
+              "xocs:funding-agency-matched-string": "European Commission",
+              "xocs:funding-agency-acronym": "EC",
+              "xocs:funding-agency": "European Commission",
+              "xocs:funding-agency-id": "http://data.elsevier.com/vocabulary/SciValFunders/501100000780",
+              "xocs:funding-agency-country": "http://sws.geonames.org/6695072/"
+            }
+          ],
+          "xocs:funding-addon-generated-timestamp": "2024-07-30T20:05:03.622Z",
+          "xocs:funding-text": [
+            {
+              "$": "Financial Support: By the European Commission (Horizon Europe 101057099). The research leading to these results also received funding from Associazione Italiana per la Ricerca sul Cancro (investigator grant 2022; identification number 27843; principal investigator, Dr. Hassan)."
+            },
+            {
+              "$": "European Commission. (PROSPERO: CRD42023402197) By the European Commission (Horizon Europe 101057099). The research leading to these results also received funding from Associazione Italiana per la Ricerca sul Cancro (investigator grant 2022; identification number 27843; principal investigator, Dr. Hassan)."
+            }
+          ],
+          "xocs:funding-addon-type": "http://vtw.elsevier.com/data/voc/AddOnTypes/50.7/aggregated-refined"
+        }
+      },
+      "bibrecord": {
+        "head": {
+          "author-group": [
+            {
+              "affiliation": {
+                "country": "Italy",
+                "@afid": "60107210",
+                "@country": "ita",
+                "city": "Rozzano",
+                "organization": [
+                  {
+                    "$": "Humanitas University"
+                  },
+                  {
+                    "$": "Department of Biomedical Sciences"
+                  },
+                  {
+                    "$": "Pieve Emanuele"
+                  },
+                  {
+                    "$": "Humanitas Clinical and Research Center"
+                  },
+                  {
+                    "$": "IRCCS"
+                  },
+                  {
+                    "$": "Endoscopy Unit"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60107210",
+                    "@dptid": "117498991"
+                  },
+                  {
+                    "@afid": "60024876"
+                  }
+                ],
+                "@affiliation-instance-id": "OB2BibRecID-957809445-b16df3d6d33fdd5732448229810f4538-1",
+                "ce:source-text": "Humanitas University, Department of Biomedical Sciences, Pieve Emanuele, and Humanitas Clinical and Research Center IRCCS, Endoscopy Unit, Rozzano, Italy",
+                "@dptid": "117498991"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Cesare",
+                  "preferred-name": {
+                    "ce:given-name": "Cesare",
+                    "ce:initials": "C.",
+                    "ce:surname": "Hassan",
+                    "ce:indexed-name": "Hassan C."
+                  },
+                  "@seq": "1",
+                  "@author-instance-id": "OB2BibRecID-957809445-7e76bcd43b088ab9195f63093f483460-1",
+                  "ce:initials": "C.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD, PhD",
+                  "ce:surname": "Hassan",
+                  "@auid": "55970664500",
+                  "ce:indexed-name": "Hassan C."
+                },
+                {
+                  "ce:given-name": "Marco",
+                  "preferred-name": {
+                    "ce:given-name": "Marco",
+                    "ce:initials": "M.",
+                    "ce:surname": "Spadaccini",
+                    "ce:indexed-name": "Spadaccini M."
+                  },
+                  "@seq": "8",
+                  "@author-instance-id": "OB2BibRecID-957809445-f19f1f82c50ad86bc70a58c27c3660e1-1",
+                  "ce:initials": "M.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Spadaccini",
+                  "@auid": "57194572265",
+                  "ce:indexed-name": "Spadaccini M."
+                },
+                {
+                  "ce:given-name": "Alessandro",
+                  "preferred-name": {
+                    "ce:given-name": "Alessandro",
+                    "ce:initials": "A.",
+                    "ce:surname": "Repici",
+                    "ce:indexed-name": "Repici A."
+                  },
+                  "@seq": "24",
+                  "@author-instance-id": "OB2BibRecID-957809445-af1e85cc1a3f18a44de8ae3ab2e2c12f-1",
+                  "ce:initials": "A.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Repici",
+                  "@auid": "8763695000",
+                  "ce:indexed-name": "Repici A."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Japan",
+                "@afid": "60159849",
+                "@country": "jpn",
+                "city": "Yokohama",
+                "organization": [
+                  {
+                    "$": "Digestive Disease Center"
+                  },
+                  {
+                    "$": "Showa University"
+                  },
+                  {
+                    "$": "Northern Yokohama Hospital"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60159849",
+                    "@dptid": "124385809"
+                  },
+                  {
+                    "@afid": "60024973"
+                  }
+                ],
+                "@affiliation-instance-id": "OB2BibRecID-957809445-255f8b4ab2bffa49f35024db5ab6a19a-1",
+                "ce:source-text": "Digestive Disease Center, Showa University Northern Yokohama Hospital, Yokohama, Japan",
+                "@dptid": "124385809"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Masashi",
+                  "preferred-name": {
+                    "ce:given-name": "Masashi",
+                    "ce:initials": "M.",
+                    "ce:surname": "Misawa",
+                    "ce:indexed-name": "Misawa M."
+                  },
+                  "@seq": "2",
+                  "@author-instance-id": "OB2BibRecID-957809445-bf1ebeda6f4536fc1e134d005f356515-1",
+                  "ce:initials": "M.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD, PhD",
+                  "ce:surname": "Misawa",
+                  "@auid": "36632805600",
+                  "ce:indexed-name": "Misawa M."
+                },
+                {
+                  "ce:given-name": "Shin-Ei",
+                  "preferred-name": {
+                    "ce:given-name": "Shin Ei",
+                    "ce:initials": "S.E.",
+                    "ce:surname": "Kudo",
+                    "ce:indexed-name": "Kudo S.E."
+                  },
+                  "@seq": "21",
+                  "@author-instance-id": "OB2BibRecID-957809445-67121c88f20b4ed9556941857f590707-1",
+                  "ce:initials": "S.-E.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD, PhD",
+                  "ce:surname": "Kudo",
+                  "@auid": "57168687600",
+                  "ce:indexed-name": "Kudo S.-E."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Italy",
+                "@afid": "60024876",
+                "@country": "ita",
+                "city": "Rozzano",
+                "organization": [
+                  {
+                    "$": "Humanitas Clinical and Research Center IRCCS"
+                  },
+                  {
+                    "$": "Endoscopy Unit"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60024876",
+                  "@dptid": "104254607"
+                },
+                "@affiliation-instance-id": "OB2BibRecID-957809445-898052cdbc7ae1602e56bbc8180a4201-1",
+                "ce:source-text": "Humanitas Clinical and Research Center IRCCS, Endoscopy Unit, Rozzano, Italy",
+                "@dptid": "104254607"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Tommy",
+                  "preferred-name": {
+                    "ce:given-name": "Tommy",
+                    "ce:initials": "T.",
+                    "ce:surname": "Rizkala",
+                    "ce:indexed-name": "Rizkala T."
+                  },
+                  "@seq": "3",
+                  "@author-instance-id": "OB2BibRecID-957809445-ab75105a319545ba173fc3e955fb97ea-1",
+                  "ce:initials": "T.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Rizkala",
+                  "@auid": "58069799200",
+                  "ce:indexed-name": "Rizkala T."
+                },
+                {
+                  "ce:given-name": "Loredana",
+                  "preferred-name": {
+                    "ce:given-name": "Loredana",
+                    "ce:initials": "L.",
+                    "ce:surname": "Correale",
+                    "ce:indexed-name": "Correale L."
+                  },
+                  "@seq": "20",
+                  "@author-instance-id": "OB2BibRecID-957809445-8d436793373ad8978c17fa2558f446d4-1",
+                  "ce:initials": "L.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Correale",
+                  "@auid": "26643747800",
+                  "ce:indexed-name": "Correale L."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Japan",
+                "@afid": "60159849",
+                "@country": "jpn",
+                "city": "Yokohama",
+                "organization": [
+                  {
+                    "$": "Digestive Disease Center"
+                  },
+                  {
+                    "$": "Showa University"
+                  },
+                  {
+                    "$": "Northern Yokohama Hospital"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60159849",
+                    "@dptid": "124385809"
+                  },
+                  {
+                    "@afid": "60024973"
+                  }
+                ],
+                "@affiliation-instance-id": "OB2BibRecID-957809445-5927f313d35050d47b558144af946daa-1",
+                "ce:source-text": "Digestive Disease Center, Showa University-Northern Yokohama Hospital, Yokohama, Japan",
+                "@dptid": "124385809"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Yuichi",
+                  "preferred-name": {
+                    "ce:given-name": "Yuichi",
+                    "ce:initials": "Y.",
+                    "ce:surname": "Mori",
+                    "ce:indexed-name": "Mori Y."
+                  },
+                  "@seq": "4",
+                  "@author-instance-id": "OB2BibRecID-957809445-2d06f066f7163e7f7f98ae174c9665bb-1",
+                  "ce:initials": "Y.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD, PhD",
+                  "ce:surname": "Mori",
+                  "@auid": "54392344400",
+                  "ce:indexed-name": "Mori Y."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Norway",
+                "@afid": "60105037",
+                "@country": "nor",
+                "city": "Oslo",
+                "organization": [
+                  {
+                    "$": "University of Oslo"
+                  },
+                  {
+                    "$": "Clinical Effectiveness Research Group"
+                  },
+                  {
+                    "$": "Department of Transplantation Medicine"
+                  },
+                  {
+                    "$": "Oslo University Hospital"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60105037",
+                    "@dptid": "114847832"
+                  },
+                  {
+                    "@afid": "60010348"
+                  }
+                ],
+                "@affiliation-instance-id": "OB2BibRecID-957809445-1d614ff45220b2b3194802469764a2ec-1",
+                "ce:source-text": "University of Oslo, Clinical Effectiveness Research Group, and Department of Transplantation Medicine, Oslo University Hospital, Oslo, Norway",
+                "@dptid": "114847832"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Yuichi",
+                  "preferred-name": {
+                    "ce:given-name": "Yuichi",
+                    "ce:initials": "Y.",
+                    "ce:surname": "Mori",
+                    "ce:indexed-name": "Mori Y."
+                  },
+                  "@seq": "4",
+                  "@author-instance-id": "OB2BibRecID-957809445-2d06f066f7163e7f7f98ae174c9665bb-1",
+                  "ce:initials": "Y.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD, PhD",
+                  "ce:surname": "Mori",
+                  "@auid": "54392344400",
+                  "ce:indexed-name": "Mori Y."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "United States",
+                "@afid": "60029445",
+                "@country": "usa",
+                "city": "Minneapolis",
+                "organization": [
+                  {
+                    "$": "Division of Gastroenterology"
+                  },
+                  {
+                    "$": "Hepatology"
+                  },
+                  {
+                    "$": "and Nutrition"
+                  },
+                  {
+                    "$": "University of Minnesota"
+                  },
+                  {
+                    "$": "VA Health Care System"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60029445",
+                    "@dptid": "124137508"
+                  },
+                  {
+                    "@afid": "60014232"
+                  }
+                ],
+                "state": "MN",
+                "@affiliation-instance-id": "OB2BibRecID-957809445-a3ea76269fb4473531ec280355830f6e-1",
+                "ce:source-text": "Division of Gastroenterology, Hepatology, and Nutrition, University of Minnesota, and VA Health Care System, Minneapolis, Minnesota",
+                "@dptid": "124137508"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Shahnaz",
+                  "preferred-name": {
+                    "ce:given-name": "Shahnaz",
+                    "ce:initials": "S.",
+                    "ce:surname": "Sultan",
+                    "ce:indexed-name": "Sultan S."
+                  },
+                  "@seq": "5",
+                  "@author-instance-id": "OB2BibRecID-957809445-91946732006ebe862eec6e7ad06b4050-1",
+                  "ce:initials": "S.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Sultan",
+                  "@auid": "7102692211",
+                  "ce:indexed-name": "Sultan S."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Italy",
+                "@afid": "60022956",
+                "@country": "ita",
+                "city": "Foggia",
+                "organization": [
+                  {
+                    "$": "University of Foggia"
+                  },
+                  {
+                    "$": "Department of Medical Sciences"
+                  },
+                  {
+                    "$": "Section of Gastroenterology"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60022956",
+                  "@dptid": "113827952"
+                },
+                "@affiliation-instance-id": "OB2BibRecID-957809445-18d00ac972322274d49f2ea6c9a751bc-1",
+                "ce:source-text": "University of Foggia, Department of Medical Sciences, Section of Gastroenterology, Foggia, Italy",
+                "@dptid": "113827952"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Antonio",
+                  "preferred-name": {
+                    "ce:given-name": "Antonio",
+                    "ce:initials": "A.",
+                    "ce:surname": "Facciorusso",
+                    "ce:indexed-name": "Facciorusso A."
+                  },
+                  "@seq": "6",
+                  "@author-instance-id": "OB2BibRecID-957809445-95c558cadc8ecf9abb711d40ae9047d6-1",
+                  "ce:initials": "A.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD, PhD",
+                  "ce:surname": "Facciorusso",
+                  "@auid": "56516762300",
+                  "ce:indexed-name": "Facciorusso A."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Italy",
+                "@afid": "60032350",
+                "@country": "ita",
+                "city": "Rome",
+                "organization": [
+                  {
+                    "$": "Gastroenterology and Digestive Endoscopy Unit"
+                  },
+                  {
+                    "$": "Ospedale dei Castelli"
+                  },
+                  {
+                    "$": "Ariccia"
+                  },
+                  {
+                    "$": "Department of Anatomical"
+                  },
+                  {
+                    "$": "Histological,"
+                  },
+                  {
+                    "$": "Forensic Medicine and Orthopedics Sciences"
+                  },
+                  {
+                    "$": "Sapienza University of Rome"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60032350",
+                  "@dptid": "109959043"
+                },
+                "@affiliation-instance-id": "OB2BibRecID-957809445-2ac655ee8cc3464f694d21e327f1a94c-1",
+                "ce:source-text": "Gastroenterology and Digestive Endoscopy Unit, Ospedale dei Castelli, Ariccia, and Department of Anatomical, Histological, Forensic Medicine and Orthopedics Sciences, Sapienza University of Rome, Rome, Italy",
+                "@dptid": "109959043"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Giulio",
+                  "preferred-name": {
+                    "ce:given-name": "Giulio",
+                    "ce:initials": "G.",
+                    "ce:surname": "Antonelli",
+                    "ce:indexed-name": "Antonelli G."
+                  },
+                  "@seq": "7",
+                  "@author-instance-id": "OB2BibRecID-957809445-0c3ac1367a14ec63fbee47a27cb8e9df-1",
+                  "ce:initials": "G.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Antonelli",
+                  "@auid": "56785417800",
+                  "ce:indexed-name": "Antonelli G."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Netherlands",
+                "@afid": "60001157",
+                "@country": "nld",
+                "city": "Amsterdam",
+                "organization": [
+                  {
+                    "$": "Department of Gastroenterology and Hepatology"
+                  },
+                  {
+                    "$": "Amsterdam University Medical Center"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60001157",
+                  "@dptid": "113148669"
+                },
+                "@affiliation-instance-id": "OB2BibRecID-957809445-e10e9b78f5e936e5b33e586735a71a4b-1",
+                "ce:source-text": "Department of Gastroenterology and Hepatology, Amsterdam University Medical Center, Amsterdam, the Netherlands",
+                "@dptid": "113148669"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Britt B.S.L.",
+                  "preferred-name": {
+                    "ce:given-name": "Britt B.S.L.",
+                    "ce:initials": "B.B.S.L.",
+                    "ce:surname": "Houwen",
+                    "ce:indexed-name": "Houwen B.B.S.L."
+                  },
+                  "@seq": "9",
+                  "@author-instance-id": "OB2BibRecID-957809445-1f9982c418f906e1dc0db16d29466abf-1",
+                  "ce:initials": "B.B.S.L.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD, PhD",
+                  "ce:surname": "Houwen",
+                  "@auid": "57212449471",
+                  "ce:indexed-name": "Houwen B.B.S.L."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Italy",
+                "@afid": "60055966",
+                "@country": "ita",
+                "city": "Como",
+                "organization": [
+                  {
+                    "$": "Gastroenterology Unit"
+                  },
+                  {
+                    "$": "Valduce Hospital"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60055966",
+                  "@dptid": "104722145"
+                },
+                "@affiliation-instance-id": "OB2BibRecID-957809445-2284bc627cb9d0738ba77bec95670be8-1",
+                "ce:source-text": "Gastroenterology Unit, Valduce Hospital, Como, Italy",
+                "@dptid": "104722145"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Emanuele",
+                  "preferred-name": {
+                    "ce:given-name": "Emanuele",
+                    "ce:initials": "E.",
+                    "ce:surname": "Rondonotti",
+                    "ce:indexed-name": "Rondonotti E."
+                  },
+                  "@seq": "10",
+                  "@author-instance-id": "OB2BibRecID-957809445-ab81314ae35c5d70f2327b92052a5df9-1",
+                  "ce:initials": "E.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Rondonotti",
+                  "@auid": "6508148474",
+                  "ce:indexed-name": "Rondonotti E."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "United States",
+                "@afid": "60014232",
+                "@country": "usa",
+                "city": "Kansas City",
+                "organization": [
+                  {
+                    "$": "Kansas City VA Medical Center"
+                  },
+                  {
+                    "$": "Gastroenterology and Hepatology"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60014232",
+                  "@dptid": "112419141"
+                },
+                "state": "MO",
+                "@affiliation-instance-id": "OB2BibRecID-957809445-ee1ec997749241f8cf1958539d64c88c-1",
+                "ce:source-text": "Kansas City VA Medical Center, Gastroenterology and Hepatology, Kansas City, Missouri",
+                "@dptid": "112419141"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Harsh",
+                  "preferred-name": {
+                    "ce:given-name": "Harsh",
+                    "ce:initials": "H.",
+                    "ce:surname": "Patel",
+                    "ce:indexed-name": "Patel H."
+                  },
+                  "@seq": "11",
+                  "@author-instance-id": "OB2BibRecID-957809445-aee085a941ece3aab277406e173840c0-1",
+                  "ce:initials": "H.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Patel",
+                  "@auid": "57199391457",
+                  "ce:indexed-name": "Patel H."
+                },
+                {
+                  "ce:given-name": "Prateek",
+                  "preferred-name": {
+                    "ce:given-name": "Prateek",
+                    "ce:initials": "P.",
+                    "ce:surname": "Sharma",
+                    "ce:indexed-name": "Sharma P."
+                  },
+                  "@seq": "22",
+                  "@author-instance-id": "OB2BibRecID-957809445-5157714a5fc1a29d63ae236e043ae531-1",
+                  "ce:initials": "P.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Sharma",
+                  "@auid": "7403231562",
+                  "ce:indexed-name": "Sharma P."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Canada",
+                "@afid": "60017018",
+                "@country": "can",
+                "city": "Toronto",
+                "organization": [
+                  {
+                    "$": "Division of Gastroenterology"
+                  },
+                  {
+                    "$": "St. Michael's Hospital"
+                  },
+                  {
+                    "$": "University of Toronto"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60017018"
+                  },
+                  {
+                    "@afid": "60016849"
+                  },
+                  {
+                    "@afid": "60021600"
+                  }
+                ],
+                "state": "ON",
+                "@affiliation-instance-id": "OB2BibRecID-957809445-470592fde7692e39907dbd1c5a04e065-1",
+                "ce:source-text": "Division of Gastroenterology, St. Michael's Hospital, University of Toronto, Toronto, Ontario, Canada"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Kareem",
+                  "preferred-name": {
+                    "ce:given-name": "Kareem",
+                    "ce:initials": "K.",
+                    "ce:surname": "Khalaf",
+                    "ce:indexed-name": "Khalaf K."
+                  },
+                  "@seq": "12",
+                  "@author-instance-id": "OB2BibRecID-957809445-eaf90c1ccd85717391bfbf1e529643ad-1",
+                  "ce:initials": "K.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Khalaf",
+                  "@auid": "57210261387",
+                  "ce:indexed-name": "Khalaf K."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Singapore",
+                "@afid": "60013022",
+                "@country": "sgp",
+                "organization": [
+                  {
+                    "$": "Department of Gastroenterology and Hepatology"
+                  },
+                  {
+                    "$": "Changi General Hospital"
+                  },
+                  {
+                    "$": "Singapore Health Services"
+                  },
+                  {
+                    "$": "Duke-NUS Academic Medicine Centre"
+                  },
+                  {
+                    "$": "Singapore Health Services"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60013022",
+                    "@dptid": "113322699"
+                  },
+                  {
+                    "@afid": "60078609"
+                  },
+                  {
+                    "@afid": "60095009"
+                  },
+                  {
+                    "@afid": "60017161"
+                  }
+                ],
+                "@affiliation-instance-id": "OB2BibRecID-957809445-a0f3d0b4a2449447ee9ca7474e991c45-1",
+                "ce:source-text": "Department of Gastroenterology and Hepatology, Changi General Hospital, Singapore Health Services, and Duke-NUS Academic Medicine Centre, Singapore Health Services, Singapore",
+                "@dptid": "113322699"
+              },
+              "author": [
+                {
+                  "ce:given-name": "James Weiquan",
+                  "preferred-name": {
+                    "ce:given-name": "James Weiquan",
+                    "ce:initials": "J.W.",
+                    "ce:surname": "Li",
+                    "ce:indexed-name": "Li J.W."
+                  },
+                  "@seq": "13",
+                  "@author-instance-id": "OB2BibRecID-957809445-bcc47ee623e237edecc56321120f795c-1",
+                  "ce:initials": "J.W.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Li",
+                  "@auid": "58895358500",
+                  "ce:indexed-name": "Li J.W."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Spain",
+                "@afid": "60001576",
+                "@country": "esp",
+                "city": "Barcelona",
+                "organization": [
+                  {
+                    "$": "Endoscopy Unit"
+                  },
+                  {
+                    "$": "Gastroenterology Department"
+                  },
+                  {
+                    "$": "Clinical Institute of Digestive and Metabolic Disease"
+                  },
+                  {
+                    "$": "Hospital Cl\u00ednic de Barcelona"
+                  },
+                  {
+                    "$": "University of Barcelona"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60001576",
+                    "@dptid": "108457948"
+                  },
+                  {
+                    "@afid": "60030315"
+                  }
+                ],
+                "@affiliation-instance-id": "OB2BibRecID-957809445-f114ac659b285e89d783cba36437926b-1",
+                "ce:source-text": "Endoscopy Unit, Gastroenterology Department, Clinical Institute of Digestive and Metabolic Disease, Hospital Cl\u00ednic de Barcelona, University of Barcelona, Barcelona, Spain",
+                "@dptid": "108457948"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Gloria M.",
+                  "preferred-name": {
+                    "ce:given-name": "Gloria M.",
+                    "ce:initials": "G.M.",
+                    "ce:surname": "Fernandez",
+                    "ce:indexed-name": "Fernandez G.M."
+                  },
+                  "@seq": "14",
+                  "@author-instance-id": "OB2BibRecID-957809445-1d221dd9258f4fde457c663b989a6f51-1",
+                  "ce:initials": "G.M.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Fernandez",
+                  "@auid": "59204428200",
+                  "ce:indexed-name": "Fernandez G.M."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "United Kingdom",
+                "@afid": "60030999",
+                "@country": "gbr",
+                "city": "Portsmouth",
+                "organization": [
+                  {
+                    "$": "Queen Alexandra Hospital"
+                  },
+                  {
+                    "$": "Department of Gastroenterology"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60030999",
+                  "@dptid": "104572416"
+                },
+                "@affiliation-instance-id": "OB2BibRecID-957809445-40a91c42aa190b788473b4f3b3769202-1",
+                "ce:source-text": "Queen Alexandra Hospital, Department of Gastroenterology, Portsmouth, United Kingdom",
+                "@dptid": "104572416"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Pradeep",
+                  "preferred-name": {
+                    "ce:given-name": "Pradeep",
+                    "ce:initials": "P.",
+                    "ce:surname": "Bhandari",
+                    "ce:indexed-name": "Bhandari P."
+                  },
+                  "@seq": "15",
+                  "@author-instance-id": "OB2BibRecID-957809445-e0b78fd6af74641c67bb18cee3fb7d17-1",
+                  "ce:initials": "P.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD, PhD",
+                  "ce:surname": "Bhandari",
+                  "@auid": "8289974500",
+                  "ce:indexed-name": "Bhandari P."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Netherlands",
+                "@afid": "60001157",
+                "@country": "nld",
+                "city": "Amsterdam",
+                "organization": [
+                  {
+                    "$": "Department of Gastroenterology and Hepatology"
+                  },
+                  {
+                    "$": "Amsterdam University Medical Center"
+                  },
+                  {
+                    "$": "Bergman Clinics Maag and Darm Amsterdam"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60001157",
+                  "@dptid": "113148669"
+                },
+                "@affiliation-instance-id": "OB2BibRecID-957809445-f376064d602ad9cf8095c62a46517c5a-1",
+                "ce:source-text": "Department of Gastroenterology and Hepatology, Amsterdam University Medical Center, and Bergman Clinics Maag and Darm Amsterdam, Amsterdam, the Netherlands",
+                "@dptid": "113148669"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Evelien",
+                  "preferred-name": {
+                    "ce:given-name": "Evelien",
+                    "ce:initials": "E.",
+                    "ce:surname": "Dekker",
+                    "ce:indexed-name": "Dekker E."
+                  },
+                  "@seq": "16",
+                  "@author-instance-id": "OB2BibRecID-957809445-fe2ce58447cd75b3e8515c7f375fcad5-1",
+                  "ce:initials": "E.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD, PhD",
+                  "ce:surname": "Dekker",
+                  "@auid": "7006195581",
+                  "ce:indexed-name": "Dekker E."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "United States",
+                "@afid": "60103213",
+                "@country": "usa",
+                "city": "New York",
+                "organization": [
+                  {
+                    "$": "Department of Gastroenterology"
+                  },
+                  {
+                    "$": "Tisch Hospital"
+                  },
+                  {
+                    "$": "New York University Langone Medical Center"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60103213",
+                    "@dptid": "108211760"
+                  },
+                  {
+                    "@afid": "60032105"
+                  }
+                ],
+                "state": "NY",
+                "@affiliation-instance-id": "OB2BibRecID-957809445-6ca22cda06e5ebe772d706883229af89-1",
+                "ce:source-text": "Department of Gastroenterology, Tisch Hospital, New York University Langone Medical Center, New York, New York",
+                "@dptid": "108211760"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Seth",
+                  "preferred-name": {
+                    "ce:given-name": "Seth",
+                    "ce:initials": "S.",
+                    "ce:surname": "Gross",
+                    "ce:indexed-name": "Gross S."
+                  },
+                  "@seq": "17",
+                  "@author-instance-id": "OB2BibRecID-957809445-381ffd8e5ee7f7725a6373b531aaa989-1",
+                  "ce:initials": "S.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Gross",
+                  "@auid": "15135896200",
+                  "ce:indexed-name": "Gross S."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "United States",
+                "@afid": "60002746",
+                "@country": "usa",
+                "city": "Boston",
+                "organization": [
+                  {
+                    "$": "Center for Advanced Endoscopy"
+                  },
+                  {
+                    "$": "Beth Israel Deaconess Medical Center"
+                  },
+                  {
+                    "$": "Harvard Medical School"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60002746",
+                    "@dptid": "114823339"
+                  },
+                  {
+                    "@afid": "60030058"
+                  }
+                ],
+                "state": "MA",
+                "@affiliation-instance-id": "OB2BibRecID-957809445-6a283e1bccaff7c0b59808c45be0631e-1",
+                "ce:source-text": "Center for Advanced Endoscopy, Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, Massachusetts",
+                "@dptid": "114823339"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Tyler",
+                  "preferred-name": {
+                    "ce:given-name": "Tyler",
+                    "ce:initials": "T.",
+                    "ce:surname": "Berzin",
+                    "ce:indexed-name": "Berzin T."
+                  },
+                  "@seq": "18",
+                  "@author-instance-id": "OB2BibRecID-957809445-0c3d37056e655337e57b457c3c666d83-1",
+                  "ce:initials": "T.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Berzin",
+                  "@auid": "35760130200",
+                  "ce:indexed-name": "Berzin T."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Norway",
+                "@afid": "60026424",
+                "@country": "nor",
+                "city": "Oslo",
+                "organization": [
+                  {
+                    "$": "Department of Medicine"
+                  },
+                  {
+                    "$": "Lovisenberg Diaconal Hospital"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60026424",
+                  "@dptid": "113512500"
+                },
+                "@affiliation-instance-id": "OB2BibRecID-957809445-532fb29efce0c5241f2b5d99ef2f3ca7-1",
+                "ce:source-text": "Department of Medicine, Lovisenberg Diaconal Hospital, Oslo, Norway",
+                "@dptid": "113512500"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Per Olav",
+                  "preferred-name": {
+                    "ce:given-name": "Per Olav",
+                    "ce:initials": "P.O.",
+                    "ce:surname": "Vandvik",
+                    "ce:indexed-name": "Vandvik P.O."
+                  },
+                  "@seq": "19",
+                  "@author-instance-id": "OB2BibRecID-957809445-d2a94f41a08a3263fe38259e9fc299c4-1",
+                  "ce:initials": "P.O.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD, PhD",
+                  "ce:surname": "Vandvik",
+                  "@auid": "6602321455",
+                  "ce:indexed-name": "Vandvik P.O."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "United States",
+                "@afid": "60024609",
+                "@country": "usa",
+                "city": "Indianapolis",
+                "organization": [
+                  {
+                    "$": "Indiana University"
+                  },
+                  {
+                    "$": "School of Medicine"
+                  },
+                  {
+                    "$": "Division of Gastroenterology"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60024609",
+                    "@dptid": "104238504"
+                  },
+                  {
+                    "@afid": "60021947"
+                  }
+                ],
+                "state": "IN",
+                "@affiliation-instance-id": "OB2BibRecID-957809445-63dfe141f8671f063b52fd082dcf2217-1",
+                "ce:source-text": "Indiana University School of Medicine, Division of Gastroenterology, Indianapolis, Indiana",
+                "@dptid": "104238504"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Douglas K.",
+                  "preferred-name": {
+                    "ce:given-name": "Douglas K.",
+                    "ce:initials": "D.K.",
+                    "ce:surname": "Rex",
+                    "ce:indexed-name": "Rex D.K."
+                  },
+                  "@seq": "23",
+                  "@author-instance-id": "OB2BibRecID-957809445-faa5a987c5fc2eebc9c8ae02618ccfe5-1",
+                  "ce:initials": "D.K.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "MD",
+                  "ce:surname": "Rex",
+                  "@auid": "7103050363",
+                  "ce:indexed-name": "Rex D.K."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "Canada",
+                "@afid": "60014468",
+                "@country": "can",
+                "city": "Toronto",
+                "organization": [
+                  {
+                    "$": "Ted Rogers Centre for Heart Research"
+                  },
+                  {
+                    "$": "University Health Network"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60014468"
+                  },
+                  {
+                    "@afid": "60193797"
+                  }
+                ],
+                "state": "ON",
+                "@affiliation-instance-id": "OB2BibRecID-957809445-78080fbc4fe126d51078c4c3560e73a0-1",
+                "ce:source-text": "Ted Rogers Centre for Heart Research, University Health Network, Toronto, Ontario, Canada"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Farid",
+                  "preferred-name": {
+                    "ce:given-name": "Farid",
+                    "ce:initials": "F.",
+                    "ce:surname": "Foroutan",
+                    "ce:indexed-name": "Foroutan F."
+                  },
+                  "@seq": "25",
+                  "@author-instance-id": "OB2BibRecID-957809445-dd3718787ebb74952eb52955d91a5f39-1",
+                  "ce:initials": "F.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:degrees": "PhD",
+                  "ce:surname": "Foroutan",
+                  "@auid": "56520083100",
+                  "ce:indexed-name": "Foroutan F."
+                }
+              ]
+            },
+            {
+              "collaboration": {
+                "@seq": "26",
+                "@collaboration-instance-id": "OB2BibRecID-957809445-0385de04c3b4b19648dd7072c8ff975c-1",
+                "ce:text": "for the CADx Analysis Study Group",
+                "ce:indexed-name": "for the CADx Analysis Study Group"
+              }
+            }
+          ],
+          "citation-title": "Computer-Aided Diagnosis for Leaving Colorectal Polyps In Situ A Systematic Review and Meta-analysis",
+          "abstracts": "\u00a9 2024 American College of Physicians.Background: Computer-aided diagnosis (CADx) allows prediction of polyp histology during colonoscopy, which may reduce unnecessary removal of nonneoplastic polyps. However, the potential benefits and harms of CADx are still unclear. Purpose: To quantify the benefit and harm of using CADx in colonoscopy for the optical diagnosis of small (\u22645-mm) rectosigmoid polyps. Data Sources: Medline, Embase, and Scopus were searched for articles published before 22 December 2023. Study Selection: Histologically verified diagnostic accuracy studies that evaluated the real-time performance of physicians in predicting neoplastic change of small rectosigmoid polyps without or with CADx assistance during colonoscopy. Data Extraction: The clinical benefit and harm were estimated on the basis of accuracy values of the endoscopist before and after CADx assistance. The certainty of evidence was assessed using the GRADE (Grading of Recommendations Assessment, Development and Evaluation) framework. The outcome measure for benefit was the proportion of polyps predicted to be nonneoplastic that would avoid removal with the use of CADx. The outcome measure for harm was the proportion of neoplastic polyps that would be not resected and left in situ due to an incorrect diagnosis with the use of CADx. Histology served as the reference standard for both outcomes. Data Synthesis: Ten studies, including 3620 patients with 4103 small rectosigmoid polyps, were analyzed. The studies that assessed the performance of CADx alone (9 studies; 3237 polyps) showed a sensitivity of 87.3% (95% CI, 79.2% to 92.5%) and specificity of 88.9% (CI, 81.7% to 93.5%) in predicting neoplastic change. In the studies that compared histology prediction performance before versus after CADx assistance (4 studies; 2503 polyps), there was no difference in the proportion of polyps predicted to be nonneoplastic that would avoid removal (55.4% vs. 58.4%; risk ratio [RR], 1.06 [CI, 0.96 to 1.17]; moderate-certainty evidence) or in the proportion of neoplastic polyps that would be erroneously left in situ (8.2% vs. 7.5%; RR, 0.95 [CI, 0.69 to 1.33]; moderate-certainty evidence). Limitation: The application of optical diagnosis was only simulated, potentially altering the decision-making process of the operator. Conclusion: Computer-aided diagnosis provided no incremental benefit or harm in the management of small rectosigmoid polyps during colonoscopy.",
+          "correspondence": {
+            "affiliation": {
+              "country": "Italy",
+              "address-part": "Via Manzoni 56, Rozzano",
+              "postal-code": "20089",
+              "@country": "ita",
+              "city": "Milano",
+              "organization": [
+                {
+                  "$": "Humanitas Research Hospital"
+                },
+                {
+                  "$": "IRCCS"
+                }
+              ],
+              "@affiliation-instance-id": "OB2BibRecID-957809445-3d873e312640dbf8cd03b1833899a1c1-1",
+              "ce:source-text": "Humanitas Research Hospital, IRCCS, and University, Via Manzoni 56, 20089 Rozzano (Milano), Italy"
+            },
+            "person": {
+              "ce:given-name": "Cesare",
+              "@author-instance-id": "OB2BibRecID-957809445-d4ab426c9ed52766c6a131c3bf807249-1",
+              "ce:initials": "C.",
+              "ce:degrees": "MD, PhD",
+              "ce:surname": "Hassan",
+              "ce:indexed-name": "Hassan C."
+            }
+          },
+          "citation-info": {
+            "citation-type": {
+              "@code": "re"
+            },
+            "citation-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            },
+            "abstract-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            }
+          },
+          "source": {
+            "website": {
+              "ce:e-address": {
+                "$": "https://www.acpjournals.org/doi/epdf/10.7326/M23-2865",
+                "@type": "email"
+              }
+            },
+            "translated-sourcetitle": {
+              "$": "Annals of Internal Medicine",
+              "@xml:lang": "eng"
+            },
+            "volisspag": {
+              "voliss": {
+                "@volume": "177",
+                "@issue": "7"
+              },
+              "pagerange": {
+                "@first": "919",
+                "@last": "928"
+              }
+            },
+            "@type": "j",
+            "sourcetitle": "Annals of Internal Medicine",
+            "publicationdate": {
+              "month": "07",
+              "year": "2024",
+              "date-text": {
+                "@xfab-added": "true",
+                "$": "1 July 2024"
+              },
+              "day": "01"
+            },
+            "codencode": "AIMEA",
+            "sourcetitle-abbrev": "Ann. Intern. Med.",
+            "@country": "usa",
+            "issn": [
+              {
+                "$": "15393704",
+                "@type": "electronic"
+              },
+              {
+                "$": "00034819",
+                "@type": "print"
+              }
+            ],
+            "publicationyear": {
+              "@first": "2024"
+            },
+            "publisher": {
+              "publishername": "American College of Physicians"
+            },
+            "@srcid": "26574"
+          },
+          "enhancement": {
+            "classificationgroup": {
+              "classifications": [
+                {
+                  "@type": "EMCLASS",
+                  "classification": [
+                    {
+                      "classification-code": "14",
+                      "classification-description": "Radiology"
+                    },
+                    {
+                      "classification-code": "48",
+                      "classification-description": "Gastroenterology"
+                    }
+                  ]
+                },
+                {
+                  "@type": "ASJC",
+                  "classification": "2724"
+                },
+                {
+                  "@type": "SUBJABBR",
+                  "classification": "MEDI"
+                }
+              ]
+            }
+          },
+          "grantlist": {
+            "@complete": "y",
+            "grant-text": {
+              "$": "European Commission. (PROSPERO: CRD42023402197) By the European Commission (Horizon Europe 101057099). The research leading to these results also received funding from Associazione Italiana per la Ricerca sul Cancro (investigator grant 2022; identification number 27843; principal investigator, Dr. Hassan).",
+              "@xml:lang": "eng"
+            }
+          }
+        },
+        "item-info": {
+          "copyright": {
+            "$": "Copyright 2024 Elsevier B.V., All rights reserved.",
+            "@type": "Elsevier"
+          },
+          "external-source": "MEDLINE",
+          "dbcollection": [
+            {
+              "$": "EMBASE"
+            },
+            {
+              "$": "EMBIOCAR"
+            },
+            {
+              "$": "MEDL"
+            },
+            {
+              "$": "NURSNG"
+            },
+            {
+              "$": "REAXYSCAR"
+            },
+            {
+              "$": "SCOPUS"
+            },
+            {
+              "$": "Scopusbase"
+            }
+          ],
+          "history": {
+            "date-created": {
+              "@day": "29",
+              "@year": "2024",
+              "@timestamp": "BST 03:35:19",
+              "@month": "07"
+            }
+          },
+          "itemidlist": {
+            "itemid": [
+              {
+                "$": "2033446493",
+                "@idtype": "PUI"
+              },
+              {
+                "$": "644326077",
+                "@idtype": "associatedPUI"
+              },
+              {
+                "$": "957809445",
+                "@idtype": "CAR-ID"
+              },
+              {
+                "$": "20240669023",
+                "@idtype": "EMBASE"
+              },
+              {
+                "$": "2024128282",
+                "@idtype": "EMBIOCAR"
+              },
+              {
+                "$": "38768453",
+                "@idtype": "MEDL"
+              },
+              {
+                "$": "2024309673",
+                "@idtype": "NURSNG"
+              },
+              {
+                "$": "20242086586",
+                "@idtype": "REAXYSCAR"
+              },
+              {
+                "$": "20242942781",
+                "@idtype": "SCOPUS"
+              },
+              {
+                "$": "957809445#76201699",
+                "@idtype": "SRC-OCC-ID"
+              },
+              {
+                "$": "20249034133429",
+                "@idtype": "TPA-ID"
+              },
+              {
+                "$": "85199124578",
+                "@idtype": "SCP"
+              },
+              {
+                "$": "85199124578",
+                "@idtype": "SGR"
+              },
+              {
+                "$": "644326077",
+                "@idtype": "PUIsecondary"
+              },
+              {
+                "$": "76201699",
+                "@idtype": "OSIN"
+              }
+            ],
+            "ce:doi": "10.7326/M23-2865"
+          }
+        },
+        "tail": {
+          "bibliography": {
+            "@refcount": "30",
+            "reference": [
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Bretthauer M, L\u00f8berg M, Wieszczy P, et al; NordICC Study Group. Effect of colonoscopy screening on risks of colorectal cancer and related death. N Engl J Med. 2022;387:1547-1556. [PMID: 36214590] doi:10.1056/NEJMoa2208375",
+                "@reference-instance-id": "OB2BibRecID-957809445-af8e40a051bb705dc2cc6cf7e2a11ff0-1",
+                "@id": "1",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2022"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Effect of colonoscopy screening on risks of colorectal cancer and related death"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1056/NEJMoa2208375",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85140269230",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "387"
+                    },
+                    "pagerange": {
+                      "@first": "1547",
+                      "@last": "1556"
+                    }
+                  },
+                  "ref-text": "[PMID: 36214590]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M",
+                        "@_fa": "true",
+                        "ce:surname": "Bretthauer",
+                        "ce:indexed-name": "Bretthauer M"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M",
+                        "@_fa": "true",
+                        "ce:surname": "L\u00f8berg",
+                        "ce:indexed-name": "Loberg M"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "P",
+                        "@_fa": "true",
+                        "ce:surname": "Wieszczy",
+                        "ce:indexed-name": "Wieszczy P"
+                      }
+                    ],
+                    "collaboration": {
+                      "@seq": "4",
+                      "ce:text": "NordICC Study Group",
+                      "ce:indexed-name": "NordICC Study Group"
+                    },
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "N Engl J Med"
+                },
+                "ce:source-text": "Bretthauer M, L\u00f8berg M, Wieszczy P, et al; NordICC Study Group. Effect of colonoscopy screening on risks of colorectal cancer and related death. N Engl J Med. 2022;387:1547-1556. [PMID: 36214590] doi:10.1056/NEJMoa2208375"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Zorzi M, Antonelli G, Barbiellini Amidei C, et al; Veneto Screening Endoscopists Working Group. Adenoma detection rate and colorectal cancer risk in fecal immunochemical test screening programs. An observational cohort study. Ann Intern Med. 2023;176:303-310. [PMID: 36802754] doi:10.7326/M22-1008",
+                "@reference-instance-id": "OB2BibRecID-957809445-bb769b37378453ebd9f9c48ba2eda6d3-2",
+                "@id": "2",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2023"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Adenoma detection rate and colorectal cancer risk in fecal immunochemical test screening programs. An observational cohort study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.7326/M22-1008",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85151493461",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "176"
+                    },
+                    "pagerange": {
+                      "@first": "303",
+                      "@last": "310"
+                    }
+                  },
+                  "ref-text": "[PMID: 36802754]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M",
+                        "@_fa": "true",
+                        "ce:surname": "Zorzi",
+                        "ce:indexed-name": "Zorzi M"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "G",
+                        "@_fa": "true",
+                        "ce:surname": "Antonelli",
+                        "ce:indexed-name": "Antonelli G"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "C",
+                        "@_fa": "true",
+                        "ce:surname": "Barbiellini Amidei",
+                        "ce:indexed-name": "Barbiellini Amidei C"
+                      }
+                    ],
+                    "collaboration": {
+                      "@seq": "4",
+                      "ce:text": "Veneto Screening Endoscopists Working Group",
+                      "ce:indexed-name": "Veneto Screening Endoscopists Working Group"
+                    },
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Ann Intern Med"
+                },
+                "ce:source-text": "Zorzi M, Antonelli G, Barbiellini Amidei C, et al; Veneto Screening Endoscopists Working Group. Adenoma detection rate and colorectal cancer risk in fecal immunochemical test screening programs. An observational cohort study. Ann Intern Med. 2023;176:303-310. [PMID: 36802754] doi:10.7326/M22-1008"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Wisse PHA, Erler NS, de Boer SY, et al. Adenoma detection rate and risk for interval postcolonoscopy colorectal cancer in fecal immunochemical test-based screening. A population-based cohort study. Ann Intern Med. 2022;175:1366-1373. [PMID: 36162114] doi:10.7326/M22-0301",
+                "@reference-instance-id": "OB2BibRecID-957809445-f320224b30aa49458e21314043a4d0c3-3",
+                "@id": "3",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2022"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Adenoma detection rate and risk for interval postcolonoscopy colorectal cancer in fecal immunochemical test-based screening. A population-based cohort study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.7326/M22-0301",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85140272932",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "175"
+                    },
+                    "pagerange": {
+                      "@first": "1366",
+                      "@last": "1373"
+                    }
+                  },
+                  "ref-text": "[PMID: 36162114]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "PHA",
+                        "@_fa": "true",
+                        "ce:surname": "Wisse",
+                        "ce:indexed-name": "Wisse PHA"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "NS",
+                        "@_fa": "true",
+                        "ce:surname": "Erler",
+                        "ce:indexed-name": "Erler NS"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "SY",
+                        "@_fa": "true",
+                        "ce:surname": "de Boer",
+                        "ce:indexed-name": "de Boer SY"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Ann Intern Med"
+                },
+                "ce:source-text": "Wisse PHA, Erler NS, de Boer SY, et al. Adenoma detection rate and risk for interval postcolonoscopy colorectal cancer in fecal immunochemical test-based screening. A population-based cohort study. Ann Intern Med. 2022;175:1366-1373. [PMID: 36162114] doi:10.7326/M22-0301"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Houwen BBSL, Hassan C, Coup\u00e9 VMH, et al. Definition of competence standards for optical diagnosis of diminutive colorectal polyps: European Society of Gastrointestinal Endoscopy (ESGE) position statement. Endoscopy. 2022;54:88-99. [PMID: 34872120] doi:10.1055/a-1689-5130",
+                "@reference-instance-id": "OB2BibRecID-957809445-aa538e89ff0938b49f347d19405d3d73-4",
+                "@id": "4",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2022"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Definition of competence standards for optical diagnosis of diminutive colorectal polyps: European Society of Gastrointestinal Endoscopy (ESGE) position statement"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1055/a-1689-5130",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85121050295",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "54"
+                    },
+                    "pagerange": {
+                      "@first": "88",
+                      "@last": "99"
+                    }
+                  },
+                  "ref-text": "[PMID: 34872120]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "BBSL",
+                        "@_fa": "true",
+                        "ce:surname": "Houwen",
+                        "ce:indexed-name": "Houwen BBSL"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C",
+                        "@_fa": "true",
+                        "ce:surname": "Hassan",
+                        "ce:indexed-name": "Hassan C"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "VMH",
+                        "@_fa": "true",
+                        "ce:surname": "Coup\u00e9",
+                        "ce:indexed-name": "Coupe VMH"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Endoscopy"
+                },
+                "ce:source-text": "Houwen BBSL, Hassan C, Coup\u00e9 VMH, et al. Definition of competence standards for optical diagnosis of diminutive colorectal polyps: European Society of Gastrointestinal Endoscopy (ESGE) position statement. Endoscopy. 2022;54:88-99. [PMID: 34872120] doi:10.1055/a-1689-5130"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Rex DK, Kahi C, O'Brien M, et al. The American Society for Gastrointestinal Endoscopy PIVI (Preservation and Incorporation of Valuable Endoscopic Innovations) on real-time endoscopic assessment of the histology of diminutive colorectal polyps. Gastrointest Endosc. 2011;73:419-422. [PMID: 21353837] doi:10.1016/j.gie.2011. 01.023",
+                "@reference-instance-id": "OB2BibRecID-957809445-0637f6a2e166fc44924a61b84c8a7221-5",
+                "@id": "5",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2011"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "The American Society for Gastrointestinal Endoscopy PIVI (Preservation and Incorporation of Valuable Endoscopic Innovations) on real-time endoscopic assessment of the histology of diminutive colorectal polyps"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1016/j.gie.2011.01.023",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "79952065802",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "73"
+                    },
+                    "pagerange": {
+                      "@first": "419",
+                      "@last": "422"
+                    }
+                  },
+                  "ref-text": "[PMID: 21353837]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "DK",
+                        "@_fa": "true",
+                        "ce:surname": "Rex",
+                        "ce:indexed-name": "Rex DK"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C",
+                        "@_fa": "true",
+                        "ce:surname": "Kahi",
+                        "ce:indexed-name": "Kahi C"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M",
+                        "@_fa": "true",
+                        "ce:surname": "O'Brien",
+                        "ce:indexed-name": "O'Brien M"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Gastrointest Endosc"
+                },
+                "ce:source-text": "Rex DK, Kahi C, O'Brien M, et al. The American Society for Gastrointestinal Endoscopy PIVI (Preservation and Incorporation of Valuable Endoscopic Innovations) on real-time endoscopic assessment of the histology of diminutive colorectal polyps. Gastrointest Endosc. 2011;73:419-422. [PMID: 21353837] doi:10.1016/j.gie.2011. 01.023"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Atkinson NS, East JE. Optical biopsy and sessile serrated polyps: is DISCARD dead? Long live DISCARD-lite!. Gastrointest Endosc. 2015; 82:118-121. [PMID: 26074037] doi:10.1016/j.gie.2015.01.059",
+                "@reference-instance-id": "OB2BibRecID-957809445-a7c80f9c2abcdbc46a9deb0b82c6318b-6",
+                "@id": "6",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2015"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Optical biopsy and sessile serrated polyps: is DISCARD dead? Long live DISCARD-lite!"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1016/j.gie.2015.01.059",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "84930892093",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "82"
+                    },
+                    "pagerange": {
+                      "@first": "118",
+                      "@last": "121"
+                    }
+                  },
+                  "ref-text": "[PMID: 26074037]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "NS",
+                        "@_fa": "true",
+                        "ce:surname": "Atkinson",
+                        "ce:indexed-name": "Atkinson NS"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "JE.",
+                        "@_fa": "true",
+                        "ce:surname": "East",
+                        "ce:indexed-name": "East JE."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gastrointest Endosc"
+                },
+                "ce:source-text": "Atkinson NS, East JE. Optical biopsy and sessile serrated polyps: is DISCARD dead? Long live DISCARD-lite!. Gastrointest Endosc. 2015; 82:118-121. [PMID: 26074037] doi:10.1016/j.gie.2015.01.059"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Kessler WR, Imperiale TF, Klein RW, et al. A quantitative assessment of the risks and cost savings of forgoing histologic examination of diminutive polyps. Endoscopy. 2011;43:683-691. [PMID: 21623556] doi:10.1055/s-0030-1256381",
+                "@reference-instance-id": "OB2BibRecID-957809445-0eb6cb5bb4c87ef95793fda515bc8d50-7",
+                "@id": "7",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2011"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "A quantitative assessment of the risks and cost savings of forgoing histologic examination of diminutive polyps"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1055/s-0030-1256381",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "79961128559",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "43"
+                    },
+                    "pagerange": {
+                      "@first": "683",
+                      "@last": "691"
+                    }
+                  },
+                  "ref-text": "[PMID: 21623556]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "WR",
+                        "@_fa": "true",
+                        "ce:surname": "Kessler",
+                        "ce:indexed-name": "Kessler WR"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "TF",
+                        "@_fa": "true",
+                        "ce:surname": "Imperiale",
+                        "ce:indexed-name": "Imperiale TF"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "RW",
+                        "@_fa": "true",
+                        "ce:surname": "Klein",
+                        "ce:indexed-name": "Klein RW"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Endoscopy"
+                },
+                "ce:source-text": "Kessler WR, Imperiale TF, Klein RW, et al. A quantitative assessment of the risks and cost savings of forgoing histologic examination of diminutive polyps. Endoscopy. 2011;43:683-691. [PMID: 21623556] doi:10.1055/s-0030-1256381"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Hassan C, Pickhardt PJ, Rex DK. A resect and discard strategy would improve cost-effectiveness of colorectal cancer screening. Clin Gastroenterol Hepatol. 2010;8:865-869. [PMID: 20621680] doi:10.1016/j.cgh.2010.05.018",
+                "@reference-instance-id": "OB2BibRecID-957809445-0e4702b61ae7a5aea20cda6b4129c10e-8",
+                "@id": "8",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2010"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "A resect and discard strategy would improve cost-effectiveness of colorectal cancer screening"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1016/j.cgh.2010.05.018",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "77957128174",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "8"
+                    },
+                    "pagerange": {
+                      "@first": "865",
+                      "@last": "869"
+                    }
+                  },
+                  "ref-text": "[PMID: 20621680]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C",
+                        "@_fa": "true",
+                        "ce:surname": "Hassan",
+                        "ce:indexed-name": "Hassan C"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "PJ",
+                        "@_fa": "true",
+                        "ce:surname": "Pickhardt",
+                        "ce:indexed-name": "Pickhardt PJ"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "DK.",
+                        "@_fa": "true",
+                        "ce:surname": "Rex",
+                        "ce:indexed-name": "Rex DK."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Clin Gastroenterol Hepatol"
+                },
+                "ce:source-text": "Hassan C, Pickhardt PJ, Rex DK. A resect and discard strategy would improve cost-effectiveness of colorectal cancer screening. Clin Gastroenterol Hepatol. 2010;8:865-869. [PMID: 20621680] doi:10.1016/j.cgh.2010.05.018"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Orlovic M, Ahmad A, Saunders BP. Economic impact of implementing optical diagnosis with a \u201cresect and discard\u201d strategy within the English Bowel Cancer Screening Programme: findings from the DISCARD3 study. Gastrointest Endosc. 2023;98:73-81.e1. [PMID: 36739996] doi:10.1016/j.gie.2023.01.054",
+                "@reference-instance-id": "OB2BibRecID-957809445-0128949eba24e62f8128d48e9e49b03a-9",
+                "@id": "9",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2023"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Economic impact of implementing optical diagnosis with a \u201cresect and discard\u201d strategy within the English Bowel Cancer Screening Programme: findings from the DISCARD3 study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1016/j.gie.2023.01.054",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85153847373",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "98"
+                    },
+                    "pagerange": {
+                      "@first": "73",
+                      "@last": "81"
+                    }
+                  },
+                  "ref-text": "e1. [PMID: 36739996]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M",
+                        "@_fa": "true",
+                        "ce:surname": "Orlovic",
+                        "ce:indexed-name": "Orlovic M"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "A",
+                        "@_fa": "true",
+                        "ce:surname": "Ahmad",
+                        "ce:indexed-name": "Ahmad A"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "BP.",
+                        "@_fa": "true",
+                        "ce:surname": "Saunders",
+                        "ce:indexed-name": "Saunders BP."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gastrointest Endosc"
+                },
+                "ce:source-text": "Orlovic M, Ahmad A, Saunders BP. Economic impact of implementing optical diagnosis with a \u201cresect and discard\u201d strategy within the English Bowel Cancer Screening Programme: findings from the DISCARD3 study. Gastrointest Endosc. 2023;98:73-81.e1. [PMID: 36739996] doi:10.1016/j.gie.2023.01.054"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Okamoto Y, Oka S, Tanaka S, et al. Effect of educational lecture on the diagnostic accuracy of Japan NBI Expert Team classification for colorectal lesions. BMC Gastroenterol. 2021;21:110. [PMID: 33663383] doi:10.1186/s12876-021-01676-x",
+                "@reference-instance-id": "OB2BibRecID-957809445-8c16e59210587df71f155dd3c8581d5b-10",
+                "@id": "10",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2021"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Effect of educational lecture on the diagnostic accuracy of Japan NBI Expert Team classification for colorectal lesions"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1186/s12876-021-01676-x",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85101956401",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "21"
+                    },
+                    "pagerange": {
+                      "@first": "110"
+                    }
+                  },
+                  "ref-text": "[PMID: 33663383]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "Y",
+                        "@_fa": "true",
+                        "ce:surname": "Okamoto",
+                        "ce:indexed-name": "Okamoto Y"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S",
+                        "@_fa": "true",
+                        "ce:surname": "Oka",
+                        "ce:indexed-name": "Oka S"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S",
+                        "@_fa": "true",
+                        "ce:surname": "Tanaka",
+                        "ce:indexed-name": "Tanaka S"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "BMC Gastroenterol"
+                },
+                "ce:source-text": "Okamoto Y, Oka S, Tanaka S, et al. Effect of educational lecture on the diagnostic accuracy of Japan NBI Expert Team classification for colorectal lesions. BMC Gastroenterol. 2021;21:110. [PMID: 33663383] doi:10.1186/s12876-021-01676-x"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Rees CJ, Rajasekhar PT, Wilson A, et al. Narrow band imaging optical diagnosis of small colorectal polyps in routine clinical practice: the Detect Inspect Characterise Resect and Discard 2 (DISCARD 2) study. Gut. 2017;66:887-895. [PMID: 27196576] doi:10.1136/gutjnl-2015-310584",
+                "@reference-instance-id": "OB2BibRecID-957809445-14a0677bf563283f839f31061b5cb6df-11",
+                "@id": "11",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2017"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Narrow band imaging optical diagnosis of small colorectal polyps in routine clinical practice: the Detect Inspect Characterise Resect and Discard 2 (DISCARD 2) study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1136/gutjnl-2015-310584",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "84982085353",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "66"
+                    },
+                    "pagerange": {
+                      "@first": "887",
+                      "@last": "895"
+                    }
+                  },
+                  "ref-text": "[PMID: 27196576]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "CJ",
+                        "@_fa": "true",
+                        "ce:surname": "Rees",
+                        "ce:indexed-name": "Rees CJ"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "PT",
+                        "@_fa": "true",
+                        "ce:surname": "Rajasekhar",
+                        "ce:indexed-name": "Rajasekhar PT"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A",
+                        "@_fa": "true",
+                        "ce:surname": "Wilson",
+                        "ce:indexed-name": "Wilson A"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Gut"
+                },
+                "ce:source-text": "Rees CJ, Rajasekhar PT, Wilson A, et al. Narrow band imaging optical diagnosis of small colorectal polyps in routine clinical practice: the Detect Inspect Characterise Resect and Discard 2 (DISCARD 2) study. Gut. 2017;66:887-895. [PMID: 27196576] doi:10.1136/gutjnl-2015-310584"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Ignjatovic A, East JE, Suzuki N, et al. Optical diagnosis of small colorectal polyps at routine colonoscopy (Detect InSpect ChAracterise Resect and Discard; DISCARD trial): a prospective cohort study. Lancet Oncol. 2009;10:1171-1178. [PMID: 19910250] doi:10.1016/ S1470-2045(09)70329-8",
+                "@reference-instance-id": "OB2BibRecID-957809445-f2027b802ad9cc16c79b33d07951de8e-12",
+                "@id": "12",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2009"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Optical diagnosis of small colorectal polyps at routine colonoscopy (Detect InSpect ChAracterise Resect and Discard; DISCARD trial): a prospective cohort study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1016/S1470-2045(09)70329-8",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "70649111390",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "10"
+                    },
+                    "pagerange": {
+                      "@first": "1171",
+                      "@last": "1178"
+                    }
+                  },
+                  "ref-text": "[PMID: 19910250]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "A",
+                        "@_fa": "true",
+                        "ce:surname": "Ignjatovic",
+                        "ce:indexed-name": "Ignjatovic A"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "JE",
+                        "@_fa": "true",
+                        "ce:surname": "East",
+                        "ce:indexed-name": "East JE"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "N",
+                        "@_fa": "true",
+                        "ce:surname": "Suzuki",
+                        "ce:indexed-name": "Suzuki N"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Lancet Oncol"
+                },
+                "ce:source-text": "Ignjatovic A, East JE, Suzuki N, et al. Optical diagnosis of small colorectal polyps at routine colonoscopy (Detect InSpect ChAracterise Resect and Discard; DISCARD trial): a prospective cohort study. Lancet Oncol. 2009;10:1171-1178. [PMID: 19910250] doi:10.1016/ S1470-2045(09)70329-8"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Wadhwa V, Alagappan M, Gonzalez A, et al. Physician sentiment toward artificial intelligence (AI) in colonoscopic practice: a survey of US gastroenterologists. Endosc Int Open. 2020;8:E1379-E1384. [PMID: 33015341] doi:10.1055/a-1223-1926",
+                "@reference-instance-id": "OB2BibRecID-957809445-1e788b81e0f8b1ca76f9d971c2ac00ab-13",
+                "@id": "13",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2020"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Physician sentiment toward artificial intelligence (AI) in colonoscopic practice: a survey of US gastroenterologists"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1055/a-1223-1926",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85098514415",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "8"
+                    },
+                    "pagerange": {
+                      "@first": "E1379",
+                      "@last": "E1384"
+                    }
+                  },
+                  "ref-text": "[PMID: 33015341]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "V",
+                        "@_fa": "true",
+                        "ce:surname": "Wadhwa",
+                        "ce:indexed-name": "Wadhwa V"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M",
+                        "@_fa": "true",
+                        "ce:surname": "Alagappan",
+                        "ce:indexed-name": "Alagappan M"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A",
+                        "@_fa": "true",
+                        "ce:surname": "Gonzalez",
+                        "ce:indexed-name": "Gonzalez A"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Endosc Int Open"
+                },
+                "ce:source-text": "Wadhwa V, Alagappan M, Gonzalez A, et al. Physician sentiment toward artificial intelligence (AI) in colonoscopic practice: a survey of US gastroenterologists. Endosc Int Open. 2020;8:E1379-E1384. [PMID: 33015341] doi:10.1055/a-1223-1926"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Hassan C, Balsamo G, Lorenzetti R, et al. Artificial intelligence allows leaving-in-situ colorectal polyps. Clin Gastroenterol Hepatol. 2022;20:2505-2513.e4. [PMID: 35835342] doi:10.1016/j.cgh.2022. 04.045",
+                "@reference-instance-id": "OB2BibRecID-957809445-236bcaca924bda9563898c5d7871c517-14",
+                "@id": "14",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2022"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Artificial intelligence allows leaving-in-situ colorectal polyps"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1016/j.cgh.2022.04.045",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85137720329",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "20"
+                    },
+                    "pagerange": {
+                      "@first": "2505",
+                      "@last": "2513"
+                    }
+                  },
+                  "ref-text": "e4. [PMID: 35835342]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C",
+                        "@_fa": "true",
+                        "ce:surname": "Hassan",
+                        "ce:indexed-name": "Hassan C"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "G",
+                        "@_fa": "true",
+                        "ce:surname": "Balsamo",
+                        "ce:indexed-name": "Balsamo G"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "R",
+                        "@_fa": "true",
+                        "ce:surname": "Lorenzetti",
+                        "ce:indexed-name": "Lorenzetti R"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Clin Gastroenterol Hepatol"
+                },
+                "ce:source-text": "Hassan C, Balsamo G, Lorenzetti R, et al. Artificial intelligence allows leaving-in-situ colorectal polyps. Clin Gastroenterol Hepatol. 2022;20:2505-2513.e4. [PMID: 35835342] doi:10.1016/j.cgh.2022. 04.045"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Mori Y, Kudo S-E, Misawa M, et al. Real-time use of artificial intelligence in identification of diminutive polyps during colonoscopy. A prospective study. Ann Intern Med. 2018;169:357-366. [PMID: 30105375] doi:10.7326/M18-0249",
+                "@reference-instance-id": "OB2BibRecID-957809445-77d247425b702b49ce44a96368ce248a-15",
+                "@id": "15",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2018"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Real-time use of artificial intelligence in identification of diminutive polyps during colonoscopy. A prospective study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.7326/M18-0249",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85053542469",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "169"
+                    },
+                    "pagerange": {
+                      "@first": "357",
+                      "@last": "366"
+                    }
+                  },
+                  "ref-text": "[PMID: 30105375]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "Y",
+                        "@_fa": "true",
+                        "ce:surname": "Mori",
+                        "ce:indexed-name": "Mori Y"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S-E",
+                        "@_fa": "true",
+                        "ce:surname": "Kudo",
+                        "ce:indexed-name": "Kudo S-E"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M",
+                        "@_fa": "true",
+                        "ce:surname": "Misawa",
+                        "ce:indexed-name": "Misawa M"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Ann Intern Med"
+                },
+                "ce:source-text": "Mori Y, Kudo S-E, Misawa M, et al. Real-time use of artificial intelligence in identification of diminutive polyps during colonoscopy. A prospective study. Ann Intern Med. 2018;169:357-366. [PMID: 30105375] doi:10.7326/M18-0249"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Barua I, Wieszczy P, Kudo S-E, et al. Real-time artificial intelligence-based optical diagnosis of neoplastic polyps during colonoscopy. NEJM Evid. 2022;1:EVIDoa2200003. [PMID: 38319238] doi:10.1056/EVIDoa2200003",
+                "@reference-instance-id": "OB2BibRecID-957809445-d34da7331f787002e003f9c1f170c750-16",
+                "@id": "16",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2022"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Real-time artificial intelligence-based optical diagnosis of neoplastic polyps during colonoscopy"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1056/EVIDoa2200003",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85135871123",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "1"
+                    }
+                  },
+                  "ref-text": "EVIDoa2200003. [PMID: 38319238]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "I",
+                        "@_fa": "true",
+                        "ce:surname": "Barua",
+                        "ce:indexed-name": "Barua I"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "P",
+                        "@_fa": "true",
+                        "ce:surname": "Wieszczy",
+                        "ce:indexed-name": "Wieszczy P"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S-E",
+                        "@_fa": "true",
+                        "ce:surname": "Kudo",
+                        "ce:indexed-name": "Kudo S-E"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "NEJM Evid"
+                },
+                "ce:source-text": "Barua I, Wieszczy P, Kudo S-E, et al. Real-time artificial intelligence-based optical diagnosis of neoplastic polyps during colonoscopy. NEJM Evid. 2022;1:EVIDoa2200003. [PMID: 38319238] doi:10.1056/EVIDoa2200003"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Moher D, Liberati A, Tetzlaff J, et al; PRISMA Group. Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement. J Clin Epidemiol. 2009;62:1006-1012. [PMID: 19631508] doi:10.1016/j.jclinepi.2009.06.005",
+                "@reference-instance-id": "OB2BibRecID-957809445-2c6211eb8005448ea53aa616da2e4dc2-17",
+                "@id": "17",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2009"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1016/j.jclinepi.2009.06.005",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "84925548115",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "62"
+                    },
+                    "pagerange": {
+                      "@first": "1006",
+                      "@last": "1012"
+                    }
+                  },
+                  "ref-text": "[PMID: 19631508]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "D",
+                        "@_fa": "true",
+                        "ce:surname": "Moher",
+                        "ce:indexed-name": "Moher D"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "A",
+                        "@_fa": "true",
+                        "ce:surname": "Liberati",
+                        "ce:indexed-name": "Liberati A"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "J",
+                        "@_fa": "true",
+                        "ce:surname": "Tetzlaff",
+                        "ce:indexed-name": "Tetzlaff J"
+                      }
+                    ],
+                    "collaboration": {
+                      "@seq": "4",
+                      "ce:text": "PRISMA Group",
+                      "ce:indexed-name": "PRISMA Group"
+                    },
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "J Clin Epidemiol"
+                },
+                "ce:source-text": "Moher D, Liberati A, Tetzlaff J, et al; PRISMA Group. Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement. J Clin Epidemiol. 2009;62:1006-1012. [PMID: 19631508] doi:10.1016/j.jclinepi.2009.06.005"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Whiting PF, Rutjes AWS, Westwood ME, et al; QUADAS-2 Group. QUADAS-2: a revised tool for the quality assessment of diagnostic accuracy studies. Ann Intern Med. 2011;155:529-536. [PMID: 22007046] doi:10.7326/0003-4819-155-8-201110180-00009",
+                "@reference-instance-id": "OB2BibRecID-957809445-f8c59dc46b371feac6fe3f3f379e0716-18",
+                "@id": "18",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2011"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "QUADAS-2: a revised tool for the quality assessment of diagnostic accuracy studies"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.7326/0003-4819-155-8-201110180-00009",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "80054740636",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "155"
+                    },
+                    "pagerange": {
+                      "@first": "529",
+                      "@last": "536"
+                    }
+                  },
+                  "ref-text": "[PMID: 22007046]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "PF",
+                        "@_fa": "true",
+                        "ce:surname": "Whiting",
+                        "ce:indexed-name": "Whiting PF"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "AWS",
+                        "@_fa": "true",
+                        "ce:surname": "Rutjes",
+                        "ce:indexed-name": "Rutjes AWS"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "ME",
+                        "@_fa": "true",
+                        "ce:surname": "Westwood",
+                        "ce:indexed-name": "Westwood ME"
+                      }
+                    ],
+                    "collaboration": {
+                      "@seq": "4",
+                      "ce:text": "QUADAS-2 Group",
+                      "ce:indexed-name": "QUADAS-2 Group"
+                    },
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Ann Intern Med"
+                },
+                "ce:source-text": "Whiting PF, Rutjes AWS, Westwood ME, et al; QUADAS-2 Group. QUADAS-2: a revised tool for the quality assessment of diagnostic accuracy studies. Ann Intern Med. 2011;155:529-536. [PMID: 22007046] doi:10.7326/0003-4819-155-8-201110180-00009"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Guyatt GH, Oxman AD, Vist GE, et al; GRADE Working Group. GRADE: an emerging consensus on rating quality of evidence and strength of recommendations. BMJ. 2008;336:924-926. [PMID: 18436948] doi:10.1136/bmj.39489.470347.AD",
+                "@reference-instance-id": "OB2BibRecID-957809445-5db11c90271ccccd537e0e33f700308d-19",
+                "@id": "19",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2008"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "GRADE: an emerging consensus on rating quality of evidence and strength of recommendations"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1136/bmj.39489.470347.AD",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "43049113533",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "336"
+                    },
+                    "pagerange": {
+                      "@first": "924",
+                      "@last": "926"
+                    }
+                  },
+                  "ref-text": "[PMID: 18436948]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "GH",
+                        "@_fa": "true",
+                        "ce:surname": "Guyatt",
+                        "ce:indexed-name": "Guyatt GH"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "AD",
+                        "@_fa": "true",
+                        "ce:surname": "Oxman",
+                        "ce:indexed-name": "Oxman AD"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "GE",
+                        "@_fa": "true",
+                        "ce:surname": "Vist",
+                        "ce:indexed-name": "Vist GE"
+                      }
+                    ],
+                    "collaboration": {
+                      "@seq": "4",
+                      "ce:text": "GRADE Working Group",
+                      "ce:indexed-name": "GRADE Working Group"
+                    },
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "BMJ"
+                },
+                "ce:source-text": "Guyatt GH, Oxman AD, Vist GE, et al; GRADE Working Group. GRADE: an emerging consensus on rating quality of evidence and strength of recommendations. BMJ. 2008;336:924-926. [PMID: 18436948] doi:10.1136/bmj.39489.470347.AD"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Yang B, Mustafa RA, Bossuyt PM, et al. GRADE guidance: 31. Assessing the certainty across a body of evidence for comparative test accuracy. J Clin Epidemiol. 2021;136:146-156. [PMID: 33864930] doi:10.1016/j.jclinepi.2021.04.001",
+                "@reference-instance-id": "OB2BibRecID-957809445-e7da1a2c46a172a04d4bef5bb1a5440d-20",
+                "@id": "20",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2021"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "GRADE guidance: 31. Assessing the certainty across a body of evidence for comparative test accuracy"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1016/j.jclinepi.2021.04.001",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85110744141",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "136"
+                    },
+                    "pagerange": {
+                      "@first": "146",
+                      "@last": "156"
+                    }
+                  },
+                  "ref-text": "[PMID: 33864930]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "B",
+                        "@_fa": "true",
+                        "ce:surname": "Yang",
+                        "ce:indexed-name": "Yang B"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "RA",
+                        "@_fa": "true",
+                        "ce:surname": "Mustafa",
+                        "ce:indexed-name": "Mustafa RA"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "PM",
+                        "@_fa": "true",
+                        "ce:surname": "Bossuyt",
+                        "ce:indexed-name": "Bossuyt PM"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "J Clin Epidemiol"
+                },
+                "ce:source-text": "Yang B, Mustafa RA, Bossuyt PM, et al. GRADE guidance: 31. Assessing the certainty across a body of evidence for comparative test accuracy. J Clin Epidemiol. 2021;136:146-156. [PMID: 33864930] doi:10.1016/j.jclinepi.2021.04.001"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Houwen BBSL, Hazewinkel Y, Giotis I, et al; POLAR Study Group. Computer-aided diagnosis for optical diagnosis of diminutive colorectal polyps including sessile serrated lesions: a real-time comparison with screening endoscopists. Endoscopy. 2023;55:756-765. [PMID: 36623839] doi:10.1055/a-2009-3990",
+                "@reference-instance-id": "OB2BibRecID-957809445-15994e975942c0f762187ec869995177-21",
+                "@id": "21",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2023"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Computer-aided diagnosis for optical diagnosis of diminutive colorectal polyps including sessile serrated lesions: a real-time comparison with screening endoscopists"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1055/a-2009-3990",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85166362440",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "55"
+                    },
+                    "pagerange": {
+                      "@first": "756",
+                      "@last": "765"
+                    }
+                  },
+                  "ref-text": "[PMID: 36623839]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "BBSL",
+                        "@_fa": "true",
+                        "ce:surname": "Houwen",
+                        "ce:indexed-name": "Houwen BBSL"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "Y",
+                        "@_fa": "true",
+                        "ce:surname": "Hazewinkel",
+                        "ce:indexed-name": "Hazewinkel Y"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "I",
+                        "@_fa": "true",
+                        "ce:surname": "Giotis",
+                        "ce:indexed-name": "Giotis I"
+                      }
+                    ],
+                    "collaboration": {
+                      "@seq": "4",
+                      "ce:text": "POLAR Study Group",
+                      "ce:indexed-name": "POLAR Study Group"
+                    },
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Endoscopy"
+                },
+                "ce:source-text": "Houwen BBSL, Hazewinkel Y, Giotis I, et al; POLAR Study Group. Computer-aided diagnosis for optical diagnosis of diminutive colorectal polyps including sessile serrated lesions: a real-time comparison with screening endoscopists. Endoscopy. 2023;55:756-765. [PMID: 36623839] doi:10.1055/a-2009-3990"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Rondonotti E, Hassan C, Tamanini G, et al. Artificial intelligence-assisted optical diagnosis for the resect-and-discard strategy in clinical practice: the Artificial intelligence BLI Characterization (ABC) study. Endoscopy. 2023;55:14-22. [PMID: 35562098] doi:10.1055/a-1852-0330",
+                "@reference-instance-id": "OB2BibRecID-957809445-5f17345f471211d65d3f351a5ffc0305-22",
+                "@id": "22",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2023"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Artificial intelligence-assisted optical diagnosis for the resect-and-discard strategy in clinical practice: the Artificial intelligence BLI Characterization (ABC) study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1055/a-1852-0330",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85134005819",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "55"
+                    },
+                    "pagerange": {
+                      "@first": "14",
+                      "@last": "22"
+                    }
+                  },
+                  "ref-text": "[PMID: 35562098]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "E",
+                        "@_fa": "true",
+                        "ce:surname": "Rondonotti",
+                        "ce:indexed-name": "Rondonotti E"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C",
+                        "@_fa": "true",
+                        "ce:surname": "Hassan",
+                        "ce:indexed-name": "Hassan C"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "G",
+                        "@_fa": "true",
+                        "ce:surname": "Tamanini",
+                        "ce:indexed-name": "Tamanini G"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Endoscopy"
+                },
+                "ce:source-text": "Rondonotti E, Hassan C, Tamanini G, et al. Artificial intelligence-assisted optical diagnosis for the resect-and-discard strategy in clinical practice: the Artificial intelligence BLI Characterization (ABC) study. Endoscopy. 2023;55:14-22. [PMID: 35562098] doi:10.1055/a-1852-0330"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Hassan C, Sharma P, Mori Y, et al; Combo Study Group. Comparative performance of artificial intelligence optical diagnosis systems for leaving in situ colorectal polyps. Gastroenterology. 2023;164:467-469.e4. [PMID: 36328079] doi:10.1053/j.gastro.2022. 10.021",
+                "@reference-instance-id": "OB2BibRecID-957809445-bc05b85c4d649b794e4e26e829d6299c-23",
+                "@id": "23",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2023"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Comparative performance of artificial intelligence optical diagnosis systems for leaving in situ colorectal polyps"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1053/j.gastro.2022.10.021",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85146441216",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "164"
+                    },
+                    "pagerange": {
+                      "@first": "467",
+                      "@last": "469"
+                    }
+                  },
+                  "ref-text": "e4. [PMID: 36328079]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C",
+                        "@_fa": "true",
+                        "ce:surname": "Hassan",
+                        "ce:indexed-name": "Hassan C"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "P",
+                        "@_fa": "true",
+                        "ce:surname": "Sharma",
+                        "ce:indexed-name": "Sharma P"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "Y",
+                        "@_fa": "true",
+                        "ce:surname": "Mori",
+                        "ce:indexed-name": "Mori Y"
+                      }
+                    ],
+                    "collaboration": {
+                      "@seq": "4",
+                      "ce:text": "Combo Study Group",
+                      "ce:indexed-name": "Combo Study Group"
+                    },
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Gastroenterology"
+                },
+                "ce:source-text": "Hassan C, Sharma P, Mori Y, et al; Combo Study Group. Comparative performance of artificial intelligence optical diagnosis systems for leaving in situ colorectal polyps. Gastroenterology. 2023;164:467-469.e4. [PMID: 36328079] doi:10.1053/j.gastro.2022. 10.021"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Minegishi Y, Kudo SE, Miyata Y, et al; Showa University and Nagoya University Ai Research Group. Comprehensive diagnostic performance of real-time characterization of colorectal lesions using an artificial intelligence-assisted system: a prospective study. Gastroenterology. 2022;163:323-325.e3. [PMID: 35398043] doi:10.1053/ j.gastro.2022.03.053",
+                "@reference-instance-id": "OB2BibRecID-957809445-19ed7ec051921b53206fac25db3fa941-24",
+                "@id": "24",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2022"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Comprehensive diagnostic performance of real-time characterization of colorectal lesions using an artificial intelligence-assisted system: a prospective study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1053/j.gastro.2022.03.053",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85132225711",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "163"
+                    },
+                    "pagerange": {
+                      "@first": "323",
+                      "@last": "325"
+                    }
+                  },
+                  "ref-text": "e3. [PMID: 35398043]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "Y",
+                        "@_fa": "true",
+                        "ce:surname": "Minegishi",
+                        "ce:indexed-name": "Minegishi Y"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "SE",
+                        "@_fa": "true",
+                        "ce:surname": "Kudo",
+                        "ce:indexed-name": "Kudo SE"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "Y",
+                        "@_fa": "true",
+                        "ce:surname": "Miyata",
+                        "ce:indexed-name": "Miyata Y"
+                      }
+                    ],
+                    "collaboration": {
+                      "@seq": "4",
+                      "ce:text": "Showa University and Nagoya University Ai Research Group",
+                      "ce:indexed-name": "Showa University and Nagoya University Ai Research Group"
+                    },
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Gastroenterology"
+                },
+                "ce:source-text": "Minegishi Y, Kudo SE, Miyata Y, et al; Showa University and Nagoya University Ai Research Group. Comprehensive diagnostic performance of real-time characterization of colorectal lesions using an artificial intelligence-assisted system: a prospective study. Gastroenterology. 2022;163:323-325.e3. [PMID: 35398043] doi:10.1053/ j.gastro.2022.03.053"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Baumer S, Streicher K, Alqahtani SA, et al. Accuracy of polyp characterization by artificial intelligence and endoscopists: a prospective, non-randomized study in a tertiary endoscopy center. Endosc Int Open. 2023;11:E818-E828. [PMID: 37727511] doi:10.1055/a-2096-2960",
+                "@reference-instance-id": "OB2BibRecID-957809445-f53b9c12b3b4a96aef5d01f0de5ccf7c-25",
+                "@id": "25",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2023"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Accuracy of polyp characterization by artificial intelligence and endoscopists: a prospective, non-randomized study in a tertiary endoscopy center"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1055/a-2096-2960",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85172281699",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "11"
+                    },
+                    "pagerange": {
+                      "@first": "E818",
+                      "@last": "E828"
+                    }
+                  },
+                  "ref-text": "[PMID: 37727511]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "S",
+                        "@_fa": "true",
+                        "ce:surname": "Baumer",
+                        "ce:indexed-name": "Baumer S"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "K",
+                        "@_fa": "true",
+                        "ce:surname": "Streicher",
+                        "ce:indexed-name": "Streicher K"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "SA",
+                        "@_fa": "true",
+                        "ce:surname": "Alqahtani",
+                        "ce:indexed-name": "Alqahtani SA"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Endosc Int Open"
+                },
+                "ce:source-text": "Baumer S, Streicher K, Alqahtani SA, et al. Accuracy of polyp characterization by artificial intelligence and endoscopists: a prospective, non-randomized study in a tertiary endoscopy center. Endosc Int Open. 2023;11:E818-E828. [PMID: 37727511] doi:10.1055/a-2096-2960"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Li JW, Wu CCH, Lee JWJ, et al; Artificial Intelligence in Gastrointestinal Endoscopy Singapore (AIGES) Study Group. Real-world validation of a computer-aided diagnosis system for prediction of polyp histology in colonoscopy: a prospective multicenter study. Am J Gastroenterol. 2023;118:1353-1364. [PMID: 37040553] doi:10.14309/ajg.0000000000002282",
+                "@reference-instance-id": "OB2BibRecID-957809445-89bf968b35cb1aea59b78ff4314a7a34-26",
+                "@id": "26",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2023"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Real-world validation of a computer-aided diagnosis system for prediction of polyp histology in colonoscopy: a prospective multicenter study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.14309/ajg.0000000000002282",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85166442346",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "118"
+                    },
+                    "pagerange": {
+                      "@first": "1353",
+                      "@last": "1364"
+                    }
+                  },
+                  "ref-text": "[PMID: 37040553]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "JW",
+                        "@_fa": "true",
+                        "ce:surname": "Li",
+                        "ce:indexed-name": "Li JW"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "CCH",
+                        "@_fa": "true",
+                        "ce:surname": "Wu",
+                        "ce:indexed-name": "Wu CCH"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "JWJ",
+                        "@_fa": "true",
+                        "ce:surname": "Lee",
+                        "ce:indexed-name": "Lee JWJ"
+                      }
+                    ],
+                    "collaboration": {
+                      "@seq": "4",
+                      "ce:text": "Artificial Intelligence in Gastrointestinal Endoscopy Singapore (AIGES) Study Group",
+                      "ce:indexed-name": "Artificial Intelligence in Gastrointestinal Endoscopy Singapore (AIGES) Study Group"
+                    },
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Am J Gastroenterol"
+                },
+                "ce:source-text": "Li JW, Wu CCH, Lee JWJ, et al; Artificial Intelligence in Gastrointestinal Endoscopy Singapore (AIGES) Study Group. Real-world validation of a computer-aided diagnosis system for prediction of polyp histology in colonoscopy: a prospective multicenter study. Am J Gastroenterol. 2023;118:1353-1364. [PMID: 37040553] doi:10.14309/ajg.0000000000002282"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Rex DK, Bhavsar-Burke I, Buckles D, et al. Artificial intelligence for real-time prediction of the histology of colorectal polyps by general endoscopists. Ann Intern Med. 2024;177:911-918. doi:10. 7326/M24-0086",
+                "@reference-instance-id": "OB2BibRecID-957809445-ac45cbb9da313839f768132beaf154d6-27",
+                "@id": "27",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2024"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Artificial intelligence for real-time prediction of the histology of colorectal polyps by general endoscopists"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.7326/M24-0086",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85199125888",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "177"
+                    },
+                    "pagerange": {
+                      "@first": "911",
+                      "@last": "918"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "DK",
+                        "@_fa": "true",
+                        "ce:surname": "Rex",
+                        "ce:indexed-name": "Rex DK"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "I",
+                        "@_fa": "true",
+                        "ce:surname": "Bhavsar-Burke",
+                        "ce:indexed-name": "Bhavsar-Burke I"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "D",
+                        "@_fa": "true",
+                        "ce:surname": "Buckles",
+                        "ce:indexed-name": "Buckles D"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Ann Intern Med"
+                },
+                "ce:source-text": "Rex DK, Bhavsar-Burke I, Buckles D, et al. Artificial intelligence for real-time prediction of the histology of colorectal polyps by general endoscopists. Ann Intern Med. 2024;177:911-918. doi:10. 7326/M24-0086"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Rastogi A, Rao DS, Gupta N, et al. Impact of a computer-based teaching module on characterization of diminutive colon polyps by using narrow-band imaging by non-experts in academic and community practice: a video-based study. Gastrointest Endosc. 2014;79:390-398. [PMID: 24021492] doi:10.1016/j.gie.2013.07.032",
+                "@reference-instance-id": "OB2BibRecID-957809445-e948ba77e582f58bc379aba320da91d1-28",
+                "@id": "28",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2014"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Impact of a computer-based teaching module on characterization of diminutive colon polyps by using narrow-band imaging by non-experts in academic and community practice: a video-based study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1016/j.gie.2013.07.032",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "84893825106",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "79"
+                    },
+                    "pagerange": {
+                      "@first": "390",
+                      "@last": "398"
+                    }
+                  },
+                  "ref-text": "[PMID: 24021492]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "A",
+                        "@_fa": "true",
+                        "ce:surname": "Rastogi",
+                        "ce:indexed-name": "Rastogi A"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "DS",
+                        "@_fa": "true",
+                        "ce:surname": "Rao",
+                        "ce:indexed-name": "Rao DS"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "N",
+                        "@_fa": "true",
+                        "ce:surname": "Gupta",
+                        "ce:indexed-name": "Gupta N"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Gastrointest Endosc"
+                },
+                "ce:source-text": "Rastogi A, Rao DS, Gupta N, et al. Impact of a computer-based teaching module on characterization of diminutive colon polyps by using narrow-band imaging by non-experts in academic and community practice: a video-based study. Gastrointest Endosc. 2014;79:390-398. [PMID: 24021492] doi:10.1016/j.gie.2013.07.032"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Reverberi C, Rigon T, Solari A, et al; GI Genius CADx Study Group. Experimental evidence of effective human-AI collaboration in medical decision-making. Sci Rep. 2022;12:14952. [PMID: 36056152] doi:10.1038/s41598-022-18751-2",
+                "@reference-instance-id": "OB2BibRecID-957809445-351f19ef049fde8cb408529aa762f4cc-29",
+                "@id": "29",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2022"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "GI Genius CADx Study Group. Experimental evidence of effective human-AI collaboration in medical decision-making"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1038/s41598-022-18751-2",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "85137162934",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "12"
+                    },
+                    "pagerange": {
+                      "@first": "14952"
+                    }
+                  },
+                  "ref-text": "[PMID: 36056152]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C",
+                        "@_fa": "true",
+                        "ce:surname": "Reverberi",
+                        "ce:indexed-name": "Reverberi C"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "T",
+                        "@_fa": "true",
+                        "ce:surname": "Rigon",
+                        "ce:indexed-name": "Rigon T"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A",
+                        "@_fa": "true",
+                        "ce:surname": "Solari",
+                        "ce:indexed-name": "Solari A"
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Sci Rep"
+                },
+                "ce:source-text": "Reverberi C, Rigon T, Solari A, et al; GI Genius CADx Study Group. Experimental evidence of effective human-AI collaboration in medical decision-making. Sci Rep. 2022;12:14952. [PMID: 36056152] doi:10.1038/s41598-022-18751-2"
+              },
+              {
+                "@aii:was-generated-by": "http://data.elsevier.com/art/structure-references art:version v2.0.229",
+                "ref-fulltext": "Ponugoti PL, Cummings OW, Rex DK. Risk of cancer in small and diminutive colorectal polyps. Dig Liver Dis. 2017;49:34-37. [PMID: 27443490] doi:10.1016/j.dld.2016.06.025",
+                "@reference-instance-id": "OB2BibRecID-957809445-8d9dac9bae9d2d9fa3ea88a623422601-30",
+                "@id": "30",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2017"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Risk of cancer in small and diminutive colorectal polyps"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "10.1016/j.dld.2016.06.025",
+                        "@idtype": "DOI"
+                      },
+                      {
+                        "$": "84997113376",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "49"
+                    },
+                    "pagerange": {
+                      "@first": "34",
+                      "@last": "37"
+                    }
+                  },
+                  "ref-text": "[PMID: 27443490]",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "PL",
+                        "@_fa": "true",
+                        "ce:surname": "Ponugoti",
+                        "ce:indexed-name": "Ponugoti PL"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "OW",
+                        "@_fa": "true",
+                        "ce:surname": "Cummings",
+                        "ce:indexed-name": "Cummings OW"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "DK.",
+                        "@_fa": "true",
+                        "ce:surname": "Rex",
+                        "ce:indexed-name": "Rex DK."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Dig Liver Dis"
+                },
+                "ce:source-text": "Ponugoti PL, Cummings OW, Rex DK. Risk of cancer in small and diminutive colorectal polyps. Dig Liver Dis. 2017;49:34-37. [PMID: 27443490] doi:10.1016/j.dld.2016.06.025"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "affiliation": [
+      {
+        "affiliation-city": "Yokohama",
+        "@id": "60159849",
+        "affilname": "Showa University Yokohama Northern Hospital",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60159849",
+        "affiliation-country": "Japan"
+      },
+      {
+        "affiliation-city": "Amsterdam",
+        "@id": "60001157",
+        "affilname": "Amsterdam UMC - University of Amsterdam",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60001157",
+        "affiliation-country": "Netherlands"
+      },
+      {
+        "affiliation-city": "Pieve Emanuele",
+        "@id": "60107210",
+        "affilname": "Humanitas University",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60107210",
+        "affiliation-country": "Italy"
+      },
+      {
+        "affiliation-city": "Oslo",
+        "@id": "60105037",
+        "affilname": "Oslo Universitetssykehus",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60105037",
+        "affiliation-country": "Norway"
+      },
+      {
+        "affiliation-city": "New York",
+        "@id": "60103213",
+        "affilname": "Tisch Hospital",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60103213",
+        "affiliation-country": "United States"
+      },
+      {
+        "affiliation-city": "Como",
+        "@id": "60055966",
+        "affilname": "Ospedale Valduce",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60055966",
+        "affiliation-country": "Italy"
+      },
+      {
+        "affiliation-city": "Rome",
+        "@id": "60032350",
+        "affilname": "Sapienza Universit\u00e0 di Roma",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60032350",
+        "affiliation-country": "Italy"
+      },
+      {
+        "affiliation-city": "Portsmouth",
+        "@id": "60030999",
+        "affilname": "Queen Alexandra Hospital",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60030999",
+        "affiliation-country": "United Kingdom"
+      },
+      {
+        "affiliation-city": "Minneapolis",
+        "@id": "60029445",
+        "affilname": "University of Minnesota Twin Cities",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029445",
+        "affiliation-country": "United States"
+      },
+      {
+        "affiliation-city": "Oslo",
+        "@id": "60026424",
+        "affilname": "Lovisenberg Diakonale Sykehus",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60026424",
+        "affiliation-country": "Norway"
+      },
+      {
+        "affiliation-city": "Rozzano",
+        "@id": "60024876",
+        "affilname": "Humanitas Research Hospital",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60024876",
+        "affiliation-country": "Italy"
+      },
+      {
+        "affiliation-city": "Indianapolis",
+        "@id": "60024609",
+        "affilname": "Indiana University-Purdue University Indianapolis",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60024609",
+        "affiliation-country": "United States"
+      },
+      {
+        "affiliation-city": "Foggia",
+        "@id": "60022956",
+        "affilname": "Universit\u00e0 degli Studi di Foggia",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60022956",
+        "affiliation-country": "Italy"
+      },
+      {
+        "affiliation-city": "Toronto",
+        "@id": "60017018",
+        "affilname": "St. Michael's Hospital, Toronto",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60017018",
+        "affiliation-country": "Canada"
+      },
+      {
+        "affiliation-city": "Toronto",
+        "@id": "60014468",
+        "affilname": "University Health Network",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60014468",
+        "affiliation-country": "Canada"
+      },
+      {
+        "affiliation-city": null,
+        "@id": "60014232",
+        "affilname": "VA Medical Center",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60014232",
+        "affiliation-country": "United States"
+      },
+      {
+        "affiliation-city": "Singapore City",
+        "@id": "60013022",
+        "affilname": "Changi General Hospital",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60013022",
+        "affiliation-country": "Singapore"
+      },
+      {
+        "affiliation-city": "Boston",
+        "@id": "60002746",
+        "affilname": "Harvard Medical School",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60002746",
+        "affiliation-country": "United States"
+      },
+      {
+        "affiliation-city": "Barcelona",
+        "@id": "60001576",
+        "affilname": "Universitat de Barcelona",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60001576",
+        "affiliation-country": "Spain"
+      }
+    ],
+    "coredata": {
+      "srctype": "j",
+      "eid": "2-s2.0-85199124578",
+      "dc:description": "Background: Computer-aided diagnosis (CADx) allows prediction of polyp histology during colonoscopy, which may reduce unnecessary removal of nonneoplastic polyps. However, the potential benefits and harms of CADx are still unclear. Purpose: To quantify the benefit and harm of using CADx in colonoscopy for the optical diagnosis of small (\u22645-mm) rectosigmoid polyps. Data Sources: Medline, Embase, and Scopus were searched for articles published before 22 December 2023. Study Selection: Histologically verified diagnostic accuracy studies that evaluated the real-time performance of physicians in predicting neoplastic change of small rectosigmoid polyps without or with CADx assistance during colonoscopy. Data Extraction: The clinical benefit and harm were estimated on the basis of accuracy values of the endoscopist before and after CADx assistance. The certainty of evidence was assessed using the GRADE (Grading of Recommendations Assessment, Development and Evaluation) framework. The outcome measure for benefit was the proportion of polyps predicted to be nonneoplastic that would avoid removal with the use of CADx. The outcome measure for harm was the proportion of neoplastic polyps that would be not resected and left in situ due to an incorrect diagnosis with the use of CADx. Histology served as the reference standard for both outcomes. Data Synthesis: Ten studies, including 3620 patients with 4103 small rectosigmoid polyps, were analyzed. The studies that assessed the performance of CADx alone (9 studies; 3237 polyps) showed a sensitivity of 87.3% (95% CI, 79.2% to 92.5%) and specificity of 88.9% (CI, 81.7% to 93.5%) in predicting neoplastic change. In the studies that compared histology prediction performance before versus after CADx assistance (4 studies; 2503 polyps), there was no difference in the proportion of polyps predicted to be nonneoplastic that would avoid removal (55.4% vs. 58.4%; risk ratio [RR], 1.06 [CI, 0.96 to 1.17]; moderate-certainty evidence) or in the proportion of neoplastic polyps that would be erroneously left in situ (8.2% vs. 7.5%; RR, 0.95 [CI, 0.69 to 1.33]; moderate-certainty evidence). Limitation: The application of optical diagnosis was only simulated, potentially altering the decision-making process of the operator. Conclusion: Computer-aided diagnosis provided no incremental benefit or harm in the management of small rectosigmoid polyps during colonoscopy.",
+      "pubmed-id": "38768453",
+      "prism:coverDate": "2024-07-01",
+      "prism:aggregationType": "Journal",
+      "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85199124578",
+      "dc:creator": {
+        "author": [
+          {
+            "ce:given-name": "Cesare",
+            "preferred-name": {
+              "ce:given-name": "Cesare",
+              "ce:initials": "C.",
+              "ce:surname": "Hassan",
+              "ce:indexed-name": "Hassan C."
+            },
+            "@seq": "1",
+            "ce:initials": "C.",
+            "@_fa": "true",
+            "affiliation": {
+              "@id": "60107210",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60107210"
+            },
+            "ce:degrees": "MD, PhD",
+            "ce:surname": "Hassan",
+            "@auid": "55970664500",
+            "author-url": "https://api.elsevier.com/content/author/author_id/55970664500",
+            "ce:indexed-name": "Hassan C."
+          }
+        ]
+      },
+      "link": [
+        {
+          "@_fa": "true",
+          "@rel": "self",
+          "@href": "https://api.elsevier.com/content/abstract/scopus_id/85199124578"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus",
+          "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85199124578&origin=inward"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus-citedby",
+          "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85199124578&origin=inward"
+        }
+      ],
+      "source-id": "26574",
+      "citedby-count": "9",
+      "prism:volume": "177",
+      "subtype": "re",
+      "dc:title": "Computer-Aided Diagnosis for Leaving Colorectal Polyps In Situ A Systematic Review and Meta-analysis",
+      "openaccess": "0",
+      "prism:issn": "15393704 00034819",
+      "publishercopyright": "\u00a9 2024 American College of Physicians.",
+      "prism:issueIdentifier": "7",
+      "subtypeDescription": "Review",
+      "prism:publicationName": "Annals of Internal Medicine",
+      "prism:pageRange": "919-928",
+      "prism:endingPage": "928",
+      "openaccessFlag": "false",
+      "prism:doi": "10.7326/M23-2865",
+      "prism:startingPage": "919",
+      "dc:identifier": "SCOPUS_ID:85199124578",
+      "dc:publisher": "American College of Physicians"
+    },
+    "idxterms": {
+      "mainterm": [
+        {
+          "$": "Colonic Polyps",
+          "@weight": "a",
+          "@candidate": "n"
+        },
+        {
+          "$": "Colonoscopy",
+          "@weight": "a",
+          "@candidate": "n"
+        },
+        {
+          "$": "Colorectal Neoplasms",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Diagnosis, Computer-Assisted",
+          "@weight": "a",
+          "@candidate": "n"
+        },
+        {
+          "$": "Humans",
+          "@weight": "b",
+          "@candidate": "n"
+        }
+      ]
+    },
+    "language": {
+      "@xml:lang": "eng"
+    },
+    "authkeywords": null,
+    "subject-areas": {
+      "subject-area": [
+        {
+          "@_fa": "true",
+          "$": "Internal Medicine",
+          "@code": "2724",
+          "@abbrev": "MEDI"
+        }
+      ]
+    },
+    "authors": {
+      "author": [
+        {
+          "ce:given-name": "Cesare",
+          "preferred-name": {
+            "ce:given-name": "Cesare",
+            "ce:initials": "C.",
+            "ce:surname": "Hassan",
+            "ce:indexed-name": "Hassan C."
+          },
+          "@seq": "1",
+          "ce:initials": "C.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60107210",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60107210"
+          },
+          "ce:degrees": "MD, PhD",
+          "ce:surname": "Hassan",
+          "@auid": "55970664500",
+          "author-url": "https://api.elsevier.com/content/author/author_id/55970664500",
+          "ce:indexed-name": "Hassan C."
+        },
+        {
+          "ce:given-name": "Masashi",
+          "preferred-name": {
+            "ce:given-name": "Masashi",
+            "ce:initials": "M.",
+            "ce:surname": "Misawa",
+            "ce:indexed-name": "Misawa M."
+          },
+          "@seq": "2",
+          "ce:initials": "M.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60159849",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60159849"
+          },
+          "ce:degrees": "MD, PhD",
+          "ce:surname": "Misawa",
+          "@auid": "36632805600",
+          "author-url": "https://api.elsevier.com/content/author/author_id/36632805600",
+          "ce:indexed-name": "Misawa M."
+        },
+        {
+          "ce:given-name": "Tommy",
+          "preferred-name": {
+            "ce:given-name": "Tommy",
+            "ce:initials": "T.",
+            "ce:surname": "Rizkala",
+            "ce:indexed-name": "Rizkala T."
+          },
+          "@seq": "3",
+          "ce:initials": "T.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60024876",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60024876"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Rizkala",
+          "@auid": "58069799200",
+          "author-url": "https://api.elsevier.com/content/author/author_id/58069799200",
+          "ce:indexed-name": "Rizkala T."
+        },
+        {
+          "ce:given-name": "Yuichi",
+          "preferred-name": {
+            "ce:given-name": "Yuichi",
+            "ce:initials": "Y.",
+            "ce:surname": "Mori",
+            "ce:indexed-name": "Mori Y."
+          },
+          "@seq": "4",
+          "ce:initials": "Y.",
+          "@_fa": "true",
+          "affiliation": [
+            {
+              "@id": "60159849",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60159849"
+            },
+            {
+              "@id": "60105037",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60105037"
+            }
+          ],
+          "ce:degrees": "MD, PhD",
+          "ce:surname": "Mori",
+          "@auid": "54392344400",
+          "author-url": "https://api.elsevier.com/content/author/author_id/54392344400",
+          "ce:indexed-name": "Mori Y."
+        },
+        {
+          "ce:given-name": "Shahnaz",
+          "preferred-name": {
+            "ce:given-name": "Shahnaz",
+            "ce:initials": "S.",
+            "ce:surname": "Sultan",
+            "ce:indexed-name": "Sultan S."
+          },
+          "@seq": "5",
+          "ce:initials": "S.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60029445",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029445"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Sultan",
+          "@auid": "7102692211",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7102692211",
+          "ce:indexed-name": "Sultan S."
+        },
+        {
+          "ce:given-name": "Antonio",
+          "preferred-name": {
+            "ce:given-name": "Antonio",
+            "ce:initials": "A.",
+            "ce:surname": "Facciorusso",
+            "ce:indexed-name": "Facciorusso A."
+          },
+          "@seq": "6",
+          "ce:initials": "A.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60022956",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60022956"
+          },
+          "ce:degrees": "MD, PhD",
+          "ce:surname": "Facciorusso",
+          "@auid": "56516762300",
+          "author-url": "https://api.elsevier.com/content/author/author_id/56516762300",
+          "ce:indexed-name": "Facciorusso A."
+        },
+        {
+          "ce:given-name": "Giulio",
+          "preferred-name": {
+            "ce:given-name": "Giulio",
+            "ce:initials": "G.",
+            "ce:surname": "Antonelli",
+            "ce:indexed-name": "Antonelli G."
+          },
+          "@seq": "7",
+          "ce:initials": "G.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60032350",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60032350"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Antonelli",
+          "@auid": "56785417800",
+          "author-url": "https://api.elsevier.com/content/author/author_id/56785417800",
+          "ce:indexed-name": "Antonelli G."
+        },
+        {
+          "ce:given-name": "Marco",
+          "preferred-name": {
+            "ce:given-name": "Marco",
+            "ce:initials": "M.",
+            "ce:surname": "Spadaccini",
+            "ce:indexed-name": "Spadaccini M."
+          },
+          "@seq": "8",
+          "ce:initials": "M.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60107210",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60107210"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Spadaccini",
+          "@auid": "57194572265",
+          "author-url": "https://api.elsevier.com/content/author/author_id/57194572265",
+          "ce:indexed-name": "Spadaccini M."
+        },
+        {
+          "ce:given-name": "Britt B.S.L.",
+          "preferred-name": {
+            "ce:given-name": "Britt B.S.L.",
+            "ce:initials": "B.B.S.L.",
+            "ce:surname": "Houwen",
+            "ce:indexed-name": "Houwen B.B.S.L."
+          },
+          "@seq": "9",
+          "ce:initials": "B.B.S.L.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60001157",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60001157"
+          },
+          "ce:degrees": "MD, PhD",
+          "ce:surname": "Houwen",
+          "@auid": "57212449471",
+          "author-url": "https://api.elsevier.com/content/author/author_id/57212449471",
+          "ce:indexed-name": "Houwen B.B.S.L."
+        },
+        {
+          "ce:given-name": "Emanuele",
+          "preferred-name": {
+            "ce:given-name": "Emanuele",
+            "ce:initials": "E.",
+            "ce:surname": "Rondonotti",
+            "ce:indexed-name": "Rondonotti E."
+          },
+          "@seq": "10",
+          "ce:initials": "E.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60055966",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60055966"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Rondonotti",
+          "@auid": "6508148474",
+          "author-url": "https://api.elsevier.com/content/author/author_id/6508148474",
+          "ce:indexed-name": "Rondonotti E."
+        },
+        {
+          "ce:given-name": "Harsh",
+          "preferred-name": {
+            "ce:given-name": "Harsh",
+            "ce:initials": "H.",
+            "ce:surname": "Patel",
+            "ce:indexed-name": "Patel H."
+          },
+          "@seq": "11",
+          "ce:initials": "H.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60014232",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60014232"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Patel",
+          "@auid": "57199391457",
+          "author-url": "https://api.elsevier.com/content/author/author_id/57199391457",
+          "ce:indexed-name": "Patel H."
+        },
+        {
+          "ce:given-name": "Kareem",
+          "preferred-name": {
+            "ce:given-name": "Kareem",
+            "ce:initials": "K.",
+            "ce:surname": "Khalaf",
+            "ce:indexed-name": "Khalaf K."
+          },
+          "@seq": "12",
+          "ce:initials": "K.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60017018",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60017018"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Khalaf",
+          "@auid": "57210261387",
+          "author-url": "https://api.elsevier.com/content/author/author_id/57210261387",
+          "ce:indexed-name": "Khalaf K."
+        },
+        {
+          "ce:given-name": "James Weiquan",
+          "preferred-name": {
+            "ce:given-name": "James Weiquan",
+            "ce:initials": "J.W.",
+            "ce:surname": "Li",
+            "ce:indexed-name": "Li J.W."
+          },
+          "@seq": "13",
+          "ce:initials": "J.W.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60013022",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60013022"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Li",
+          "@auid": "58895358500",
+          "author-url": "https://api.elsevier.com/content/author/author_id/58895358500",
+          "ce:indexed-name": "Li J.W."
+        },
+        {
+          "ce:given-name": "Gloria M.",
+          "preferred-name": {
+            "ce:given-name": "Gloria M.",
+            "ce:initials": "G.M.",
+            "ce:surname": "Fernandez",
+            "ce:indexed-name": "Fernandez G.M."
+          },
+          "@seq": "14",
+          "ce:initials": "G.M.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60001576",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60001576"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Fernandez",
+          "@auid": "59204428200",
+          "author-url": "https://api.elsevier.com/content/author/author_id/59204428200",
+          "ce:indexed-name": "Fernandez G.M."
+        },
+        {
+          "ce:given-name": "Pradeep",
+          "preferred-name": {
+            "ce:given-name": "Pradeep",
+            "ce:initials": "P.",
+            "ce:surname": "Bhandari",
+            "ce:indexed-name": "Bhandari P."
+          },
+          "@seq": "15",
+          "ce:initials": "P.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60030999",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60030999"
+          },
+          "ce:degrees": "MD, PhD",
+          "ce:surname": "Bhandari",
+          "@auid": "8289974500",
+          "author-url": "https://api.elsevier.com/content/author/author_id/8289974500",
+          "ce:indexed-name": "Bhandari P."
+        },
+        {
+          "ce:given-name": "Evelien",
+          "preferred-name": {
+            "ce:given-name": "Evelien",
+            "ce:initials": "E.",
+            "ce:surname": "Dekker",
+            "ce:indexed-name": "Dekker E."
+          },
+          "@seq": "16",
+          "ce:initials": "E.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60001157",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60001157"
+          },
+          "ce:degrees": "MD, PhD",
+          "ce:surname": "Dekker",
+          "@auid": "7006195581",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7006195581",
+          "ce:indexed-name": "Dekker E."
+        },
+        {
+          "ce:given-name": "Seth",
+          "preferred-name": {
+            "ce:given-name": "Seth",
+            "ce:initials": "S.",
+            "ce:surname": "Gross",
+            "ce:indexed-name": "Gross S."
+          },
+          "@seq": "17",
+          "ce:initials": "S.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60103213",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60103213"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Gross",
+          "@auid": "15135896200",
+          "author-url": "https://api.elsevier.com/content/author/author_id/15135896200",
+          "ce:indexed-name": "Gross S."
+        },
+        {
+          "ce:given-name": "Tyler",
+          "preferred-name": {
+            "ce:given-name": "Tyler",
+            "ce:initials": "T.",
+            "ce:surname": "Berzin",
+            "ce:indexed-name": "Berzin T."
+          },
+          "@seq": "18",
+          "ce:initials": "T.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60002746",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60002746"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Berzin",
+          "@auid": "35760130200",
+          "author-url": "https://api.elsevier.com/content/author/author_id/35760130200",
+          "ce:indexed-name": "Berzin T."
+        },
+        {
+          "ce:given-name": "Per Olav",
+          "preferred-name": {
+            "ce:given-name": "Per Olav",
+            "ce:initials": "P.O.",
+            "ce:surname": "Vandvik",
+            "ce:indexed-name": "Vandvik P.O."
+          },
+          "@seq": "19",
+          "ce:initials": "P.O.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60026424",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60026424"
+          },
+          "ce:degrees": "MD, PhD",
+          "ce:surname": "Vandvik",
+          "@auid": "6602321455",
+          "author-url": "https://api.elsevier.com/content/author/author_id/6602321455",
+          "ce:indexed-name": "Vandvik P.O."
+        },
+        {
+          "ce:given-name": "Loredana",
+          "preferred-name": {
+            "ce:given-name": "Loredana",
+            "ce:initials": "L.",
+            "ce:surname": "Correale",
+            "ce:indexed-name": "Correale L."
+          },
+          "@seq": "20",
+          "ce:initials": "L.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60024876",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60024876"
+          },
+          "ce:surname": "Correale",
+          "@auid": "26643747800",
+          "author-url": "https://api.elsevier.com/content/author/author_id/26643747800",
+          "ce:indexed-name": "Correale L."
+        },
+        {
+          "ce:given-name": "Shin-Ei",
+          "preferred-name": {
+            "ce:given-name": "Shin Ei",
+            "ce:initials": "S.E.",
+            "ce:surname": "Kudo",
+            "ce:indexed-name": "Kudo S.E."
+          },
+          "@seq": "21",
+          "ce:initials": "S.-E.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60159849",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60159849"
+          },
+          "ce:degrees": "MD, PhD",
+          "ce:surname": "Kudo",
+          "@auid": "57168687600",
+          "author-url": "https://api.elsevier.com/content/author/author_id/57168687600",
+          "ce:indexed-name": "Kudo S.-E."
+        },
+        {
+          "ce:given-name": "Prateek",
+          "preferred-name": {
+            "ce:given-name": "Prateek",
+            "ce:initials": "P.",
+            "ce:surname": "Sharma",
+            "ce:indexed-name": "Sharma P."
+          },
+          "@seq": "22",
+          "ce:initials": "P.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60014232",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60014232"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Sharma",
+          "@auid": "7403231562",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7403231562",
+          "ce:indexed-name": "Sharma P."
+        },
+        {
+          "ce:given-name": "Douglas K.",
+          "preferred-name": {
+            "ce:given-name": "Douglas K.",
+            "ce:initials": "D.K.",
+            "ce:surname": "Rex",
+            "ce:indexed-name": "Rex D.K."
+          },
+          "@seq": "23",
+          "ce:initials": "D.K.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60024609",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60024609"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Rex",
+          "@auid": "7103050363",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7103050363",
+          "ce:indexed-name": "Rex D.K."
+        },
+        {
+          "ce:given-name": "Alessandro",
+          "preferred-name": {
+            "ce:given-name": "Alessandro",
+            "ce:initials": "A.",
+            "ce:surname": "Repici",
+            "ce:indexed-name": "Repici A."
+          },
+          "@seq": "24",
+          "ce:initials": "A.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60107210",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60107210"
+          },
+          "ce:degrees": "MD",
+          "ce:surname": "Repici",
+          "@auid": "8763695000",
+          "author-url": "https://api.elsevier.com/content/author/author_id/8763695000",
+          "ce:indexed-name": "Repici A."
+        },
+        {
+          "ce:given-name": "Farid",
+          "preferred-name": {
+            "ce:given-name": "Farid",
+            "ce:initials": "F.",
+            "ce:surname": "Foroutan",
+            "ce:indexed-name": "Foroutan F."
+          },
+          "@seq": "25",
+          "ce:initials": "F.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60014468",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60014468"
+          },
+          "ce:degrees": "PhD",
+          "ce:surname": "Foroutan",
+          "@auid": "56520083100",
+          "author-url": "https://api.elsevier.com/content/author/author_id/56520083100",
+          "ce:indexed-name": "Foroutan F."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,314 @@
+{
+    "abstracts-retrieval-response": {
+        "item": {
+            "ait:process-info": {
+                "ait:status": {
+                    "@state": "update",
+                    "@type": "core",
+                    "@stage": "S300"
+                },
+                "ait:date-delivered": {
+                    "@day": "29",
+                    "@year": "2020",
+                    "@timestamp": "2020-01-29T07:27:19.000019-05:00",
+                    "@month": "01"
+                },
+                "ait:date-sort": {
+                    "@day": "01",
+                    "@year": "1982",
+                    "@month": "01"
+                }
+            },
+            "bibrecord": {
+                "head": {
+                    "author-group": {
+                        "affiliation": {
+                            "country": "United Kingdom",
+                            "@afid": "60011520",
+                            "@country": "gbr",
+                            "affiliation-id": {
+                                "@afid": "60011520",
+                                "@dptid": "113933207"
+                            },
+                            "ce:text": "Dep. Food Sci. Nutr., Queen Elizabeth Coll., London W8",
+                            "@dptid": "113933207"
+                        },
+                        "author": [
+                            {
+                                "preferred-name": {
+                                    "ce:given-name": "A. E.",
+                                    "ce:initials": "A.E.",
+                                    "ce:surname": "Bender",
+                                    "ce:indexed-name": "Bender A."
+                                },
+                                "@seq": "1",
+                                "ce:initials": "A.E.",
+                                "@_fa": "true",
+                                "@type": "auth",
+                                "ce:surname": "Bender",
+                                "@auid": "23056909100",
+                                "ce:indexed-name": "Bender A.E."
+                            },
+                            {
+                                "preferred-name": {
+                                    "ce:given-name": "G. B.",
+                                    "ce:initials": "G.B.",
+                                    "ce:surname": "Reaidi",
+                                    "ce:indexed-name": "Reaidi G."
+                                },
+                                "@seq": "2",
+                                "ce:initials": "G.B.",
+                                "@_fa": "true",
+                                "@type": "auth",
+                                "ce:surname": "Reaidi",
+                                "@auid": "57214015736",
+                                "ce:indexed-name": "Reaidi G.B."
+                            }
+                        ]
+                    },
+                    "citation-title": "Toxicity of kidney beans (Phaseolus vulgaris) with particular reference to lectins",
+                    "abstracts": "Haemagglutinins (lectins) have long been known as toxins naturally present in many legumes, but since they are readily destroyed by cooking they have not previously presented a problem. Recently there have been 25 outbreaks of food poisoning reported in Great Britain, totalling about 100 persons, arising from raw or undercooked red kidney beans (Phaseolus vulgaris). A public television programme resulted in 330 letters, totalling 880 cases, apparently from the same cause, indicating the greater spread of this problem than was realised. The legumes containing large amounts of lectins appear, so far, to be restricted to varieties of Phaseolus vulgaris; other legumes contain unimportant amounts and have not given rise to any complaints. The signs of the poisoning are nausea, vomiting and diarrhoea about two hours after consumption of the beans. The toxin is completely destroyed by about 10 min boiling, although there appears to be some variation in the stability of the toxin of different samples of beans. Heating at 80\u00b0C increases the amount of lectin (as determined by in vitro haemagglutination) about five-fold, so that incompletely cooked beans may be more toxic than when eaten raw.",
+                    "citation-info": {
+                        "citation-type": {
+                            "@code": "ar"
+                        },
+                        "citation-language": {
+                            "@language": "English",
+                            "@xml:lang": "eng"
+                        }
+                    },
+                    "source": {
+                        "codencode": "JPFOD",
+                        "sourcetitle-abbrev": "J. PLANT FOODS",
+                        "@country": "gbr",
+                        "volisspag": {
+                            "voliss": {
+                                "@volume": "4",
+                                "@issue": "1"
+                            },
+                            "pagerange": {
+                                "@first": "15",
+                                "@last": "22"
+                            }
+                        },
+                        "@type": "j",
+                        "publicationyear": {
+                            "@first": "1982"
+                        },
+                        "sourcetitle": {
+                            "@xfab-added": "true",
+                            "$": "J. PLANT FOODS"
+                        },
+                        "@srcid": "83067",
+                        "publicationdate": {
+                            "year": "1982",
+                            "date-text": {
+                                "@xfab-added": "true",
+                                "$": "1982"
+                            }
+                        }
+                    },
+                    "enhancement": {
+                        "classificationgroup": {
+                            "classifications": [
+                                {
+                                    "@type": "ASJC",
+                                    "classification": "2700"
+                                },
+                                {
+                                    "@type": "EMCLASS",
+                                    "classification": {
+                                        "classification-code": "52",
+                                        "classification-description": "Toxicology"
+                                    }
+                                },
+                                {
+                                    "@type": "SUBJABBR",
+                                    "classification": "MEDI"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "item-info": {
+                    "copyright": {
+                        "$": "Copyright 2018 Elsevier B.V., All rights reserved.",
+                        "@type": "Elsevier"
+                    },
+                    "dbcollection": [
+                        {
+                            "$": "EMBASE"
+                        },
+                        {
+                            "$": "SCOPUS"
+                        },
+                        {
+                            "$": "Scopusbase"
+                        }
+                    ],
+                    "history": {
+                        "date-created": {
+                            "@day": "29",
+                            "@year": "2018",
+                            "@timestamp": "BST 13:41:40",
+                            "@month": "03"
+                        }
+                    },
+                    "itemidlist": {
+                        "itemid": [
+                            {
+                                "$": "13185957",
+                                "@idtype": "PUI"
+                            },
+                            {
+                                "$": "12122144",
+                                "@idtype": "CAR-ID"
+                            },
+                            {
+                                "$": "1983079807",
+                                "@idtype": "EMBASE"
+                            },
+                            {
+                                "$": "0020362344",
+                                "@idtype": "SCP"
+                            },
+                            {
+                                "$": "0020362344",
+                                "@idtype": "SGR"
+                            }
+                        ],
+                        "ce:doi": "10.1080/0142968X.1982.11904243"
+                    }
+                },
+                "tail": null
+            }
+        },
+        "affiliation": {
+            "affiliation-city": "London",
+            "@id": "60011520",
+            "affilname": "King's College London",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60011520",
+            "affiliation-country": "United Kingdom"
+        },
+        "coredata": {
+            "srctype": "j",
+            "prism:issueIdentifier": "1",
+            "eid": "2-s2.0-0020362344",
+            "dc:description": "Haemagglutinins (lectins) have long been known as toxins naturally present in many legumes, but since they are readily destroyed by cooking they have not previously presented a problem. Recently there have been 25 outbreaks of food poisoning reported in Great Britain, totalling about 100 persons, arising from raw or undercooked red kidney beans (Phaseolus vulgaris). A public television programme resulted in 330 letters, totalling 880 cases, apparently from the same cause, indicating the greater spread of this problem than was realised. The legumes containing large amounts of lectins appear, so far, to be restricted to varieties of Phaseolus vulgaris; other legumes contain unimportant amounts and have not given rise to any complaints. The signs of the poisoning are nausea, vomiting and diarrhoea about two hours after consumption of the beans. The toxin is completely destroyed by about 10 min boiling, although there appears to be some variation in the stability of the toxin of different samples of beans. Heating at 80\u00b0C increases the amount of lectin (as determined by in vitro haemagglutination) about five-fold, so that incompletely cooked beans may be more toxic than when eaten raw.",
+            "prism:coverDate": "1982-01-01",
+            "prism:aggregationType": "Journal",
+            "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/0020362344",
+            "subtypeDescription": "Article",
+            "dc:creator": {
+                "author": [
+                    {
+                        "preferred-name": {
+                            "ce:given-name": "A. E.",
+                            "ce:initials": "A.E.",
+                            "ce:surname": "Bender",
+                            "ce:indexed-name": "Bender A."
+                        },
+                        "@seq": "1",
+                        "ce:initials": "A.E.",
+                        "@_fa": "true",
+                        "affiliation": {
+                            "@id": "60011520",
+                            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60011520"
+                        },
+                        "ce:surname": "Bender",
+                        "@auid": "23056909100",
+                        "author-url": "https://api.elsevier.com/content/author/author_id/23056909100",
+                        "ce:indexed-name": "Bender A.E."
+                    }
+                ]
+            },
+            "link": [
+                {
+                    "@_fa": "true",
+                    "@rel": "self",
+                    "@href": "https://api.elsevier.com/content/abstract/scopus_id/0020362344"
+                },
+                {
+                    "@_fa": "true",
+                    "@rel": "scopus",
+                    "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=0020362344&origin=inward"
+                },
+                {
+                    "@_fa": "true",
+                    "@rel": "scopus-citedby",
+                    "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=0020362344&origin=inward"
+                }
+            ],
+            "prism:publicationName": "J. PLANT FOODS",
+            "source-id": "83067",
+            "citedby-count": "45",
+            "prism:volume": "4",
+            "subtype": "ar",
+            "prism:pageRange": "15-22",
+            "dc:title": "Toxicity of kidney beans (Phaseolus vulgaris) with particular reference to lectins",
+            "prism:endingPage": "22",
+            "openaccess": "0",
+            "openaccessFlag": "false",
+            "prism:doi": "10.1080/0142968X.1982.11904243",
+            "prism:startingPage": "15",
+            "dc:identifier": "SCOPUS_ID:0020362344"
+        },
+        "idxterms": null,
+        "language": {
+            "@xml:lang": "eng"
+        },
+        "authkeywords": null,
+        "subject-areas": {
+            "subject-area": [
+                {
+                    "@_fa": "true",
+                    "$": "Medicine (all)",
+                    "@code": "2700",
+                    "@abbrev": "MEDI"
+                }
+            ]
+        },
+        "authors": {
+            "author": [
+                {
+                    "preferred-name": {
+                        "ce:given-name": "A. E.",
+                        "ce:initials": "A.E.",
+                        "ce:surname": "Bender",
+                        "ce:indexed-name": "Bender A."
+                    },
+                    "@seq": "1",
+                    "ce:initials": "A.E.",
+                    "@_fa": "true",
+                    "affiliation": {
+                        "@id": "60011520",
+                        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60011520"
+                    },
+                    "ce:surname": "Bender",
+                    "@auid": "23056909100",
+                    "author-url": "https://api.elsevier.com/content/author/author_id/23056909100",
+                    "ce:indexed-name": "Bender A.E."
+                },
+                {
+                    "preferred-name": {
+                        "ce:given-name": "G. B.",
+                        "ce:initials": "G.B.",
+                        "ce:surname": "Reaidi",
+                        "ce:indexed-name": "Reaidi G."
+                    },
+                    "@seq": "2",
+                    "ce:initials": "G.B.",
+                    "@_fa": "true",
+                    "affiliation": {
+                        "@id": "60011520",
+                        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60011520"
+                    },
+                    "ce:surname": "Reaidi",
+                    "@auid": "57214015736",
+                    "author-url": "https://api.elsevier.com/content/author/author_id/57214015736",
+                    "ce:indexed-name": "Reaidi G.B."
+                }
+            ]
+        }
+    }
+}

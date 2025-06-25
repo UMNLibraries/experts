@@ -1,0 +1,1468 @@
+{
+  "abstracts-retrieval-response": {
+    "item": {
+      "ait:process-info": {
+        "ait:status": {
+          "@state": "update",
+          "@type": "core",
+          "@stage": "S300"
+        },
+        "ait:date-delivered": {
+          "@day": "02",
+          "@year": "2020",
+          "@timestamp": "2020-01-02T04:25:52.000052-05:00",
+          "@month": "01"
+        },
+        "ait:date-sort": {
+          "@day": "01",
+          "@year": "1994",
+          "@month": "01"
+        }
+      },
+      "bibrecord": {
+        "head": {
+          "author-group": {
+            "affiliation": {
+              "city-group": "Bombay, 400 085",
+              "country": "India",
+              "address-part": "Trombay",
+              "@afid": "60033473",
+              "@country": "ind",
+              "organization": [
+                {
+                  "$": "Nuclear Agriculture Division"
+                },
+                {
+                  "$": "Bhabha Atomic Research Centre"
+                }
+              ],
+              "affiliation-id": {
+                "@afid": "60033473"
+              }
+            },
+            "author": [
+              {
+                "ce:given-name": "Sangeeta A",
+                "preferred-name": {
+                  "ce:given-name": "Sangeeta A.",
+                  "ce:initials": "S.A.",
+                  "ce:surname": "Godbole",
+                  "ce:indexed-name": "Godbole S."
+                },
+                "@seq": "1",
+                "ce:initials": "S.A.",
+                "@_fa": "true",
+                "@type": "auth",
+                "ce:surname": "Godbole",
+                "@auid": "7006469018",
+                "ce:indexed-name": "Godbole S.A."
+              },
+              {
+                "ce:given-name": "Thirumalai G",
+                "preferred-name": {
+                  "ce:given-name": "Thirumalai G.",
+                  "ce:initials": "T.G.",
+                  "ce:surname": "Krishna",
+                  "ce:indexed-name": "Krishna T."
+                },
+                "@seq": "2",
+                "ce:initials": "T.G.",
+                "@_fa": "true",
+                "@type": "auth",
+                "ce:surname": "Krishna",
+                "@auid": "7003786353",
+                "ce:indexed-name": "Krishna T.G."
+              },
+              {
+                "ce:given-name": "Chittaranjan R",
+                "preferred-name": {
+                  "ce:given-name": "Chittaranjan R.",
+                  "ce:initials": "C.R.",
+                  "ce:surname": "Bhatia",
+                  "ce:indexed-name": "Bhatia C."
+                },
+                "@seq": "3",
+                "ce:initials": "C.R.",
+                "@_fa": "true",
+                "@type": "auth",
+                "ce:surname": "Bhatia",
+                "@auid": "7005147848",
+                "ce:indexed-name": "Bhatia C.R."
+              }
+            ]
+          },
+          "citation-title": "Purification and characterisation of protease inhibitors from pigeon pea (cajanus cajan (l) millsp) seeds",
+          "abstracts": "Two protease inhibitors from Cajanus cajan seeds have been purified to homogeneity by trichloroacetic acid (TCA) solubilisation, ion\u2010exchange and gel\u2010filtration chromatography followed by preparative polyacrylamide gel electro\u2010phoresis. One of the inhibitors, Cajanus trypsin\u2010chymotrypsin inhibitor (CTCI), inhibits both bovine trypsin and chymotrypsin while the other, Cajanus trypsin inhibitor(CTI), inhibits only bovine trypsin. The two inhibitors contained no carbohydrate and had an isoelectric point of 6. CTCI and CTI had average molecular weights of 15000 and 10500, respectively. The purified inhibitors in solution were stable to heat at 80\u00b0C for 15 min and pH 7\u201310. In the pH range 3\u20135, 80% of the activity was retained. Autoclaving totally destroyed the inhibitor activity. CTCI had two sites for trypsin binding and one site for chymotrypsin binding while CTI had only one site for trypsin binding. The inhibitors were very specific towards mammalian serine proteases and did not inhibit other proteases or serine proteases of bacterial origin. Copyright \u00a9 1994 John Wiley & Sons, Ltd",
+          "correspondence": {
+            "affiliation": {
+              "city-group": "Bombay, 400 085",
+              "country": "India",
+              "address-part": "Trombay",
+              "@country": "ind",
+              "organization": [
+                {
+                  "$": "Nuclear Agriculture Division"
+                },
+                {
+                  "$": "Bhabha Atomic Research Centre"
+                }
+              ]
+            },
+            "person": {
+              "ce:given-name": "Thirumalai G",
+              "ce:initials": "T.G.",
+              "ce:surname": "Krishna",
+              "ce:indexed-name": "Krishna T.G."
+            }
+          },
+          "citation-info": {
+            "author-keywords": {
+              "author-keyword": [
+                {
+                  "$": "Cajanus cajan",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "pigeon pea",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "protease inhibitors",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "seed",
+                  "@xml:lang": "eng"
+                }
+              ]
+            },
+            "citation-type": {
+              "@code": "ar"
+            },
+            "citation-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            },
+            "abstract-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            }
+          },
+          "source": {
+            "sourcetitle-abbrev": "J. Sci. Food Agric.",
+            "issn": [
+              {
+                "$": "10970010",
+                "@type": "electronic"
+              },
+              {
+                "$": "00225142",
+                "@type": "print"
+              }
+            ],
+            "volisspag": {
+              "voliss": {
+                "@volume": "64",
+                "@issue": "1"
+              },
+              "pagerange": {
+                "@first": "87",
+                "@last": "93"
+              }
+            },
+            "@type": "j",
+            "publicationyear": {
+              "@first": "1994"
+            },
+            "sourcetitle": "Journal of the Science of Food and Agriculture",
+            "@srcid": "33928",
+            "publicationdate": {
+              "year": "1994",
+              "date-text": "January 1994"
+            }
+          },
+          "enhancement": {
+            "classificationgroup": {
+              "classifications": [
+                {
+                  "@type": "CABSCLASS",
+                  "classification": [
+                    {
+                      "$": "82.5.3"
+                    },
+                    {
+                      "$": "82.8.3"
+                    },
+                    {
+                      "$": "92.1.4.4"
+                    }
+                  ]
+                },
+                {
+                  "@type": "SUBJECT",
+                  "classification": "Agriculture, Biology and Environmental Sciences"
+                },
+                {
+                  "@type": "ASJC",
+                  "classification": [
+                    {
+                      "$": "1305"
+                    },
+                    {
+                      "$": "1106"
+                    },
+                    {
+                      "$": "1102"
+                    },
+                    {
+                      "$": "2916"
+                    }
+                  ]
+                },
+                {
+                  "@type": "SUBJABBR",
+                  "classification": [
+                    {
+                      "$": "BIOC"
+                    },
+                    {
+                      "$": "AGRI"
+                    },
+                    {
+                      "$": "NURS"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "item-info": {
+          "copyright": {
+            "$": "Copyright 2016 Elsevier B.V., All rights reserved.",
+            "@type": "Elsevier"
+          },
+          "dbcollection": [
+            {
+              "$": "ARCWBL"
+            },
+            {
+              "$": "SCOPUS"
+            },
+            {
+              "$": "Scopusbase"
+            },
+            {
+              "$": "CABS"
+            }
+          ],
+          "history": {
+            "date-created": {
+              "@day": "08",
+              "@year": "2015",
+              "@timestamp": "BST 20:11:24",
+              "@month": "12"
+            }
+          },
+          "itemidlist": {
+            "itemid": [
+              {
+                "$": "416526838",
+                "@idtype": "PUI"
+              },
+              {
+                "$": "20150001526838",
+                "@idtype": "ARCWBL"
+              },
+              {
+                "$": "655260585",
+                "@idtype": "CAR-ID"
+              },
+              {
+                "$": "0028121297",
+                "@idtype": "SCP"
+              },
+              {
+                "$": "0028121297",
+                "@idtype": "SGR"
+              },
+              {
+                "$": "2040983",
+                "@idtype": "PUIsecondary"
+              },
+              {
+                "$": "1994054378",
+                "@idtype": "CABS"
+              }
+            ],
+            "ce:doi": "10.1002/jsfa.2740640113"
+          }
+        },
+        "tail": {
+          "bibliography": {
+            "@refcount": "19",
+            "reference": [
+              {
+                "@id": "1",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1987"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "84988160379",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-text": "Boehringer Mannheim GmbH, Biochemica Information. Biochemica, Germany."
+                }
+              },
+              {
+                "@id": "2",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1989"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Use of cowpea trypsin inhibitor (CpTI) to protect plants against insect pre\u2010dations"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0024887875",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "7"
+                    },
+                    "pagerange": {
+                      "@first": "489",
+                      "@last": "497"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "D",
+                        "@_fa": "true",
+                        "ce:surname": "Boulter",
+                        "ce:indexed-name": "Boulter D"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "AMR",
+                        "@_fa": "true",
+                        "ce:surname": "Gatehouse",
+                        "ce:indexed-name": "Gatehouse AMR"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "VA",
+                        "@_fa": "true",
+                        "ce:surname": "Hilder",
+                        "ce:indexed-name": "Hilder VA"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Biotechnol Adv"
+                }
+              },
+              {
+                "@id": "3",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1970"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Titration of trypsin, plasmin and thrombin with p\u2010nitrophenyl p\u2010 guanidinobenzoate HCL"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "77956987594",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "19"
+                    },
+                    "pagerange": {
+                      "@first": "20",
+                      "@last": "27"
+                    }
+                  },
+                  "ref-text": "eds, Perlmann G E, Lorand L, Academic Press, New York, USA",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "T",
+                        "@_fa": "true",
+                        "ce:surname": "Chase",
+                        "ce:suffix": "Jr",
+                        "ce:indexed-name": "Chase T"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "E",
+                        "@_fa": "true",
+                        "ce:surname": "Shaw",
+                        "ce:indexed-name": "Shaw E"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Methods in Enzymolog"
+                }
+              },
+              {
+                "@id": "4",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1964"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Disc electrophoresis II. Methods and application to human serum"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "78651153791",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "122"
+                    },
+                    "pagerange": {
+                      "@first": "404",
+                      "@last": "429"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "BJ",
+                        "@_fa": "true",
+                        "ce:surname": "Davis",
+                        "ce:indexed-name": "Davis BJ"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Ann N Y Acad Sci"
+                }
+              },
+              {
+                "@id": "5",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1956"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Colorimetric method for determination of sugars and related substances"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "33749946901",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "28"
+                    },
+                    "pagerange": {
+                      "@first": "350",
+                      "@last": "356"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M",
+                        "@_fa": "true",
+                        "ce:surname": "Dubois",
+                        "ce:indexed-name": "Dubois M"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "KA",
+                        "@_fa": "true",
+                        "ce:surname": "Gilles",
+                        "ce:indexed-name": "Gilles KA"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "JK",
+                        "@_fa": "true",
+                        "ce:surname": "Hamilton",
+                        "ce:indexed-name": "Hamilton JK"
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "PA",
+                        "@_fa": "true",
+                        "ce:surname": "Rebers",
+                        "ce:indexed-name": "Rebers PA"
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "F",
+                        "@_fa": "true",
+                        "ce:surname": "Smith",
+                        "ce:indexed-name": "Smith F"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Anal Chem"
+                }
+              },
+              {
+                "@id": "6",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1961"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "The preparation and properties of two new chromogenic substrates of trypsin"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "50549163362",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "95"
+                    },
+                    "pagerange": {
+                      "@first": "271",
+                      "@last": "278"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "BF",
+                        "@_fa": "true",
+                        "ce:surname": "Erlanger",
+                        "ce:indexed-name": "Erlanger BF"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "N",
+                        "@_fa": "true",
+                        "ce:surname": "Kokowsky",
+                        "ce:indexed-name": "Kokowsky N"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "W",
+                        "@_fa": "true",
+                        "ce:surname": "Cohen",
+                        "ce:indexed-name": "Cohen W"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Arch Biochem Biophys"
+                }
+              },
+              {
+                "@id": "7",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1983"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Assessment of anti\u2010metabolic effects of trypsin inhibitors from cowpea (Vigna unguiculata) and other legumes on development of the bruchid beetle Callosobruchus maculatus"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "84986841422",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "34"
+                    },
+                    "pagerange": {
+                      "@first": "345",
+                      "@last": "350"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "AMR",
+                        "@_fa": "true",
+                        "ce:surname": "Gatehouse",
+                        "ce:indexed-name": "Gatehouse AMR"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "D",
+                        "@_fa": "true",
+                        "ce:surname": "Boulter",
+                        "ce:indexed-name": "Boulter D"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Journal of the Science of Food and Agriculture"
+                }
+              },
+              {
+                "@id": "8",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1972"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Wound induced protemase inhibi\u2010toi in plant leaves: A possible defense mechanism against insects"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0001068883",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "175"
+                    },
+                    "pagerange": {
+                      "@first": "776",
+                      "@last": "777"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "TR",
+                        "@_fa": "true",
+                        "ce:surname": "Green",
+                        "ce:indexed-name": "Green TR"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "CA",
+                        "@_fa": "true",
+                        "ce:surname": "Ryan",
+                        "ce:indexed-name": "Ryan CA"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Science"
+                }
+              },
+              {
+                "@id": "9",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1987"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "A novel mechanism of insect resistance engineered into tobacco"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0023652138",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "330"
+                    },
+                    "pagerange": {
+                      "@first": "160",
+                      "@last": "163"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "VA",
+                        "@_fa": "true",
+                        "ce:surname": "Hilder",
+                        "ce:indexed-name": "Hilder VA"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "AMR",
+                        "@_fa": "true",
+                        "ce:surname": "Gatehouse",
+                        "ce:indexed-name": "Gatehouse AMR"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "SE",
+                        "@_fa": "true",
+                        "ce:surname": "Sheerman",
+                        "ce:indexed-name": "Sheerman SE"
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "RF",
+                        "@_fa": "true",
+                        "ce:surname": "Barker",
+                        "ce:indexed-name": "Barker RF"
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "D",
+                        "@_fa": "true",
+                        "ce:surname": "Boulter",
+                        "ce:indexed-name": "Boulter D"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Nature"
+                }
+              },
+              {
+                "@id": "10",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1991"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "The partial purification and characterisation of serine protease activity in midgut of larval"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0001669768",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "21"
+                    },
+                    "pagerange": {
+                      "@first": "389",
+                      "@last": "397"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "KA",
+                        "@_fa": "true",
+                        "ce:surname": "Johnston",
+                        "ce:indexed-name": "Johnston KA"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "MJ",
+                        "@_fa": "true",
+                        "ce:surname": "Lea",
+                        "ce:indexed-name": "Lea MJ"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "JA",
+                        "@_fa": "true",
+                        "ce:surname": "Gatehouse",
+                        "ce:indexed-name": "Gatehouse JA"
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "JW",
+                        "@_fa": "true",
+                        "ce:surname": "Anstee",
+                        "ce:indexed-name": "Anstee JW"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Helicoverpa armigera Insect Biochem"
+                }
+              },
+              {
+                "@id": "11",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1970"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Cleavage of structural proteins during the assembly of the head of bacteriophage Ta"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0014949207",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "227"
+                    },
+                    "pagerange": {
+                      "@first": "680",
+                      "@last": "685"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "UK",
+                        "@_fa": "true",
+                        "ce:surname": "Laemmli",
+                        "ce:indexed-name": "Laemmli UK"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Nature"
+                }
+              },
+              {
+                "@id": "12",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1980"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Protein inhibitors of protein\u2010ases"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0018873523",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "49"
+                    },
+                    "pagerange": {
+                      "@first": "593",
+                      "@last": "626"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M",
+                        "@_fa": "true",
+                        "ce:surname": "Laskowski",
+                        "ce:suffix": "Jr",
+                        "ce:indexed-name": "Laskowski M"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "I",
+                        "@_fa": "true",
+                        "ce:surname": "Kato",
+                        "ce:indexed-name": "Kato I"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Ann Rev Biochem"
+                }
+              },
+              {
+                "@id": "13",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1989"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Isolation and characterization of two trypsin\u2010chymotrypsin inhibitors from lentil seeds (Lens culinaris Medik.)"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "84986522574",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "13"
+                    },
+                    "pagerange": {
+                      "@first": "39",
+                      "@last": "63"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "R",
+                        "@_fa": "true",
+                        "ce:surname": "Mueller",
+                        "ce:indexed-name": "Mueller R"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "JKP",
+                        "@_fa": "true",
+                        "ce:surname": "Weder",
+                        "ce:indexed-name": "Weder JKP"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Journal of Food Biochemistry"
+                }
+              },
+              {
+                "@id": "14",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1990"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Purification of Bowman\u2010Birk type inhibitor of high molecular weight from Wisteria seeds"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0001279935",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "54"
+                    },
+                    "pagerange": {
+                      "@first": "3029",
+                      "@last": "3030"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H",
+                        "@_fa": "true",
+                        "ce:surname": "Norimura",
+                        "ce:indexed-name": "Norimura H"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "I",
+                        "@_fa": "true",
+                        "ce:surname": "Hirashiki",
+                        "ce:indexed-name": "Hirashiki I"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "F",
+                        "@_fa": "true",
+                        "ce:surname": "Ogata",
+                        "ce:indexed-name": "Ogata F"
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "N",
+                        "@_fa": "true",
+                        "ce:surname": "Yoshida",
+                        "ce:indexed-name": "Yoshida N"
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "A",
+                        "@_fa": "true",
+                        "ce:surname": "Ito",
+                        "ce:indexed-name": "Ito A"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Agricultural and Biological Chemistry"
+                }
+              },
+              {
+                "@id": "15",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1988"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Distribution of the Kunitz and the Bowman\u2010Birk family proteinase inhibitors in leguminous seeds"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "85004399341",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "52"
+                    },
+                    "pagerange": {
+                      "@first": "1245",
+                      "@last": "1252"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "N",
+                        "@_fa": "true",
+                        "ce:surname": "Noroika",
+                        "ce:indexed-name": "Noroika N"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S",
+                        "@_fa": "true",
+                        "ce:surname": "Hara",
+                        "ce:indexed-name": "Hara S"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "T",
+                        "@_fa": "true",
+                        "ce:surname": "Ikenaka",
+                        "ce:indexed-name": "Ikenaka T"
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "J",
+                        "@_fa": "true",
+                        "ce:surname": "Abe",
+                        "ce:indexed-name": "Abe J"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Agricultural and Biological Chemistry"
+                }
+              },
+              {
+                "@id": "16",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1985"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Measurement of protein using bicinchoninic acid"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0022186670",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "150"
+                    },
+                    "pagerange": {
+                      "@first": "76",
+                      "@last": "85"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "PK",
+                        "@_fa": "true",
+                        "ce:surname": "Smith",
+                        "ce:indexed-name": "Smith PK"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "RI",
+                        "@_fa": "true",
+                        "ce:surname": "Krohn",
+                        "ce:indexed-name": "Krohn RI"
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "GT",
+                        "@_fa": "true",
+                        "ce:surname": "Hermanson",
+                        "ce:indexed-name": "Hermanson GT"
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "AK",
+                        "@_fa": "true",
+                        "ce:surname": "Mallia",
+                        "ce:indexed-name": "Mallia AK"
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "FH",
+                        "@_fa": "true",
+                        "ce:surname": "Gartner",
+                        "ce:indexed-name": "Gartner FH"
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "MD",
+                        "@_fa": "true",
+                        "ce:surname": "Provenzano",
+                        "ce:indexed-name": "Provenzano MD"
+                      },
+                      {
+                        "@seq": "7",
+                        "ce:initials": "EK",
+                        "@_fa": "true",
+                        "ce:surname": "Fujimoto",
+                        "ce:indexed-name": "Fujimoto EK"
+                      },
+                      {
+                        "@seq": "8",
+                        "ce:initials": "NM",
+                        "@_fa": "true",
+                        "ce:surname": "Goeke",
+                        "ce:indexed-name": "Goeke NM"
+                      },
+                      {
+                        "@seq": "9",
+                        "ce:initials": "BI",
+                        "@_fa": "true",
+                        "ce:surname": "Olson",
+                        "ce:indexed-name": "Olson BI"
+                      },
+                      {
+                        "@seq": "10",
+                        "ce:initials": "DC",
+                        "@_fa": "true",
+                        "ce:surname": "Klenk",
+                        "ce:indexed-name": "Klenk DC"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Anal Biochem"
+                }
+              },
+              {
+                "@id": "17",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1990"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Quantitation of proteins"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0025211779",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "182"
+                    },
+                    "pagerange": {
+                      "@first": "50",
+                      "@last": "60"
+                    }
+                  },
+                  "ref-text": "ed, Deutscher M P, Academic Press, New York, USA",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "CM",
+                        "@_fa": "true",
+                        "ce:surname": "Stoscheck",
+                        "ce:indexed-name": "Stoscheck CM"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Methods in Enzymology"
+                }
+              },
+              {
+                "@id": "18",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1968"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Characterisation of natural inhibitors of trypsin and chymotrypsin by electrophoresis in acrylamide\u2010agarose gels"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0014410887",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "218"
+                    },
+                    "pagerange": {
+                      "@first": "578",
+                      "@last": "580"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J",
+                        "@_fa": "true",
+                        "ce:surname": "Uriel",
+                        "ce:indexed-name": "Uriel J"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J",
+                        "@_fa": "true",
+                        "ce:surname": "Burges",
+                        "ce:indexed-name": "Burges J"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Nature"
+                }
+              },
+              {
+                "@id": "19",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1990"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Purification and partial characterisation of four trypsin/chymotrypsin inhibitors from red kidney beans (Phaseolus vulgaris, Var. Linden)"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0000402251",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "38"
+                    },
+                    "pagerange": {
+                      "@first": "1523",
+                      "@last": "1529"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C",
+                        "@_fa": "true",
+                        "ce:surname": "Wu",
+                        "ce:indexed-name": "Wu C"
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "JR",
+                        "@_fa": "true",
+                        "ce:surname": "Whitaker",
+                        "ce:indexed-name": "Whitaker JR"
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J Agric Food Chem"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "affiliation": {
+      "affiliation-city": "Mumbai",
+      "@id": "60033473",
+      "affilname": "Bhabha Atomic Research Centre",
+      "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60033473",
+      "affiliation-country": "India"
+    },
+    "coredata": {
+      "srctype": "j",
+      "prism:issueIdentifier": "1",
+      "eid": "2-s2.0-0028121297",
+      "dc:description": "Two protease inhibitors from Cajanus cajan seeds have been purified to homogeneity by trichloroacetic acid (TCA) solubilisation, ion\u2010exchange and gel\u2010filtration chromatography followed by preparative polyacrylamide gel electro\u2010phoresis. One of the inhibitors, Cajanus trypsin\u2010chymotrypsin inhibitor (CTCI), inhibits both bovine trypsin and chymotrypsin while the other, Cajanus trypsin inhibitor(CTI), inhibits only bovine trypsin. The two inhibitors contained no carbohydrate and had an isoelectric point of 6. CTCI and CTI had average molecular weights of 15000 and 10500, respectively. The purified inhibitors in solution were stable to heat at 80\u00b0C for 15 min and pH 7\u201310. In the pH range 3\u20135, 80% of the activity was retained. Autoclaving totally destroyed the inhibitor activity. CTCI had two sites for trypsin binding and one site for chymotrypsin binding while CTI had only one site for trypsin binding. The inhibitors were very specific towards mammalian serine proteases and did not inhibit other proteases or serine proteases of bacterial origin. Copyright \u00a9 1994 John Wiley & Sons, Ltd",
+      "prism:coverDate": "1994-01-01",
+      "prism:aggregationType": "Journal",
+      "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/0028121297",
+      "subtypeDescription": "Article",
+      "dc:creator": {
+        "author": [
+          {
+            "ce:given-name": "Sangeeta A",
+            "preferred-name": {
+              "ce:given-name": "Sangeeta A.",
+              "ce:initials": "S.A.",
+              "ce:surname": "Godbole",
+              "ce:indexed-name": "Godbole S."
+            },
+            "@seq": "1",
+            "ce:initials": "S.A.",
+            "@_fa": "true",
+            "affiliation": {
+              "@id": "60033473",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60033473"
+            },
+            "ce:surname": "Godbole",
+            "@auid": "7006469018",
+            "author-url": "https://api.elsevier.com/content/author/author_id/7006469018",
+            "ce:indexed-name": "Godbole S.A."
+          }
+        ]
+      },
+      "link": [
+        {
+          "@_fa": "true",
+          "@rel": "self",
+          "@href": "https://api.elsevier.com/content/abstract/scopus_id/0028121297"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus",
+          "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=0028121297&origin=inward"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus-citedby",
+          "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=0028121297&origin=inward"
+        }
+      ],
+      "prism:publicationName": "Journal of the Science of Food and Agriculture",
+      "source-id": "33928",
+      "citedby-count": "54",
+      "prism:volume": "64",
+      "subtype": "ar",
+      "prism:pageRange": "87-93",
+      "dc:title": "Purification and characterisation of protease inhibitors from pigeon pea (cajanus cajan (l) millsp) seeds",
+      "prism:endingPage": "93",
+      "openaccess": "0",
+      "openaccessFlag": "false",
+      "prism:doi": "10.1002/jsfa.2740640113",
+      "prism:issn": "10970010 00225142",
+      "prism:startingPage": "87",
+      "dc:identifier": "SCOPUS_ID:0028121297"
+    },
+    "idxterms": null,
+    "language": {
+      "@xml:lang": "eng"
+    },
+    "authkeywords": {
+      "author-keyword": [
+        {
+          "@_fa": "true",
+          "$": "Cajanus cajan"
+        },
+        {
+          "@_fa": "true",
+          "$": "pigeon pea"
+        },
+        {
+          "@_fa": "true",
+          "$": "protease inhibitors"
+        },
+        {
+          "@_fa": "true",
+          "$": "seed"
+        }
+      ]
+    },
+    "subject-areas": {
+      "subject-area": [
+        {
+          "@_fa": "true",
+          "$": "Biotechnology",
+          "@code": "1305",
+          "@abbrev": "BIOC"
+        },
+        {
+          "@_fa": "true",
+          "$": "Food Science",
+          "@code": "1106",
+          "@abbrev": "AGRI"
+        },
+        {
+          "@_fa": "true",
+          "$": "Agronomy and Crop Science",
+          "@code": "1102",
+          "@abbrev": "AGRI"
+        },
+        {
+          "@_fa": "true",
+          "$": "Nutrition and Dietetics",
+          "@code": "2916",
+          "@abbrev": "NURS"
+        }
+      ]
+    },
+    "authors": {
+      "author": [
+        {
+          "ce:given-name": "Sangeeta A",
+          "preferred-name": {
+            "ce:given-name": "Sangeeta A.",
+            "ce:initials": "S.A.",
+            "ce:surname": "Godbole",
+            "ce:indexed-name": "Godbole S."
+          },
+          "@seq": "1",
+          "ce:initials": "S.A.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60033473",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60033473"
+          },
+          "ce:surname": "Godbole",
+          "@auid": "7006469018",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7006469018",
+          "ce:indexed-name": "Godbole S.A."
+        },
+        {
+          "ce:given-name": "Thirumalai G",
+          "preferred-name": {
+            "ce:given-name": "Thirumalai G.",
+            "ce:initials": "T.G.",
+            "ce:surname": "Krishna",
+            "ce:indexed-name": "Krishna T."
+          },
+          "@seq": "2",
+          "ce:initials": "T.G.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60033473",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60033473"
+          },
+          "ce:surname": "Krishna",
+          "@auid": "7003786353",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7003786353",
+          "ce:indexed-name": "Krishna T.G."
+        },
+        {
+          "ce:given-name": "Chittaranjan R",
+          "preferred-name": {
+            "ce:given-name": "Chittaranjan R.",
+            "ce:initials": "C.R.",
+            "ce:surname": "Bhatia",
+            "ce:indexed-name": "Bhatia C."
+          },
+          "@seq": "3",
+          "ce:initials": "C.R.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60033473",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60033473"
+          },
+          "ce:surname": "Bhatia",
+          "@auid": "7005147848",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7005147848",
+          "ce:indexed-name": "Bhatia C.R."
+        }
+      ]
+    }
+  }
+}

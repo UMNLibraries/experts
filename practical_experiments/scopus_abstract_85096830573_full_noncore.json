@@ -1,0 +1,1308 @@
+{
+  "abstracts-retrieval-response": {
+    "item": {
+      "ait:process-info": {
+        "ait:status": {
+          "@state": "update",
+          "@type": "core",
+          "@stage": "S300"
+        },
+        "ait:date-delivered": {
+          "@day": "20",
+          "@year": "2021",
+          "@timestamp": "2021-10-20T07:05:46.000046-04:00",
+          "@month": "10"
+        },
+        "ait:date-sort": {
+          "@day": "01",
+          "@year": "2021",
+          "@month": "05"
+        }
+      },
+      "xocs:meta": {
+        "xocs:funding-list": {
+          "@pui-match": "primary",
+          "@has-funding-info": "1",
+          "xocs:funding-addon-generated-timestamp": "2021-06-05T09:16:01.619Z",
+          "xocs:funding-addon-type": "http://vtw.elsevier.com/data/voc/AddOnTypes/50.7/aggregated-refined"
+        }
+      },
+      "bibrecord": {
+        "head": {
+          "author-group": [
+            {
+              "affiliation": {
+                "country": "United States",
+                "@afid": "60023621",
+                "@country": "usa",
+                "city": "Minneapolis",
+                "organization": [
+                  {
+                    "$": "Division of Cardiology"
+                  },
+                  {
+                    "$": "Minneapolis VA Health Care System"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60023621",
+                  "@dptid": "108021699"
+                },
+                "state": "MN",
+                "@affiliation-instance-id": "S1553838920306886-2a339e1f58753eb079ce50256816f312",
+                "ce:source-text": "Division of Cardiology, Minneapolis VA Health Care System, Minneapolis, MN, USA",
+                "@dptid": "108021699"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Natthapon",
+                  "preferred-name": {
+                    "ce:given-name": "Natthapon",
+                    "ce:initials": "N.",
+                    "ce:surname": "Angsubhakorn",
+                    "ce:indexed-name": "Angsubhakorn N."
+                  },
+                  "@seq": "1",
+                  "@author-instance-id": "S1553838920306886-bdc0eaa30d4a7fdd88fc6153d7b901a2",
+                  "ce:initials": "N.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Angsubhakorn",
+                  "@auid": "57195975545",
+                  "ce:indexed-name": "Angsubhakorn N."
+                },
+                {
+                  "ce:given-name": "Maria",
+                  "preferred-name": {
+                    "ce:given-name": "Maria",
+                    "ce:initials": "M.",
+                    "ce:surname": "Anderson",
+                    "ce:indexed-name": "Anderson M."
+                  },
+                  "@seq": "2",
+                  "@author-instance-id": "S1553838920306886-754dfe33dbbfcd317dac253104e81dfd",
+                  "ce:initials": "M.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Anderson",
+                  "@auid": "57220090714",
+                  "ce:indexed-name": "Anderson M."
+                },
+                {
+                  "ce:given-name": "Baris",
+                  "preferred-name": {
+                    "ce:given-name": "Baris",
+                    "ce:initials": "B.",
+                    "ce:surname": "Akdemir",
+                    "ce:indexed-name": "Akdemir B."
+                  },
+                  "@seq": "3",
+                  "@author-instance-id": "S1553838920306886-69f1fc7e00b746916fcdf2e46d892f56",
+                  "ce:initials": "B.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Akdemir",
+                  "@auid": "48460926700",
+                  "ce:indexed-name": "Akdemir B."
+                },
+                {
+                  "ce:given-name": "Stefan",
+                  "preferred-name": {
+                    "ce:given-name": "Stefan",
+                    "ce:initials": "S.",
+                    "ce:surname": "Bertog",
+                    "ce:indexed-name": "Bertog S."
+                  },
+                  "@seq": "4",
+                  "@author-instance-id": "S1553838920306886-ca87079df9950bd474e8605f7cbf3544",
+                  "ce:initials": "S.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Bertog",
+                  "@auid": "6504007210",
+                  "ce:indexed-name": "Bertog S."
+                },
+                {
+                  "ce:given-name": "Alok",
+                  "preferred-name": {
+                    "ce:given-name": "Alok",
+                    "ce:initials": "A.",
+                    "ce:surname": "Sharma",
+                    "ce:indexed-name": "Sharma A."
+                  },
+                  "@seq": "6",
+                  "@author-instance-id": "S1553838920306886-89dd1be03ec1e50997d6df0c3a20ffc6",
+                  "ce:initials": "A.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Sharma",
+                  "@auid": "55482845300",
+                  "ce:indexed-name": "Sharma A."
+                },
+                {
+                  "ce:given-name": "Venkat",
+                  "preferred-name": {
+                    "ce:given-name": "Venkat",
+                    "ce:initials": "V.",
+                    "ce:surname": "Tholakanahalli",
+                    "ce:indexed-name": "Tholakanahalli V."
+                  },
+                  "@seq": "7",
+                  "@author-instance-id": "S1553838920306886-fc777c1945c117c2bbab159da2ed849b",
+                  "ce:initials": "V.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Tholakanahalli",
+                  "@auid": "6508195743",
+                  "ce:indexed-name": "Tholakanahalli V."
+                },
+                {
+                  "ce:given-name": "Selcuk",
+                  "preferred-name": {
+                    "ce:given-name": "Selcuk",
+                    "ce:initials": "S.",
+                    "ce:surname": "Adabag",
+                    "ce:indexed-name": "Adabag S."
+                  },
+                  "@seq": "8",
+                  "@author-instance-id": "S1553838920306886-a02e5e8e5546ba5087eba0ecbff8bf94",
+                  "ce:initials": "S.",
+                  "@date-locked": "2021-05-11T18:39:49.481",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Adabag",
+                  "@auid": "14822965400",
+                  "ce:indexed-name": "Adabag S."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "United States",
+                "@afid": "60008772",
+                "@country": "usa",
+                "city": "Minneapolis",
+                "organization": [
+                  {
+                    "$": "Department of Medicine"
+                  },
+                  {
+                    "$": "University of Minnesota Medical School"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60008772"
+                },
+                "state": "MN",
+                "@affiliation-instance-id": "S1553838920306886-42e033acbbe4e8f3b9940a8da53ff6cc",
+                "ce:source-text": "Department of Medicine, University of Minnesota Medical School, Minneapolis, MN, USA"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Natthapon",
+                  "preferred-name": {
+                    "ce:given-name": "Natthapon",
+                    "ce:initials": "N.",
+                    "ce:surname": "Angsubhakorn",
+                    "ce:indexed-name": "Angsubhakorn N."
+                  },
+                  "@seq": "1",
+                  "@author-instance-id": "S1553838920306886-bdc0eaa30d4a7fdd88fc6153d7b901a2",
+                  "ce:initials": "N.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Angsubhakorn",
+                  "@auid": "57195975545",
+                  "ce:indexed-name": "Angsubhakorn N."
+                },
+                {
+                  "ce:given-name": "Maria",
+                  "preferred-name": {
+                    "ce:given-name": "Maria",
+                    "ce:initials": "M.",
+                    "ce:surname": "Anderson",
+                    "ce:indexed-name": "Anderson M."
+                  },
+                  "@seq": "2",
+                  "@author-instance-id": "S1553838920306886-754dfe33dbbfcd317dac253104e81dfd",
+                  "ce:initials": "M.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Anderson",
+                  "@auid": "57220090714",
+                  "ce:indexed-name": "Anderson M."
+                },
+                {
+                  "ce:given-name": "Baris",
+                  "preferred-name": {
+                    "ce:given-name": "Baris",
+                    "ce:initials": "B.",
+                    "ce:surname": "Akdemir",
+                    "ce:indexed-name": "Akdemir B."
+                  },
+                  "@seq": "3",
+                  "@author-instance-id": "S1553838920306886-69f1fc7e00b746916fcdf2e46d892f56",
+                  "ce:initials": "B.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Akdemir",
+                  "@auid": "48460926700",
+                  "ce:indexed-name": "Akdemir B."
+                },
+                {
+                  "ce:given-name": "Stefan",
+                  "preferred-name": {
+                    "ce:given-name": "Stefan",
+                    "ce:initials": "S.",
+                    "ce:surname": "Bertog",
+                    "ce:indexed-name": "Bertog S."
+                  },
+                  "@seq": "4",
+                  "@author-instance-id": "S1553838920306886-ca87079df9950bd474e8605f7cbf3544",
+                  "ce:initials": "S.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Bertog",
+                  "@auid": "6504007210",
+                  "ce:indexed-name": "Bertog S."
+                },
+                {
+                  "ce:given-name": "Alok",
+                  "preferred-name": {
+                    "ce:given-name": "Alok",
+                    "ce:initials": "A.",
+                    "ce:surname": "Sharma",
+                    "ce:indexed-name": "Sharma A."
+                  },
+                  "@seq": "6",
+                  "@author-instance-id": "S1553838920306886-89dd1be03ec1e50997d6df0c3a20ffc6",
+                  "ce:initials": "A.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Sharma",
+                  "@auid": "55482845300",
+                  "ce:indexed-name": "Sharma A."
+                },
+                {
+                  "ce:given-name": "Venkat",
+                  "preferred-name": {
+                    "ce:given-name": "Venkat",
+                    "ce:initials": "V.",
+                    "ce:surname": "Tholakanahalli",
+                    "ce:indexed-name": "Tholakanahalli V."
+                  },
+                  "@seq": "7",
+                  "@author-instance-id": "S1553838920306886-fc777c1945c117c2bbab159da2ed849b",
+                  "ce:initials": "V.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Tholakanahalli",
+                  "@auid": "6508195743",
+                  "ce:indexed-name": "Tholakanahalli V."
+                },
+                {
+                  "ce:given-name": "Selcuk",
+                  "preferred-name": {
+                    "ce:given-name": "Selcuk",
+                    "ce:initials": "S.",
+                    "ce:surname": "Adabag",
+                    "ce:indexed-name": "Adabag S."
+                  },
+                  "@seq": "8",
+                  "@author-instance-id": "S1553838920306886-a02e5e8e5546ba5087eba0ecbff8bf94",
+                  "ce:initials": "S.",
+                  "@date-locked": "2021-05-11T18:39:49.481",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Adabag",
+                  "@auid": "14822965400",
+                  "ce:indexed-name": "Adabag S."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "United States",
+                "@afid": "60020051",
+                "@country": "usa",
+                "city": "Minneapolis",
+                "organization": {
+                  "$": "Minneapolis Heart Institute Foundation"
+                },
+                "affiliation-id": {
+                  "@afid": "60020051"
+                },
+                "state": "MN",
+                "@affiliation-instance-id": "S1553838920306886-786dd9a4ab4d5c73290e870f2d35e586",
+                "ce:source-text": "Minneapolis Heart Institute Foundation, Minneapolis, MN, USA"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Santiago",
+                  "preferred-name": {
+                    "ce:given-name": "Santiago",
+                    "ce:initials": "S.",
+                    "ce:surname": "Garcia",
+                    "ce:indexed-name": "Garcia S."
+                  },
+                  "@seq": "5",
+                  "@author-instance-id": "S1553838920306886-63f2d9c6a842c6bbf29be5d856aec861",
+                  "ce:initials": "S.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Garcia",
+                  "@auid": "7201561382",
+                  "ce:indexed-name": "Garcia S."
+                }
+              ]
+            }
+          ],
+          "citation-title": "Prevalence and Implications of Junctional Rhythm During Transcatheter Aortic Valve Replacement",
+          "abstracts": null,
+          "correspondence": {
+            "affiliation": {
+              "country": "United States",
+              "address-part": "420 Delaware Street SE, MMC 284",
+              "postal-code": "55455",
+              "@country": "usa",
+              "city": "Minneapolis",
+              "state": "MN"
+            },
+            "person": {
+              "ce:given-name": "Natthapon",
+              "ce:initials": "N.",
+              "ce:surname": "Angsubhakorn",
+              "ce:indexed-name": "Angsubhakorn N."
+            }
+          },
+          "citation-info": {
+            "citation-type": {
+              "@code": "le"
+            },
+            "citation-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            }
+          },
+          "source": {
+            "sourcetitle-abbrev": "Cardiovasc. Revasc. Med.",
+            "website": {
+              "ce:e-address": {
+                "$": "www.elsevier.com/inca/publications/store/6/2/0/0/4/2",
+                "@type": "email"
+              }
+            },
+            "@country": "usa",
+            "translated-sourcetitle": {
+              "$": "Cardiovascular Revascularization Medicine",
+              "@xml:lang": "eng"
+            },
+            "issn": [
+              {
+                "$": "18780938",
+                "@type": "electronic"
+              },
+              {
+                "$": "15538389",
+                "@type": "print"
+              }
+            ],
+            "volisspag": {
+              "voliss": {
+                "@volume": "26"
+              },
+              "pagerange": {
+                "@first": "61",
+                "@last": "62"
+              }
+            },
+            "@type": "j",
+            "publicationyear": {
+              "@first": "2021"
+            },
+            "publisher": {
+              "publishername": "Elsevier Inc."
+            },
+            "sourcetitle": "Cardiovascular Revascularization Medicine",
+            "@srcid": "145617",
+            "publicationdate": {
+              "month": "05",
+              "year": "2021",
+              "date-text": "May 2021",
+              "day": "01"
+            }
+          },
+          "enhancement": {
+            "classificationgroup": {
+              "classifications": [
+                {
+                  "@type": "EMCLASS",
+                  "classification": [
+                    {
+                      "classification-code": "14",
+                      "classification-description": "Radiology"
+                    },
+                    {
+                      "classification-code": "18",
+                      "classification-description": "Cardiovascular Diseases and Cardiovascular Surgery"
+                    }
+                  ]
+                },
+                {
+                  "@type": "ASJC",
+                  "classification": "2705"
+                },
+                {
+                  "@type": "SUBJABBR",
+                  "classification": "MEDI"
+                }
+              ]
+            }
+          },
+          "grantlist": {
+            "@complete": "y",
+            "grant-text": {
+              "$": "This manuscript is the result of work supported with resources and use of facilities of the Minneapolis VA Health Care System. The contents do not represent the views of the U.S. Department of Veterans Affairs or the United States Government. This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.",
+              "@xml:lang": "eng"
+            }
+          }
+        },
+        "item-info": {
+          "copyright": {
+            "$": "Copyright 2021 Elsevier B.V., All rights reserved.",
+            "@type": "Elsevier"
+          },
+          "external-source": "Publisher",
+          "dbcollection": [
+            {
+              "$": "EMBASE"
+            },
+            {
+              "$": "MEDL"
+            },
+            {
+              "$": "NURSNG"
+            },
+            {
+              "$": "REAXYSCAR"
+            },
+            {
+              "$": "RMC"
+            },
+            {
+              "$": "SCOPUS"
+            },
+            {
+              "$": "Scopusbase"
+            }
+          ],
+          "history": {
+            "date-created": {
+              "@day": "25",
+              "@year": "2021",
+              "@timestamp": "BST 23:46:29",
+              "@month": "05"
+            }
+          },
+          "itemidlist": {
+            "itemid": [
+              {
+                "$": "2008600517",
+                "@idtype": "PUI"
+              },
+              {
+                "$": "633454359",
+                "@idtype": "associatedPUI"
+              },
+              {
+                "$": "929915041",
+                "@idtype": "CAR-ID"
+              },
+              {
+                "$": "20201054581",
+                "@idtype": "EMBASE"
+              },
+              {
+                "$": "33203581",
+                "@idtype": "MEDL"
+              },
+              {
+                "$": "2020493209",
+                "@idtype": "NURSNG"
+              },
+              {
+                "$": "20202855872",
+                "@idtype": "REAXYSCAR"
+              },
+              {
+                "$": "2020465870",
+                "@idtype": "RMC"
+              },
+              {
+                "$": "20204199662",
+                "@idtype": "SCOPUS"
+              },
+              {
+                "$": "85096830573",
+                "@idtype": "SCP"
+              },
+              {
+                "$": "85096830573",
+                "@idtype": "SGR"
+              },
+              {
+                "$": "633454359",
+                "@idtype": "PUIsecondary"
+              },
+              {
+                "$": "78567799",
+                "@idtype": "OSIN"
+              }
+            ],
+            "ce:pii": "S1553838920306886",
+            "ce:ern": "pii:S1553838920306886",
+            "ce:doi": "10.1016/j.carrev.2020.11.014"
+          }
+        },
+        "tail": {
+          "bibliography": {
+            "@refcount": "5",
+            "reference": [
+              {
+                "ref-fulltext": "Mack, M.J., Leon, M.B., Thourani, V.H., Makkar, R., Kodali, S.K., Russo, M., et al. Transcatheter aortic-valve replacement with a balloon-expandable valve in low-risk patients. N Engl J Med 380 (2019), 1695\u20131705.",
+                "@id": "1",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2019"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Transcatheter aortic-valve replacement with a balloon-expandable valve in low-risk patients"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "bb0005",
+                        "@idtype": "FRAGMENTID"
+                      },
+                      {
+                        "$": "85063743385",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "380"
+                    },
+                    "pagerange": {
+                      "@first": "1695",
+                      "@last": "1705"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Mack",
+                        "ce:indexed-name": "Mack M.J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M.B.",
+                        "@_fa": "true",
+                        "ce:surname": "Leon",
+                        "ce:indexed-name": "Leon M.B."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "V.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Thourani",
+                        "ce:indexed-name": "Thourani V.H."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Makkar",
+                        "ce:indexed-name": "Makkar R."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "S.K.",
+                        "@_fa": "true",
+                        "ce:surname": "Kodali",
+                        "ce:indexed-name": "Kodali S.K."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Russo",
+                        "ce:indexed-name": "Russo M."
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "N Engl J Med"
+                },
+                "ce:source-text": "Mack MJ, Leon MB, Thourani VH, Makkar R, Kodali SK, Russo M, et al. Transcatheter aortic-valve replacement with a balloon-expandable valve in low-risk patients. N Engl J Med. 2019;380:1695-705."
+              },
+              {
+                "ref-fulltext": "Jain, R., Duval, S., Adabag, S., How accurate is the eyeball test? A comparison of physician's subjective assessment versus statistical methods in estimating mortality risk after cardiac surgery. Circ Cardiovasc Qual Outcomes 7 (2014), 151\u2013156.",
+                "@id": "2",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2014"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "How accurate is the eyeball test? A comparison of physician's subjective assessment versus statistical methods in estimating mortality risk after cardiac surgery"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "bb0010",
+                        "@idtype": "FRAGMENTID"
+                      },
+                      {
+                        "$": "84898760130",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "7"
+                    },
+                    "pagerange": {
+                      "@first": "151",
+                      "@last": "156"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Jain",
+                        "ce:indexed-name": "Jain R."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Duval",
+                        "ce:indexed-name": "Duval S."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Adabag",
+                        "ce:indexed-name": "Adabag S."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Circ Cardiovasc Qual Outcomes"
+                },
+                "ce:source-text": "Jain R, Duval S, Adabag S. How accurate is the eyeball test? A comparison of physician'\u2019s subjective assessment versus statistical methods in estimating mortality risk after cardiac surgery. Circ Cardiovasc Qual Outcomes. 2014;7:151-6."
+              },
+              {
+                "ref-fulltext": "Grover, F.L., Vemulapalli, S., Carroll, J.D., Edwards, F.H., Mack, M.J., Thourani, V.H., et al. 2016 annual report of the Society of Thoracic Surgeons/American College of Cardiology transcatheter valve therapy registry. J Am Coll Cardiol 69 (2017), 1215\u20131230.",
+                "@id": "3",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2017"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "2016 annual report of the Society of Thoracic Surgeons/American College of Cardiology transcatheter valve therapy registry"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "bb0015",
+                        "@idtype": "FRAGMENTID"
+                      },
+                      {
+                        "$": "85014428801",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "69"
+                    },
+                    "pagerange": {
+                      "@first": "1215",
+                      "@last": "1230"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "F.L.",
+                        "@_fa": "true",
+                        "ce:surname": "Grover",
+                        "ce:indexed-name": "Grover F.L."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Vemulapalli",
+                        "ce:indexed-name": "Vemulapalli S."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "J.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Carroll",
+                        "ce:indexed-name": "Carroll J.D."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "F.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Edwards",
+                        "ce:indexed-name": "Edwards F.H."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "M.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Mack",
+                        "ce:indexed-name": "Mack M.J."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "V.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Thourani",
+                        "ce:indexed-name": "Thourani V.H."
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "J Am Coll Cardiol"
+                },
+                "ce:source-text": "Grover FL, Vemulapalli S, Carroll JD, Edwards FH, Mack MJ, Thourani VH, et al. 2016 annual report of the Society of Thoracic Surgeons/American College of Cardiology transcatheter valve therapy registry. J Am Coll Cardiol. 2017;69:1215-30."
+              },
+              {
+                "ref-fulltext": "Angsubhakorn, N., Akdemir, B., Bertog, S., Garcia, S., Vutthikraivit, W., Adabag, S., Junctional rhythm following transcatheter aortic valve replacement. Heart Rhythm Case Rep 6 (2020), 749\u2013753.",
+                "@id": "4",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2020"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Junctional rhythm following transcatheter aortic valve replacement"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "bb0020",
+                        "@idtype": "FRAGMENTID"
+                      },
+                      {
+                        "$": "85089889970",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "6"
+                    },
+                    "pagerange": {
+                      "@first": "749",
+                      "@last": "753"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "N.",
+                        "@_fa": "true",
+                        "ce:surname": "Angsubhakorn",
+                        "ce:indexed-name": "Angsubhakorn N."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Akdemir",
+                        "ce:indexed-name": "Akdemir B."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Bertog",
+                        "ce:indexed-name": "Bertog S."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Garcia",
+                        "ce:indexed-name": "Garcia S."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "W.",
+                        "@_fa": "true",
+                        "ce:surname": "Vutthikraivit",
+                        "ce:indexed-name": "Vutthikraivit W."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Adabag",
+                        "ce:indexed-name": "Adabag S."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Heart Rhythm Case Rep"
+                },
+                "ce:source-text": "Angsubhakorn N, Akdemir B, Bertog S, Garcia S, Vutthikraivit W, Adabag S. Junctional Rhythm Following Transcatheter Aortic Valve Replacement. HeartRhythm Case Rep. 2020;6:749-53"
+              },
+              {
+                "ref-fulltext": "Kusumoto, F.M., Schoenfeld, M.H., Barrett, C., Edgerton, J.R., Ellenbogen, K.A., Gold, M.R., et al. 2018 ACC/AHA/HRS guideline on the evaluation and management of patients with bradycardia and cardiac conduction delay: a report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society. J Am Coll Cardiol 74 (2019), e51\u2013156.",
+                "@id": "5",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2019"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "2018 ACC/AHA/HRS guideline on the evaluation and management of patients with bradycardia and cardiac conduction delay: a report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "bb0025",
+                        "@idtype": "FRAGMENTID"
+                      },
+                      {
+                        "$": "85062446668",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "74"
+                    },
+                    "pagerange": {
+                      "@first": "e51",
+                      "@last": "156"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "F.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Kusumoto",
+                        "ce:indexed-name": "Kusumoto F.M."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Schoenfeld",
+                        "ce:indexed-name": "Schoenfeld M.H."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Barrett",
+                        "ce:indexed-name": "Barrett C."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "J.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Edgerton",
+                        "ce:indexed-name": "Edgerton J.R."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "K.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Ellenbogen",
+                        "ce:indexed-name": "Ellenbogen K.A."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "M.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Gold",
+                        "ce:indexed-name": "Gold M.R."
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "J Am Coll Cardiol"
+                },
+                "ce:source-text": "Kusumoto FM, Schoenfeld MH, Barrett C, Edgerton JR, Ellenbogen KA, Gold MR, et al. 2018 ACC/AHA/HRS guideline on the evaluation and management of patients with bradycardia and cardiac conduction delay: a report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society. J Am Coll Cardiol. 2019;74:e51-156."
+              }
+            ]
+          }
+        }
+      }
+    },
+    "affiliation": [
+      {
+        "affiliation-city": "Minneapolis",
+        "@id": "60023621",
+        "affilname": "VA Midwest Health Care Network",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60023621",
+        "affiliation-country": "United States"
+      },
+      {
+        "affiliation-city": "Minneapolis",
+        "@id": "60020051",
+        "affilname": "Minneapolis Heart Institute",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60020051",
+        "affiliation-country": "United States"
+      },
+      {
+        "affiliation-city": "Minneapolis",
+        "@id": "60008772",
+        "affilname": "University of Minnesota Medical School",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60008772",
+        "affiliation-country": "United States"
+      }
+    ],
+    "coredata": {
+      "srctype": "j",
+      "eid": "2-s2.0-85096830573",
+      "pubmed-id": "33203581",
+      "prism:coverDate": "2021-05-01",
+      "prism:aggregationType": "Journal",
+      "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85096830573",
+      "dc:creator": {
+        "author": [
+          {
+            "ce:given-name": "Natthapon",
+            "preferred-name": {
+              "ce:given-name": "Natthapon",
+              "ce:initials": "N.",
+              "ce:surname": "Angsubhakorn",
+              "ce:indexed-name": "Angsubhakorn N."
+            },
+            "@seq": "1",
+            "ce:initials": "N.",
+            "@_fa": "true",
+            "affiliation": [
+              {
+                "@id": "60023621",
+                "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60023621"
+              },
+              {
+                "@id": "60008772",
+                "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60008772"
+              }
+            ],
+            "ce:surname": "Angsubhakorn",
+            "@auid": "57195975545",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57195975545",
+            "ce:indexed-name": "Angsubhakorn N."
+          }
+        ]
+      },
+      "link": [
+        {
+          "@_fa": "true",
+          "@rel": "self",
+          "@href": "https://api.elsevier.com/content/abstract/scopus_id/85096830573"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus",
+          "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85096830573&origin=inward"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus-citedby",
+          "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85096830573&origin=inward"
+        }
+      ],
+      "source-id": "145617",
+      "pii": "S1553838920306886",
+      "citedby-count": "0",
+      "prism:volume": "26",
+      "subtype": "le",
+      "dc:title": "Prevalence and Implications of Junctional Rhythm During Transcatheter Aortic Valve Replacement",
+      "openaccess": "0",
+      "prism:issn": "18780938 15538389",
+      "subtypeDescription": "Letter",
+      "prism:publicationName": "Cardiovascular Revascularization Medicine",
+      "prism:pageRange": "61-62",
+      "prism:endingPage": "62",
+      "openaccessFlag": "false",
+      "prism:doi": "10.1016/j.carrev.2020.11.014",
+      "prism:startingPage": "61",
+      "dc:identifier": "SCOPUS_ID:85096830573",
+      "dc:publisher": "Elsevier Inc."
+    },
+    "idxterms": {
+      "mainterm": [
+        {
+          "$": "Aortic Valve",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Aortic Valve Stenosis",
+          "@weight": "a",
+          "@candidate": "n"
+        },
+        {
+          "$": "Humans",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Prevalence",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Transcatheter Aortic Valve Replacement",
+          "@weight": "a",
+          "@candidate": "n"
+        }
+      ]
+    },
+    "language": {
+      "@xml:lang": "eng"
+    },
+    "authkeywords": null,
+    "subject-areas": {
+      "subject-area": [
+        {
+          "@_fa": "true",
+          "$": "Cardiology and Cardiovascular Medicine",
+          "@code": "2705",
+          "@abbrev": "MEDI"
+        }
+      ]
+    },
+    "authors": {
+      "author": [
+        {
+          "ce:given-name": "Natthapon",
+          "preferred-name": {
+            "ce:given-name": "Natthapon",
+            "ce:initials": "N.",
+            "ce:surname": "Angsubhakorn",
+            "ce:indexed-name": "Angsubhakorn N."
+          },
+          "@seq": "1",
+          "ce:initials": "N.",
+          "@_fa": "true",
+          "affiliation": [
+            {
+              "@id": "60023621",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60023621"
+            },
+            {
+              "@id": "60008772",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60008772"
+            }
+          ],
+          "ce:surname": "Angsubhakorn",
+          "@auid": "57195975545",
+          "author-url": "https://api.elsevier.com/content/author/author_id/57195975545",
+          "ce:indexed-name": "Angsubhakorn N."
+        },
+        {
+          "ce:given-name": "Maria",
+          "preferred-name": {
+            "ce:given-name": "Maria",
+            "ce:initials": "M.",
+            "ce:surname": "Anderson",
+            "ce:indexed-name": "Anderson M."
+          },
+          "@seq": "2",
+          "ce:initials": "M.",
+          "@_fa": "true",
+          "affiliation": [
+            {
+              "@id": "60023621",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60023621"
+            },
+            {
+              "@id": "60008772",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60008772"
+            }
+          ],
+          "ce:surname": "Anderson",
+          "@auid": "57220090714",
+          "author-url": "https://api.elsevier.com/content/author/author_id/57220090714",
+          "ce:indexed-name": "Anderson M."
+        },
+        {
+          "ce:given-name": "Baris",
+          "preferred-name": {
+            "ce:given-name": "Baris",
+            "ce:initials": "B.",
+            "ce:surname": "Akdemir",
+            "ce:indexed-name": "Akdemir B."
+          },
+          "@seq": "3",
+          "ce:initials": "B.",
+          "@_fa": "true",
+          "affiliation": [
+            {
+              "@id": "60023621",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60023621"
+            },
+            {
+              "@id": "60008772",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60008772"
+            }
+          ],
+          "ce:surname": "Akdemir",
+          "@auid": "48460926700",
+          "author-url": "https://api.elsevier.com/content/author/author_id/48460926700",
+          "ce:indexed-name": "Akdemir B."
+        },
+        {
+          "ce:given-name": "Stefan",
+          "preferred-name": {
+            "ce:given-name": "Stefan",
+            "ce:initials": "S.",
+            "ce:surname": "Bertog",
+            "ce:indexed-name": "Bertog S."
+          },
+          "@seq": "4",
+          "ce:initials": "S.",
+          "@_fa": "true",
+          "affiliation": [
+            {
+              "@id": "60023621",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60023621"
+            },
+            {
+              "@id": "60008772",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60008772"
+            }
+          ],
+          "ce:surname": "Bertog",
+          "@auid": "6504007210",
+          "author-url": "https://api.elsevier.com/content/author/author_id/6504007210",
+          "ce:indexed-name": "Bertog S."
+        },
+        {
+          "ce:given-name": "Santiago",
+          "preferred-name": {
+            "ce:given-name": "Santiago",
+            "ce:initials": "S.",
+            "ce:surname": "Garcia",
+            "ce:indexed-name": "Garcia S."
+          },
+          "@seq": "5",
+          "ce:initials": "S.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60020051",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60020051"
+          },
+          "ce:surname": "Garcia",
+          "@auid": "7201561382",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7201561382",
+          "ce:indexed-name": "Garcia S."
+        },
+        {
+          "ce:given-name": "Alok",
+          "preferred-name": {
+            "ce:given-name": "Alok",
+            "ce:initials": "A.",
+            "ce:surname": "Sharma",
+            "ce:indexed-name": "Sharma A."
+          },
+          "@seq": "6",
+          "ce:initials": "A.",
+          "@_fa": "true",
+          "affiliation": [
+            {
+              "@id": "60023621",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60023621"
+            },
+            {
+              "@id": "60008772",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60008772"
+            }
+          ],
+          "ce:surname": "Sharma",
+          "@auid": "55482845300",
+          "author-url": "https://api.elsevier.com/content/author/author_id/55482845300",
+          "ce:indexed-name": "Sharma A."
+        },
+        {
+          "ce:given-name": "Venkat",
+          "preferred-name": {
+            "ce:given-name": "Venkat",
+            "ce:initials": "V.",
+            "ce:surname": "Tholakanahalli",
+            "ce:indexed-name": "Tholakanahalli V."
+          },
+          "@seq": "7",
+          "ce:initials": "V.",
+          "@_fa": "true",
+          "affiliation": [
+            {
+              "@id": "60023621",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60023621"
+            },
+            {
+              "@id": "60008772",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60008772"
+            }
+          ],
+          "ce:surname": "Tholakanahalli",
+          "@auid": "6508195743",
+          "author-url": "https://api.elsevier.com/content/author/author_id/6508195743",
+          "ce:indexed-name": "Tholakanahalli V."
+        },
+        {
+          "ce:given-name": "Selcuk",
+          "preferred-name": {
+            "ce:given-name": "Selcuk",
+            "ce:initials": "S.",
+            "ce:surname": "Adabag",
+            "ce:indexed-name": "Adabag S."
+          },
+          "@seq": "8",
+          "ce:initials": "S.",
+          "@_fa": "true",
+          "affiliation": [
+            {
+              "@id": "60023621",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60023621"
+            },
+            {
+              "@id": "60008772",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60008772"
+            }
+          ],
+          "ce:surname": "Adabag",
+          "@auid": "14822965400",
+          "author-url": "https://api.elsevier.com/content/author/author_id/14822965400",
+          "ce:indexed-name": "Adabag S."
+        }
+      ]
+    }
+  }
+}
