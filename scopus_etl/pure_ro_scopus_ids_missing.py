@@ -39,9 +39,9 @@ WHERE JSON_EXISTS(ro.json_document, '$.uuid')
 )
 SELECT distinct asi.scopus_id
 FROM authored_scopus_ids asi
-LEFT JOIN scopus_json_abstract_authored sjaa 
-ON asi.scopus_id = sjaa.scopus_id
-WHERE sjaa.scopus_id IS NULL
+LEFT JOIN scopus_json_abstract sja 
+ON asi.scopus_id = sja.scopus_id
+WHERE sja.scopus_id IS NULL
 '''
 
 #scopus_ids_sql = 'SELECT scopus_id FROM scopus_authored_abstracts_to_download'

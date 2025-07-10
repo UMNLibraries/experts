@@ -4,7 +4,7 @@ WITH reference_scopus_ids AS (
     sjson.reference_scopus_id
     --sjson.reference_scopus_id_type
   FROM
-    scopus_json_abstract_authored sja,
+    scopus_json_abstract sja,
     JSON_TABLE(sja.json_document, '$."abstracts-retrieval-response".item.bibrecord.tail'
       COLUMNS (
         NESTED PATH '$.bibliography.reference[*]' COLUMNS (

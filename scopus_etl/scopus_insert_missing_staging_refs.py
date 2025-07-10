@@ -14,7 +14,7 @@ from experts.api.scopus import \
 scopus_ids_sql = '''
 WITH cited_scopus_ids AS (
   SELECT distinct refs.ref_id as scopus_id
-  FROM scopus_json_abstract_authored sja,
+  FROM scopus_json_abstract sja,
     JSON_TABLE (
       sja.json_document, '$."abstracts-retrieval-response".item.bibrecord.tail' COLUMNS (
         NESTED PATH '$.bibliography.reference[*]' COLUMNS (
