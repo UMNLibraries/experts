@@ -361,7 +361,7 @@ class Client:
         )
         return self.request(*args, prepared_request=prepared_request, **kwargs)
 
-    def get_abstract_by_scopus_id(self, scopus_id: ScopusId, *args, params=m(content='core', view='FULL'), **kwargs) -> tuple[ScopusId, RequestResult]:
+    def get_abstract_by_scopus_id(self, scopus_id: ScopusId, *args, params=m(view='FULL'), **kwargs) -> ScopusIdRequestResult:
         prepared_request = self.httpx_client.build_request(
             'GET',
             f'abstract/scopus_id/{scopus_id}',
@@ -371,6 +371,18 @@ class Client:
         #return self.request(*args, prepared_request=prepared_request, **kwargs)
         # Return a tuple with the scopus ID and the result of the request, so we can associate the two later:
         return (scopus_id, self.request(*args, prepared_request=prepared_request, **kwargs))
+
+    def get_citations_by_scopus_ids(self, scopus_ids: list[ScopusId], *args, params=m(citation='exclude-self'), **kwargs) -> ScopusIdRequestResult: # Not sure what the result should be...
+        params_with_scopus_ids = params.set('scopus_id', ','.join(scopus_ids))
+        prepared_request = self.httpx_client.build_request(
+            'GET',
+            f'abstract/citations',
+            params=thaw(params_with_scopus_ids),
+            timeout=self.timeout # TODO: Change to default_timeout
+        )
+        #return self.request(*args, prepared_request=prepared_request, **kwargs)
+        # Return a tuple with the scopus ID and the result of the request, so we can associate the two later:
+        return (scopus_ids, self.request(*args, prepared_request=prepared_request, **kwargs))
 
     def request_many_by_id(
         self,
@@ -411,7 +423,8 @@ class Client:
         scopus_ids: Iterator,
         params: RequestParams = m(content='core', view='FULL'),
     #) -> Iterator[httpx.Response]:
-    ) -> Iterator[tuple[ScopusId, RequestResult]]:
+    #) -> Iterator[tuple[ScopusId, RequestResult]]:
+    ) -> Iterator[ScopusIdRequestResult]:
         partial_request = partial(
             self.get_abstract_by_scopus_id,
             params=params,
