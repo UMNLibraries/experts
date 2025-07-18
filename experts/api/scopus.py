@@ -5,7 +5,7 @@ from datetime import date, datetime
 from functools import reduce, partial
 import os
 import re
-from typing import Callable, Iterable, Iterator, Mapping
+from typing import Callable, Iterable, Iterator, Mapping, Sequence
 import uuid
 
 import attrs
@@ -36,9 +36,37 @@ from experts.api.common import \
 
 from experts.helpers.jsonpath import flatten_mixed_match_values
 
+
 Json = dict
 ScopusId = str # Are these always 11 digits?
+
+class ScopusIds(CheckedPSet):
+    '''Used for sets of defunct scopus records, etc'''
+    __type__ = ScopusId
+
+class CitationRequestScopusIds(CheckedPSet):
+    '''A set of Scopus IDs to include in a Citation Overview API request. Do not
+    instantiate this class direcetly. Instead, use the citation_request_scopus_ids
+    factory function'''
+    __type__ = ScopusId
+
+    def query_param_string(self):
+        '''Scopus API requires multiple identifiers to be comma-separated'''
+        return ','.join(self)
+
+CITATION_OVERVIEW_MAX_IDENTIFIERS = 25
+def citation_request_scopus_ids(scopus_ids:Sequence[ScopusId]) -> CitationRequestScopusIds:
+    '''Factory function to create instances of CitationRequestScopusIds, which provides set size validation,
+    because its base clase does not allow custom constructors or whole-set validation'''
+    if len(scopus_ids) > CITATION_OVERVIEW_MAX_IDENTIFIERS:
+        raise ValueError(f'Scopus Citation Overview API accepts no more than {CITATION_OVERVIEW_MAX_IDENTIFIERS} identifiers per request. {len(scopus_ids)} received')
+    if len(scopus_ids) == 0:
+        raise ValueError(f'Scopus Citation Overview API requires at least one identifier per request. 0 received')
+    return CitationRequestScopusIds(scopus_ids)
+
 ScopusIdRequestResult = tuple[ScopusId, RequestResult]
+AbstractRequestResult = tuple[ScopusId, RequestResult]
+CitationsRequestResult = tuple[ScopusIds, RequestResult] # Or tuple[list[ScopusId], RequestResult], or tuple[Interator[ScopusId], RequestResult]?
 
 class SuccessResponse(PRecord):
     headers = pfield(type=httpx.Headers)
@@ -48,9 +76,13 @@ class SuccessResponses(CheckedPMap):
     __key_type__ = ScopusId
     __value_type__ = SuccessResponse
 
-class ScopusIds(CheckedPSet):
-    '''Used for sets of defunct scopus records, etc'''
-    __type__ = ScopusId
+class AbstractSuccessResponses(CheckedPMap):
+    __key_type__ = ScopusId
+    __value_type__ = SuccessResponse
+
+class CitationSuccessResponses(CheckedPMap):
+    __key_type__ = ScopusIds # Notice that this is a set!
+    __value_type__ = SuccessResponse
 
 class ErrorResult(PRecord):
     exception = pfield(type=(Exception, type(None)))
@@ -58,6 +90,14 @@ class ErrorResult(PRecord):
 
 class ErrorResults(CheckedPMap):
     __key_type__ = ScopusId
+    __value_type__ = ErrorResult
+
+class AbstractErrorResults(CheckedPMap):
+    __key_type__ = ScopusId
+    __value_type__ = ErrorResult
+
+class CitationErrorResults(CheckedPMap):
+    __key_type__ = ScopusIds # Notice that this is a set!
     __value_type__ = ErrorResult
 
 # Final data structure of multiple results, e.g. concurrent requests for 1000 abstracts:
@@ -68,6 +108,25 @@ class AssortedResults(PRecord):
 
     def scopus_ids(self):
         return ScopusIds(list(self.success.keys()) + list(self.defunct) + list(self.error.keys()))
+
+# Final data structure of multiple results, e.g. concurrent requests for 1000 abstracts:
+class AssortedAbstractResults(PRecord):
+    success = pfield(type=AbstractSuccessResponses)
+    defunct = pfield(type=ScopusIds)
+    error = pfield(type=AbstractErrorResults)
+
+    def scopus_ids(self):
+        return ScopusIds(list(self.success.keys()) + list(self.defunct) + list(self.error.keys()))
+
+# Final data structure of multiple results, e.g. concurrent requests for 1000 citations:
+class AssortedCitationResults(PRecord):
+    success = pfield(type=CitationSuccessResponses)
+    defunct = pfield(type=ScopusIds)
+    missing = pfield(type=ScopusIds)
+    error = pfield(type=CitationErrorResults)
+
+    def scopus_ids(self):
+        return ScopusIds(list(self.success.keys()) + list(self.defunct) + list(self.missing) + list(self.error.keys()))
 
 class ScopusIdRequestResultAssorter:
     @staticmethod
@@ -361,28 +420,32 @@ class Client:
         )
         return self.request(*args, prepared_request=prepared_request, **kwargs)
 
-    def get_abstract_by_scopus_id(self, scopus_id: ScopusId, *args, params=m(view='FULL'), **kwargs) -> ScopusIdRequestResult:
-        prepared_request = self.httpx_client.build_request(
-            'GET',
-            f'abstract/scopus_id/{scopus_id}',
-            params=thaw(params),
-            timeout=self.timeout # TODO: Change to default_timeout
-        )
-        #return self.request(*args, prepared_request=prepared_request, **kwargs)
+    def get_abstract_by_scopus_id(self, scopus_id:ScopusId, *args, params=m(view='FULL'), **kwargs) -> ScopusIdRequestResult:
         # Return a tuple with the scopus ID and the result of the request, so we can associate the two later:
-        return (scopus_id, self.request(*args, prepared_request=prepared_request, **kwargs))
+        return (
+            scopus_id,
+            self.get(
+                f'abstract/scopus_id/{scopus_id}',
+                *args,
+                params=params,
+                timeout=self.timeout, # TODO: Change to default_timeout
+                **kwargs
+            )
+        )
 
-    def get_citations_by_scopus_ids(self, scopus_ids: list[ScopusId], *args, params=m(citation='exclude-self'), **kwargs) -> ScopusIdRequestResult: # Not sure what the result should be...
-        params_with_scopus_ids = params.set('scopus_id', ','.join(scopus_ids))
-        prepared_request = self.httpx_client.build_request(
-            'GET',
-            f'abstract/citations',
-            params=thaw(params_with_scopus_ids),
-            timeout=self.timeout # TODO: Change to default_timeout
+    def get_citations_by_scopus_ids(self, scopus_ids:CitationRequestScopusIds, *args, params=m(citation='exclude-self'), **kwargs) -> ScopusIdRequestResult: # Not sure what the result should be...
+        #params_with_scopus_ids = params.set('scopus_id', ','.join(scopus_ids))
+        # Return a tuple with the scopus IDs and the result of the request, so we can associate the two later:
+        return (
+            scopus_ids,
+            self.get(
+                f'abstract/citations',
+                *args,
+                params=params.set('scopus_id', scopus_ids.query_param_string()),
+                timeout=self.timeout, # TODO: Change to default_timeout
+                **kwargs
+            )
         )
-        #return self.request(*args, prepared_request=prepared_request, **kwargs)
-        # Return a tuple with the scopus ID and the result of the request, so we can associate the two later:
-        return (scopus_ids, self.request(*args, prepared_request=prepared_request, **kwargs))
 
     def request_many_by_id(
         self,
@@ -421,7 +484,7 @@ class Client:
     def get_many_abstracts_by_scopus_id(
         self,
         scopus_ids: Iterator,
-        params: RequestParams = m(content='core', view='FULL'),
+        params: RequestParams = m(view='FULL'),
     #) -> Iterator[httpx.Response]:
     #) -> Iterator[tuple[ScopusId, RequestResult]]:
     ) -> Iterator[ScopusIdRequestResult]:
