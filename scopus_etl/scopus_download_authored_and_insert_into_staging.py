@@ -94,13 +94,18 @@ with db.cx_oracle_connection() as db_session, scopus_client() as scopus_session:
             INSERT /*+ ignore_row_on_dupkey_index(scopus_abstract_defunct(scopus_id)) */
             INTO scopus_abstract_defunct
             (
-              scopus_id
+              scopus_id,
+              inserted
             ) VALUES (
-              :scopus_id
+              :scopus_id,
+              :inserted
             )
         '''
-        defunct_abstract_scopus_is = [
-            {'scopus_id': scopus_id}
+        defunct_abstract_scopus_ids = [
+            {
+                'scopus_id': scopus_id,
+                'inserted': datetime.now(),
+            }
             for scopus_id in assorted_abstract_results.defunct.keys()
         ]
         insert_cursor.executemany(insert_defunct_abstract_scopus_ids_sql, defunct_abstract_scopus_ids)
