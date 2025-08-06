@@ -4,7 +4,7 @@ import pytest
 
 from experts.api.scopus import \
     AbstractResponseBodyParser as abstract_parser, \
-    CitationOverviewResponseBodyParser as citation_overview_parser
+    CitationResponseBodyParser as citation_parser
 
 def load_abstract_data(scopus_id: str):
     with open(f'tests/api/scopus/data/abstract/{scopus_id}/body.json') as body_file, open(f'tests/api/scopus/data/abstract/{scopus_id}/body_ref_scopus_ids.json') as ref_scopus_ids_file:
@@ -54,8 +54,8 @@ def test_abstract_response_body_parser_no_references():
     assert isinstance(abstract_parser.refcount(body), int)
     assert sorted(abstract_parser.reference_scopus_ids(body)) == sorted(reference_scopus_ids)
 
-def load_citation_overview_data(scopus_ids: str):
-    with open(f'tests/api/scopus/data/citation_overview/{scopus_ids}.json') as body_file:
+def load_citation_data(scopus_ids: str):
+    with open(f'tests/api/scopus/data/citation/{scopus_ids}.json') as body_file:
         return json.load(body_file)
 
 

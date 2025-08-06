@@ -3,10 +3,10 @@ import json
 import pytest
 
 from experts.api.scopus import \
-    CitationOverviewResponseBodyParser as parser
+    CitationResponseBodyParser as parser
 
 def load_response_body(scopus_ids: str):
-    with open(f'tests/api/scopus/data/citation_overview/{scopus_ids}.json') as body_file:
+    with open(f'tests/api/scopus/data/citation/{scopus_ids}.json') as body_file:
         return json.load(body_file)
 
 def test_parser():
