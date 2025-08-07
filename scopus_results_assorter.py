@@ -42,6 +42,10 @@ with Client() as session:
     )
     print(f'{cited_assorted_results.success.keys()=}, {cited_assorted_results.defunct.keys()=}, {cited_assorted_results.error.keys()=}')
     print(f'{cited_assorted_results.scopus_ids()=}')
+    print(f'{cited_assorted_results.success.scopus_ids()=}')
+    print(f'{cited_assorted_results.success_subrecords.keys()=}')
+    print(f'{cited_assorted_results.defunct.scopus_ids()=}')
+    print(f'{cited_assorted_results.defunct_scopus_ids=}')
 
     # Why is this here?
     #print(f'{authored_assorted_results.success[next(iter(authored_scopus_ids))]}')

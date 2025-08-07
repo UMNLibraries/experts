@@ -37,9 +37,19 @@ from experts.api.common import \
 
 from experts.helpers.jsonpath import flatten_mixed_match_values
 
+# Would like to make these types more specific at some point:
+CitationResponseBody = ResponseBody
+CitationSubrecordBody = dict # ResponseBody would work, but seems misleading in this case.
+AbstractResponseBody = ResponseBody
+#class AbstractResponseBody(TypedDict):
+#    ...
+#    Would like to have this class, but the Scopus data we need is so deeply
+#    nested, and Python's TypedDicts are so strict, that the costs outweigh
+#    any documentation and type annotation benefits we would get from it.
 
 Json = dict
 ScopusId = str # Are these always 11 digits?
+#ScopusId = int # Are these always 11 digits?
 
 class ScopusIds(CheckedPSet):
     '''Used for sets of defunct scopus records, etc'''
@@ -150,6 +160,34 @@ class CitationSuccessResponses(CheckedPMap):
     __key_type__ = CitationRequestScopusIds # Notice that this is a set!
     __value_type__ = SuccessResponse
 
+    def scopus_ids(self) -> ScopusIds:
+        return ScopusIds(
+            list(
+                reduce(
+                    # Calling list() on a set returns a list of the elements in the set,
+                    # which we recursively concatenate to reduce them into a single list
+                    # of scopus Ids:
+                    lambda set_a, set_b: list(set_a) + list(set_b),
+
+                    # CheckedPMap keys() are a set, and each key is itself a set of type
+                    # CitationRequestScopusIds, so we have sets of sets. We unpack
+                    # each set of keys into its elements using the asterisk operator,
+                    # to produce a single list of sets:
+                    list(self.keys()),
+                    []
+                )
+            )
+        )
+
+class CitationSuccessSubrecords(CheckedPMap):
+    __key_type__ = ScopusId
+    __value_type__ = CitationSubrecordBody
+
+    def scopus_ids(self) -> ScopusIds:
+        return ScopusIds(
+            list(self.keys())
+        )
+
 class ErrorResult(PRecord):
     exception = pfield(type=(Exception, type(None)))
     response = pfield(type=(httpx.Response, type(None)))
@@ -166,6 +204,25 @@ class AbstractErrorResults(CheckedPMap):
 class CitationErrorResults(CheckedPMap):
     __key_type__ = CitationRequestScopusIds # Notice that this is a set!
     __value_type__ = ErrorResult
+
+    def scopus_ids(self) -> ScopusIds:
+        return ScopusIds(
+            list(
+                reduce(
+                    # Calling list() on a set returns a list of the elements in the set,
+                    # which we recursively concatenate to reduce them into a single list
+                    # of scopus Ids:
+                    lambda set_a, set_b: list(set_a) + list(set_b),
+
+                    # CheckedPMap keys() are a set, and each key is itself a set of type
+                    # CitationRequestScopusIds, so we have sets of sets. We unpack
+                    # each set of keys into its elements using the asterisk operator,
+                    # to produce a single list of sets:
+                    list(self.keys()),
+                    []
+                )
+            )
+        )
 
 # Final data structure of multiple results, e.g. concurrent requests for 1000 abstracts:
 class AssortedResults(PRecord):
@@ -200,8 +257,10 @@ class AbstractAssortedResults(PRecord):
 class CitationAssortedResults(PRecord):
     success = pfield(type=CitationSuccessResponses)
     defunct = pfield(type=CitationErrorResults)
-    #missing = pfield(type=ScopusIds) # TODO: Parsing these out should probably come later.
     error = pfield(type=CitationErrorResults)
+
+    success_subrecords = pfield(type=CitationSuccessSubrecords)
+    defunct_scopus_ids = pfield(type=ScopusIds)
 
     def scopus_ids(self) -> ScopusIds:
         return ScopusIds(
@@ -271,16 +330,6 @@ class AbstractRequestResultAssorter:
             error=AbstractErrorResults(assorted['error']),
         )
 
-class CitationRequestResultAssorter:
-    @staticmethod
-    def assort(results: Iterator[CitationRequestResult]) -> CitationAssortedResults:
-        assorted = ScopusIdRequestResultAssorter.assort(results)
-        return CitationAssortedResults(
-            success=CitationSuccessResponses(assorted['success']),
-            defunct=CitationErrorResults(assorted['defunct']),
-            error=CitationErrorResults(assorted['error']),
-        )
-
 class ResponseParser:
     @staticmethod
     def body(response:httpx.Response) -> ResponseBody:
@@ -310,24 +359,18 @@ class ResponseHeadersParser:
     def last_modified(headers:httpx.Headers) -> datetime:
         return dateutil.parser.parse(headers.get('last-modified'))
 
-#class AbstractResponseBody(TypedDict):
-#    ...
-#    Would like to have this class, but the Scopus data we need is so deeply
-#    nested, and Python's TypedDicts are so strict, that the costs outweigh
-#    any documentation and type annotation benefits we would get from it.
-
 class AbstractResponseBodyParser():
     @staticmethod
-    def eid(body: ResponseBody) -> str:
+    def eid(body: AbstractResponseBody) -> str:
         # There should always be exactly one of these:
         return jp.parse("$..coredata.eid").find(body)[0].value
 
     @staticmethod
-    def scopus_id(body: ResponseBody) -> str:
+    def scopus_id(body: AbstractResponseBody) -> str:
         return re.search(r'-(\d+)$', AbstractResponseBodyParser.eid(body)).group(1)
 
     @staticmethod
-    def date_created(body: ResponseBody) -> date:
+    def date_created(body: AbstractResponseBody) -> date:
         year, month, day = [
             jp.parse(f"$..item-info.history.date-created['@{date_part}']").find(body)[0].value
             for date_part in ['year','month','day']
@@ -335,7 +378,7 @@ class AbstractResponseBodyParser():
         return date.fromisoformat(f'{year}-{month}-{day}')
 
     @staticmethod
-    def refcount(body: ResponseBody) -> int:
+    def refcount(body: AbstractResponseBody) -> int:
         refcount_expr = jp.parse("$..['@refcount']")
         matches = refcount_expr.find(body)
         if matches:
@@ -344,7 +387,7 @@ class AbstractResponseBodyParser():
             return 0
 
     @staticmethod
-    def reference_scopus_ids(body: ResponseBody) -> list:
+    def reference_scopus_ids(body: AbstractResponseBody) -> list:
         return [
             itemid['$'] for itemid in filter(
                 lambda itemid: itemid['@idtype'] == 'SGR',
@@ -355,7 +398,7 @@ class AbstractResponseBodyParser():
         ]
 
     @Pipe
-    def bodies_to_reference_scopus_ids(bodies: Iterator[ResponseBody]) -> Iterator[str]:
+    def bodies_to_reference_scopus_ids(bodies: Iterator[AbstractResponseBody]) -> Iterator[str]:
         for body in bodies:
             for scopus_id in AbstractResponseBodyParser.reference_scopus_ids(body):
                 yield scopus_id
@@ -406,23 +449,23 @@ def single_citation(*, identifiers, cite_info, column_heading):
 
 class CitationResponseBodyParser():
     @staticmethod
-    def identifier_subrecords(body: ResponseBody) -> Iterator:
+    def identifier_subrecords(body: CitationResponseBody) -> Iterator:
         return flatten_mixed_match_values(
             jp.parse('$..identifier-legend.identifier').find(body)
         )
 
     @staticmethod
-    def cite_info_subrecords(body: ResponseBody) -> Iterator:
+    def cite_info_subrecords(body: CitationResponseBody) -> Iterator:
         return flatten_mixed_match_values(
             jp.parse('$..citeInfoMatrix.citeInfoMatrixXML.citationMatrix.citeInfo').find(body)
         )
 
     @staticmethod
-    def column_heading(body: ResponseBody) -> Iterator: # TODO: Find a better type for this!
+    def column_heading(body: CitationResponseBody) -> Iterator: # TODO: Find a better type for this!
         return jp.parse('$..citeColumnTotalXML.citeCountHeader.columnHeading').find(body)[0].value
 
     @staticmethod
-    def subrecords(body: ResponseBody) -> Iterator:
+    def subrecords(body: CitationResponseBody) -> Iterator:
         column_heading = CitationResponseBodyParser.column_heading(body)
         return [
             single_citation(
@@ -435,6 +478,55 @@ class CitationResponseBodyParser():
                 CitationResponseBodyParser.cite_info_subrecords(body)
             ))
         ]
+
+class CitationSubrecordBodyParser():
+    @staticmethod
+    def scopus_id(body: CitationSubrecordBody) -> ScopusId:
+        # There should be only one identifier dict in a subrecord:
+        return jp.parse('$..identifier-legend.identifier[0].scopus_id').find(body)[0].value
+
+    @staticmethod
+    def sort_year(body: CitationSubrecordBody) -> datetime:
+        return datetime.strptime(    
+            jp.parse('$..citeInfoMatrix.citeInfoMatrixXML.citationMatrix.citeInfo[0].sort-year').find(body)[0].value, '%Y'
+        )
+
+def parse_citation_success_responses(responses:Sequence[SuccessResponse]) -> CitationSuccessSubrecords:
+    return CitationSuccessSubrecords({
+        CitationSubrecordBodyParser.scopus_id(subrecord): subrecord
+        for subrecord in list(reduce(
+            lambda list1, list2: list1 + list2,
+            # Each call to subrecords will return a list, so we need to reduce the following
+            # list of lists into a single list:
+            [CitationResponseBodyParser.subrecords(response.body) for response in responses],
+            []
+        ))
+    })
+
+class CitationRequestResultAssorter:
+    @staticmethod
+    def assort(results: Iterator[CitationRequestResult]) -> CitationAssortedResults:
+        assorted = ScopusIdRequestResultAssorter.assort(results)
+
+        # Because we may request multiple citations at a time, we need to do some
+        # extra work to parse out individual subrecords and defunct scopus Ids:
+        
+        success_subrecords = parse_citation_success_responses(assorted['success'].values())
+
+        success = CitationSuccessResponses(assorted['success'])
+        defunct = CitationErrorResults(assorted['defunct'])
+
+        defunct_scopus_ids = ScopusIds(
+            list(success.scopus_ids() - success_subrecords.scopus_ids()) + list(defunct.scopus_ids())
+        )
+
+        return CitationAssortedResults(
+            success=success,
+            defunct=defunct,
+            error=CitationErrorResults(assorted['error']),
+            success_subrecords=success_subrecords,
+            defunct_scopus_ids=defunct_scopus_ids,
+        )
 
 @frozen(kw_only=True)
 class Client:

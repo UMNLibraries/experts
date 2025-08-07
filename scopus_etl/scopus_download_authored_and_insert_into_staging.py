@@ -11,7 +11,6 @@ from experts.api.scopus import \
     Client as scopus_client, \
     ScopusIds, \
     AbstractRequestResultAssorter as a_assorter, \
-    ResponseParser as r_parser, \
     AbstractResponseBodyParser as arb_parser
 
 #scopus_ids_sql = '''
@@ -60,7 +59,7 @@ with db.cx_oracle_connection() as db_session, scopus_client() as scopus_session:
         rows = select_cursor.fetchmany(1000)
         if not rows:
             break
-        scopus_ids = [row['SCOPUS_ID'] for row in rows]
+        scopus_ids = [str(row['SCOPUS_ID']) for row in rows]
         
         assorted_abstract_results = a_assorter.assort(
             scopus_session.get_many_abstracts_by_scopus_id(scopus_ids)
