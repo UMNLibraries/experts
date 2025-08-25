@@ -4,19 +4,19 @@ from itertools import islice
 
 from experts.api.scopus import \
     Client, \
-    ScopusIds, \
     AbstractRequestResultAssorter as a_assorter, \
     CitationRequestResultAssorter as c_assorter, \
     AbstractResponseBodyParser as parser
 
 with Client() as session:
-    authored_scopus_ids = ScopusIds([
+    authored_scopus_ids = [
         '75149190029',
         '85150001360',
         '49949145584',
         '84924664029',
         '85159902125',
-    ])
+    ]
+    
     # This works, but we don't need it in this little test program. Will come in handy for
     # processing results in chunks, though.
     #authored_assorted_results = assorter.assort(
@@ -31,11 +31,11 @@ with Client() as session:
     print(f'{authored_assorted_results.success.keys()=}, {authored_assorted_results.defunct.keys()=}, {authored_assorted_results.error.keys()=}')
     print(f'{authored_assorted_results.scopus_ids()=}')
 
-    cited_scopus_ids = ScopusIds({
+    cited_scopus_ids = [
         scopus_id
         for value in authored_assorted_results.success.values()
             for scopus_id in parser.reference_scopus_ids(value.body)
-    })
+    ]
     print(f'{cited_scopus_ids=}')
     cited_assorted_results = c_assorter.assort(
         session.get_many_citations_by_scopus_ids(cited_scopus_ids)
