@@ -152,8 +152,6 @@ def scopus_ids_to_citation_request_subsets(scopus_ids:Iterable[int|str|ScopusId]
 class AbstractRequestResult(PRecord):
     scopus_id = pfield(type=ScopusId, mandatory=True)
     result = pfield(type=Result, mandatory=True)
-    # For some unknown reason, pyrsistent can't handle the RequestResult type.
-    # The following results in an infinite loop:
     #result = pfield(type=RequestResult, mandatory=True)
 
     def kv(self) -> tuple[ScopusId, Result]:
@@ -691,40 +689,6 @@ class Client:
                 **kwargs
             )
         )
-
-    def request_many_by_id(
-        self,
-        request_function: RequestFunction,
-        collection: str,
-        id_type: str,
-        ids: Iterator,
-        params: RequestParams = m(),
-    ) -> Iterator[httpx.Response]:
-        partial_request = partial(
-            request_function,
-            params=params,
-        )
-        def request_by_id(identifier: str):
-            # Pass an id-specific resource_path:
-            return partial_request(
-                f'{collection}/{id_type}/{identifier}'
-            )
-
-        for result in common.request_many_by_identifier(
-            request_by_identifier_function = request_by_id,
-            identifiers = ids,
-        ):
-            if is_successful(result):
-                response = result.unwrap()
-                if response.status_code == 200:
-                    yield response
-                else:
-                    print(f'Failed! {result}')
-                    continue
-            else:
-            # TODO: log failure. Maybe pass in a logger?
-                print(f'Failed! {result}')
-                continue
 
     def get_many_abstracts_by_scopus_id(
         self,
