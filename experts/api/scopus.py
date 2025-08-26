@@ -51,8 +51,6 @@ AbstractResponseBody = ResponseBody
 #    any documentation and type annotation benefits we would get from it.
 
 Json = dict
-#ScopusId = int # Are these always 11 digits?
-#ScopusId = str # Are these always 11 digits? No!
 
 class ScopusId(ValidatedStr):
     '''Are these always 11 digits? No! What we've seen as of 2025-08-25:
@@ -170,12 +168,14 @@ class SuccessResponse(PRecord):
     headers = pfield(type=httpx.Headers)
     body = pfield(type=Json)
 
-class SuccessResponses(CheckedPMap):
-    # The following type union  triggers an error from pyrsistent:
-    # "TypeError: Type specifications must be types or strings. Input: str | experts.api.scopus.CitationRequestScopusIds"
-    #__key_type__ = ScopusIdEnigma (This was a union type of either ScopusId or CitationRequestScopusIds
-    __key_type__ = ScopusId
-    __value_type__ = SuccessResponse
+# Not using this as a parent class due to the comment below
+# about the pyrsistent errors.
+#class SuccessResponses(CheckedPMap):
+#    # The following type union  triggers an error from pyrsistent:
+#    # "TypeError: Type specifications must be types or strings. Input: str | experts.api.scopus.CitationRequestScopusIds"
+#    #__key_type__ = ScopusIdEnigma (This was a union type of either ScopusId or CitationRequestScopusIds
+#    __key_type__ = ScopusId
+#    __value_type__ = SuccessResponse
 
 class AbstractSuccessResponses(CheckedPMap):
     __key_type__ = ScopusId
@@ -247,17 +247,6 @@ class CitationErrorResults(CheckedPMap):
                     []
                 )
             )
-        )
-
-# Final data structure of multiple results, e.g. concurrent requests for 1000 abstracts:
-class AssortedResults(PRecord):
-    success = pfield(type=SuccessResponses)
-    defunct = pfield(type=ErrorResults)
-    error = pfield(type=ErrorResults)
-
-    def scopus_ids(self):
-        return iterable_to_scopus_ids(
-            list(self.success.keys()) + list(self.defunct.keys()) + list(self.error.keys())
         )
 
 # Final data structure of multiple results, e.g. concurrent requests for 1000 abstracts:
