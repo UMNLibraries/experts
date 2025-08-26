@@ -147,6 +147,11 @@ def scopus_ids_to_citation_request_subsets(scopus_ids:Iterable[int|str|ScopusId]
 #           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # ...
 
+# The *Result classes below are really just key-value pairs,
+# which map either a scopus ID or a set of scopus IDs key
+# a result value. Each has a kv() method that returns the
+# key-value pair for a given instance.
+
 class AbstractRequestResult(PRecord):
     scopus_id = pfield(type=ScopusId, mandatory=True)
     result = pfield(type=Result, mandatory=True)
