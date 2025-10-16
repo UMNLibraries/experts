@@ -1,12 +1,15 @@
 # See https://peps.python.org/pep-0655/#usage-in-python-3-11
 from __future__ import annotations
+
 from itertools import batched
-from typing_extensions import NotRequired, TypedDict
 from datetime import date, datetime
-from functools import reduce, partial
+from functools import cached_property, reduce, partial
 import os
 import re
-from typing import Any, Callable, Iterable, Iterator, Mapping, MutableMapping, Sequence, Self
+
+# Previously we imported Self from typing, but we don't need it since we import annotations from __future__.
+from typing import Any, Callable, Iterable, Iterator, Mapping, MutableMapping, Sequence
+
 import uuid
 
 import attrs
@@ -16,16 +19,14 @@ import dateutil
 
 import httpx
 import jsonpath_ng.ext as jp
-from pipe import Pipe
 
-from pycific.validated import ValidatedPMap, ValidatedStr
+from pycific.validated import ValidatedPMap, ValidatedPMapSpec, ValidatedStr
 
-from pyrsistent import CheckedPMap, CheckedPSet, PRecord, field as pfield, freeze, thaw, m, pmap, s, v, pvector
+from pyrsistent import CheckedPMap, CheckedPSet, CheckedPVector, PRecord, field as pfield, freeze, thaw, m, pmap, s, v, pvector
 from pyrsistent.typing import PMap, PSet
 
 import returns
-from returns.pipeline import is_successful
-from returns.result import Result
+from returns.result import Result, Success, Failure, safe
 
 from experts.api import common
 from experts.api.common import \
@@ -40,17 +41,212 @@ from experts.api.common import \
 
 from experts.helpers.jsonpath import flatten_mixed_match_values
 
-# Would like to make these types more specific at some point:
-CitationResponseBody = ResponseBody
-CitationSubrecordBody = dict # ResponseBody would work, but seems misleading in this case.
-AbstractResponseBody = ResponseBody
-#class AbstractResponseBody(TypedDict):
-#    ...
-#    Would like to have this class, but the Scopus data we need is so deeply
-#    nested, and Python's TypedDicts are so strict, that the costs outweigh
-#    any documentation and type annotation benefits we would get from it.
+class AbstractRecordValidated(ValidatedPMapSpec):
+    eid: str
+    scopus_id: ScopusId
+    date_created: date
+    refcount: int
+    reference_scopus_ids: ScopusIds
 
-Json = dict
+class AbstractRecord(ValidatedPMap):
+    def _validate(self) -> AbstractRecordValidated:
+        return AbstractRecordValidated(
+            eid=self.eid,
+            scopus_id=self.scopus_id,
+            date_created=self.date_created,
+            refcount=self.refcount,
+            reference_scopus_ids=self.reference_scopus_ids,
+        )
+
+    @cached_property
+    def eid(self) -> str:
+        # There should always be exactly one of these:
+        return jp.parse("$..coredata.eid").find(
+            # We need to thaw the self pmap, because jsonpath needs a dict:
+            thaw(self)
+        )[0].value
+
+    @cached_property
+    def scopus_id(self) -> ScopusId:
+        return ScopusId(
+            re.search(r'-(\d+)$', self.eid).group(1)
+        )
+
+    @cached_property
+    def date_created(self) -> date:
+        year, month, day = [
+            jp.parse(f"$..item-info.history.date-created['@{date_part}']").find(
+                # We need to thaw the self pmap, because jsonpath needs a dict:
+                thaw(self)
+            )[0].value
+            for date_part in ['year','month','day']
+        ]
+        return date.fromisoformat(f'{year}-{month}-{day}')
+
+    @cached_property
+    def refcount(self) -> int:
+        refcount_expr = jp.parse("$..['@refcount']")
+        matches = refcount_expr.find(
+            # We need to thaw the self pmap, because jsonpath needs a dict:
+            thaw(self)
+        )
+        if matches:
+            return int(matches[0].value)
+        else:
+            return 0
+
+    @cached_property
+    def reference_scopus_ids(self) -> ScopusIds:
+        if self.refcount == 0:
+            return ScopusIds([])
+        scopus_ids, invalid_scopus_ids = ScopusIds.factory([
+            itemid['$'] for itemid in filter(
+                lambda itemid: itemid['@idtype'] == 'SGR',
+                flatten_mixed_match_values(
+                    jp.parse("$..reference[*].ref-info.refd-itemidlist.itemid").find(
+                        # We need to thaw the self pmap, because jsonpath needs a dict:
+                        thaw(self)
+                    )
+                )
+            )
+        ])
+        if len(invalid_scopus_ids) > 0:
+            raise ValueError(f'Parsing of abstract with Scopus ID {self.scopus_id} returned some invalid reference Scopus IDs: {invalid_scopus_ids}')
+        return scopus_ids
+
+#    # Not sure we'll need this, but keeping it here and commented out for now.
+#    def issn(self) -> str:
+#        if 'issn' not in self['abstracts-retrieval-response']['item']['bibrecord']['head']['source']:
+#            print('scopus id:', self.scopus_id())
+#            print(self['abstracts-retrieval-response']['item']['bibrecord']['head']['source'])
+#            # TODO: Fix the line below!
+#            return None
+#        return self['abstracts-retrieval-response']['item']['bibrecord']['head']['source']['issn']['$']
+
+class CitationRecordMixin():
+    @cached_property
+    def _identifier_subrecords(self) -> Iterable[dict]:
+        return list(flatten_mixed_match_values(
+            jp.parse('$..identifier-legend.identifier').find(
+                # We need to thaw the self pmap, because jsonpath needs a dict:
+                thaw(self)
+            )
+        ))
+
+    @cached_property
+    def _cite_info_subrecords(self) -> Iterable[dict]:
+        return list(flatten_mixed_match_values(
+            jp.parse('$..citeInfoMatrix.citeInfoMatrixXML.citationMatrix.citeInfo').find(
+                # We need to thaw the self pmap, because jsonpath needs a dict:
+                thaw(self)
+            )
+        ))
+
+    @cached_property
+    def _column_heading(self) -> Iterable[dict]:
+        return jp.parse('$..citeColumnTotalXML.citeCountHeader.columnHeading').find(
+            # We need to thaw the self pmap, because jsonpath needs a dict:
+            thaw(self)
+        )[0].value
+
+class CitationMaybeMultiRecordValidated(ValidatedPMapSpec):
+    _identifier_subrecords: Iterable[dict]
+    _cite_info_subrecords: Iterable[dict]
+    _column_heading: Iterable[dict]
+    scopus_ids: ScopusIds
+    single_records: Iterable[CitationSingleRecord]
+
+class CitationMaybeMultiRecord(ValidatedPMap, CitationRecordMixin):
+    def _validate(self) -> CitationMaybeMultiRecordValidated:
+        return CitationMaybeMultiRecordValidated(
+            _column_heading=self._column_heading,
+            _identifier_subrecords=self._identifier_subrecords,
+            _cite_info_subrecords=self._cite_info_subrecords,
+            scopus_ids=self.scopus_ids,
+            single_records=self.single_records,
+        )
+
+    @property
+    def scopus_ids(self) -> ScopusIds:
+        scopus_ids, invalid_scopus_ids = ScopusIds.factory(
+            map(lambda subrecord: subrecord['scopus_id'], self._identifier_subrecords)
+        )
+        if len(invalid_scopus_ids) > 0:
+            raise ValueError(f'Parsing of a citation overview returned some invalid Scopus IDs: {invalid_scopus_ids}')
+        return scopus_ids
+
+    @cached_property
+    def single_records(self) -> list[CitationSingleRecord]:
+        return [
+            CitationSingleRecord({
+                'abstract-citations-response': {
+                    'h-index': '1',
+                    'identifier-legend': {
+                        'identifier': [identifiers],
+                    },
+                    'citeInfoMatrix': {
+                        'citeInfoMatrixXML': {
+                            'citationMatrix': {
+                                'citeInfo': [cite_info],
+                            },
+                        },
+                    },
+                    'citeColumnTotalXML': {
+                        'citeCountHeader': {
+                            'prevColumnHeading': 'previous',
+                            'columnHeading': self._column_heading,
+                            'laterColumnHeading': 'later',
+                            'prevColumnTotal': cite_info['pcc'],
+                            'columnTotal': cite_info['cc'],
+                            'laterColumnTotal': cite_info['lcc'],
+                            'rangeColumnTotal': cite_info['rangeCount'],
+                            'grandTotal': cite_info['rowTotal'],
+                        },
+                    },
+                },
+            })
+            for identifiers, cite_info in list(zip(
+                self._identifier_subrecords,
+                self._cite_info_subrecords,
+            ))
+        ]
+
+class CitationSingleRecordValidated(ValidatedPMapSpec):
+    scopus_id: ScopusId
+    sort_year: datetime
+    _identifier_subrecords: Iterable[dict]
+    _cite_info_subrecords: Iterable[dict]
+    _column_heading: Iterable[dict]
+
+class CitationSingleRecord(ValidatedPMap, CitationRecordMixin):
+    def _validate(self) -> CitationSingleRecordValidated:
+        return CitationSingleRecordValidated(
+            scopus_id=self.scopus_id,
+            sort_year=self.sort_year,
+            _column_heading=self._column_heading,
+            _identifier_subrecords=self._identifier_subrecords,
+            _cite_info_subrecords=self._cite_info_subrecords,
+        )
+
+    @cached_property
+    def scopus_id(self) -> ScopusId:
+        # There should be only one identifier dict in a single record:
+        return ScopusId(
+            # We avoid the complex, repetitious, commented-out code below by using a mixin property method:
+            #jp.parse('$..identifier-legend.identifier[0].scopus_id').find(thaw(self))[0].value
+            self._identifier_subrecords[0]['scopus_id']
+        )
+
+    @cached_property
+    def sort_year(self) -> datetime:
+        # There should be only one cite info dict in a single record:
+        return datetime.strptime(
+            # We avoid the complex, repetitious, commented-out code below by using a mixin property method:
+            #jp.parse('$..citeInfoMatrix.citeInfoMatrixXML.citationMatrix.citeInfo[0].sort-year').find(thaw(self))[0].value, '%Y'
+            self._cite_info_subrecords[0]['sort-year'], '%Y'
+        )
+
+    # TODO: Add issn()?
 
 class ScopusId(ValidatedStr):
     '''Are these always 11 digits? No! What we've seen as of 2025-08-25:
@@ -59,483 +255,316 @@ class ScopusId(ValidatedStr):
     min citation: 1842737537
     max citation: 105011990601
     The shortest Scopus ID we've seen is 10 characters, so 5 seems like a safe minimum.
+    TODO: Do any Scopus IDs start with a leading zero, though? That could be a problem
+    for storing these as integers, especially in a database.
     '''
-    def _validate(self) -> Self:
+    def _validate(self) -> ScopusId:
         if not re.match(r'^\d{5,}$', self):
             raise ValueError(f'ScopusId value {self} is invalid: must be at least five characters, all digits')
         return self
+
+# This type alias is just to make our code self-documenting
+InvalidScopusId = Any
 
 class ScopusIds(CheckedPSet):
     '''Used for sets of defunct scopus records, etc'''
     __type__ = ScopusId
 
-def iterable_to_scopus_ids(scopus_ids:Iterable[int|str|ScopusId]) -> ScopusIds:
-    if isinstance(scopus_ids, ScopusIds):
-        return scopus_ids
-    return ScopusIds([
-        ScopusId(scopus_id) for scopus_id in scopus_ids
-    ])
+    @classmethod
+    def union(cls, *scopus_ids:Iterable[ScopusId]) -> ScopusIds:
+        # The built-in set().union function doesn't seem to work with CheckedPSets
+        # and multiple set arguments, so we make it work here as a class method.
+        # Each argument after `cls` must be an iterable containing validated
+        # instances of ScopusID.
+        return ScopusIds(
+            set().union(*scopus_ids)
+        )
+
+    @classmethod
+    def validate_scopus_ids(cls, scopus_ids:Iterable[int|str|ScopusId]) -> tuple[set[ScopusId], set[InvalidScopusId]]:
+        valid_scopus_ids = set()
+        invalid_scopus_ids = set()
+        for scopus_id in scopus_ids:
+            match ScopusId.factory(scopus_id):
+                case Success(valid_scopus_id):
+                    valid_scopus_ids.add(valid_scopus_id)
+                case Failure(Exception):
+                    invalid_scopus_ids.add(scopus_id)
+        return (valid_scopus_ids, invalid_scopus_ids)
+
+    @classmethod
+    def factory(cls, scopus_ids:Iterable[int|str|ScopusId]) -> tuple[ScopusIds, set[InvalidScopusId]]:
+        if isinstance(scopus_ids, cls):
+            return (scopus_ids, set())
+        valid_scopus_ids, invalid_scopus_ids = cls.validate_scopus_ids(scopus_ids)
+        return (cls(valid_scopus_ids), invalid_scopus_ids)
+
+# We set this as a python "constant" in case we ever want to support
+# identifiers other than Scopus IDs:
+CITATION_OVERVIEW_REQUEST_MAX_IDENTIFIERS = 25
 
 class CitationRequestScopusIds(CheckedPSet):
     '''A set of Scopus IDs to include in a Citation Overview API request. Do not
-    instantiate this class direcetly. Instead, use the citation_request_scopus_ids
-    factory function'''
+    instantiate this class direcetly. Instead, use CitationRequestScopusIds.factory()
+    '''
     __type__ = ScopusId
+
+    #@property
+    # Update: Using this generates this error:
+    # TypeError: 'property' object cannot be interpreted as an integer
+    @classmethod
+    def max_scopus_ids_per_request(cls):
+        return CITATION_OVERVIEW_REQUEST_MAX_IDENTIFIERS
+
+    @classmethod
+    def factory(cls, scopus_ids:Iterable[int|str|ScopusId]) -> tuple[list[CitationRequestScopusIds], set[InvalidScopusId]]:
+        if isinstance(scopus_ids, cls):
+            return (scopus_ids, set())
+        valid_scopus_ids, invalid_scopus_ids = ScopusIds.validate_scopus_ids(scopus_ids)
+        citation_request_scopus_ids = [
+            cls(batch)
+            for batch in list(batched(valid_scopus_ids, cls.max_scopus_ids_per_request()))
+        ]
+        return (citation_request_scopus_ids, invalid_scopus_ids)
 
     def query_param_string(self):
         '''Scopus API requires multiple identifiers to be comma-separated'''
         return ','.join(self)
 
-CITATION_OVERVIEW_MAX_IDENTIFIERS = 25
+class RequestResponse(PRecord):
+    response = pfield(type=httpx.Response, mandatory=True)
 
-def citation_request_scopus_ids(scopus_ids:Iterable[int|str|ScopusId]) -> CitationRequestScopusIds:
-    '''Factory function to create instances of CitationRequestScopusIds, which provides set size validation,
-    because its base clase does not allow custom constructors or whole-set validation'''
-    if len(scopus_ids) > CITATION_OVERVIEW_MAX_IDENTIFIERS:
-        raise ValueError(f'Scopus Citation Overview API accepts no more than {CITATION_OVERVIEW_MAX_IDENTIFIERS} identifiers per request. {len(scopus_ids)} received')
-    if len(scopus_ids) == 0:
-        raise ValueError(f'Scopus Citation Overview API requires at least one identifier per request. 0 received')
-    return CitationRequestScopusIds(iterable_to_scopus_ids(scopus_ids))
-
-def scopus_ids_to_citation_request_subsets(scopus_ids:Iterable[int|str|ScopusId]) -> Sequence[CitationRequestScopusIds]:
-    # TODO: Can we return a tuple, pset, or pvector here?
-    return [
-        citation_request_scopus_ids(batch)
-        for batch in list(batched(scopus_ids, CITATION_OVERVIEW_MAX_IDENTIFIERS))
-    ]
-
-# In the classes below, setting a value type of Request Result caused an infinite loop
-# in pyrsistent:
+#    @property
+#    def response_text(self) -> str:
+#        return self.response.text
 #
-#Traceback (most recent call last):
-#  File "/home/naughton/github.com/UMNLibraries/experts/./scopus_results_assorter.py", line 5, in <module>
-#    from experts.api.scopus import \
-#  File "/home/naughton/github.com/UMNLibraries/experts/experts/api/scopus.py", line 76, in <module>
-#    class AbstractRequestResult(CheckedPMap):
-#  File "/home/naughton/github.com/UMNLibraries/experts/.venv/lib/python3.12/site-packages/pyrsistent/_checked_types.py", line 434, in __new__
-#    _store_types(dct, bases, '_checked_value_types', '__value_type__')
-#  File "/home/naughton/github.com/UMNLibraries/experts/.venv/lib/python3.12/site-packages/pyrsistent/_checked_types.py", line 102, in _store_types
-#    maybe_types = maybe_parse_many_user_types([
-#                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#  File "/home/naughton/github.com/UMNLibraries/experts/.venv/lib/python3.12/site-packages/pyrsistent/_checked_types.py", line 98, in maybe_parse_many_user_types
-#    return maybe_parse_user_type(ts)
-#           ^^^^^^^^^^^^^^^^^^^^^^^^^
-#  File "/home/naughton/github.com/UMNLibraries/experts/.venv/lib/python3.12/site-packages/pyrsistent/_checked_types.py", line 87, in maybe_parse_user_type
-#    return tuple(e for t in ts for e in maybe_parse_user_type(t))
-#           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#  File "/home/naughton/github.com/UMNLibraries/experts/.venv/lib/python3.12/site-packages/pyrsistent/_checked_types.py", line 87, in <genexpr>
-#    return tuple(e for t in ts for e in maybe_parse_user_type(t))
-#           ^^^^^^^^^^^^^^^^^^^^^^^^^
-#  File "/home/naughton/github.com/UMNLibraries/experts/.venv/lib/python3.12/site-packages/pyrsistent/_checked_types.py", line 87, in maybe_parse_user_type
-#    return tuple(e for t in ts for e in maybe_parse_user_type(t))
-#           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#  File "/home/naughton/github.com/UMNLibraries/experts/.venv/lib/python3.12/site-packages/pyrsistent/_checked_types.py", line 87, in <genexpr>
-#    return tuple(e for t in ts for e in maybe_parse_user_type(t))
-# ...
-#
-#  File "/home/naughton/.anyenv/envs/pyenv/versions/3.12.11/lib/python3.12/typing.py", line 1458, in __iter__
-#    yield Unpack[self]
-#          ~~~~~~^^^^^^
-#  File "/home/naughton/.anyenv/envs/pyenv/versions/3.12.11/lib/python3.12/typing.py", line 395, in inner
-#    return _caches[func](*args, **kwds)
-#           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#  File "/home/naughton/.anyenv/envs/pyenv/versions/3.12.11/lib/python3.12/typing.py", line 1286, in __hash__
-#    return hash((self.__origin__, self.__args__))
-#           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#  File "/home/naughton/.anyenv/envs/pyenv/versions/3.12.11/lib/python3.12/typing.py", line 1286, in __hash__
-#    return hash((self.__origin__, self.__args__))
-#           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-# ...
+#    @property
+#    def response_json(self) -> dict:
+#        return self.response.json()
 
-# The *Result classes below are really just key-value pairs,
-# which map either a scopus ID or a set of scopus IDs key
-# a result value. Each has a kv() method that returns the
-# key-value pair for a given instance.
+class RequestResponseWithRatelimit(RequestResponse):
+    # If we try to use @cached_property, we get:
+    # "TypeError: No '__dict__' attribute on 'AbstractSuccessResponse' instance to cache 'ratelimit' property."
+    @property
+    def ratelimit(self) -> int:
+        return int(self.response.headers['x-ratelimit-limit'])
 
-class AbstractRequestResult(PRecord):
-    scopus_id = pfield(type=ScopusId, mandatory=True)
-    result = pfield(type=Result, mandatory=True)
-    #result = pfield(type=RequestResult, mandatory=True)
+    @property
+    def ratelimit_remaining(self) -> int:
+        return int(self.response.headers['x-ratelimit-remaining'])
 
-    def kv(self) -> tuple[ScopusId, Result]:
-        return (self.scopus_id, self.result)
+    @property
+    def ratelimit_reset(self) -> datetime:
+        return datetime.fromtimestamp(int(self.response.headers['x-ratelimit-reset']))
 
-class CitationRequestResult(PRecord):
-    scopus_ids = pfield(type=CitationRequestScopusIds, mandatory=True)
-    result = pfield(type=Result, mandatory=True)
+class AbstractRequestSuccess(RequestResponseWithRatelimit):
+    requested_scopus_id = pfield(type=ScopusId, mandatory=True)
+    #status_code = pfield(invariant=lambda x: (x==200, 'HTTP OK'), mandatory=True)
+    record = pfield(type=AbstractRecord, mandatory=True)
 
-    def kv(self) -> tuple[CitationRequestScopusIds, Result]:
-        return (self.scopus_ids, self.result)
+    # These seem like overkill:
+    #record_str = RequestResponse.response_text
+    #record_json = RequestResponse.response_json
 
-ScopusIdRequestResult = AbstractRequestResult | CitationRequestResult
+    @property
+    def date_created(self) -> date:
+        return self.record.date_created
 
-class SuccessResponse(PRecord):
-    headers = pfield(type=httpx.Headers)
-    body = pfield(type=Json)
+    @property
+    def last_modified(self) -> datetime:
+        return dateutil.parser.parse(self.response.headers['last-modified'])
 
-# Not using this as a parent class due to the comment below
-# about the pyrsistent errors.
-#class SuccessResponses(CheckedPMap):
-#    # The following type union  triggers an error from pyrsistent:
-#    # "TypeError: Type specifications must be types or strings. Input: str | experts.api.scopus.CitationRequestScopusIds"
-#    #__key_type__ = ScopusIdEnigma (This was a union type of either ScopusId or CitationRequestScopusIds
-#    __key_type__ = ScopusId
-#    __value_type__ = SuccessResponse
+class AbstractRequestFailure(PRecord):
+    requested_scopus_id = pfield(type=ScopusId, mandatory=True)
 
-class AbstractSuccessResponses(CheckedPMap):
-    __key_type__ = ScopusId
-    __value_type__ = SuccessResponse
+AbstractRequestResult = Result[AbstractRequestSuccess, AbstractRequestFailure]
 
-class CitationSuccessResponses(CheckedPMap):
-    __key_type__ = CitationRequestScopusIds # Notice that this is a set!
-    __value_type__ = SuccessResponse
+class AbstractRequestResponseFailure(AbstractRequestFailure, RequestResponse):
+    pass
+    # These seem like overkill:
+    #error_message_str = RequestResponse.response_text
+    #error_message_json = RequestResponse.response_json
 
-    def scopus_ids(self) -> ScopusIds:
-        return iterable_to_scopus_ids(
-            list(
-                reduce(
-                    # Calling list() on a set returns a list of the elements in the set,
-                    # which we recursively concatenate to reduce them into a single list
-                    # of scopus Ids:
-                    lambda set_a, set_b: list(set_a) + list(set_b),
+class AbstractRequestResponseValidationError(AbstractRequestResponseFailure, RequestResponseWithRatelimit):
+    #status_code = pfield(invariant=lambda x: (x==200, 'HTTP OK'), mandatory=True)
+    validation_error = pfield(type=Exception, mandatory=True)
 
-                    # CheckedPMap keys() are a set, and each key is itself a set of type
-                    # CitationRequestScopusIds, so we have sets of sets. We unpack
-                    # each set of keys into its elements using the asterisk operator,
-                    # to produce a single list of sets:
-                    list(self.keys()),
-                    []
-                )
-            )
+class AbstractRequestResponseDefunct(AbstractRequestResponseFailure, RequestResponseWithRatelimit):
+    #status_code = pfield(invariant=lambda x: (x==404, 'HTTP Not Found'), mandatory=True)
+    pass
+
+class AbstractRequestNonresponseFailure(AbstractRequestFailure):
+    exception = pfield(type=Exception, mandatory=True)
+
+class CitationRequestSuccess(RequestResponse):
+    requested_scopus_ids = pfield(type=CitationRequestScopusIds, mandatory=True)
+    record = pfield(type=CitationMaybeMultiRecord, mandatory=True)
+
+    # These seem like overkill:
+    #record_str = RequestResponse.response_text
+    #record_json = RequestResponse.response_json
+
+class CitationRequestFailure(PRecord):
+    requested_scopus_ids = pfield(type=ScopusIds, mandatory=True)
+
+CitationRequestResult = Result[CitationRequestSuccess, CitationRequestFailure]
+
+class CitationRequestResponseFailure(CitationRequestFailure, RequestResponse):
+    pass
+    # These seem like overkill:
+    #error_message_str = RequestResponse.response_text
+    #error_message_json = RequestResponse.response_json
+
+class CitationRequestResponseValidationError(CitationRequestResponseFailure):
+    #status_code = pfield(invariant=lambda x: (x==200, 'HTTP OK'), mandatory=True)
+    validation_error = pfield(type=Exception, mandatory=True)
+
+class CitationRequestResponseDefunct(CitationRequestResponseFailure):
+    #status_code = pfield(invariant=lambda x: (x==404, 'HTTP Not Found'), mandatory=True)
+    pass
+
+class CitationRequestNonresponseFailure(CitationRequestFailure):
+    exception = pfield(type=Exception, mandatory=True)
+
+class AbstractResultsMixin:
+    @property
+    def requested_scopus_ids(self) -> ScopusIds:
+        return ScopusIds(
+            [result.requested_scopus_id for result in self]
         )
 
-class CitationSuccessSubrecords(CheckedPMap):
-    __key_type__ = ScopusId
-    __value_type__ = CitationSubrecordBody
+class AbstractSuccessResults(CheckedPVector, AbstractResultsMixin):
+    __type__ = AbstractRequestSuccess
 
-    def scopus_ids(self) -> ScopusIds:
-        return iterable_to_scopus_ids(
-            list(self.keys())
+    @property
+    def cited_scopus_ids(self) -> ScopusIds:
+        return ScopusIds.union(
+            *[result.record.reference_scopus_ids for result in self]
         )
 
-class ErrorResult(PRecord):
-    exception = pfield(type=(Exception, type(None)))
-    response = pfield(type=(httpx.Response, type(None)))
+class AbstractDefunctResults(CheckedPVector, AbstractResultsMixin):
+    __type__ = AbstractRequestResponseDefunct
 
-class ErrorResults(CheckedPMap):
-    #__key_type__ = ScopusIdEnigma
-    __key_type__ = ScopusId
-    __value_type__ = ErrorResult
+class AbstractErrorResults(CheckedPVector, AbstractResultsMixin):
+    __type__ = AbstractRequestFailure
 
-class AbstractErrorResults(CheckedPMap):
-    __key_type__ = ScopusId
-    __value_type__ = ErrorResult
-
-class CitationErrorResults(CheckedPMap):
-    __key_type__ = CitationRequestScopusIds # Notice that this is a set!
-    __value_type__ = ErrorResult
-
-    def scopus_ids(self) -> ScopusIds:
-        return iterable_to_scopus_ids(
-            list(
-                reduce(
-                    # Calling list() on a set returns a list of the elements in the set,
-                    # which we recursively concatenate to reduce them into a single list
-                    # of scopus Ids:
-                    lambda set_a, set_b: list(set_a) + list(set_b),
-
-                    # CheckedPMap keys() are a set, and each key is itself a set of type
-                    # CitationRequestScopusIds, so we have sets of sets. We unpack
-                    # each set of keys into its elements using the asterisk operator,
-                    # to produce a single list of sets:
-                    list(self.keys()),
-                    []
-                )
-            )
+class CitationResultsMixin:
+    @property
+    def requested_scopus_ids(self) -> ScopusIds:
+        return ScopusIds.union(
+            *[result.requested_scopus_ids for result in self]
         )
+
+class CitationSuccessResults(CheckedPVector, CitationResultsMixin):
+    __type__ = CitationRequestSuccess
+
+    @property
+    def single_records(self) -> list[CitationSingleRecord]:
+        return reduce(
+            lambda list1, list2: list1 + list2,
+            # Each call to single_records will return a list, so we need to
+            # reduce the following list of lists into a single list:
+            [result.record.single_records for result in self],
+            []
+        )
+        
+    @property
+    def single_record_scopus_ids(self) -> ScopusIds:
+        return ScopusIds(
+            [record.scopus_id for record in self.single_records]
+        )
+        
+    returned_scopus_ids = single_record_scopus_ids
+
+    @property
+    def probably_defunct_scopus_ids(self) -> ScopusIds:
+        '''If there are some defunct Scopus IDs in the set of those requested,
+        they will not appear in the response. We capture those here, so we can
+        identify them, maybe test them to ensure the Scopus API returns a 404.
+        '''
+        return ScopusIds(
+            self.requested_scopus_ids - self.returned_scopus_ids
+        )
+
+class CitationDefunctResults(CheckedPVector, CitationResultsMixin):
+    __type__ = CitationRequestResponseDefunct
+
+class CitationErrorResults(CheckedPVector, CitationResultsMixin):
+    __type__ = CitationRequestFailure
 
 # Final data structure of multiple results, e.g. concurrent requests for 1000 abstracts:
 class AbstractAssortedResults(PRecord):
-    success = pfield(type=AbstractSuccessResponses)
-    defunct = pfield(type=AbstractErrorResults)
+    success = pfield(type=AbstractSuccessResults)
+    defunct = pfield(type=AbstractDefunctResults)
     error = pfield(type=AbstractErrorResults)
 
-    def scopus_ids(self) -> ScopusIds:
-        return iterable_to_scopus_ids(
-            # CheckedPMap keys() are a set, and each set contains scopus Ids. We unpack
-            # each set into a list of its elements using the asterisk operator, then combine
-            # those scopus ID elements into a single list:
-            [*self.success.keys(), *self.defunct.keys(), *self.error.keys()]
+    @property
+    def requested_scopus_ids(self) -> ScopusIds:
+        return ScopusIds.union(
+            self.success.requested_scopus_ids, self.defunct.requested_scopus_ids, self.error.requested_scopus_ids
         )
-
-        # Another way to accomplish what we did above:
-        #return ScopusIds(
-        #    list(self.success.keys()) + list(self.defunct.keys()) + list(self.error.keys())
-        #)
-
 
 # Final data structure of multiple results, e.g. concurrent requests for 1000 citations:
 class CitationAssortedResults(PRecord):
-    success = pfield(type=CitationSuccessResponses)
-    defunct = pfield(type=CitationErrorResults)
+    success = pfield(type=CitationSuccessResults)
+    defunct = pfield(type=CitationDefunctResults)
     error = pfield(type=CitationErrorResults)
 
-    success_subrecords = pfield(type=CitationSuccessSubrecords)
-    defunct_scopus_ids = pfield(type=ScopusIds)
-
-    def scopus_ids(self) -> ScopusIds:
-        return iterable_to_scopus_ids(
-            list(
-                reduce(
-                    # Calling list() on a set returns a list of the elements in the set,
-                    # which we recursively concatenate to reduce them into a single list
-                    # of scopus Ids:
-                    lambda set_a, set_b: list(set_a) + list(set_b),
-
-                    # CheckedPMap keys() are a set, and each key is itself a set of type
-                    # CitationRequestScopusIds, so we have sets of sets. We unpack
-                    # each set of keys into its elements using the asterisk operator,
-                    # to produce a single list of sets:
-                    [*self.success.keys(), *self.defunct.keys(), *self.error.keys()],
-                    []
-                )
-            )
-        )
-
-class ScopusIdRequestResultAssorter:
-    @staticmethod
-    def classify(accumulator: MutableMapping, request_result: AbstractRequestResult | CitationRequestResult) -> MutableMapping:
-        # Note that ScopusIdRequestResult is a type union, such that the scopus ID(s)
-        # associated with a request could be either a single scopus ID or a set of
-        # scopus IDs, thus "enigma":
-        scopus_id_enigma, result = request_result.kv()
-        if is_successful(result):
-            response = result.unwrap()
-            if response.status_code == 200:
-                accumulator['success'][scopus_id_enigma] = SuccessResponse(headers=response.headers, body=response.json())
-            elif response.status_code == 404:
-                accumulator['defunct'][scopus_id_enigma] = ErrorResult(exception=None, response=response)
-            else:
-                accumulator['error'][scopus_id_enigma] = ErrorResult(exception=None, response=response)
-        else:
-            accumulator['error'][scopus_id_enigma] = ErrorResult(exception=result.failure(), response=None)
-        return accumulator
-
-    @staticmethod
-    def assort(results: Iterator[AbstractRequestResult | CitationRequestResult]) -> MutableMapping:
-        #assorted = reduce(
-        return reduce(
-            ScopusIdRequestResultAssorter.classify,
-            results,
-            {'success': {}, 'defunct': {}, 'error': {}}
+    # Doubt that we'll need this property, but we'll keep it anyway:
+    @property
+    def requested_scopus_ids(self) -> ScopusIds:
+        return ScopusIds.union(
+            self.success.requested_scopus_ids, self.defunct.requested_scopus_ids, self.error.requested_scopus_ids
         )
 
 class AbstractRequestResultAssorter:
     @staticmethod
+    def classify(accumulator: MutableMapping, result: AbstractRequestResult) -> MutableMapping:
+        match result:
+            case Success(AbstractRequestSuccess() as success_result):
+                accumulator['success'].append(success_result)
+            case Failure(AbstractRequestResponseDefunct() as defunct_result):
+                accumulator['defunct'].append(defunct_result)
+            case Failure(AbstractRequestFailure() as error_result):
+                accumulator['error'].append(error_result)
+        return accumulator
+
+    @staticmethod
     def assort(results: Iterator[AbstractRequestResult]) -> AbstractAssortedResults:
-        assorted = ScopusIdRequestResultAssorter.assort(results)
+        assorted = reduce(
+            AbstractRequestResultAssorter.classify,
+            results,
+            {'success': [], 'defunct': [], 'error': []}
+        )
         return AbstractAssortedResults(
-            success=AbstractSuccessResponses(assorted['success']),
-            defunct=AbstractErrorResults(assorted['defunct']),
+            success=AbstractSuccessResults(assorted['success']),
+            defunct=AbstractDefunctResults(assorted['defunct']),
             error=AbstractErrorResults(assorted['error']),
         )
 
-class ResponseParser:
-    @staticmethod
-    def body(response:httpx.Response) -> ResponseBody:
-        return response.json()
-
-    @Pipe
-    def responses_to_bodies(responses: Iterator[httpx.Response]) -> Iterator[ResponseBody]:
-        for response in responses:
-            yield ResponseParser.body(response)
-
-    @Pipe
-    def responses_to_headers_bodies(responses: Iterator[httpx.Response]) -> Iterator[tuple[httpx.Headers, ResponseBody]]:
-        for response in responses:
-            yield (response.headers, response.json())
-
-class ResponseHeadersParser:
-    def ratelimit(headers:httpx.Headers) -> int:
-        return int(headers.get('x-ratelimit-limit'))
-
-    def ratelimit_remaining(headers:httpx.Headers) -> int:
-        return int(headers.get('x-ratelimit-remaining'))
-
-    def ratelimit_reset(headers:httpx.Headers) -> datetime:
-        return datetime.fromtimestamp(int(headers.get('x-ratelimit-reset')))
-
-    @staticmethod
-    def last_modified(headers:httpx.Headers) -> datetime:
-        return dateutil.parser.parse(headers.get('last-modified'))
-
-class AbstractResponseBodyParser():
-    @staticmethod
-    def eid(body: AbstractResponseBody) -> str:
-        # There should always be exactly one of these:
-        return jp.parse("$..coredata.eid").find(body)[0].value
-
-    @staticmethod
-    def scopus_id(body: AbstractResponseBody) -> str:
-        return re.search(r'-(\d+)$', AbstractResponseBodyParser.eid(body)).group(1)
-
-    @staticmethod
-    def date_created(body: AbstractResponseBody) -> date:
-        year, month, day = [
-            jp.parse(f"$..item-info.history.date-created['@{date_part}']").find(body)[0].value
-            for date_part in ['year','month','day']
-        ]
-        return date.fromisoformat(f'{year}-{month}-{day}')
-
-    @staticmethod
-    def refcount(body: AbstractResponseBody) -> int:
-        refcount_expr = jp.parse("$..['@refcount']")
-        matches = refcount_expr.find(body)
-        if matches:
-            return int(matches[0].value)
-        else:
-            return 0
-
-    @staticmethod
-    def reference_scopus_ids(body: AbstractResponseBody) -> list:
-        return [
-            itemid['$'] for itemid in filter(
-                lambda itemid: itemid['@idtype'] == 'SGR',
-                flatten_mixed_match_values(
-                    jp.parse("$..reference[*].ref-info.refd-itemidlist.itemid").find(body)
-                )
-            )
-        ]
-
-    @Pipe
-    def bodies_to_reference_scopus_ids(bodies: Iterator[AbstractResponseBody]) -> Iterator[str]:
-        for body in bodies:
-            for scopus_id in AbstractResponseBodyParser.reference_scopus_ids(body):
-                yield scopus_id
-
-    @Pipe
-    def responses_to_reference_scopus_ids(responses: Iterator[httpx.Response]) -> Iterator[str]:
-        for scopus_id in responses | ResponseParser.responses_to_bodies | AbstractResponseBodyParser.bodies_to_reference_scopus_ids:
-            yield scopus_id
-
-
-#    # Not sure we'll need this, but keeping it here and commented out for now.
-#    def issn(body: ResponseBody) -> str:
-#        if 'issn' not in body['abstracts-retrieval-response']['item']['bibrecord']['head']['source']:
-#            print('scopus id:', AbstractResponseBodyParser.scopus_id(body))
-#            print(body['abstracts-retrieval-response']['item']['bibrecord']['head']['source'])
-#            # TODO: Fix the line below!
-#            return None
-#        return body['abstracts-retrieval-response']['item']['bibrecord']['head']['source']['issn']['$']
-
-def single_citation(*, identifiers, cite_info, column_heading):
-    return {
-        'abstract-citations-response': {
-            'h-index': '1',
-            'identifier-legend': {
-                'identifier': [identifiers],
-            },
-            'citeInfoMatrix': {
-                'citeInfoMatrixXML': {
-                    'citationMatrix': {
-                        'citeInfo': [cite_info],
-                    },
-                },
-            },
-            'citeColumnTotalXML': {
-                'citeCountHeader': {
-                    'prevColumnHeading': 'previous',
-                    'columnHeading': column_heading,
-                    'laterColumnHeading': 'later',
-                    'prevColumnTotal': cite_info['pcc'],
-                    'columnTotal': cite_info['cc'],
-                    'laterColumnTotal': cite_info['lcc'],
-                    'rangeColumnTotal': cite_info['rangeCount'],
-                    'grandTotal': cite_info['rowTotal'],
-                },
-            },
-        },
-    }
-
-class CitationResponseBodyParser():
-    @staticmethod
-    def identifier_subrecords(body: CitationResponseBody) -> Iterator:
-        return flatten_mixed_match_values(
-            jp.parse('$..identifier-legend.identifier').find(body)
-        )
-
-    @staticmethod
-    def cite_info_subrecords(body: CitationResponseBody) -> Iterator:
-        return flatten_mixed_match_values(
-            jp.parse('$..citeInfoMatrix.citeInfoMatrixXML.citationMatrix.citeInfo').find(body)
-        )
-
-    @staticmethod
-    def column_heading(body: CitationResponseBody) -> Iterator: # TODO: Find a better type for this!
-        return jp.parse('$..citeColumnTotalXML.citeCountHeader.columnHeading').find(body)[0].value
-
-    @staticmethod
-    def subrecords(body: CitationResponseBody) -> Iterator:
-        column_heading = CitationResponseBodyParser.column_heading(body)
-        return [
-            single_citation(
-                identifiers=identifiers,
-                cite_info=cite_info,
-                column_heading=column_heading,
-            )
-            for identifiers, cite_info in list(zip(
-                CitationResponseBodyParser.identifier_subrecords(body),
-                CitationResponseBodyParser.cite_info_subrecords(body)
-            ))
-        ]
-
-class CitationSubrecordBodyParser():
-    @staticmethod
-    def scopus_id(body: CitationSubrecordBody) -> ScopusId:
-        # There should be only one identifier dict in a subrecord:
-        return jp.parse('$..identifier-legend.identifier[0].scopus_id').find(body)[0].value
-
-    @staticmethod
-    def sort_year(body: CitationSubrecordBody) -> datetime:
-        return datetime.strptime(    
-            jp.parse('$..citeInfoMatrix.citeInfoMatrixXML.citationMatrix.citeInfo[0].sort-year').find(body)[0].value, '%Y'
-        )
-
-def parse_citation_success_responses(responses:Sequence[SuccessResponse]) -> CitationSuccessSubrecords:
-    return CitationSuccessSubrecords({
-        ScopusId(CitationSubrecordBodyParser.scopus_id(subrecord)): subrecord
-        for subrecord in list(reduce(
-            lambda list1, list2: list1 + list2,
-            # Each call to subrecords will return a list, so we need to reduce the following
-            # list of lists into a single list:
-            [CitationResponseBodyParser.subrecords(response.body) for response in responses],
-            []
-        ))
-    })
-
 class CitationRequestResultAssorter:
     @staticmethod
+    def classify(accumulator: MutableMapping, result: CitationRequestResult) -> MutableMapping:
+        match result:
+            case Success(CitationRequestSuccess() as success_result):
+                accumulator['success'].append(success_result)
+            case Failure(CitationRequestResponseDefunct() as defunct_result):
+                accumulator['defunct'].append(defunct_result)
+            case Failure(CitationRequestFailure() as error_result):
+                accumulator['error'].append(error_result)
+        return accumulator
+
+    @staticmethod
     def assort(results: Iterator[CitationRequestResult]) -> CitationAssortedResults:
-        assorted = ScopusIdRequestResultAssorter.assort(results)
-
-        # Because we may request multiple citations at a time, we need to do some
-        # extra work to parse out individual subrecords and defunct scopus Ids:
-        
-        success_subrecords = parse_citation_success_responses(assorted['success'].values())
-
-        success = CitationSuccessResponses(assorted['success'])
-        defunct = CitationErrorResults(assorted['defunct'])
-
-        defunct_scopus_ids = ScopusIds(
-            list(success.scopus_ids() - success_subrecords.scopus_ids()) + list(defunct.scopus_ids())
+        assorted = reduce(
+            CitationRequestResultAssorter.classify,
+            results,
+            {'success': [], 'defunct': [], 'error': []}
         )
-
         return CitationAssortedResults(
-            success=success,
-            defunct=defunct,
+            success=CitationSuccessResults(assorted['success']),
+            defunct=CitationDefunctResults(assorted['defunct']),
             error=CitationErrorResults(assorted['error']),
-            success_subrecords=success_subrecords,
-            defunct_scopus_ids=defunct_scopus_ids,
         )
 
 @frozen(kw_only=True)
@@ -626,8 +655,8 @@ class Client:
         retyrable = default_retryable,
         next_wait_interval = default_next_wait_interval,
         max_attempts = default_max_attempts,
-        **kwargs
-    ): # -> TODO: Type?
+        **kwargs,
+    ) -> RequestResult:
         return manage_request_attempts(
             httpx_client = self.httpx_client,
             prepared_request = prepared_request,
@@ -637,12 +666,12 @@ class Client:
             attempts_id = uuid.uuid4(),
         )
 
-    def get(self, resource_path, *args, params=m(), **kwargs):
+    def get(self, resource_path, *args, params=m(), **kwargs) -> RequestResult:
         prepared_request = self.httpx_client.build_request(
             'GET',
             resource_path,
             params=thaw(params),
-            timeout=self.timeout # TODO: Change to default_timeout
+            timeout=self.timeout,
         )
         return self.request(*args, prepared_request=prepared_request, **kwargs)
 
@@ -653,40 +682,114 @@ class Client:
         params=m(view='FULL'),
         **kwargs
     ) -> AbstractRequestResult:
-        # Return a tuple with the scopus ID and the result of the request, so we can associate the two later:
-        return AbstractRequestResult(
-            scopus_id=scopus_id,
-            result=self.get(
-                f'abstract/scopus_id/{scopus_id}',
-                *args,
-                params=params,
-                timeout=self.timeout, # TODO: Change to default_timeout
-                **kwargs
-            )
-        )
+        match self.get(
+            f'abstract/scopus_id/{scopus_id}',
+            *args,
+            params=params,
+            timeout=self.timeout,
+            **kwargs,
+        ):
+            case Success(response):
+                match response.status_code:
+                    case 200:
+                        match AbstractRecord.factory(response.json()):
+                            case Success(record):
+                                return Success(
+                                    AbstractRequestSuccess(
+                                        requested_scopus_id=scopus_id,
+                                        response=response,
+                                        record=record,
+                                    )
+                                )
+                            case Failure(exception):
+                                return Failure(
+                                    AbstractRequestResponseValidationError(
+                                        requested_scopus_id=scopus_id,
+                                        response=response,
+                                        validation_error=exception,
+                                    )
+                                )
+                    case 404:
+                        return Failure(
+                            AbstractRequestResponseDefunct(
+                                requested_scopus_id=scopus_id,
+                                response=response,
+                            )
+                        )
+                    case _:
+                        return Failure(
+                            AbstractRequestResponseFailure(
+                                requested_scopus_id=scopus_id,
+                                response=response,
+                            )
+                        )
+            case Failure(exception):
+                return Failure(
+                    AbstractRequestNonresponseFailure(
+                        requested_scopus_id=scopus_id,
+                        exception=exception,
+                    )
+                )
 
     def get_citations_by_scopus_ids(
         self,
-        scopus_ids:CitationRequestScopusIds,
+        scopus_ids: CitationRequestScopusIds,
         *args,
-        params:RequestParms = m(citation='exclude-self'),
+        params: RequestParams = m(citation='exclude-self'),
         **kwargs,
     ) -> CitationRequestResult:
-        # Return a tuple with the scopus IDs and the result of the request, so we can associate the two later:
-        return CitationRequestResult(
-            scopus_ids=scopus_ids,
-            result=self.get(
-                f'abstract/citations',
-                *args,
-                params=params.set('scopus_id', scopus_ids.query_param_string()),
-                timeout=self.timeout, # TODO: Change to default_timeout
-                **kwargs
-            )
-        )
+        match self.get(
+            f'abstract/citations',
+            *args,
+            params=params.set('scopus_id', scopus_ids.query_param_string()),
+            timeout=self.timeout,
+            **kwargs,
+        ):
+            case Success(response):
+                match response.status_code:
+                    case 200:
+                        match CitationMaybeMultiRecord.factory(response.json()):
+                            case Success(record):
+                                return Success(
+                                    CitationRequestSuccess(
+                                        requested_scopus_ids=scopus_ids,
+                                        response=response,
+                                        record=record,
+                                    )
+                                )
+                            case Failure(exception):
+                                return Failure(
+                                    CitationRequestResponseValidationError(
+                                        requested_scopus_ids=scopus_ids,
+                                        response=response,
+                                        validation_error=exception,
+                                    )
+                                )
+                    case 404:
+                        return Failure(
+                            CitationRequestResponseDefunct(
+                                requested_scopus_ids=scopus_ids,
+                                response=response,
+                            )
+                        )
+                    case _:
+                        return Failure(
+                            CitationRequestResponseFailure(
+                                requested_scopus_ids=scopus_ids,
+                                response=response,
+                            )
+                        )
+            case Failure(exception):
+                return Failure(
+                    CitationRequestNonresponseFailure(
+                        requested_scopus_ids=scopus_ids,
+                        exception=exception,
+                    )
+                )
 
     def get_many_abstracts_by_scopus_id(
         self,
-        scopus_ids: Iteratable[int|str|ScopusId],
+        scopus_ids: ScopusIds,
         params: RequestParams = m(view='FULL'),
     ) -> Iterator[AbstractRequestResult]:
         partial_request = partial(
@@ -698,24 +801,60 @@ class Client:
 
         for result in common.request_many_by_identifier(
             request_by_identifier_function = request_by_scopus_id,
-            identifiers = iterable_to_scopus_ids(scopus_ids),
+            identifiers = scopus_ids,
         ):
             yield result
 
+    def get_assorted_abstracts_by_scopus_id(
+        self,
+        scopus_ids: ScopusIds,
+        params: RequestParams = m(view='FULL'),
+        batch_size: int = 1000,
+        assorter = AbstractRequestResultAssorter,
+    ) -> Iterator[AbstractAssortedResults]:
+        for results in batched(
+            self.get_many_abstracts_by_scopus_id(
+                scopus_ids=scopus_ids,
+                params=params,
+            ),
+            batch_size,
+        ):
+            yield assorter.assort(results)
+
     def get_many_citations_by_scopus_ids(
         self,
-        scopus_ids: Iterable[int|str|ScopusId],
+        scopus_ids: ScopusIds,
         params: RequestParams = m(citation='exclude-self'),
     ) -> Iterator[CitationRequestResult]:
         partial_request = partial(
             self.get_citations_by_scopus_ids,
             params=params,
         )
-        def request_by_scopus_ids(scopus_ids_set: CitationRequestScopusIds):
+        def request_by_scopus_ids_set(scopus_ids_set: CitationRequestScopusIds):
             return partial_request(scopus_ids_set)
 
+        # invalid_scopus_ids should be empty, because we require scopus_ids to be of type ScopusIds:
+        citation_request_scopus_ids_sets, invalid_scopus_ids = CitationRequestScopusIds.factory(scopus_ids)
+
         for result in common.request_many_by_identifier(
-            request_by_identifier_function = request_by_scopus_ids,
-            identifiers = scopus_ids_to_citation_request_subsets(scopus_ids),
+            request_by_identifier_function = request_by_scopus_ids_set,
+            identifiers = citation_request_scopus_ids_sets,
         ):
             yield result
+
+    def get_assorted_citations_by_scopus_ids(
+        self,
+        scopus_ids: ScopusIds,
+        params: RequestParams = m(citation='exclude-self'),
+        batch_size: int = 40, # We request citations 25 at a time, so we divide 1000 by 25
+        assorter = CitationRequestResultAssorter,
+    ) -> Iterator[CitationAssortedResults]:
+        for results in batched(
+            self.get_many_citations_by_scopus_ids(
+                scopus_ids=scopus_ids,
+                params=params,
+            ),
+            batch_size,
+        ):
+            yield assorter.assort(results)
+

@@ -1,8 +1,8 @@
 import pytest
 
-from experts.api.scopus import Client
+from experts.api import scopus
 
 @pytest.fixture(scope="module")
-def session():
-    with Client() as session:
-        yield session
+def client():
+    with scopus.Client() as client:
+        yield client
