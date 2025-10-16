@@ -13,8 +13,6 @@ import uuid
 import attrs
 from attrs import Factory, field, frozen
 
-from pipe import Pipe
-
 from pyrsistent import thaw, m, pmap, v, pvector
 from pyrsistent.typing import PMap, PVector
 
@@ -172,18 +170,17 @@ def retryable(
     retryable_status_codes:PVector[int],
     retryable_errors:tuple[Type[Exception]],
 ) -> bool:
-    if is_successful(result):
-        response = result.unwrap()
-        if (response.status_code in retryable_status_codes):
-            return True
-        else:
-            return False
-    else:
-       exc = result.failure()
-       if isinstance(exc, retryable_errors):
-           return True
-       else:
-           return False
+    match result:
+        case Success(response):
+            if (response.status_code in retryable_status_codes):
+                return True
+            else:
+                return False
+        case Failure(exception):
+           if isinstance(exception, retryable_errors):
+               return True
+           else:
+               return False
 
 def default_retryable():
        return partial(
