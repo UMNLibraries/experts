@@ -5,24 +5,23 @@ import json
 import sys
 
 from pyrsistent import m
-from returns.pipeline import is_successful
+from returns.result import Success, Failure
 
+from experts.api import scopus
 from experts.api.scopus import \
     Client, \
-    ScopusIds, \
-    CitationRequestScopusIds, \
-    citation_request_scopus_ids, \
-    ResponseParser as r_parser, \
-    AbstractResponseBodyParser as ar_parser
+    CitationMaybeMultiRecord
     
 # Multiple Scopus IDs must be comma-separated:
-#scopus_ids = sys.argv[1]
+scopus_ids_query_param = sys.argv[1]
+
 #scopus_ids = [
 #    #'84876222028',
 #    #'33644930319',
 #    #'85199124578',
 #
 #    '85092720354',
+#
 #    '85095828686',
 #    '85095839902',
 #    '85096116393',
@@ -52,25 +51,15 @@ from experts.api.scopus import \
 #]
 
 # Defunct socpus IDs:
-scopus_ids = [
-    '0004149691',
-    '0142190895',
-    '85159914383',
-]
+#scopus_ids = [
+#    '0004149691',
+#    '0142190895',
+#    '85159914383',
+#]
 
-with Client() as session:
-    #params = m(scopus_id=scopus_ids, citation='exclude-self') 
-    #result = session.get(f'abstract/citations', params=params)
-
-    request_scopus_ids = citation_request_scopus_ids(scopus_ids)
-    print(f'{request_scopus_ids=}')
-    response_scopus_ids, result = session.get_citations_by_scopus_ids(request_scopus_ids)
-    #assert response_scopus_ids == list(request_scopus_ids.scopus_ids)
-    print(f'{response_scopus_ids=}')
-    
-    if not is_successful(result):
-        raise result.failure()
-    response = result.unwrap()
-    #print(f'{response.headers=}')
-    response_json = response.json()
-    print(json.dumps(response_json, indent=2))
+with scopus.Client() as client:
+    match client.get(f'abstract/citations', params=m(citation='exclude-self', scopus_id=scopus_ids_query_param)):
+        case Success(response):
+            print(json.dumps(response.json(), indent=2))
+        case Failure(exception):
+            raise exception

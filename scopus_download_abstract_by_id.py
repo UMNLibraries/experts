@@ -5,16 +5,17 @@ import json
 import sys
 
 from pyrsistent import m
-from returns.pipeline import is_successful
+from returns.result import Success, Failure
 
+from experts.api import scopus
 from experts.api.scopus import \
-    Client, \
-    ResponseParser as r_parser, \
-    AbstractResponseBodyParser as ar_parser
+    ScopusId, \
+    AbstractRequestSuccess, \
+    AbstractRequestFailure 
     
-request_scopus_id = sys.argv[1]
+scopus_id = sys.argv[1]
 
-with Client() as session:
+with scopus.Client() as client:
     # Abstract Retrieval API
     # content='core' excludes dummy records (404s), but not when retrieving
     # abstracts by scopus ID, apparently.
@@ -22,14 +23,12 @@ with Client() as session:
 
     #params = m(view='FULL')
     #params = m(content='core', view='REF')
-    #result = session.get(f'abstract/scopus_id/{scopus_id}', params=params)
+    #result = client.get(f'abstract/scopus_id/{scopus_id}', params=params)
 
-    response_scopus_id, result = session.get_abstract_by_scopus_id(request_scopus_id)
-    assert response_scopus_id == request_scopus_id
-
-    if not is_successful(result):
-        raise result.failure()
-    response = result.unwrap()
-    #print(f'{response.headers=}')
-    response_json = response.json()
-    print(json.dumps(response_json, indent=2))
+    match client.get_abstract_by_scopus_id(ScopusId(scopus_id)):
+        case Success(AbstractRequestSuccess() as result):
+            print(json.dumps(result.response.json(), indent=2))
+        case Failure(AbstractRequestFailure() as should_not_happen):
+            raise Exception(f'Request for Scopus ID {scopus_id} failed: {should_not_happen}')
+        case _:
+            raise Exception(f'WTF? The above two cases should be the only possible cases.')
