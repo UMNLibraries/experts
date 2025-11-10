@@ -8,11 +8,12 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.12"
 addict = "^2.4.0"
-attrs = "^23.1.0"
+attrs = "^25.3.0"
 oracledb = "^1.3.2"
 dotenv_switch = {url = "https://github.com/UMNLibraries/dotenv_switch/raw/master/dist/dotenv_switch-0.1.2.tar.gz"}
 immutable = {url = "https://github.com/UMNLibraries/immutable-python/raw/main/dist/immutable-0.1.0.tar.gz"}
-pycific = {url = "https://github.com/UMNLibraries/pycific/raw/main/dist/pycific-0.3.0.tar.gz"}
+pycific = {url = "https://github.com/UMNLibraries/pycific/raw/main/dist/pycific-0.4.0.tar.gz"}
+experts_dw = {url = "https://github.com/UMNLibraries/experts_dw/raw/main/dist/experts_dw-10.6.1.tar.gz"}
 requests = "^2.20.0"
 tenacity = "^8.2.0"
 returns = ">=0.26.0,<0.27.0"
