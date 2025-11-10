@@ -7,16 +7,13 @@ from experts_dw import db, scopus_json
 from experts_dw.scopus_json_collection_meta import \
     get_collection_meta_by_local_name
 
+from experts.api import scopus
 from experts.api.scopus import \
-    Client as scopus_client, \
-    ScopusIds, \
-    CitationRequestResultAssorter as c_assorter, \
-    CitationResponseBodyParser as crb_parser, \
-    CitationSubrecordBodyParser as csb_parser
+    ScopusIds
 
 scopus_ids_sql = 'SELECT scopus_id FROM scopus_citation_to_download'
 
-with db.cx_oracle_connection() as db_session, scopus_client() as scopus_session:
+with db.cx_oracle_connection() as db_session, scopus.Client() as scopus_client:
     select_cursor = db_session.cursor()
 
     meta = get_collection_meta_by_local_name(
@@ -24,37 +21,38 @@ with db.cx_oracle_connection() as db_session, scopus_client() as scopus_session:
         local_name='citation',
     )
     select_cursor.execute(scopus_ids_sql)
+        
+    # cx_Oracle columns definition:
     columns = [col[0] for col in select_cursor.description]
+    # oracledb columns definition:
+    #columns = [col.name for col in select_cursor.description]
     select_cursor.rowfactory = lambda *args: dict(zip(columns, args))
+    scopus_ids, invalid_scopus_ids = ScopusIds.factory(
+        [str(row['SCOPUS_ID']) for row in select_cursor.fetchall()]
+    )
+    # TODO: Handle any invalid_scopus_ids
 
     insert_cursor = db_session.cursor()
-    while True:
-        rows = select_cursor.fetchmany(1000)
-        if not rows:
-            break
-        # Our ScopusId type requires a string, but we store them as ints in Oracle:
-        scopus_ids = [str(row['SCOPUS_ID']) for row in rows]
-        
-        # TODO: This needs work for citations!
-        assorted_citation_results = c_assorter.assort(
-            scopus_session.get_many_citations_by_scopus_ids(scopus_ids)
-        )
+
+    for assorted_results in client.get_assorted_citations_by_scopus_ids(scopus_ids):    
 
         documents_to_insert = [
             {
-                'scopus_id': csb_parser.scopus_id(subrecord),
-                'scopus_created': csb_parser.sort_year(subrecord),
-                'scopus_modified': csb_parser.sort_year(subrecord),
+                'scopus_id': record.scopus_id,
+                'scopus_created': record.sort_year,
+                'scopus_modified': record.sort_year,
                 'inserted': datetime.now(),
                 'updated': datetime.now(),
-                'json_document': json.dumps(subrecord),
+                'json_document': json.dumps(record),
             }
-            for subrecord in assorted_citation_results.success_subrecords.values()
+            for record in assorted_results.success.single_records
         ]
     
         scopus_json.insert_documents(
            insert_cursor,
-           documents=list(documents_to_insert),
+           # TODO: Do we need list() here? Isn't it already a list?
+           #documents=list(documents_to_insert),
+           documents=documents_to_insert,
            meta=meta,
            staging=True,
         )
@@ -64,7 +62,7 @@ with db.cx_oracle_connection() as db_session, scopus_client() as scopus_session:
         # by attempting to download them one-by-one.
 
         # add defunct abstract scopus ids to defunct abstract list 
-        insert_defunct_citation_scopus_ids_sql = f'''
+        insert_defunct_scopus_ids_sql = f'''
             INSERT /*+ ignore_row_on_dupkey_index(scopus_abstract_defunct(scopus_id)) */
             INTO scopus_citation_defunct
             (
@@ -75,19 +73,22 @@ with db.cx_oracle_connection() as db_session, scopus_client() as scopus_session:
               :inserted
             )
         '''
-        defunct_citation_scopus_ids = [
+        defunct_scopus_ids = [
             {
                 'scopus_id': scopus_id,
                 'inserted': datetime.now(),
             }
-            for scopus_id in list(assorted_citation_results.defunct_scopus_ids())
+            for scopus_id in assorted_results.defunct.scopus_ids
         ]
-        insert_cursor.executemany(insert_defunct_citation_scopus_ids_sql, defunct_citation_scopus_ids)
+        insert_cursor.executemany(insert_defunct_scopus_ids_sql, defunct_scopus_ids)
 
         # remove scopus ids in defunct abstract list from abstract to-download list: can do in sql
 
-        # log errors for scopus ids in error list
-        for scopus_ids, error in assorted_citation_results.error.items():
-            print(f'{list(scopus_ids)=}: {error=}')
+        # TODO: Where to log these? Log file, db, or both?
+        for result in assorted_results.error:
+            # TODO: Update the following to handle different types of errors:
+            print(f'{list(result.requested_scopus_ids)=}: {error=}')
+
+        # TODO: Handle result.probably_defunct_scopus_ids
 
         db_session.commit()
