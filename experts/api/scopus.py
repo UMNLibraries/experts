@@ -6,6 +6,7 @@ from datetime import date, datetime
 from functools import cached_property, reduce, partial
 import os
 import re
+import traceback
 
 # Previously we imported Self from typing, but we don't need it since we import annotations from __future__.
 from typing import Any, Callable, Iterable, Iterator, Mapping, MutableMapping, Sequence
@@ -332,15 +333,16 @@ class CitationRequestScopusIds(CheckedPSet):
         return ','.join(self)
 
 class RequestResponse(PRecord):
-    response = pfield(type=httpx.Response, mandatory=True)
-
-#    @property
-#    def response_text(self) -> str:
-#        return self.response.text
-#
-#    @property
-#    def response_json(self) -> dict:
-#        return self.response.json()
+    response = pfield(
+        type=httpx.Response,
+        mandatory=True,
+        serializer=lambda _format, response: {
+            'status_code': response.status_code,
+            # May be nice to include headers, but these contain secrets:
+            #'headers': dict(response.headers),
+            'body': response.json(),
+        }
+    )
 
 class RequestResponseWithRatelimit(RequestResponse):
     # If we try to use @cached_property, we get:
@@ -359,12 +361,7 @@ class RequestResponseWithRatelimit(RequestResponse):
 
 class AbstractRequestSuccess(RequestResponseWithRatelimit):
     requested_scopus_id = pfield(type=ScopusId, mandatory=True)
-    #status_code = pfield(invariant=lambda x: (x==200, 'HTTP OK'), mandatory=True)
     record = pfield(type=AbstractRecord, mandatory=True)
-
-    # These seem like overkill:
-    #record_str = RequestResponse.response_text
-    #record_json = RequestResponse.response_json
 
     @property
     def date_created(self) -> date:
@@ -374,57 +371,57 @@ class AbstractRequestSuccess(RequestResponseWithRatelimit):
     def last_modified(self) -> datetime:
         return dateutil.parser.parse(self.response.headers['last-modified'])
 
-class AbstractRequestFailure(PRecord):
+class RequestFailure(PRecord):
+    def serialize(self) -> dict:
+        return {
+            'type': type(self).__name__,
+            **super().serialize(),
+        }
+
+# A serializer for PRecord exception fields:
+exception_serializer = lambda _format, ex: {
+    'type': type(ex).__name__,
+    'message': str(ex),
+    'traceback': traceback.format_exception(ex),
+}
+
+class AbstractRequestFailure(RequestFailure):
     requested_scopus_id = pfield(type=ScopusId, mandatory=True)
 
 AbstractRequestResult = Result[AbstractRequestSuccess, AbstractRequestFailure]
 
 class AbstractRequestResponseFailure(AbstractRequestFailure, RequestResponse):
     pass
-    # These seem like overkill:
-    #error_message_str = RequestResponse.response_text
-    #error_message_json = RequestResponse.response_json
 
 class AbstractRequestResponseValidationError(AbstractRequestResponseFailure, RequestResponseWithRatelimit):
-    #status_code = pfield(invariant=lambda x: (x==200, 'HTTP OK'), mandatory=True)
-    validation_error = pfield(type=Exception, mandatory=True)
+    exception = pfield(type=Exception, mandatory=True, serializer=exception_serializer)
 
 class AbstractRequestResponseDefunct(AbstractRequestResponseFailure, RequestResponseWithRatelimit):
-    #status_code = pfield(invariant=lambda x: (x==404, 'HTTP Not Found'), mandatory=True)
     pass
 
 class AbstractRequestNonresponseFailure(AbstractRequestFailure):
-    exception = pfield(type=Exception, mandatory=True)
+    exception = pfield(type=Exception, mandatory=True, serializer=exception_serializer)
 
-class CitationRequestSuccess(RequestResponse):
+class CitationRequestSuccess(RequestResponseWithRatelimit):
     requested_scopus_ids = pfield(type=CitationRequestScopusIds, mandatory=True)
     record = pfield(type=CitationMaybeMultiRecord, mandatory=True)
 
-    # These seem like overkill:
-    #record_str = RequestResponse.response_text
-    #record_json = RequestResponse.response_json
-
-class CitationRequestFailure(PRecord):
+class CitationRequestFailure(RequestFailure):
     requested_scopus_ids = pfield(type=ScopusIds, mandatory=True)
 
 CitationRequestResult = Result[CitationRequestSuccess, CitationRequestFailure]
 
 class CitationRequestResponseFailure(CitationRequestFailure, RequestResponse):
     pass
-    # These seem like overkill:
-    #error_message_str = RequestResponse.response_text
-    #error_message_json = RequestResponse.response_json
 
-class CitationRequestResponseValidationError(CitationRequestResponseFailure):
-    #status_code = pfield(invariant=lambda x: (x==200, 'HTTP OK'), mandatory=True)
-    validation_error = pfield(type=Exception, mandatory=True)
+class CitationRequestResponseValidationError(CitationRequestResponseFailure, RequestResponseWithRatelimit):
+    exception = pfield(type=Exception, mandatory=True, serializer=exception_serializer)
 
-class CitationRequestResponseDefunct(CitationRequestResponseFailure):
-    #status_code = pfield(invariant=lambda x: (x==404, 'HTTP Not Found'), mandatory=True)
+class CitationRequestResponseDefunct(CitationRequestResponseFailure, RequestResponseWithRatelimit):
     pass
 
 class CitationRequestNonresponseFailure(CitationRequestFailure):
-    exception = pfield(type=Exception, mandatory=True)
+    exception = pfield(type=Exception, mandatory=True, serializer=exception_serializer)
 
 class AbstractResultsMixin:
     @property
@@ -585,7 +582,8 @@ class Client:
     timeout: httpx.Timeout = httpx.Timeout(10.0, connect=3.0, read=60.0)
     '''httpx client timeouts. Default: ``httpx.Timeout(10.0, connect=3.0, read=60.0)``.'''
 
-    max_attempts: int = 10
+    #max_attempts: int = 10
+    max_attempts: int = 3 # TODO: This may be way too high, depending on the wait interval!
     '''An integer maximum number of times to retry a request. Default: ``10``.'''
 
     retryable: Callable = Factory(default_retryable)
@@ -648,6 +646,18 @@ class Client:
         # TODO: Do something with the other args?
         self.httpx_client.close()
 
+    def scopus_retryable(self, result: RequestResult) -> bool:
+        match result:
+            case Success(response):
+                if ('x-els-status' in response.headers and response.headers['x-els-status'] == 'QUOTA_EXCEEDED - Quota Exceeded'):
+                    return False
+                else:
+                    # TODO: Resolves to common.default_retryable. This is confusing. Fix!
+                    return self.retryable(result)
+            case _:
+                # TODO: Resolves to common.default_retryable. This is confusing. Fix!
+                return self.retryable(result)
+
     def request(
         self,
         *args,
@@ -660,7 +670,8 @@ class Client:
         return manage_request_attempts(
             httpx_client = self.httpx_client,
             prepared_request = prepared_request,
-            retryable = self.retryable,
+            #retryable = self.retryable,
+            retryable = self.scopus_retryable,
             next_wait_interval = self.next_wait_interval,
             max_attempts = self.max_attempts,
             attempts_id = uuid.uuid4(),
@@ -706,7 +717,7 @@ class Client:
                                     AbstractRequestResponseValidationError(
                                         requested_scopus_id=scopus_id,
                                         response=response,
-                                        validation_error=exception,
+                                        exception=exception,
                                     )
                                 )
                     case 404:
@@ -762,7 +773,7 @@ class Client:
                                     CitationRequestResponseValidationError(
                                         requested_scopus_ids=scopus_ids,
                                         response=response,
-                                        validation_error=exception,
+                                        exception=exception,
                                     )
                                 )
                     case 404:
