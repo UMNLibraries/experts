@@ -10,6 +10,8 @@ import time
 from typing import Callable, Generic, Iterator, Mapping, Protocol, Type, TypeVar
 import uuid
 
+from loguru import logger
+
 import attrs
 from attrs import Factory, field, frozen
 
@@ -111,7 +113,8 @@ class TokenResponseParser(Protocol):
     def items(response:httpx.Response) -> list[ResponseBodyItem]:
         ...
 
-default_max_attempts: int = 10
+#default_max_attempts: int = 10 # TODO: This could be way too long, depending on the wait interval!
+default_max_attempts: int = 3
 
 class Client(Protocol):
     '''Common client configuration settings. Used by most functions.
@@ -190,7 +193,8 @@ def default_retryable():
         )
 
 def default_next_wait_interval(wait_interval: int):
-    return wait_interval**2
+    #return wait_interval**2 # TODO: This seems way too long!
+    return wait_interval*2
 
 # TODO: This needs work. Need to remove the context, at least.
 #class RequestFunction(Protocol):
@@ -216,44 +220,43 @@ def manage_request_attempts(
     wait_interval: int = 2,
 ) -> RequestResult:
     start_time = time.perf_counter()
-    if __debug__:
-        print({
-            'attempts_id': attempts_id,
-            'attempt_number': attempt_number,
-            'attempt_stage': 'start',
-            'time': start_time,
-            'method': prepared_request.method,
-            'url': prepared_request.url,
-            #'params': params,
-        })
- 
-    result = attempt_request(httpx_client, prepared_request)
- 
-    end_time = time.perf_counter()
-    if __debug__:
-        print({
-            'attempts_id': attempts_id,
-            'attempt_number': attempt_number,
-            'attempt_stage': 'end',
-            'time': end_time,
-            'elapsed_time': end_time - start_time,
-            'result': result,
-        })
-
-    if retryable(result) and attempt_number < max_attempts:
-        time.sleep(wait_interval)
-        return manage_request_attempts(
-            httpx_client = httpx_client,
-            prepared_request = prepared_request,
-            retryable = retryable,
-            next_wait_interval = next_wait_interval,
-            wait_interval=next_wait_interval(wait_interval),
-            attempts_id=attempts_id,
-            attempt_number=attempt_number+1,
-            max_attempts = max_attempts,
+    with logger.contextualize(
+        attempts_id = attempts_id,
+        attempt_number = attempt_number,
+    ):
+        logger.debug(
+            'attempt request log',
+            attempt_stage = 'start',
+            time = start_time,
+            method = prepared_request.method,
+            url = prepared_request.url,
         )
-    else:
-        return result       
+ 
+        result = attempt_request(httpx_client, prepared_request)
+
+        end_time = time.perf_counter()
+        logger.debug(
+            'attempt request log',
+            attempt_stage = 'end',
+            time = end_time,
+            elapsed_time = end_time - start_time,
+            result = result,
+        )
+
+        if retryable(result) and attempt_number < max_attempts:
+            time.sleep(wait_interval)
+            return manage_request_attempts(
+                httpx_client = httpx_client,
+                prepared_request = prepared_request,
+                retryable = retryable,
+                next_wait_interval = next_wait_interval,
+                wait_interval=next_wait_interval(wait_interval),
+                attempts_id=attempts_id,
+                attempt_number=attempt_number+1,
+                max_attempts = max_attempts,
+            )
+        else:
+            return result
 
 def request_many_by_identifier(
     request_by_identifier_function,
@@ -264,12 +267,15 @@ def request_many_by_identifier(
     '''
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        results = [
+        # Originally used a list comprehension with [], but that is eargerly evaluated,
+        # which causes all results to be collected before continuing. Changed it to use
+        # a generator expression with () instead, which is lazily evaluated.
+        results = (
             executor.submit(
                 request_by_identifier_function,
                 identifier
             ) for identifier in identifiers
-        ]
+        )
         for future in concurrent.futures.as_completed(results):
             yield future.result()
 
