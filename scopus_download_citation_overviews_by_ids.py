@@ -11,7 +11,7 @@ from experts.api import scopus
 from experts.api.scopus import \
     Client, \
     CitationMaybeMultiRecord
-    
+
 # Multiple Scopus IDs must be comma-separated:
 scopus_ids_query_param = sys.argv[1]
 
@@ -60,6 +60,7 @@ scopus_ids_query_param = sys.argv[1]
 with scopus.Client() as client:
     match client.get(f'abstract/citations', params=m(citation='exclude-self', scopus_id=scopus_ids_query_param)):
         case Success(response):
+            print(response.headers)
             print(json.dumps(response.json(), indent=2))
         case Failure(exception):
             raise exception

@@ -11,8 +11,8 @@ from experts.api import scopus
 from experts.api.scopus import \
     ScopusId, \
     AbstractRequestSuccess, \
-    AbstractRequestFailure 
-    
+    AbstractRequestFailure
+
 scopus_id = sys.argv[1]
 
 with scopus.Client() as client:
@@ -27,8 +27,10 @@ with scopus.Client() as client:
 
     match client.get_abstract_by_scopus_id(ScopusId(scopus_id)):
         case Success(AbstractRequestSuccess() as result):
+            print(f'{result.response.headers=}')
             print(json.dumps(result.response.json(), indent=2))
         case Failure(AbstractRequestFailure() as should_not_happen):
+            print(f'{should_not_happen.response.headers=}')
             raise Exception(f'Request for Scopus ID {scopus_id} failed: {should_not_happen}')
         case _:
             raise Exception(f'WTF? The above two cases should be the only possible cases.')
