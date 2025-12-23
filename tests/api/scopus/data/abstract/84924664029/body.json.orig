@@ -1,0 +1,4597 @@
+{
+  "abstracts-retrieval-response": {
+    "item": {
+      "ait:process-info": {
+        "ait:status": {
+          "@state": "update",
+          "@type": "core",
+          "@stage": "S300"
+        },
+        "ait:date-delivered": {
+          "@day": "18",
+          "@timestamp": "2021-11-18T10:25:39.000039-05:00",
+          "@year": "2021",
+          "@month": "11"
+        },
+        "ait:date-sort": {
+          "@day": "01",
+          "@year": "2015",
+          "@month": "02"
+        }
+      },
+      "bibrecord": {
+        "head": {
+          "author-group": [
+            {
+              "affiliation": {
+                "country": "United States",
+                "postal-code": "68198",
+                "@afid": "60029465",
+                "@country": "usa",
+                "city": "Omaha",
+                "organization": [
+                  {
+                    "$": "Department of Pharmaceutical Sciences"
+                  },
+                  {
+                    "$": "College of Pharmacy"
+                  },
+                  {
+                    "$": "University of Nebraska Medical Center"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60029465",
+                    "@dptid": "100251424"
+                  },
+                  {
+                    "@afid": "60016261"
+                  }
+                ],
+                "state": "NE",
+                "@dptid": "100251424"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Sai Praneeth R.",
+                  "preferred-name": {
+                    "ce:given-name": "Sai Praneeth R.",
+                    "ce:initials": "S.P.R.",
+                    "ce:surname": "Bathena",
+                    "ce:indexed-name": "Bathena S.P.R."
+                  },
+                  "@seq": "1",
+                  "ce:initials": "S.P.R.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Bathena",
+                  "@auid": "36150410700",
+                  "ce:indexed-name": "Bathena S.P.R."
+                },
+                {
+                  "ce:given-name": "Rhishikesh",
+                  "preferred-name": {
+                    "ce:given-name": "Rhishikesh",
+                    "ce:initials": "R.",
+                    "ce:surname": "Thakare",
+                    "ce:indexed-name": "Thakare R."
+                  },
+                  "@seq": "2",
+                  "ce:initials": "R.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Thakare",
+                  "@auid": "56429378900",
+                  "ce:indexed-name": "Thakare R."
+                },
+                {
+                  "ce:given-name": "Nagsen",
+                  "preferred-name": {
+                    "ce:given-name": "Nagsen",
+                    "ce:initials": "N.",
+                    "ce:surname": "Gautam",
+                    "ce:indexed-name": "Gautam N."
+                  },
+                  "@seq": "3",
+                  "ce:initials": "N.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Gautam",
+                  "@auid": "36109882900",
+                  "ce:indexed-name": "Gautam N."
+                },
+                {
+                  "ce:given-name": "Yazen",
+                  "preferred-name": {
+                    "ce:given-name": "Yazen",
+                    "ce:initials": "Y.",
+                    "ce:surname": "Alnouti",
+                    "ce:indexed-name": "Alnouti Y."
+                  },
+                  "@seq": "7",
+                  "ce:initials": "Y.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Alnouti",
+                  "@auid": "12646969800",
+                  "ce:indexed-name": "Alnouti Y."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "United States",
+                "postal-code": "68198",
+                "@afid": "60027837",
+                "@country": "usa",
+                "city": "Omaha",
+                "organization": [
+                  {
+                    "$": "Department of Internal Medicine"
+                  },
+                  {
+                    "$": "College of Medicine"
+                  },
+                  {
+                    "$": "University of Nebraska Medical Center"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60027837"
+                  },
+                  {
+                    "@afid": "60016261"
+                  }
+                ],
+                "state": "NE"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Sandeep",
+                  "preferred-name": {
+                    "ce:given-name": "Sandeep",
+                    "ce:initials": "S.",
+                    "ce:surname": "Mukherjee",
+                    "ce:indexed-name": "Mukherjee S."
+                  },
+                  "@seq": "4",
+                  "ce:initials": "S.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Mukherjee",
+                  "@auid": "7401816418",
+                  "ce:indexed-name": "Mukherjee S."
+                },
+                {
+                  "ce:given-name": "Marco",
+                  "preferred-name": {
+                    "ce:given-name": "Marco",
+                    "ce:initials": "M.",
+                    "ce:surname": "Olivera",
+                    "ce:indexed-name": "Olivera M."
+                  },
+                  "@seq": "5",
+                  "ce:initials": "M.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Olivera",
+                  "@auid": "7801551357",
+                  "ce:indexed-name": "Olivera M."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "country": "United States",
+                "postal-code": "68198",
+                "@afid": "60016261",
+                "@country": "usa",
+                "city": "Omaha",
+                "organization": [
+                  {
+                    "$": "Department of Biostatistics"
+                  },
+                  {
+                    "$": "College of Public Health"
+                  },
+                  {
+                    "$": "University of Nebraska Medical Center"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60016261",
+                  "@dptid": "109679026"
+                },
+                "state": "NE",
+                "@dptid": "109679026"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Jane",
+                  "preferred-name": {
+                    "ce:given-name": "Jane",
+                    "ce:initials": "J.",
+                    "ce:surname": "Meza",
+                    "ce:indexed-name": "Meza J."
+                  },
+                  "@seq": "6",
+                  "ce:initials": "J.",
+                  "@_fa": "true",
+                  "@type": "auth",
+                  "ce:surname": "Meza",
+                  "@auid": "7004563632",
+                  "ce:indexed-name": "Meza J."
+                }
+              ]
+            }
+          ],
+          "citation-title": "Urinary bile acids as biomarkers for liver diseases I. stability of the baseline profile in healthy subjects",
+          "abstracts": "\u00a9 The Author 2014. Published by Oxford University Press on behalf of the Society of Toxicology. All rights reserved.The role of bile acids (BAs) as biomarkers for liver injury has been proposed for decades. However, the large inter- and intra-individual variability of the BA profile has prevented its clinical application. To this end, we investigated the effect of covariates such as food, gender, age, BMI, and moderate alcohol consumption on the BA profile in healthy human subjects. The BA profile was characterized by the calculation of indices that describe the composition, sulfation, and amidation of total and individual BAs. Both inter- and intra-individual variabilities of BA indices were low in serum and even lower in urine compared with those of absolute concentrations of BAs. Serum BA concentrations increased with consumption of food, whereas urinary BA concentrations were mildly affected by food. Gender differences in the urinary and serum BA profile were minimal. The serum and urinary BA profiles were also not affected by age. BMI showed minimal effect on the urine and serum BA profile. Moderate alcohol consumption did not have a significant effect on the BA profile in both urine and serum. When the effect of the type of alcohol was studied, the results indicate that moderate drinking of beer does not affect BA concentrations and has minimal effect on BA indices, whereas moderate wine consumption slightly increases BA concentrations without affecting the BA indices. In summary, urinary BA indices showed lower variability and higher stability than absolute BA concentrations in serum and showed minimal changes to covariate effects suggesting their utility as biomarkers in clinic.",
+          "correspondence": {
+            "affiliation": {
+              "country": "United States",
+              "postal-code": "68198-6025",
+              "@country": "usa",
+              "city": "Omaha",
+              "organization": [
+                {
+                  "$": "Department of Pharmaceutical Sciences"
+                },
+                {
+                  "$": "College of Pharmacy"
+                },
+                {
+                  "$": "University of Nebraska Medical Center"
+                }
+              ],
+              "state": "NE"
+            },
+            "person": {
+              "ce:given-name": "Yazen",
+              "ce:initials": "Y.",
+              "ce:surname": "Alnouti",
+              "ce:indexed-name": "Alnouti Y."
+            }
+          },
+          "citation-info": {
+            "author-keywords": {
+              "author-keyword": [
+                {
+                  "$": "Bile acid profile",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "Healthy subjects",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "Serum bile acid",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "Stability",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "Urinary bile acid",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "Variability",
+                  "@xml:lang": "eng"
+                }
+              ]
+            },
+            "citation-type": {
+              "@code": "ar"
+            },
+            "citation-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            },
+            "abstract-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            }
+          },
+          "source": {
+            "website": {
+              "ce:e-address": {
+                "$": "http://toxsci.oxfordjournals.org/",
+                "@type": "email"
+              }
+            },
+            "translated-sourcetitle": {
+              "$": "Toxicological Sciences",
+              "@xml:lang": "eng"
+            },
+            "volisspag": {
+              "voliss": {
+                "@volume": "143",
+                "@issue": "2"
+              },
+              "pagerange": {
+                "@first": "296",
+                "@last": "307"
+              }
+            },
+            "@type": "j",
+            "sourcetitle": "Toxicological Sciences",
+            "publicationdate": {
+              "month": "02",
+              "year": "2015",
+              "date-text": {
+                "@xfab-added": "true",
+                "$": "1 February 2015"
+              },
+              "day": "01"
+            },
+            "codencode": "TOSCF",
+            "sourcetitle-abbrev": "Toxicol. Sci.",
+            "@country": "gbr",
+            "issn": [
+              {
+                "$": "10960929",
+                "@type": "electronic"
+              },
+              {
+                "$": "10966080",
+                "@type": "print"
+              }
+            ],
+            "publicationyear": {
+              "@first": "2015"
+            },
+            "publisher": {
+              "publishername": "Oxford University Press"
+            },
+            "@srcid": "25218"
+          },
+          "enhancement": {
+            "classificationgroup": {
+              "classifications": [
+                {
+                  "@type": "CABSCLASS",
+                  "classification": {
+                    "classification-code": "81.3.2.2",
+                    "classification-description": "CLINICAL CHEMISTRY; PHYSIOLOGY; Liver and Bile; Bile composition and formation"
+                  }
+                },
+                {
+                  "@type": "EMCLASS",
+                  "classification": {
+                    "classification-code": "48",
+                    "classification-description": "Gastroenterology"
+                  }
+                },
+                {
+                  "@type": "ASJC",
+                  "classification": "3005"
+                },
+                {
+                  "@type": "SUBJABBR",
+                  "classification": "PHAR"
+                }
+              ]
+            },
+            "chemicalgroup": {
+              "chemicals": [
+                {
+                  "@source": "esbd",
+                  "chemical": [
+                    {
+                      "cas-registry-number": "17655-31-1",
+                      "chemical-name": "amide"
+                    },
+                    {
+                      "cas-registry-number": "14808-79-8",
+                      "chemical-name": "sulfate"
+                    }
+                  ]
+                },
+                {
+                  "@source": "nlm",
+                  "chemical": [
+                    {
+                      "chemical-name": "Amides"
+                    },
+                    {
+                      "chemical-name": "Bile Acids and Salts"
+                    },
+                    {
+                      "chemical-name": "Biological Markers"
+                    },
+                    {
+                      "chemical-name": "Sulfates"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "item-info": {
+          "copyright": {
+            "$": "Copyright 2021 Elsevier B.V., All rights reserved.",
+            "@type": "Elsevier"
+          },
+          "external-source": "MEDLINE",
+          "dbcollection": [
+            {
+              "$": "CABS"
+            },
+            {
+              "$": "EMBASE"
+            },
+            {
+              "$": "EMBIO"
+            },
+            {
+              "$": "MEDL"
+            },
+            {
+              "$": "REAXYSCAR"
+            },
+            {
+              "$": "SCOPUS"
+            },
+            {
+              "$": "Scopusbase"
+            }
+          ],
+          "history": {
+            "date-created": {
+              "@day": "27",
+              "@timestamp": "BST 09:15:01",
+              "@year": "2021",
+              "@month": "09"
+            }
+          },
+          "itemidlist": {
+            "itemid": [
+              {
+                "$": "602983007",
+                "@idtype": "PUI"
+              },
+              {
+                "$": "2015715615",
+                "@idtype": "CABS"
+              },
+              {
+                "$": "633788519",
+                "@idtype": "CAR-ID"
+              },
+              {
+                "$": "2015828785",
+                "@idtype": "EMBASE"
+              },
+              {
+                "$": "2015769050",
+                "@idtype": "EMBIO"
+              },
+              {
+                "$": "25344562",
+                "@idtype": "MEDL"
+              },
+              {
+                "$": "20213851859",
+                "@idtype": "REAXYSCAR"
+              },
+              {
+                "$": "20153254742",
+                "@idtype": "SCOPUS"
+              },
+              {
+                "$": "84924664029",
+                "@idtype": "SCP"
+              },
+              {
+                "$": "84924664029",
+                "@idtype": "SGR"
+              },
+              {
+                "$": "606215511",
+                "@idtype": "PUIsecondary"
+              }
+            ],
+            "ce:doi": "10.1093/toxsci/kfu227"
+          }
+        },
+        "tail": {
+          "bibliography": {
+            "@refcount": "60",
+            "reference": [
+              {
+                "ref-fulltext": "Alnouti, Y. (2009). Bile acid sulfation: a pathway of bile acid elimination and detoxification. Toxicol. Sci. 108, 225-246.",
+                "@id": "1",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2009"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Bile acid sulfation: a pathway of bile acid elimination and detoxification"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "64349115740",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "108"
+                    },
+                    "pagerange": {
+                      "@first": "225",
+                      "@last": "246"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Alnouti",
+                        "ce:indexed-name": "Alnouti Y."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Toxicol. Sci."
+                }
+              },
+              {
+                "ref-fulltext": "Alnouti, Y., and Klaassen, C. D. (2006). Tissue distribution and ontogeny of sulfotransferase enzymes in mice. Toxicol. Sci. 93, 242-255.",
+                "@id": "2",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2006"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Tissue distribution and ontogeny of sulfotransferase enzymes in mice"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "33748750527",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "93"
+                    },
+                    "pagerange": {
+                      "@first": "242",
+                      "@last": "255"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Alnouti",
+                        "ce:indexed-name": "Alnouti Y."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Klaassen",
+                        "ce:indexed-name": "Klaassen C.D."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Toxicol. Sci."
+                }
+              },
+              {
+                "ref-fulltext": "Alnouti, Y., and Klaassen, C. D. (2008). Regulation of sulfotransferase enzymes by prototypical microsomal enzyme inducers in mice. J. Pharmacol. Exp. Ther. 324, 612-621.",
+                "@id": "3",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2008"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Regulation of sulfotransferase enzymes by prototypical microsomal enzyme inducers in mice"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "38749090899",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "324"
+                    },
+                    "pagerange": {
+                      "@first": "612",
+                      "@last": "621"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Alnouti",
+                        "ce:indexed-name": "Alnouti Y."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Klaassen",
+                        "ce:indexed-name": "Klaassen C.D."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Pharmacol. Exp. Ther."
+                }
+              },
+              {
+                "ref-fulltext": "Angelin, B., and Bj\u00f6rkhem, I. (1977). Postprandial serum bile acids in healthy man. Evidence for differences in absorptive pattern between individual bile acids. Gut 18, 606-609.",
+                "@id": "4",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1977"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Postprandial serum bile acids in healthy man. Evidence for differences in absorptive pattern between individual bile acids"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017696932",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "18"
+                    },
+                    "pagerange": {
+                      "@first": "606",
+                      "@last": "609"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Angelin",
+                        "ce:indexed-name": "Angelin B."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "I.",
+                        "@_fa": "true",
+                        "ce:surname": "Bj\u00f6rkhem",
+                        "ce:indexed-name": "Bjorkhem I."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gut"
+                }
+              },
+              {
+                "ref-fulltext": "Barbara, L., Lazzari, R., Roda, A., Aldini, R., Festi, D., Sama, C., Morselli, A.M., Collina, A., Bazzoli, F., Mazzella, G., et al. (1980). Serum bile acids in newborns and children. Pediatr. Res. 14, 1222-1225.",
+                "@id": "5",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1980"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Serum bile acids in newborns and children"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019136209",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "14"
+                    },
+                    "pagerange": {
+                      "@first": "1222",
+                      "@last": "1225"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "L.",
+                        "@_fa": "true",
+                        "ce:surname": "Barbara",
+                        "ce:indexed-name": "Barbara L."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Lazzari",
+                        "ce:indexed-name": "Lazzari R."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "Roda",
+                        "ce:indexed-name": "Roda A."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Aldini",
+                        "ce:indexed-name": "Aldini R."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "D.",
+                        "@_fa": "true",
+                        "ce:surname": "Festi",
+                        "ce:indexed-name": "Festi D."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Sama",
+                        "ce:indexed-name": "Sama C."
+                      },
+                      {
+                        "@seq": "7",
+                        "ce:initials": "A.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Morselli",
+                        "ce:indexed-name": "Morselli A.M."
+                      },
+                      {
+                        "@seq": "8",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "Collina",
+                        "ce:indexed-name": "Collina A."
+                      },
+                      {
+                        "@seq": "9",
+                        "ce:initials": "F.",
+                        "@_fa": "true",
+                        "ce:surname": "Bazzoli",
+                        "ce:indexed-name": "Bazzoli F."
+                      },
+                      {
+                        "@seq": "10",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Mazzella",
+                        "ce:indexed-name": "Mazzella G."
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Pediatr. Res."
+                }
+              },
+              {
+                "ref-fulltext": "Barnes, S., Burhol, P. G., Zander, R., Haggstrom, G., Settine, R. L., and Hirschowitz, B. I. (1979a). Enzymatic sulfation of glycochenodeoxycholic acid by tissue fractions from adult hamsters. J. Lipid Res. 20, 952-959.",
+                "@id": "6",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1979"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Enzymatic sulfation of glycochenodeoxycholic acid by tissue fractions from adult hamsters"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0018614873",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "20"
+                    },
+                    "pagerange": {
+                      "@first": "952",
+                      "@last": "959"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Barnes",
+                        "ce:indexed-name": "Barnes S."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "P.G.",
+                        "@_fa": "true",
+                        "ce:surname": "Burhol",
+                        "ce:indexed-name": "Burhol P.G."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Zander",
+                        "ce:indexed-name": "Zander R."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Haggstrom",
+                        "ce:indexed-name": "Haggstrom G."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "R.L.",
+                        "@_fa": "true",
+                        "ce:surname": "Settine",
+                        "ce:indexed-name": "Settine R.L."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "B.I.",
+                        "@_fa": "true",
+                        "ce:surname": "Hirschowitz",
+                        "ce:indexed-name": "Hirschowitz B.I."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Lipid Res."
+                }
+              },
+              {
+                "ref-fulltext": "Barnes, S., Burhol, P. G., Zander, R., and Hirschowitz, B. I. (1979b). The effect of bile duct ligation on hepatic bile acid sulfotransferase activity in the hamster. Biochem. Med. 22, 165-174.",
+                "@id": "7",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1979"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "The effect of bile duct ligation on hepatic bile acid sulfotransferase activity in the hamster"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0018600670",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "22"
+                    },
+                    "pagerange": {
+                      "@first": "165",
+                      "@last": "174"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Barnes",
+                        "ce:indexed-name": "Barnes S."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "P.G.",
+                        "@_fa": "true",
+                        "ce:surname": "Burhol",
+                        "ce:indexed-name": "Burhol P.G."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Zander",
+                        "ce:indexed-name": "Zander R."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "B.I.",
+                        "@_fa": "true",
+                        "ce:surname": "Hirschowitz",
+                        "ce:indexed-name": "Hirschowitz B.I."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Biochem. Med."
+                }
+              },
+              {
+                "ref-fulltext": "Bathena, S. P., Mukherjee, S., Olivera, M., and Alnouti, Y. (2013). The profile of bile acids and their sulfate metabolites in human urine and serum. J. Chromatogr. B. 942-943, 53-62.",
+                "@id": "8",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2013"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "The profile of bile acids and their sulfate metabolites in human urine and serum"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "84887399153",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "942-943"
+                    },
+                    "pagerange": {
+                      "@first": "53",
+                      "@last": "62"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "S.P.",
+                        "@_fa": "true",
+                        "ce:surname": "Bathena",
+                        "ce:indexed-name": "Bathena S.P."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Mukherjee",
+                        "ce:indexed-name": "Mukherjee S."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Olivera",
+                        "ce:indexed-name": "Olivera M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Alnouti",
+                        "ce:indexed-name": "Alnouti Y."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Chromatogr. B."
+                }
+              },
+              {
+                "ref-fulltext": "Bertolotti, M., Gabbi, C., Anzivino, C., Crestani, M., Mitro, N., Del Puppo, M., Godio, C., De Fabiani, E., Macchioni, D., Carulli, L., et al. (2007). Age-related changes in bile acid synthesis and hepatic nuclear receptor expression. Eur. J. Clin. Invest. 37, 501-508.",
+                "@id": "9",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2007"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Age-related changes in bile acid synthesis and hepatic nuclear receptor expression"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "34249289704",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "37"
+                    },
+                    "pagerange": {
+                      "@first": "501",
+                      "@last": "508"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Bertolotti",
+                        "ce:indexed-name": "Bertolotti M."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Gabbi",
+                        "ce:indexed-name": "Gabbi C."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Anzivino",
+                        "ce:indexed-name": "Anzivino C."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Crestani",
+                        "ce:indexed-name": "Crestani M."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "N.",
+                        "@_fa": "true",
+                        "ce:surname": "Mitro",
+                        "ce:indexed-name": "Mitro N."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Del Puppo",
+                        "ce:indexed-name": "Del Puppo M."
+                      },
+                      {
+                        "@seq": "7",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Godio",
+                        "ce:indexed-name": "Godio C."
+                      },
+                      {
+                        "@seq": "8",
+                        "ce:initials": "E.",
+                        "@_fa": "true",
+                        "ce:surname": "De Fabiani",
+                        "ce:indexed-name": "De Fabiani E."
+                      },
+                      {
+                        "@seq": "9",
+                        "ce:initials": "D.",
+                        "@_fa": "true",
+                        "ce:surname": "Macchioni",
+                        "ce:indexed-name": "Macchioni D."
+                      },
+                      {
+                        "@seq": "10",
+                        "ce:initials": "L.",
+                        "@_fa": "true",
+                        "ce:surname": "Carulli",
+                        "ce:indexed-name": "Carulli L."
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Eur. J. Clin. Invest."
+                }
+              },
+              {
+                "ref-fulltext": "Chen, G., Baron, J., and Duffel, M. W. (1995). Enzyme- and sexspecific differences in the intralobular localizations and distributions of aryl sulfotransferase IV (tyrosine-ester sulfotransferase) and alcohol (hydroxysteroid) sulfotransferase a in rat liver. Drug. Metab. Dispos. 23, 1346-1353.",
+                "@id": "10",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1995"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Enzyme- and sexspecific differences in the intralobular localizations and distributions of aryl sulfotransferase IV (tyrosine-ester sulfotransferase) and alcohol (hydroxysteroid) sulfotransferase a in rat liver"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0029583178",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "23"
+                    },
+                    "pagerange": {
+                      "@first": "1346",
+                      "@last": "1353"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Chen",
+                        "ce:indexed-name": "Chen G."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Baron",
+                        "ce:indexed-name": "Baron J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.W.",
+                        "@_fa": "true",
+                        "ce:surname": "Duffel",
+                        "ce:indexed-name": "Duffel M.W."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Drug. Metab. Dispos."
+                }
+              },
+              {
+                "ref-fulltext": "Chiang, J. Y. (2009). Bile acids: regulation of synthesis. J. Lipid Res. 50, 1955-1966.",
+                "@id": "11",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2009"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Bile acids: regulation of synthesis"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "70349430938",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "50"
+                    },
+                    "pagerange": {
+                      "@first": "1955",
+                      "@last": "1966"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Chiang",
+                        "ce:indexed-name": "Chiang J.Y."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Lipid Res."
+                }
+              },
+              {
+                "ref-fulltext": "Crouse, J. R., and Grundy, S. M. (1984). Effects of alcohol on plasma lipoproteins and cholesterol and triglyceride metabolism in man. J. Lipid Res. 25, 486-496.",
+                "@id": "12",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1984"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Effects of alcohol on plasma lipoproteins and cholesterol and triglyceride metabolism in man"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0021215560",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "25"
+                    },
+                    "pagerange": {
+                      "@first": "486",
+                      "@last": "496"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Crouse",
+                        "ce:indexed-name": "Crouse J.R."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Grundy",
+                        "ce:indexed-name": "Grundy S.M."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Lipid Res."
+                }
+              },
+              {
+                "ref-fulltext": "Duane, W. C., Levitt, D. G., Mueller, S. M., and Behrens, J. C. (1983). Regulation of bile acid synthesis in man. Presence of a diurnal rhythm. J. Clin. Invest. 72, 1930-1936.",
+                "@id": "13",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1983"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Regulation of bile acid synthesis in man. Presence of a diurnal rhythm"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0021062922",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "72"
+                    },
+                    "pagerange": {
+                      "@first": "1930",
+                      "@last": "1936"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "W.C.",
+                        "@_fa": "true",
+                        "ce:surname": "Duane",
+                        "ce:indexed-name": "Duane W.C."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "D.G.",
+                        "@_fa": "true",
+                        "ce:surname": "Levitt",
+                        "ce:indexed-name": "Levitt D.G."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Mueller",
+                        "ce:indexed-name": "Mueller S.M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "J.C.",
+                        "@_fa": "true",
+                        "ce:surname": "Behrens",
+                        "ce:indexed-name": "Behrens J.C."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Clin. Invest."
+                }
+              },
+              {
+                "ref-fulltext": "Dunn, R. T., 2nd, and Klaassen, C. D. (1998). Tissue-specific expression of rat sulfotransferase messenger RNAs. Drug. Metab. Dispos. 26, 598-604.",
+                "@id": "14",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1998"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Tissue-specific expression of rat sulfotransferase messenger RNAs"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0031738098",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "26"
+                    },
+                    "pagerange": {
+                      "@first": "598",
+                      "@last": "604"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "R.T.",
+                        "@_fa": "true",
+                        "ce:surname": "Dunn",
+                        "ce:suffix": "II",
+                        "ce:indexed-name": "Dunn R.T."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Klaassen",
+                        "ce:indexed-name": "Klaassen C.D."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Drug. Metab. Dispos."
+                }
+              },
+              {
+                "ref-fulltext": "Einarsson, K., Nilsell, K., Leijd, B., and Angelin, B. (1985). Influence of age on secretion of cholesterol and synthesis of bile acids by the liver. N. Engl. J. Med. 313, 277-282.",
+                "@id": "15",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1985"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Influence of age on secretion of cholesterol and synthesis of bile acids by the liver"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0021811872",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "313"
+                    },
+                    "pagerange": {
+                      "@first": "277",
+                      "@last": "282"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Einarsson",
+                        "ce:indexed-name": "Einarsson K."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Nilsell",
+                        "ce:indexed-name": "Nilsell K."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Leijd",
+                        "ce:indexed-name": "Leijd B."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Angelin",
+                        "ce:indexed-name": "Angelin B."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "N. Engl. J. Med."
+                }
+              },
+              {
+                "ref-fulltext": "Fischer, S., Beuers, U., Spengler, U., Zwiebel, F. M., and Koebe, H. G. (1996). Hepatic levels of bile acids in end-stage chronic cholestatic liver disease. Clin. Chim. Acta 251, 173-186.",
+                "@id": "16",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1996"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Hepatic levels of bile acids in end-stage chronic cholestatic liver disease"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0030606673",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "251"
+                    },
+                    "pagerange": {
+                      "@first": "173",
+                      "@last": "186"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Fischer",
+                        "ce:indexed-name": "Fischer S."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "U.",
+                        "@_fa": "true",
+                        "ce:surname": "Beuers",
+                        "ce:indexed-name": "Beuers U."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "U.",
+                        "@_fa": "true",
+                        "ce:surname": "Spengler",
+                        "ce:indexed-name": "Spengler U."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "F.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Zwiebel",
+                        "ce:indexed-name": "Zwiebel F.M."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "H.G.",
+                        "@_fa": "true",
+                        "ce:surname": "Koebe",
+                        "ce:indexed-name": "Koebe H.G."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Clin. Chim. Acta"
+                }
+              },
+              {
+                "ref-fulltext": "Galman, C., Angelin, B., and Rudling, M. (2005). Bile acid synthesis in humans has a rapid diurnal variation that is asynchronous with cholesterol synthesis. Gastroenterology 129, 1445-1453.",
+                "@id": "17",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2005"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Bile acid synthesis in humans has a rapid diurnal variation that is asynchronous with cholesterol synthesis"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "27744516236",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "129"
+                    },
+                    "pagerange": {
+                      "@first": "1445",
+                      "@last": "1453"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Galman",
+                        "ce:indexed-name": "Galman C."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Angelin",
+                        "ce:indexed-name": "Angelin B."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Rudling",
+                        "ce:indexed-name": "Rudling M."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gastroenterology"
+                }
+              },
+              {
+                "ref-fulltext": "Glicksman, C., Pournaras, D. J., Wright, M., Roberts, R., Mahon, D., Welbourn, R., Sherwood, R., Alaghband-Zadeh, J., and le Roux, C. W. (2010). Postprandial plasma bile acid responses in normal weight and obese subjects. Ann. Clin. Biochem. 47, 482-484.",
+                "@id": "18",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2010"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Postprandial plasma bile acid responses in normal weight and obese subjects"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "77957674664",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "47"
+                    },
+                    "pagerange": {
+                      "@first": "482",
+                      "@last": "484"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Glicksman",
+                        "ce:indexed-name": "Glicksman C."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "D.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Pournaras",
+                        "ce:indexed-name": "Pournaras D.J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Wright",
+                        "ce:indexed-name": "Wright M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Roberts",
+                        "ce:indexed-name": "Roberts R."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "D.",
+                        "@_fa": "true",
+                        "ce:surname": "Mahon",
+                        "ce:indexed-name": "Mahon D."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Welbourn",
+                        "ce:indexed-name": "Welbourn R."
+                      },
+                      {
+                        "@seq": "7",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Sherwood",
+                        "ce:indexed-name": "Sherwood R."
+                      },
+                      {
+                        "@seq": "8",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Alaghband-Zadeh",
+                        "ce:indexed-name": "Alaghband-Zadeh J."
+                      },
+                      {
+                        "@seq": "9",
+                        "ce:initials": "C.W.",
+                        "@_fa": "true",
+                        "ce:surname": "le Roux",
+                        "ce:indexed-name": "le Roux C.W."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Ann. Clin. Biochem."
+                }
+              },
+              {
+                "ref-fulltext": "Hammerman, K. J., Chen, L. J., Fernandez-Corugedo, A., and Earnest, D. L. (1978). Sex differences in hepatic sulfation of taurolithocholate in the rat. Gastroenterology 75, 1021-1025.",
+                "@id": "19",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1978"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Sex differences in hepatic sulfation of taurolithocholate in the rat"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0018068188",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "75"
+                    },
+                    "pagerange": {
+                      "@first": "1021",
+                      "@last": "1025"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "K.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Hammerman",
+                        "ce:indexed-name": "Hammerman K.J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "L.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Chen",
+                        "ce:indexed-name": "Chen L.J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "Fernandez-Corugedo",
+                        "ce:indexed-name": "Fernandez-Corugedo A."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "D.L.",
+                        "@_fa": "true",
+                        "ce:surname": "Earnest",
+                        "ce:indexed-name": "Earnest D.L."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gastroenterology"
+                }
+              },
+              {
+                "ref-fulltext": "Heuman, D. M., Pandak, W. M., Hylemon, P. B., and Vlahcevic, Z. R. (1991). Conjugates of ursodeoxycholate protect against cytotoxicity of more hydrophobic bile salts: in vitro studies in rat hepatocytes and human erythrocytes. Hepatology 14, 920-926.",
+                "@id": "20",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1991"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Conjugates of ursodeoxycholate protect against cytotoxicity of more hydrophobic bile salts: in vitro studies in rat hepatocytes and human erythrocytes"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0025790578",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "14"
+                    },
+                    "pagerange": {
+                      "@first": "920",
+                      "@last": "926"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "D.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Heuman",
+                        "ce:indexed-name": "Heuman D.M."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "W.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Pandak",
+                        "ce:indexed-name": "Pandak W.M."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "P.B.",
+                        "@_fa": "true",
+                        "ce:surname": "Hylemon",
+                        "ce:indexed-name": "Hylemon P.B."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "Z.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Vlahcevic",
+                        "ce:indexed-name": "Vlahcevic Z.R."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Hepatology"
+                }
+              },
+              {
+                "ref-fulltext": "Hofmann, A. F. (1999). The continuing importance of bile acids in liver and intestinal disease. Arch. Intern. Med. 159, 2647-2658.",
+                "@id": "21",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1999"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "The continuing importance of bile acids in liver and intestinal disease"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0033611305",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "159"
+                    },
+                    "pagerange": {
+                      "@first": "2647",
+                      "@last": "2658"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "A.F.",
+                        "@_fa": "true",
+                        "ce:surname": "Hofmann",
+                        "ce:indexed-name": "Hofmann A.F."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Arch. Intern. Med."
+                }
+              },
+              {
+                "ref-fulltext": "Hofmann, A. F., Grundy, S. M., Lachin, J. M., Lan, S. P., Baum, R. A., Hanson, R. F., Hersh, T., Hightower, N. C. Jr, Marks, J. W., Mekhjian, H., et al. (1982). Pretreatment biliary lipid composition in white patients with radiolucent gallstones in the National Cooperative Gallstone Study. Gastroenterology 83, 738-752.",
+                "@id": "22",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1982"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Pretreatment biliary lipid composition in white patients with radiolucent gallstones in the National Cooperative Gallstone Study"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019977566",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "83"
+                    },
+                    "pagerange": {
+                      "@first": "738",
+                      "@last": "752"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "A.F.",
+                        "@_fa": "true",
+                        "ce:surname": "Hofmann",
+                        "ce:indexed-name": "Hofmann A.F."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Grundy",
+                        "ce:indexed-name": "Grundy S.M."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "J.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Lachin",
+                        "ce:indexed-name": "Lachin J.M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "S.P.",
+                        "@_fa": "true",
+                        "ce:surname": "Lan",
+                        "ce:indexed-name": "Lan S.P."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "R.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Baum",
+                        "ce:indexed-name": "Baum R.A."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "R.F.",
+                        "@_fa": "true",
+                        "ce:surname": "Hanson",
+                        "ce:indexed-name": "Hanson R.F."
+                      },
+                      {
+                        "@seq": "7",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Hersh",
+                        "ce:indexed-name": "Hersh T."
+                      },
+                      {
+                        "@seq": "8",
+                        "ce:initials": "N.C.",
+                        "@_fa": "true",
+                        "ce:surname": "Hightower Jr",
+                        "ce:indexed-name": "Hightower Jr N.C."
+                      },
+                      {
+                        "@seq": "9",
+                        "ce:initials": "J.W.",
+                        "@_fa": "true",
+                        "ce:surname": "Marks",
+                        "ce:indexed-name": "Marks J.W."
+                      },
+                      {
+                        "@seq": "10",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Mekhjian",
+                        "ce:indexed-name": "Mekhjian H."
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Gastroenterology"
+                }
+              },
+              {
+                "ref-fulltext": "Huang, W. M., Seubert, D. E., Donnelly, J. G., Liu, M., and Javitt, N. B. (2007). Intrahepatic cholestasis of pregnancy: detection with urinary bile acid assays. J. Perinat. Med. 35, 486-491.",
+                "@id": "23",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2007"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Intrahepatic cholestasis of pregnancy: detection with urinary bile acid assays"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "36849082448",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "35"
+                    },
+                    "pagerange": {
+                      "@first": "486",
+                      "@last": "491"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "W.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Huang",
+                        "ce:indexed-name": "Huang W.M."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "D.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Seubert",
+                        "ce:indexed-name": "Seubert D.E."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "J.G.",
+                        "@_fa": "true",
+                        "ce:surname": "Donnelly",
+                        "ce:indexed-name": "Donnelly J.G."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Liu",
+                        "ce:indexed-name": "Liu M."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "N.B.",
+                        "@_fa": "true",
+                        "ce:surname": "Javitt",
+                        "ce:indexed-name": "Javitt N.B."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Perinat. Med."
+                }
+              },
+              {
+                "ref-fulltext": "Islam, S., Poupon, R. E., Barbare, J. C., Chretien, Y., Darnis, F., and Poupon, R. (1985). Fasting serum bile acid level in cirrhosis. A semi-quantitative index of hepatic function. J. Hepatol. 1, 609-617.",
+                "@id": "24",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1985"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Fasting serum bile acid level in cirrhosis. A semi-quantitative index of hepatic function"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0021840653",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "1"
+                    },
+                    "pagerange": {
+                      "@first": "609",
+                      "@last": "617"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Islam",
+                        "ce:indexed-name": "Islam S."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "R.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Poupon",
+                        "ce:indexed-name": "Poupon R.E."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "J.C.",
+                        "@_fa": "true",
+                        "ce:surname": "Barbare",
+                        "ce:indexed-name": "Barbare J.C."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Chretien",
+                        "ce:indexed-name": "Chretien Y."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "F.",
+                        "@_fa": "true",
+                        "ce:surname": "Darnis",
+                        "ce:indexed-name": "Darnis F."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Poupon",
+                        "ce:indexed-name": "Poupon R."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Hepatol."
+                }
+              },
+              {
+                "ref-fulltext": "Joelsson, B., Hultberg, B., Isaksson, A., Alwmark, A., Gullstrand, P., and Bengmark, S. (1984). Total fasting serum bile acids and beta-hexosaminidase in alcoholic liver disease. Clin. Chim. Acta 136, 203-209.",
+                "@id": "25",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1984"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Total fasting serum bile acids and beta-hexosaminidase in alcoholic liver disease"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0021350233",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "136"
+                    },
+                    "pagerange": {
+                      "@first": "203",
+                      "@last": "209"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Joelsson",
+                        "ce:indexed-name": "Joelsson B."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Hultberg",
+                        "ce:indexed-name": "Hultberg B."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "Isaksson",
+                        "ce:indexed-name": "Isaksson A."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "Alwmark",
+                        "ce:indexed-name": "Alwmark A."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "P.",
+                        "@_fa": "true",
+                        "ce:surname": "Gullstrand",
+                        "ce:indexed-name": "Gullstrand P."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Bengmark",
+                        "ce:indexed-name": "Bengmark S."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Clin. Chim. Acta"
+                }
+              },
+              {
+                "ref-fulltext": "Jonsson, G., Hedenborg, G., Wisen, O., and Norman, A. (1992). Serum concentrations and excretion of bile acids in cirrhosis. Scand. J. Clin. Lab. Invest. 52, 599-605.",
+                "@id": "26",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1992"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Serum concentrations and excretion of bile acids in cirrhosis"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0026485521",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "52"
+                    },
+                    "pagerange": {
+                      "@first": "599",
+                      "@last": "605"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Jonsson",
+                        "ce:indexed-name": "Jonsson G."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Hedenborg",
+                        "ce:indexed-name": "Hedenborg G."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "O.",
+                        "@_fa": "true",
+                        "ce:surname": "Wisen",
+                        "ce:indexed-name": "Wisen O."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "Norman",
+                        "ce:indexed-name": "Norman A."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Scand. J. Clin. Lab. Invest."
+                }
+              },
+              {
+                "ref-fulltext": "Kawasaki, H., Yamanishi, Y., Miyake, M., Mura, T., and Ikawa, S. (1986). Age- and sex-related profiles of serum primary and total bile acids in infants, children and adults. Tohoku. J. Exp. Med. 150, 353-357.",
+                "@id": "27",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1986"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Age- and sex-related profiles of serum primary and total bile acids in infants, children and adults"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0022879443",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "150"
+                    },
+                    "pagerange": {
+                      "@first": "353",
+                      "@last": "357"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Kawasaki",
+                        "ce:indexed-name": "Kawasaki H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Yamanishi",
+                        "ce:indexed-name": "Yamanishi Y."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Miyake",
+                        "ce:indexed-name": "Miyake M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Mura",
+                        "ce:indexed-name": "Mura T."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Ikawa",
+                        "ce:indexed-name": "Ikawa S."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Tohoku. J. Exp. Med."
+                }
+              },
+              {
+                "ref-fulltext": "Kerai, M. D., Waterfield, C. J., Kenyon, S. H., Asker, D. S., and Timbrell, J. A. (1998). Taurine: protective properties against ethanol-induced hepatic steatosis and lipid peroxidation during chronic ethanol consumption in rats. Amino Acids. 15, 53-76.",
+                "@id": "28",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1998"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Taurine: protective properties against ethanol-induced hepatic steatosis and lipid peroxidation during chronic ethanol consumption in rats"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0031709570",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "15"
+                    },
+                    "pagerange": {
+                      "@first": "53",
+                      "@last": "76"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Kerai",
+                        "ce:indexed-name": "Kerai M.D."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Waterfield",
+                        "ce:indexed-name": "Waterfield C.J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Kenyon",
+                        "ce:indexed-name": "Kenyon S.H."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "D.S.",
+                        "@_fa": "true",
+                        "ce:surname": "Asker",
+                        "ce:indexed-name": "Asker D.S."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "J.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Timbrell",
+                        "ce:indexed-name": "Timbrell J.A."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Amino Acids."
+                }
+              },
+              {
+                "ref-fulltext": "Kerai, M. D., Waterfield, C. J., Kenyon, S. H., Asker, D. S., and Timbrell, J. A. (2001). The effect of taurine depletion by betaalanine treatment on the susceptibility to ethanol-induced hepatic dysfunction in rats. Alcohol Alcohol. 36, 29-38.",
+                "@id": "29",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2001"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "The effect of taurine depletion by betaalanine treatment on the susceptibility to ethanol-induced hepatic dysfunction in rats"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0035142087",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "36"
+                    },
+                    "pagerange": {
+                      "@first": "29",
+                      "@last": "38"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Kerai",
+                        "ce:indexed-name": "Kerai M.D."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Waterfield",
+                        "ce:indexed-name": "Waterfield C.J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Kenyon",
+                        "ce:indexed-name": "Kenyon S.H."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "D.S.",
+                        "@_fa": "true",
+                        "ce:surname": "Asker",
+                        "ce:indexed-name": "Asker D.S."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "J.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Timbrell",
+                        "ce:indexed-name": "Timbrell J.A."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Alcohol Alcohol."
+                }
+              },
+              {
+                "ref-fulltext": "Lucangioli, S. E., Castano, G., Contin, M. D., and Tripodi, V. P. (2009). Lithocholic acid as a biomarker of intrahepatic cholestasis of pregnancy during ursodeoxycholic acid treatment. Ann. Clin. Biochem. 46, 44-49.",
+                "@id": "30",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2009"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Lithocholic acid as a biomarker of intrahepatic cholestasis of pregnancy during ursodeoxycholic acid treatment"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "58149520312",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "46"
+                    },
+                    "pagerange": {
+                      "@first": "44",
+                      "@last": "49"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "S.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Lucangioli",
+                        "ce:indexed-name": "Lucangioli S.E."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Castano",
+                        "ce:indexed-name": "Castano G."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Contin",
+                        "ce:indexed-name": "Contin M.D."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "V.P.",
+                        "@_fa": "true",
+                        "ce:surname": "Tripodi",
+                        "ce:indexed-name": "Tripodi V.P."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Ann. Clin. Biochem."
+                }
+              },
+              {
+                "ref-fulltext": "Maillette de Buy Wenniger, L., and Beuers, U. (2010). Bile salts and cholestasis. Dig. Liver Dis. 42, 409-418.",
+                "@id": "31",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2010"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Bile salts and cholestasis"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "77952744201",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "42"
+                    },
+                    "pagerange": {
+                      "@first": "409",
+                      "@last": "418"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "L.",
+                        "@_fa": "true",
+                        "ce:surname": "Maillette de Buy Wenniger",
+                        "ce:indexed-name": "Maillette de Buy Wenniger L."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "U.",
+                        "@_fa": "true",
+                        "ce:surname": "Beuers",
+                        "ce:indexed-name": "Beuers U."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Dig. Liver Dis."
+                }
+              },
+              {
+                "ref-fulltext": "Makino, I., Hashimoto, H., Shinozaki, K., Yoshino, K., and Nakagawa, S. (1975). Sulfated and nonsulfated bile acids in urine, serum, and bile of patients with hepatobiliary diseases. Gastroenterology 68, 545-553.",
+                "@id": "32",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1975"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Sulfated and nonsulfated bile acids in urine, serum, and bile of patients with hepatobiliary diseases"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0016481815",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "68"
+                    },
+                    "pagerange": {
+                      "@first": "545",
+                      "@last": "553"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "I.",
+                        "@_fa": "true",
+                        "ce:surname": "Makino",
+                        "ce:indexed-name": "Makino I."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Hashimoto",
+                        "ce:indexed-name": "Hashimoto H."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Shinozaki",
+                        "ce:indexed-name": "Shinozaki K."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Yoshino",
+                        "ce:indexed-name": "Yoshino K."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Nakagawa",
+                        "ce:indexed-name": "Nakagawa S."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gastroenterology"
+                }
+              },
+              {
+                "ref-fulltext": "Mannes, G. A., Stellaard, F., and Paumgartner, G. (1982). Increased serum bile acids in cirrhosis with normal transaminases. Digestion 25, 217-221.",
+                "@id": "33",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1982"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Increased serum bile acids in cirrhosis with normal transaminases"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0020363237",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "25"
+                    },
+                    "pagerange": {
+                      "@first": "217",
+                      "@last": "221"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "G.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Mannes",
+                        "ce:indexed-name": "Mannes G.A."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "F.",
+                        "@_fa": "true",
+                        "ce:surname": "Stellaard",
+                        "ce:indexed-name": "Stellaard F."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Paumgartner",
+                        "ce:indexed-name": "Paumgartner G."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Digestion"
+                }
+              },
+              {
+                "ref-fulltext": "Milstein, H. J., Bloomer, J. R., and Klatskin, G. (1976). Serum bile acids in alcoholic liver disease. Comparison with histological features of the disease. Am. J. Dig. Dis. 21, 281-285.",
+                "@id": "34",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1976"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Serum bile acids in alcoholic liver disease. Comparison with histological features of the disease"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017143229",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "21"
+                    },
+                    "pagerange": {
+                      "@first": "281",
+                      "@last": "285"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Milstein",
+                        "ce:indexed-name": "Milstein H.J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Bloomer",
+                        "ce:indexed-name": "Bloomer J.R."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Klatskin",
+                        "ce:indexed-name": "Klatskin G."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Am. J. Dig. Dis."
+                }
+              },
+              {
+                "ref-fulltext": "Monte, M. J., Marin, J. J., Antelo, A., and Vazquez-Tato, J. (2009). Bile acids: chemistry, physiology, and pathophysiology. World J. Gastroenterol. 15, 804-816.",
+                "@id": "35",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2009"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Bile acids: chemistry, physiology, and pathophysiology"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "65649129982",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "15"
+                    },
+                    "pagerange": {
+                      "@first": "804",
+                      "@last": "816"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Monte",
+                        "ce:indexed-name": "Monte M.J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Marin",
+                        "ce:indexed-name": "Marin J.J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "Antelo",
+                        "ce:indexed-name": "Antelo A."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Vazquez-Tato",
+                        "ce:indexed-name": "Vazquez-Tato J."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "World J. Gastroenterol."
+                }
+              },
+              {
+                "ref-fulltext": "Muraji, T., Harada, T., Miki, K., Moriuchi, T., Obatake, M., and Tsugawa, C. (2003). Urinary sulfated bile acid concentrations in infants with biliary atresia and breast-feeding jaundice. Pediatr. Int. 45, 281-283.",
+                "@id": "36",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2003"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Urinary sulfated bile acid concentrations in infants with biliary atresia and breast-feeding jaundice"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0042664072",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "45"
+                    },
+                    "pagerange": {
+                      "@first": "281",
+                      "@last": "283"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Muraji",
+                        "ce:indexed-name": "Muraji T."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Harada",
+                        "ce:indexed-name": "Harada T."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Miki",
+                        "ce:indexed-name": "Miki K."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Moriuchi",
+                        "ce:indexed-name": "Moriuchi T."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Obatake",
+                        "ce:indexed-name": "Obatake M."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Tsugawa",
+                        "ce:indexed-name": "Tsugawa C."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Pediatr. Int."
+                }
+              },
+              {
+                "ref-fulltext": "Nestel, P. J., Simons, L. A., and Homma, Y. (1976). Effects of ethanol on bile acid and cholesterol metabolism. Am. J. Clin. Nutr. 29, 1007-1015.",
+                "@id": "37",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1976"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Effects of ethanol on bile acid and cholesterol metabolism"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017119520",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "29"
+                    },
+                    "pagerange": {
+                      "@first": "1007",
+                      "@last": "1015"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "P.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Nestel",
+                        "ce:indexed-name": "Nestel P.J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "L.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Simons",
+                        "ce:indexed-name": "Simons L.A."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Homma",
+                        "ce:indexed-name": "Homma Y."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Am. J. Clin. Nutr."
+                }
+              },
+              {
+                "ref-fulltext": "Okolicsanyi, L., Lirussi, F., Strazzabosco, M., Jemmolo, R. M., Orlando, R., Nassuato, G., Muraca, M., and Crepaldi, G. (1986). The effect of drugs on bile flow and composition. An overview. Drugs 31, 430-448.",
+                "@id": "38",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1986"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "The effect of drugs on bile flow and composition"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0022491873",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "31"
+                    },
+                    "pagerange": {
+                      "@first": "430",
+                      "@last": "448"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "L.",
+                        "@_fa": "true",
+                        "ce:surname": "Okolicsanyi",
+                        "ce:indexed-name": "Okolicsanyi L."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "F.",
+                        "@_fa": "true",
+                        "ce:surname": "Lirussi",
+                        "ce:indexed-name": "Lirussi F."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Strazzabosco",
+                        "ce:indexed-name": "Strazzabosco M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "R.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Jemmolo",
+                        "ce:indexed-name": "Jemmolo R.M."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Orlando",
+                        "ce:indexed-name": "Orlando R."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Nassuato",
+                        "ce:indexed-name": "Nassuato G."
+                      },
+                      {
+                        "@seq": "7",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Muraca",
+                        "ce:indexed-name": "Muraca M."
+                      },
+                      {
+                        "@seq": "8",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Crepaldi",
+                        "ce:indexed-name": "Crepaldi G."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "An overview. Drugs"
+                }
+              },
+              {
+                "ref-fulltext": "Pagano, M., and Gauvreau, K. (2000). Principles of Biostatistics. Brooks/Cole, Pacific Grove, CA.",
+                "@id": "39",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2000"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0004268574",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-text": "Brooks/Cole, Pacific Grove, CA",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Pagano",
+                        "ce:indexed-name": "Pagano M."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Gauvreau",
+                        "ce:indexed-name": "Gauvreau K."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Principles of Biostatistics"
+                }
+              },
+              {
+                "ref-fulltext": "Patti, M. E., Houten, S. M., Bianco, A. C., Bernier, R., Larsen, P. R., Holst, J. J., Badman, M. K., Maratos-Flier, E., Mun, E. C., Pihlajamaki, J., et al. (2009). Serum bile acids are higher in humans with prior gastric bypass: potential contribution to improved glucose and lipid metabolism. Obesity (Silver Spring) 17, 1671-1677.",
+                "@id": "40",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2009"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Serum bile acids are higher in humans with prior gastric bypass: potential contribution to improved glucose and lipid metabolism"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "69749127975",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "17"
+                    },
+                    "pagerange": {
+                      "@first": "1671",
+                      "@last": "1677"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Patti",
+                        "ce:indexed-name": "Patti M.E."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Houten",
+                        "ce:indexed-name": "Houten S.M."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A.C.",
+                        "@_fa": "true",
+                        "ce:surname": "Bianco",
+                        "ce:indexed-name": "Bianco A.C."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Bernier",
+                        "ce:indexed-name": "Bernier R."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "P.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Larsen",
+                        "ce:indexed-name": "Larsen P.R."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "J.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Holst",
+                        "ce:indexed-name": "Holst J.J."
+                      },
+                      {
+                        "@seq": "7",
+                        "ce:initials": "M.K.",
+                        "@_fa": "true",
+                        "ce:surname": "Badman",
+                        "ce:indexed-name": "Badman M.K."
+                      },
+                      {
+                        "@seq": "8",
+                        "ce:initials": "E.",
+                        "@_fa": "true",
+                        "ce:surname": "Maratos-Flier",
+                        "ce:indexed-name": "Maratos-Flier E."
+                      },
+                      {
+                        "@seq": "9",
+                        "ce:initials": "E.C.",
+                        "@_fa": "true",
+                        "ce:surname": "Mun",
+                        "ce:indexed-name": "Mun E.C."
+                      },
+                      {
+                        "@seq": "10",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Pihlajamaki",
+                        "ce:indexed-name": "Pihlajamaki J."
+                      }
+                    ],
+                    "et-al": null
+                  },
+                  "ref-sourcetitle": "Obesity (Silver Spring)"
+                }
+              },
+              {
+                "ref-fulltext": "Pauli-Magnus, C., and Meier, P. J. (2005). Hepatocellular transporters and cholestasis. J. Clin. Gastroenterol. 39, S103-S110.",
+                "@id": "41",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2005"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Hepatocellular transporters and cholestasis"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "15444369213",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "39"
+                    },
+                    "pagerange": {
+                      "@first": "S103",
+                      "@last": "S110"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Pauli-Magnus",
+                        "ce:indexed-name": "Pauli-Magnus C."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "P.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Meier",
+                        "ce:indexed-name": "Meier P.J."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Clin. Gastroenterol."
+                }
+              },
+              {
+                "ref-fulltext": "Pennington, C. R., Ross, P. E., and Bouchier, I. A. (1977). Serum bile acids in the diagnosis of hepatobiliary disease. Gut 18, 903-908.",
+                "@id": "42",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1977"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Serum bile acids in the diagnosis of hepatobiliary disease"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017664068",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "18"
+                    },
+                    "pagerange": {
+                      "@first": "903",
+                      "@last": "908"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Pennington",
+                        "ce:indexed-name": "Pennington C.R."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "P.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Ross",
+                        "ce:indexed-name": "Ross P.E."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "I.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Bouchier",
+                        "ce:indexed-name": "Bouchier I.A."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gut"
+                }
+              },
+              {
+                "ref-fulltext": "Pikaar, N. A., Wedel, M., van der Beek, E. J., van Dokkum, W., Kempen, H. J., Kluft, C., Ockhuizen, T., and Hermus, R. J. (1987). Effects of moderate alcohol consumption on platelet aggregation, fibrinolysis, and blood lipids. Metabolism 36, 538-543.",
+                "@id": "43",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1987"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Effects of moderate alcohol consumption on platelet aggregation, fibrinolysis, and blood lipids"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0023263192",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "36"
+                    },
+                    "pagerange": {
+                      "@first": "538",
+                      "@last": "543"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "N.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Pikaar",
+                        "ce:indexed-name": "Pikaar N.A."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Wedel",
+                        "ce:indexed-name": "Wedel M."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "E.J.",
+                        "@_fa": "true",
+                        "ce:surname": "van der Beek",
+                        "ce:indexed-name": "van der Beek E.J."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "W.",
+                        "@_fa": "true",
+                        "ce:surname": "van Dokkum",
+                        "ce:indexed-name": "van Dokkum W."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "H.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Kempen",
+                        "ce:indexed-name": "Kempen H.J."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Kluft",
+                        "ce:indexed-name": "Kluft C."
+                      },
+                      {
+                        "@seq": "7",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Ockhuizen",
+                        "ce:indexed-name": "Ockhuizen T."
+                      },
+                      {
+                        "@seq": "8",
+                        "ce:initials": "R.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Hermus",
+                        "ce:indexed-name": "Hermus R.J."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Metabolism"
+                }
+              },
+              {
+                "ref-fulltext": "Poupon, R. Y., Poupon, R. E., Lebrec, D., Le Quernec, L., and Darnis, F. (1981). Mechanisms for reduced hepatic clearance and elevated plasma levels of bile acids in cirrhosis. A study in patients with an end-to-side portacaval shunt. Gastroenterology 80, 1438-1444.",
+                "@id": "44",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1981"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Mechanisms for reduced hepatic clearance and elevated plasma levels of bile acids in cirrhosis. A study in patients with an end-to-side portacaval shunt"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019449167",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "80"
+                    },
+                    "pagerange": {
+                      "@first": "1438",
+                      "@last": "1444"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "R.Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Poupon",
+                        "ce:indexed-name": "Poupon R.Y."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "R.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Poupon",
+                        "ce:indexed-name": "Poupon R.E."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "D.",
+                        "@_fa": "true",
+                        "ce:surname": "Lebrec",
+                        "ce:indexed-name": "Lebrec D."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "L.",
+                        "@_fa": "true",
+                        "ce:surname": "Le Quernec",
+                        "ce:indexed-name": "Le Quernec L."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "F.",
+                        "@_fa": "true",
+                        "ce:surname": "Darnis",
+                        "ce:indexed-name": "Darnis F."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gastroenterology"
+                }
+              },
+              {
+                "ref-fulltext": "Schalm, S. W., LaRusso, N. F., Hofmann, A. F., Hoffman, N. E., van Berge-Henegouwen, G. P., and Korman, M. G. (1978). Diurnal serum levels of primary conjugated bile acids. Assessment by specific radioimmunoassays for conjugates of cholic and chenodeoxycholic acid. Gut 19, 1006-1014.",
+                "@id": "45",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1978"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Diurnal serum levels of primary conjugated bile acids. Assessment by specific radioimmunoassays for conjugates of cholic and chenodeoxycholic acid"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0018072125",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "19"
+                    },
+                    "pagerange": {
+                      "@first": "1006",
+                      "@last": "1014"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "S.W.",
+                        "@_fa": "true",
+                        "ce:surname": "Schalm",
+                        "ce:indexed-name": "Schalm S.W."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "N.F.",
+                        "@_fa": "true",
+                        "ce:surname": "LaRusso",
+                        "ce:indexed-name": "LaRusso N.F."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A.F.",
+                        "@_fa": "true",
+                        "ce:surname": "Hofmann",
+                        "ce:indexed-name": "Hofmann A.F."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "N.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Hoffman",
+                        "ce:indexed-name": "Hoffman N.E."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "G.P.",
+                        "@_fa": "true",
+                        "ce:surname": "van Berge-Henegouwen",
+                        "ce:indexed-name": "van Berge-Henegouwen G.P."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "M.G.",
+                        "@_fa": "true",
+                        "ce:surname": "Korman",
+                        "ce:indexed-name": "Korman M.G."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gut"
+                }
+              },
+              {
+                "ref-fulltext": "Setchell, K. D., Lawson, A. M., Blackstock, E. J., and Murphy, G. M. (1982). Diurnal changes in serum unconjugated bile acids in normal man. Gut 23, 637-642.",
+                "@id": "46",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1982"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Diurnal changes in serum unconjugated bile acids in normal man"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019979314",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "23"
+                    },
+                    "pagerange": {
+                      "@first": "637",
+                      "@last": "642"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "K.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Setchell",
+                        "ce:indexed-name": "Setchell K.D."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "A.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Lawson",
+                        "ce:indexed-name": "Lawson A.M."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "E.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Blackstock",
+                        "ce:indexed-name": "Blackstock E.J."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "G.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Murphy",
+                        "ce:indexed-name": "Murphy G.M."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gut"
+                }
+              },
+              {
+                "ref-fulltext": "Shaffer, E. A., and Gordon, E. R. (1978). Serum bile acids as related to bile acid secretion in liver disease. Am. J. Dig. Dis. 23, 392-397.",
+                "@id": "47",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1978"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Serum bile acids as related to bile acid secretion in liver disease"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017889854",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "23"
+                    },
+                    "pagerange": {
+                      "@first": "392",
+                      "@last": "397"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "E.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Shaffer",
+                        "ce:indexed-name": "Shaffer E.A."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "E.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Gordon",
+                        "ce:indexed-name": "Gordon E.R."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Am. J. Dig. Dis."
+                }
+              },
+              {
+                "ref-fulltext": "Simko, V., Ferris, R. K.,Michael, S., and Zachary, K. (1988). Random urine bile acids in predictionof liver abnormality inasymptomatic alcoholics. Arch. Intern. Med. 148, 312-315.",
+                "@id": "48",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1988"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Random urine bile acids in predictionof liver abnormality inasymptomatic alcoholics"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0023841222",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "148"
+                    },
+                    "pagerange": {
+                      "@first": "312",
+                      "@last": "315"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "V.",
+                        "@_fa": "true",
+                        "ce:surname": "Simko",
+                        "ce:indexed-name": "Simko V."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "R.K.",
+                        "@_fa": "true",
+                        "ce:surname": "Ferris",
+                        "ce:indexed-name": "Ferris R.K."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Michael",
+                        "ce:indexed-name": "Michael S."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Zachary",
+                        "ce:indexed-name": "Zachary K."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Arch. Intern. Med."
+                }
+              },
+              {
+                "ref-fulltext": "Simko, V., and Michael, S. (1998). Urinary bile acids in population screening for inapparent liver disease. Hepatogastroenterology 45, 1706-1714.",
+                "@id": "49",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1998"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Urinary bile acids in population screening for inapparent liver disease"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0031736808",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "45"
+                    },
+                    "pagerange": {
+                      "@first": "1706",
+                      "@last": "1714"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "V.",
+                        "@_fa": "true",
+                        "ce:surname": "Simko",
+                        "ce:indexed-name": "Simko V."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Michael",
+                        "ce:indexed-name": "Michael S."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Hepatogastroenterology"
+                }
+              },
+              {
+                "ref-fulltext": "Simko, V., Michael, S., and Kelley, R. E. (1987). Predictive value of random sample urine bile acids corrected by creatinine in liver disease. Hepatology 7, 115-121.",
+                "@id": "50",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1987"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Predictive value of random sample urine bile acids corrected by creatinine in liver disease"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0023107578",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "7"
+                    },
+                    "pagerange": {
+                      "@first": "115",
+                      "@last": "121"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "V.",
+                        "@_fa": "true",
+                        "ce:surname": "Simko",
+                        "ce:indexed-name": "Simko V."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Michael",
+                        "ce:indexed-name": "Michael S."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "R.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Kelley",
+                        "ce:indexed-name": "Kelley R.E."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Hepatology"
+                }
+              },
+              {
+                "ref-fulltext": "Sinakos, E., and Lindor, K. D. (2010). Bile acid profiles in intrahepatic cholestasis of pregnancy: is this the solution to the enigma of intrahepatic cholestasis of pregnancy? Am. J. Gastroenterol. 105, 596-598.",
+                "@id": "51",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2010"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Bile acid profiles in intrahepatic cholestasis of pregnancy: is this the solution to the enigma of intrahepatic cholestasis of pregnancy?"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "77749277164",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "105"
+                    },
+                    "pagerange": {
+                      "@first": "596",
+                      "@last": "598"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "E.",
+                        "@_fa": "true",
+                        "ce:surname": "Sinakos",
+                        "ce:indexed-name": "Sinakos E."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "K.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Lindor",
+                        "ce:indexed-name": "Lindor K.D."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Am. J. Gastroenterol."
+                }
+              },
+              {
+                "ref-fulltext": "Starkey, B. J., and Marks, V. (1982). Determination of total bile acids in serum. A comparison of a radioimmunoassay with an enzymatic-fluorimetricmethod. Clin. Chim. Acta 119, 165-177.",
+                "@id": "52",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1982"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Determination of total bile acids in serum. A comparison of a radioimmunoassay with an enzymatic-fluorimetricmethod"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0020076423",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "119"
+                    },
+                    "pagerange": {
+                      "@first": "165",
+                      "@last": "177"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "B.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Starkey",
+                        "ce:indexed-name": "Starkey B.J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "V.",
+                        "@_fa": "true",
+                        "ce:surname": "Marks",
+                        "ce:indexed-name": "Marks V."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Clin. Chim. Acta"
+                }
+              },
+              {
+                "ref-fulltext": "Steiner, C., Othman, A., Saely, C. H., Rein, P., Drexel, H., von Eckardstein, A., and Rentsch, K. M. (2011). Bile acid metabolites in serum: intraindividual variation and associations with coronary heart disease, metabolic syndrome and diabetes mellitus. PLoS One 6, e25006.",
+                "@id": "53",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2011"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Bile acid metabolites in serum: intraindividual variation and associations with coronary heart disease, metabolic syndrome and diabetes mellitus"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "e25006",
+                        "@idtype": "ARTNUM"
+                      },
+                      {
+                        "$": "81155153943",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "6"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Steiner",
+                        "ce:indexed-name": "Steiner C."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "Othman",
+                        "ce:indexed-name": "Othman A."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "C.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Saely",
+                        "ce:indexed-name": "Saely C.H."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "P.",
+                        "@_fa": "true",
+                        "ce:surname": "Rein",
+                        "ce:indexed-name": "Rein P."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Drexel",
+                        "ce:indexed-name": "Drexel H."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "von Eckardstein",
+                        "ce:indexed-name": "von Eckardstein A."
+                      },
+                      {
+                        "@seq": "7",
+                        "ce:initials": "K.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Rentsch",
+                        "ce:indexed-name": "Rentsch K.M."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "PLoS One"
+                }
+              },
+              {
+                "ref-fulltext": "Styles, N. A., Falany, J. L., Barnes, S., and Falany, C. N. (2007). Quantification and regulation of the subcellular distribution of bile acid coenzyme A:amino acid N-acyltransferase activity in rat liver. J. Lipid Res. 48, 1305-1315.",
+                "@id": "54",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2007"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Quantification and regulation of the subcellular distribution of bile acid coenzyme A:amino acid N-acyltransferase activity in rat liver"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "34548158293",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "48"
+                    },
+                    "pagerange": {
+                      "@first": "1305",
+                      "@last": "1315"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "N.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Styles",
+                        "ce:indexed-name": "Styles N.A."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.L.",
+                        "@_fa": "true",
+                        "ce:surname": "Falany",
+                        "ce:indexed-name": "Falany J.L."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Barnes",
+                        "ce:indexed-name": "Barnes S."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "C.N.",
+                        "@_fa": "true",
+                        "ce:surname": "Falany",
+                        "ce:indexed-name": "Falany C.N."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Lipid Res."
+                }
+              },
+              {
+                "ref-fulltext": "Thomas, C., Pellicciari, R., Pruzanski, M., Auwerx, J., and Schoonjans, K. (2008). Targeting bile-acid signalling for metabolic diseases. Nat. Rev. Drug Discov. 7, 678-693.",
+                "@id": "55",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2008"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Targeting bile-acid signalling for metabolic diseases"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "48749113401",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "7"
+                    },
+                    "pagerange": {
+                      "@first": "678",
+                      "@last": "693"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Thomas",
+                        "ce:indexed-name": "Thomas C."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Pellicciari",
+                        "ce:indexed-name": "Pellicciari R."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Pruzanski",
+                        "ce:indexed-name": "Pruzanski M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Auwerx",
+                        "ce:indexed-name": "Auwerx J."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Schoonjans",
+                        "ce:indexed-name": "Schoonjans K."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Nat. Rev. Drug Discov."
+                }
+              },
+              {
+                "ref-fulltext": "Tobiasson, P., and Boeryd, B. (1980). Serum cholic and chenodeoxycholic acid conjugates and standard liver function tests in various morphological stages of alcoholic liver disease. Scand. J. Gastroenterol. 15, 657-663.",
+                "@id": "56",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1980"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Serum cholic and chenodeoxycholic acid conjugates and standard liver function tests in various morphological stages of alcoholic liver disease"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019182431",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "15"
+                    },
+                    "pagerange": {
+                      "@first": "657",
+                      "@last": "663"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "P.",
+                        "@_fa": "true",
+                        "ce:surname": "Tobiasson",
+                        "ce:indexed-name": "Tobiasson P."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Boeryd",
+                        "ce:indexed-name": "Boeryd B."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Scand. J. Gastroenterol."
+                }
+              },
+              {
+                "ref-fulltext": "Trinchet, J. C., Gerhardt, M. F., Balkau, B., Munz, C., and Poupon, R. E. (1994). Serum bile acids and cholestasis in alcoholic hepatitis. Relationship with usual liver tests and histological features. J. Hepatol. 21, 235-240.",
+                "@id": "57",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1994"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Serum bile acids and cholestasis in alcoholic hepatitis. Relationship with usual liver tests and histological features"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0028076991",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "21"
+                    },
+                    "pagerange": {
+                      "@first": "235",
+                      "@last": "240"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.C.",
+                        "@_fa": "true",
+                        "ce:surname": "Trinchet",
+                        "ce:indexed-name": "Trinchet J.C."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M.F.",
+                        "@_fa": "true",
+                        "ce:surname": "Gerhardt",
+                        "ce:indexed-name": "Gerhardt M.F."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Balkau",
+                        "ce:indexed-name": "Balkau B."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Munz",
+                        "ce:indexed-name": "Munz C."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "R.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Poupon",
+                        "ce:indexed-name": "Poupon R.E."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Hepatol."
+                }
+              },
+              {
+                "ref-fulltext": "Trottier, J., Caron, P., Straka, R. J., and Barbier, O. (2011). Profile of serum bile acids in noncholestatic volunteers: gender-related differences in response to fenofibrate. Clin. Pharmacol. Ther. 90, 279-286.",
+                "@id": "58",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2011"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Profile of serum bile acids in noncholestatic volunteers: gender-related differences in response to fenofibrate"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "79960608008",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "90"
+                    },
+                    "pagerange": {
+                      "@first": "279",
+                      "@last": "286"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Trottier",
+                        "ce:indexed-name": "Trottier J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "P.",
+                        "@_fa": "true",
+                        "ce:surname": "Caron",
+                        "ce:indexed-name": "Caron P."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "R.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Straka",
+                        "ce:indexed-name": "Straka R.J."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "O.",
+                        "@_fa": "true",
+                        "ce:surname": "Barbier",
+                        "ce:indexed-name": "Barbier O."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Clin. Pharmacol. Ther."
+                }
+              },
+              {
+                "ref-fulltext": "van Berge Henegouwen, G. P., Brandt, K. H., Eyssen, H., and Parmentier, G. (1976). Sulphated and unsulphated bile acids in serum, bile, and urine of patients with cholestasis. Gut 17, 861-869.",
+                "@id": "59",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1976"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Sulphated and unsulphated bile acids in serum, bile, and urine of patients with cholestasis"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017059521",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "17"
+                    },
+                    "pagerange": {
+                      "@first": "861",
+                      "@last": "869"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "G.P.",
+                        "@_fa": "true",
+                        "ce:surname": "van Berge Henegouwen",
+                        "ce:indexed-name": "van Berge Henegouwen G.P."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "K.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Brandt",
+                        "ce:indexed-name": "Brandt K.H."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Eyssen",
+                        "ce:indexed-name": "Eyssen H."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "G.",
+                        "@_fa": "true",
+                        "ce:surname": "Parmentier",
+                        "ce:indexed-name": "Parmentier G."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Gut"
+                }
+              },
+              {
+                "ref-fulltext": "Xiang, X., Backman, J. T., Neuvonen, P. J., and Niemi, M. (2012). Gender, but not CYP7A1 or SLCO1B1 polymorphism, affects the fasting plasma concentrations of bile acidsin human beings. Basic Clin. Pharmacol. Toxicol. 110, 245-252.",
+                "@id": "60",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2012"
+                  },
+                  "ref-title": {
+                    "ref-titletext": "Gender, but not CYP7A1 or SLCO1B1 polymorphism, affects the fasting plasma concentrations of bile acidsin human beings"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "84857258987",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "110"
+                    },
+                    "pagerange": {
+                      "@first": "245",
+                      "@last": "252"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "X.",
+                        "@_fa": "true",
+                        "ce:surname": "Xiang",
+                        "ce:indexed-name": "Xiang X."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.T.",
+                        "@_fa": "true",
+                        "ce:surname": "Backman",
+                        "ce:indexed-name": "Backman J.T."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "P.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Neuvonen",
+                        "ce:indexed-name": "Neuvonen P.J."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Niemi",
+                        "ce:indexed-name": "Niemi M."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Basic Clin. Pharmacol. Toxicol."
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "affiliation": [
+      {
+        "affiliation-city": "Omaha",
+        "@id": "60029465",
+        "affilname": "College of Pharmacy",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029465",
+        "affiliation-country": "United States"
+      },
+      {
+        "affiliation-city": "Omaha",
+        "@id": "60027837",
+        "affilname": "College of Medicine",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60027837",
+        "affiliation-country": "United States"
+      },
+      {
+        "affiliation-city": "Omaha",
+        "@id": "60016261",
+        "affilname": "University of Nebraska Medical Center",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60016261",
+        "affiliation-country": "United States"
+      }
+    ],
+    "coredata": {
+      "srctype": "j",
+      "eid": "2-s2.0-84924664029",
+      "dc:description": "The role of bile acids (BAs) as biomarkers for liver injury has been proposed for decades. However, the large inter- and intra-individual variability of the BA profile has prevented its clinical application. To this end, we investigated the effect of covariates such as food, gender, age, BMI, and moderate alcohol consumption on the BA profile in healthy human subjects. The BA profile was characterized by the calculation of indices that describe the composition, sulfation, and amidation of total and individual BAs. Both inter- and intra-individual variabilities of BA indices were low in serum and even lower in urine compared with those of absolute concentrations of BAs. Serum BA concentrations increased with consumption of food, whereas urinary BA concentrations were mildly affected by food. Gender differences in the urinary and serum BA profile were minimal. The serum and urinary BA profiles were also not affected by age. BMI showed minimal effect on the urine and serum BA profile. Moderate alcohol consumption did not have a significant effect on the BA profile in both urine and serum. When the effect of the type of alcohol was studied, the results indicate that moderate drinking of beer does not affect BA concentrations and has minimal effect on BA indices, whereas moderate wine consumption slightly increases BA concentrations without affecting the BA indices. In summary, urinary BA indices showed lower variability and higher stability than absolute BA concentrations in serum and showed minimal changes to covariate effects suggesting their utility as biomarkers in clinic.",
+      "pubmed-id": "25344562",
+      "prism:coverDate": "2015-02-01",
+      "prism:aggregationType": "Journal",
+      "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84924664029",
+      "dc:creator": {
+        "author": [
+          {
+            "ce:given-name": "Sai Praneeth R.",
+            "preferred-name": {
+              "ce:given-name": "Sai Praneeth R.",
+              "ce:initials": "S.P.R.",
+              "ce:surname": "Bathena",
+              "ce:indexed-name": "Bathena S.P.R."
+            },
+            "@seq": "1",
+            "ce:initials": "S.P.R.",
+            "@_fa": "true",
+            "affiliation": {
+              "@id": "60029465",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029465"
+            },
+            "ce:surname": "Bathena",
+            "@auid": "36150410700",
+            "author-url": "https://api.elsevier.com/content/author/author_id/36150410700",
+            "ce:indexed-name": "Bathena S.P.R."
+          }
+        ]
+      },
+      "link": [
+        {
+          "@_fa": "true",
+          "@rel": "self",
+          "@href": "https://api.elsevier.com/content/abstract/scopus_id/84924664029"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus",
+          "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84924664029&origin=inward"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus-citedby",
+          "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84924664029&origin=inward"
+        }
+      ],
+      "source-id": "25218",
+      "citedby-count": "44",
+      "prism:volume": "143",
+      "subtype": "ar",
+      "dc:title": "Urinary bile acids as biomarkers for liver diseases I. stability of the baseline profile in healthy subjects",
+      "openaccess": "1",
+      "prism:issn": "10960929 10966080",
+      "publishercopyright": "\u00a9 The Author 2014. Published by Oxford University Press on behalf of the Society of Toxicology. All rights reserved.",
+      "prism:issueIdentifier": "2",
+      "subtypeDescription": "Article",
+      "prism:publicationName": "Toxicological Sciences",
+      "prism:pageRange": "296-307",
+      "prism:endingPage": "307",
+      "openaccessFlag": "true",
+      "prism:doi": "10.1093/toxsci/kfu227",
+      "prism:startingPage": "296",
+      "dc:identifier": "SCOPUS_ID:84924664029",
+      "dc:publisher": "Oxford University Press"
+    },
+    "idxterms": {
+      "mainterm": [
+        {
+          "$": "Adult",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Age Factors",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Aged",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Alcohol Drinking",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Amides",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Bile Acids and Salts",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Biological Markers",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Data Interpretation, Statistical",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Drug Stability",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Female",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Healthy Volunteers",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Humans",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Liver Diseases",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Male",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Middle Aged",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Sex Factors",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Sulfates",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Young Adult",
+          "@weight": "b",
+          "@candidate": "n"
+        }
+      ]
+    },
+    "language": {
+      "@xml:lang": "eng"
+    },
+    "authkeywords": {
+      "author-keyword": [
+        {
+          "@_fa": "true",
+          "$": "Bile acid profile"
+        },
+        {
+          "@_fa": "true",
+          "$": "Healthy subjects"
+        },
+        {
+          "@_fa": "true",
+          "$": "Serum bile acid"
+        },
+        {
+          "@_fa": "true",
+          "$": "Stability"
+        },
+        {
+          "@_fa": "true",
+          "$": "Urinary bile acid"
+        },
+        {
+          "@_fa": "true",
+          "$": "Variability"
+        }
+      ]
+    },
+    "subject-areas": {
+      "subject-area": [
+        {
+          "@_fa": "true",
+          "$": "Toxicology",
+          "@code": "3005",
+          "@abbrev": "PHAR"
+        }
+      ]
+    },
+    "authors": {
+      "author": [
+        {
+          "ce:given-name": "Sai Praneeth R.",
+          "preferred-name": {
+            "ce:given-name": "Sai Praneeth R.",
+            "ce:initials": "S.P.R.",
+            "ce:surname": "Bathena",
+            "ce:indexed-name": "Bathena S.P.R."
+          },
+          "@seq": "1",
+          "ce:initials": "S.P.R.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60029465",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029465"
+          },
+          "ce:surname": "Bathena",
+          "@auid": "36150410700",
+          "author-url": "https://api.elsevier.com/content/author/author_id/36150410700",
+          "ce:indexed-name": "Bathena S.P.R."
+        },
+        {
+          "ce:given-name": "Rhishikesh",
+          "preferred-name": {
+            "ce:given-name": "Rhishikesh",
+            "ce:initials": "R.",
+            "ce:surname": "Thakare",
+            "ce:indexed-name": "Thakare R."
+          },
+          "@seq": "2",
+          "ce:initials": "R.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60029465",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029465"
+          },
+          "ce:surname": "Thakare",
+          "@auid": "56429378900",
+          "author-url": "https://api.elsevier.com/content/author/author_id/56429378900",
+          "ce:indexed-name": "Thakare R."
+        },
+        {
+          "ce:given-name": "Nagsen",
+          "preferred-name": {
+            "ce:given-name": "Nagsen",
+            "ce:initials": "N.",
+            "ce:surname": "Gautam",
+            "ce:indexed-name": "Gautam N."
+          },
+          "@seq": "3",
+          "ce:initials": "N.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60029465",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029465"
+          },
+          "ce:surname": "Gautam",
+          "@auid": "36109882900",
+          "author-url": "https://api.elsevier.com/content/author/author_id/36109882900",
+          "ce:indexed-name": "Gautam N."
+        },
+        {
+          "ce:given-name": "Sandeep",
+          "preferred-name": {
+            "ce:given-name": "Sandeep",
+            "ce:initials": "S.",
+            "ce:surname": "Mukherjee",
+            "ce:indexed-name": "Mukherjee S."
+          },
+          "@seq": "4",
+          "ce:initials": "S.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60027837",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60027837"
+          },
+          "ce:surname": "Mukherjee",
+          "@auid": "7401816418",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7401816418",
+          "ce:indexed-name": "Mukherjee S."
+        },
+        {
+          "ce:given-name": "Marco",
+          "preferred-name": {
+            "ce:given-name": "Marco",
+            "ce:initials": "M.",
+            "ce:surname": "Olivera",
+            "ce:indexed-name": "Olivera M."
+          },
+          "@seq": "5",
+          "ce:initials": "M.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60027837",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60027837"
+          },
+          "ce:surname": "Olivera",
+          "@auid": "7801551357",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7801551357",
+          "ce:indexed-name": "Olivera M."
+        },
+        {
+          "ce:given-name": "Jane",
+          "preferred-name": {
+            "ce:given-name": "Jane",
+            "ce:initials": "J.",
+            "ce:surname": "Meza",
+            "ce:indexed-name": "Meza J."
+          },
+          "@seq": "6",
+          "ce:initials": "J.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60016261",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60016261"
+          },
+          "ce:surname": "Meza",
+          "@auid": "7004563632",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7004563632",
+          "ce:indexed-name": "Meza J."
+        },
+        {
+          "ce:given-name": "Yazen",
+          "preferred-name": {
+            "ce:given-name": "Yazen",
+            "ce:initials": "Y.",
+            "ce:surname": "Alnouti",
+            "ce:indexed-name": "Alnouti Y."
+          },
+          "@seq": "7",
+          "ce:initials": "Y.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60029465",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60029465"
+          },
+          "ce:surname": "Alnouti",
+          "@auid": "12646969800",
+          "author-url": "https://api.elsevier.com/content/author/author_id/12646969800",
+          "ce:indexed-name": "Alnouti Y."
+        }
+      ]
+    }
+  }
+}

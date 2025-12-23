@@ -1,0 +1,1435 @@
+{
+  "abstracts-retrieval-response": {
+    "item": {
+      "ait:process-info": {
+        "ait:status": {
+          "@state": "update",
+          "@type": "core",
+          "@stage": "S300"
+        },
+        "ait:date-delivered": {
+          "@day": "04",
+          "@timestamp": "2022-05-04T16:32:57.000057-04:00",
+          "@year": "2022",
+          "@month": "05"
+        },
+        "ait:date-sort": {
+          "@day": "01",
+          "@year": "2006",
+          "@month": "03"
+        }
+      },
+      "xocs:meta": {
+        "xocs:funding-list": {
+          "@pui-match": "primary",
+          "@has-funding-info": "1",
+          "xocs:funding": {
+            "xocs:funding-agency-matched-string": "Special Foundation of Basic Research of Science and Technology for Central Research Institute of China"
+          },
+          "xocs:funding-addon-generated-timestamp": "2021-06-01T09:43:19.576Z",
+          "xocs:funding-text": "Acknowledgements This work was supported by a grant (no. 2001DEA20022) from Special Foundation of Basic Research of Science and Technology for Central Research Institute of China.",
+          "xocs:funding-addon-type": "http://vtw.elsevier.com/data/voc/AddOnTypes/50.7/aggregated-refined"
+        }
+      },
+      "bibrecord": {
+        "head": {
+          "author-group": [
+            {
+              "affiliation": {
+                "city-group": "Nanchang, Jiangxi 330045",
+                "country": "China",
+                "@afid": "60004148",
+                "@country": "chn",
+                "organization": [
+                  {
+                    "$": "College of Animal Science and Technology"
+                  },
+                  {
+                    "$": "Jiangxi Agricultural University"
+                  }
+                ],
+                "affiliation-id": {
+                  "@afid": "60004148",
+                  "@dptid": "103256970"
+                },
+                "@dptid": "103256970"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Guan-Hong",
+                  "preferred-name": {
+                    "ce:given-name": "Guan Hong",
+                    "ce:initials": "G.H.",
+                    "ce:surname": "Li",
+                    "ce:indexed-name": "Li G.H."
+                  },
+                  "@seq": "1",
+                  "ce:initials": "G.-H.",
+                  "@_fa": "true",
+                  "ce:surname": "Li",
+                  "@auid": "57223838318",
+                  "ce:indexed-name": "Li G.-H."
+                }
+              ]
+            },
+            {
+              "affiliation": {
+                "city-group": "Wuxi, Jiangsu 214036",
+                "country": "China",
+                "address-part": "170 Huihe Road",
+                "@afid": "60001604",
+                "@country": "chn",
+                "organization": [
+                  {
+                    "$": "Key Laboratory of Food Science and Safety"
+                  },
+                  {
+                    "$": "Ministry of Education"
+                  },
+                  {
+                    "$": "Southern Yangtze University"
+                  }
+                ],
+                "affiliation-id": [
+                  {
+                    "@afid": "60001604",
+                    "@dptid": "103133122"
+                  },
+                  {
+                    "@afid": "60007029"
+                  }
+                ],
+                "@dptid": "103133122"
+              },
+              "author": [
+                {
+                  "ce:given-name": "Yong-Hui",
+                  "preferred-name": {
+                    "ce:given-name": "Yong Hui",
+                    "ce:initials": "Y.H.",
+                    "ce:surname": "Shi",
+                    "ce:indexed-name": "Shi Y.H."
+                  },
+                  "@seq": "2",
+                  "ce:initials": "Y.-H.",
+                  "@_fa": "true",
+                  "ce:surname": "Shi",
+                  "@auid": "8759293100",
+                  "ce:indexed-name": "Shi Y.-H."
+                },
+                {
+                  "ce:given-name": "Huan",
+                  "preferred-name": {
+                    "ce:given-name": "Huan",
+                    "ce:initials": "H.",
+                    "ce:surname": "Liu",
+                    "ce:indexed-name": "Liu H."
+                  },
+                  "@seq": "3",
+                  "ce:initials": "H.",
+                  "@_fa": "true",
+                  "ce:surname": "Liu",
+                  "@auid": "57219213026",
+                  "ce:indexed-name": "Liu H."
+                },
+                {
+                  "ce:given-name": "Guo-Wei",
+                  "preferred-name": {
+                    "ce:given-name": "Guo Wei",
+                    "ce:initials": "G.W.",
+                    "ce:surname": "Le",
+                    "ce:indexed-name": "Le G.W."
+                  },
+                  "@seq": "4",
+                  "ce:initials": "G.-W.",
+                  "@_fa": "true",
+                  "ce:surname": "Le",
+                  "@auid": "7005498505",
+                  "ce:indexed-name": "Le G.-W."
+                }
+              ]
+            }
+          ],
+          "citation-title": "Antihypertensive effect of alcalase generated mung bean protein hydrolysates in spontaneously hypertensive rats",
+          "abstracts": "Mung bean protein isolates were hydrolyzed by alcalase and neutrase, respectively, and the angiotensin I-converting enzyme (ACE) inhibitory activities of the enzymatic hydrolysates were determined at different hydrolysis times. The highest ACE inhibitory activity recorded was for a hydrolysate generated by alcalase (IC50: 0.64 mg protein/ml) after 2 h of hydrolysis. A significant decrease in systolic blood pressure was observed in spontaneously hypertensive rats following a single oral administration of this hydrolysate at a dose of 600 mg/kg of body weight.",
+          "correspondence": {
+            "affiliation": {
+              "city-group": "Nanchang, Jiangxi 330045",
+              "country": "China",
+              "@country": "chn",
+              "organization": [
+                {
+                  "$": "College of Animal Science and Technology"
+                },
+                {
+                  "$": "Jiangxi Agricultural University"
+                }
+              ]
+            },
+            "person": {
+              "ce:initials": "G.-H.",
+              "ce:surname": "Li",
+              "ce:indexed-name": "Li G.-H."
+            }
+          },
+          "citation-info": {
+            "author-keywords": {
+              "author-keyword": [
+                {
+                  "$": "Alcalase",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "Angiotensin I-converting enzyme",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "Antihypertensive effect",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "Bioactive peptides",
+                  "@xml:lang": "eng"
+                },
+                {
+                  "$": "Mung bean Protein hydrolysates",
+                  "@xml:lang": "eng"
+                }
+              ]
+            },
+            "citation-type": {
+              "@code": "ar"
+            },
+            "citation-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            },
+            "abstract-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            }
+          },
+          "source": {
+            "sourcetitle-abbrev": "Eur. Food Res. Technol.",
+            "@country": "deu",
+            "issn": [
+              {
+                "$": "14382377",
+                "@type": "print"
+              },
+              {
+                "$": "14382385",
+                "@type": "electronic"
+              }
+            ],
+            "volisspag": {
+              "voliss": {
+                "@volume": "222",
+                "@issue": "5-6"
+              },
+              "pagerange": {
+                "@first": "733",
+                "@last": "736"
+              }
+            },
+            "@type": "j",
+            "publicationyear": {
+              "@first": "2006"
+            },
+            "sourcetitle": "European Food Research and Technology",
+            "@srcid": "23068",
+            "publicationdate": {
+              "month": "03",
+              "year": "2006",
+              "date-text": {
+                "@xfab-added": "true",
+                "$": "March 2006"
+              }
+            }
+          },
+          "enhancement": {
+            "classificationgroup": {
+              "classifications": [
+                {
+                  "@type": "ASJC",
+                  "classification": [
+                    {
+                      "$": "1305"
+                    },
+                    {
+                      "$": "1106"
+                    },
+                    {
+                      "$": "1303"
+                    },
+                    {
+                      "$": "1600"
+                    },
+                    {
+                      "$": "2209"
+                    }
+                  ]
+                },
+                {
+                  "@type": "SUBJABBR",
+                  "classification": [
+                    {
+                      "$": "BIOC"
+                    },
+                    {
+                      "$": "AGRI"
+                    },
+                    {
+                      "$": "CHEM"
+                    },
+                    {
+                      "$": "ENGI"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "item-info": {
+          "copyright": {
+            "$": "Copyright 2008 Elsevier B.V., All rights reserved.",
+            "@type": "Elsevier"
+          },
+          "dbcollection": [
+            {
+              "$": "SNCPX"
+            },
+            {
+              "$": "SCOPUS"
+            },
+            {
+              "$": "Scopusbase"
+            }
+          ],
+          "history": {
+            "date-created": {
+              "@day": "20",
+              "@year": "2006",
+              "@month": "03"
+            }
+          },
+          "itemidlist": {
+            "itemid": [
+              {
+                "$": "43383279",
+                "@idtype": "PUI"
+              },
+              {
+                "$": "2006007250",
+                "@idtype": "SNCPX"
+              },
+              {
+                "$": "33644930319",
+                "@idtype": "SCP"
+              },
+              {
+                "$": "33644930319",
+                "@idtype": "SGR"
+              }
+            ],
+            "ce:doi": "10.1007/s00217-005-0147-2"
+          }
+        },
+        "tail": {
+          "bibliography": {
+            "@refcount": "17",
+            "reference": [
+              {
+                "ref-fulltext": "Yoshikawa M, Fujita H, Matoba N (2000) BioFactors 12:143-146",
+                "@id": "1",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2000"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0034495131",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "12"
+                    },
+                    "pagerange": {
+                      "@first": "143",
+                      "@last": "146"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Yoshikawa",
+                        "ce:indexed-name": "Yoshikawa M."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Fujita",
+                        "ce:indexed-name": "Fujita H."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "N.",
+                        "@_fa": "true",
+                        "ce:surname": "Matoba",
+                        "ce:indexed-name": "Matoba N."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "BioFactors"
+                }
+              },
+              {
+                "ref-fulltext": "Gobbetti M, Stepaniak L, De Angelis M, Corsetti A, Di R (2002) Crit Rev Food Sci Nutr 42:223-239",
+                "@id": "2",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2002"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0035985105",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "42"
+                    },
+                    "pagerange": {
+                      "@first": "223",
+                      "@last": "239"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Gobbetti",
+                        "ce:indexed-name": "Gobbetti M."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "L.",
+                        "@_fa": "true",
+                        "ce:surname": "Stepaniak",
+                        "ce:indexed-name": "Stepaniak L."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "De Angelis",
+                        "ce:indexed-name": "De Angelis M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "Corsetti",
+                        "ce:indexed-name": "Corsetti A."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Di",
+                        "ce:indexed-name": "Di R."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Crit Rev Food Sci Nutr"
+                }
+              },
+              {
+                "ref-fulltext": "Erd\u00f6s EG (1975) Circ Res 36:247-255",
+                "@id": "3",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1975"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0016608047",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "36"
+                    },
+                    "pagerange": {
+                      "@first": "247",
+                      "@last": "255"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "E.G.",
+                        "@_fa": "true",
+                        "ce:surname": "Erd\u00f6s",
+                        "ce:indexed-name": "Erdos E.G."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Circ Res"
+                }
+              },
+              {
+                "ref-fulltext": "Messerli FH (1999) Am J Hypertens 12:86S-90S",
+                "@id": "4",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1999"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0032858745",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "pages": "86S-90S",
+                    "voliss": {
+                      "@volume": "12"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "F.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Messerli",
+                        "ce:indexed-name": "Messerli F.H."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Am J Hypertens"
+                }
+              },
+              {
+                "ref-fulltext": "Li G-H, Le G-W, Shi Y-H, Shrestha S (2004) Nutr Res 27:469-486",
+                "@id": "5",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2004"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "3242774456",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "27"
+                    },
+                    "pagerange": {
+                      "@first": "469",
+                      "@last": "486"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "G.-H.",
+                        "@_fa": "true",
+                        "ce:surname": "Li",
+                        "ce:indexed-name": "Li G.-H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "G.-W.",
+                        "@_fa": "true",
+                        "ce:surname": "Le",
+                        "ce:indexed-name": "Le G.-W."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "Y.-H.",
+                        "@_fa": "true",
+                        "ce:surname": "Shi",
+                        "ce:indexed-name": "Shi Y.-H."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Shrestha",
+                        "ce:indexed-name": "Shrestha S."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Nutr Res"
+                }
+              },
+              {
+                "ref-fulltext": "Adsuale RN, Kadam SS, Salunkhe DK (1986) Crit Rev Food Sci Nutr 25:73-105",
+                "@id": "6",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1986"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0022960867",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "25"
+                    },
+                    "pagerange": {
+                      "@first": "73",
+                      "@last": "105"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "R.N.",
+                        "@_fa": "true",
+                        "ce:surname": "Adsuale",
+                        "ce:indexed-name": "Adsuale R.N."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.S.",
+                        "@_fa": "true",
+                        "ce:surname": "Kadam",
+                        "ce:indexed-name": "Kadam S.S."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "D.K.",
+                        "@_fa": "true",
+                        "ce:surname": "Salunkhe",
+                        "ce:indexed-name": "Salunkhe D.K."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Crit Rev Food Sci Nutr"
+                }
+              },
+              {
+                "ref-fulltext": "Adler-Nissen J (1986) Enzymic Hydrolysis of Food Proteins. Elsevier Applied Science Publishers, London, pp 9-24",
+                "@id": "7",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1986"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0003737812",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "pagerange": {
+                      "@first": "9",
+                      "@last": "24"
+                    }
+                  },
+                  "ref-text": "Elsevier Applied Science Publishers, London",
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Adler-Nissen",
+                        "ce:indexed-name": "Adler-Nissen J."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Enzymic Hydrolysis of Food Proteins"
+                }
+              },
+              {
+                "ref-fulltext": "Murphy JB, Kies MW (1960) Biochim Biophys Acta 45:382-384",
+                "@id": "8",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1960"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0001671557",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "45"
+                    },
+                    "pagerange": {
+                      "@first": "382",
+                      "@last": "384"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.B.",
+                        "@_fa": "true",
+                        "ce:surname": "Murphy",
+                        "ce:indexed-name": "Murphy J.B."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M.W.",
+                        "@_fa": "true",
+                        "ce:surname": "Kies",
+                        "ce:indexed-name": "Kies M.W."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Biochim Biophys Acta"
+                }
+              },
+              {
+                "ref-fulltext": "Li G-H, Liu H, Shi Y-H, Le G-W (2005) J Pharm Biomed Anal 37:219-224",
+                "@id": "9",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2005"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "13544276309",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "37"
+                    },
+                    "pagerange": {
+                      "@first": "219",
+                      "@last": "224"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "G.-H.",
+                        "@_fa": "true",
+                        "ce:surname": "Li",
+                        "ce:indexed-name": "Li G.-H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Liu",
+                        "ce:indexed-name": "Liu H."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "Y.-H.",
+                        "@_fa": "true",
+                        "ce:surname": "Shi",
+                        "ce:indexed-name": "Shi Y.-H."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "G.-W.",
+                        "@_fa": "true",
+                        "ce:surname": "Le",
+                        "ce:indexed-name": "Le G.-W."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J Pharm Biomed Anal"
+                }
+              },
+              {
+                "ref-fulltext": "Matsufuji H, Matsui T, Seki E, Osajima K, Nakashima M, Osajima Y (1994) Biosci Biotechnol Biochem 58:2244-2245",
+                "@id": "10",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1994"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0028712310",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "58"
+                    },
+                    "pagerange": {
+                      "@first": "2244",
+                      "@last": "2245"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Matsufuji",
+                        "ce:indexed-name": "Matsufuji H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Matsui",
+                        "ce:indexed-name": "Matsui T."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "E.",
+                        "@_fa": "true",
+                        "ce:surname": "Seki",
+                        "ce:indexed-name": "Seki E."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Osajima",
+                        "ce:indexed-name": "Osajima K."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Nakashima",
+                        "ce:indexed-name": "Nakashima M."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Osajima",
+                        "ce:indexed-name": "Osajima Y."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Biosci Biotechnol Biochem"
+                }
+              },
+              {
+                "ref-fulltext": "Byun HG, Kim SK (2001) Process Biochem 36:1155-1162",
+                "@id": "11",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2001"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0034951098",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "36"
+                    },
+                    "pagerange": {
+                      "@first": "1155",
+                      "@last": "1162"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H.G.",
+                        "@_fa": "true",
+                        "ce:surname": "Byun",
+                        "ce:indexed-name": "Byun H.G."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.K.",
+                        "@_fa": "true",
+                        "ce:surname": "Kim",
+                        "ce:indexed-name": "Kim S.K."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Process Biochem"
+                }
+              },
+              {
+                "ref-fulltext": "Pedroche J, Yust MM, Gir\u00f3n-Calle J, Alaiz M, Mill\u00e1n F, Vioque J (2002) J Sci Food Agric 82:960-965",
+                "@id": "12",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2002"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0036302694",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "82"
+                    },
+                    "pagerange": {
+                      "@first": "960",
+                      "@last": "965"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Pedroche",
+                        "ce:indexed-name": "Pedroche J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Yust",
+                        "ce:indexed-name": "Yust M.M."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Gir\u00f3n-Calle",
+                        "ce:indexed-name": "Giron-Calle J."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Alaiz",
+                        "ce:indexed-name": "Alaiz M."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "F.",
+                        "@_fa": "true",
+                        "ce:surname": "Mill\u00e1n",
+                        "ce:indexed-name": "Millan F."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Vioque",
+                        "ce:indexed-name": "Vioque J."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J Sci Food Agric"
+                }
+              },
+              {
+                "ref-fulltext": "Cushman DW, Cheung MS, Sabo EF, Ondetti MA (1977) Biochemistry 16:5484-5491",
+                "@id": "13",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1977"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017584729",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "16"
+                    },
+                    "pagerange": {
+                      "@first": "5484",
+                      "@last": "5491"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "D.W.",
+                        "@_fa": "true",
+                        "ce:surname": "Cushman",
+                        "ce:indexed-name": "Cushman D.W."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M.S.",
+                        "@_fa": "true",
+                        "ce:surname": "Cheung",
+                        "ce:indexed-name": "Cheung M.S."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "E.F.",
+                        "@_fa": "true",
+                        "ce:surname": "Sabo",
+                        "ce:indexed-name": "Sabo E.F."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "M.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Ondetti",
+                        "ce:indexed-name": "Ondetti M.A."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Biochemistry"
+                }
+              },
+              {
+                "ref-fulltext": "Yamamoto N, Maeno M, Takano T (1999) J Dairy Sci 82:1388-1393",
+                "@id": "14",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1999"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0033161658",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "82"
+                    },
+                    "pagerange": {
+                      "@first": "1388",
+                      "@last": "1393"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "N.",
+                        "@_fa": "true",
+                        "ce:surname": "Yamamoto",
+                        "ce:indexed-name": "Yamamoto N."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Maeno",
+                        "ce:indexed-name": "Maeno M."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Takano",
+                        "ce:indexed-name": "Takano T."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J Dairy Sci"
+                }
+              },
+              {
+                "ref-fulltext": "Fujita H, Yokoyama K, Yoshikawa M (2000) J Food Sci 65:564-569",
+                "@id": "15",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2000"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0033860508",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "65"
+                    },
+                    "pagerange": {
+                      "@first": "564",
+                      "@last": "569"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Fujita",
+                        "ce:indexed-name": "Fujita H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Yokoyama",
+                        "ce:indexed-name": "Yokoyama K."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Yoshikawa",
+                        "ce:indexed-name": "Yoshikawa M."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J Food Sci"
+                }
+              },
+              {
+                "ref-fulltext": "Sato M, Oba T, Yamaguchi T (2002) Ann Nutr Metab 46:259-267",
+                "@id": "16",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2002"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0036437731",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "46"
+                    },
+                    "pagerange": {
+                      "@first": "259",
+                      "@last": "267"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Sato",
+                        "ce:indexed-name": "Sato M."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Oba",
+                        "ce:indexed-name": "Oba T."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Yamaguchi",
+                        "ce:indexed-name": "Yamaguchi T."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Ann Nutr Metab"
+                }
+              },
+              {
+                "ref-fulltext": "Suetsuna K, Chen JR (2001) Mar Biotechnol (NY) 3:305-309",
+                "@id": "17",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2001"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0034817211",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "3"
+                    },
+                    "pagerange": {
+                      "@first": "305",
+                      "@last": "309"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Suetsuna",
+                        "ce:indexed-name": "Suetsuna K."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Chen",
+                        "ce:indexed-name": "Chen J.R."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Mar Biotechnol (NY)"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "affiliation": [
+      {
+        "affiliation-city": "Nanchang",
+        "@id": "60004148",
+        "affilname": "Jiangxi Agricultural University",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60004148",
+        "affiliation-country": "China"
+      },
+      {
+        "affiliation-city": "Beijing",
+        "@id": "60001604",
+        "affilname": "Ministry of Education of the People's Republic of China",
+        "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60001604",
+        "affiliation-country": "China"
+      }
+    ],
+    "coredata": {
+      "srctype": "j",
+      "prism:issueIdentifier": "5-6",
+      "eid": "2-s2.0-33644930319",
+      "dc:description": "Mung bean protein isolates were hydrolyzed by alcalase and neutrase, respectively, and the angiotensin I-converting enzyme (ACE) inhibitory activities of the enzymatic hydrolysates were determined at different hydrolysis times. The highest ACE inhibitory activity recorded was for a hydrolysate generated by alcalase (IC50: 0.64 mg protein/ml) after 2 h of hydrolysis. A significant decrease in systolic blood pressure was observed in spontaneously hypertensive rats following a single oral administration of this hydrolysate at a dose of 600 mg/kg of body weight.",
+      "prism:coverDate": "2006-03-01",
+      "prism:aggregationType": "Journal",
+      "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/33644930319",
+      "subtypeDescription": "Article",
+      "dc:creator": {
+        "author": [
+          {
+            "ce:given-name": "Guan-Hong",
+            "preferred-name": {
+              "ce:given-name": "Guan Hong",
+              "ce:initials": "G.H.",
+              "ce:surname": "Li",
+              "ce:indexed-name": "Li G.H."
+            },
+            "@seq": "1",
+            "ce:initials": "G.-H.",
+            "@_fa": "true",
+            "affiliation": {
+              "@id": "60004148",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60004148"
+            },
+            "ce:surname": "Li",
+            "@auid": "57223838318",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57223838318",
+            "ce:indexed-name": "Li G.-H."
+          }
+        ]
+      },
+      "link": [
+        {
+          "@_fa": "true",
+          "@rel": "self",
+          "@href": "https://api.elsevier.com/content/abstract/scopus_id/33644930319"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus",
+          "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=33644930319&origin=inward"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus-citedby",
+          "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=33644930319&origin=inward"
+        }
+      ],
+      "prism:publicationName": "European Food Research and Technology",
+      "source-id": "23068",
+      "citedby-count": "56",
+      "prism:volume": "222",
+      "subtype": "ar",
+      "prism:pageRange": "733-736",
+      "dc:title": "Antihypertensive effect of alcalase generated mung bean protein hydrolysates in spontaneously hypertensive rats",
+      "prism:endingPage": "736",
+      "openaccess": "0",
+      "openaccessFlag": "false",
+      "prism:doi": "10.1007/s00217-005-0147-2",
+      "prism:issn": "14382377 14382385",
+      "prism:startingPage": "733",
+      "dc:identifier": "SCOPUS_ID:33644930319"
+    },
+    "idxterms": null,
+    "language": {
+      "@xml:lang": "eng"
+    },
+    "authkeywords": {
+      "author-keyword": [
+        {
+          "@_fa": "true",
+          "$": "Alcalase"
+        },
+        {
+          "@_fa": "true",
+          "$": "Angiotensin I-converting enzyme"
+        },
+        {
+          "@_fa": "true",
+          "$": "Antihypertensive effect"
+        },
+        {
+          "@_fa": "true",
+          "$": "Bioactive peptides"
+        },
+        {
+          "@_fa": "true",
+          "$": "Mung bean Protein hydrolysates"
+        }
+      ]
+    },
+    "subject-areas": {
+      "subject-area": [
+        {
+          "@_fa": "true",
+          "$": "Biotechnology",
+          "@code": "1305",
+          "@abbrev": "BIOC"
+        },
+        {
+          "@_fa": "true",
+          "$": "Food Science",
+          "@code": "1106",
+          "@abbrev": "AGRI"
+        },
+        {
+          "@_fa": "true",
+          "$": "Biochemistry",
+          "@code": "1303",
+          "@abbrev": "BIOC"
+        },
+        {
+          "@_fa": "true",
+          "$": "Chemistry (all)",
+          "@code": "1600",
+          "@abbrev": "CHEM"
+        },
+        {
+          "@_fa": "true",
+          "$": "Industrial and Manufacturing Engineering",
+          "@code": "2209",
+          "@abbrev": "ENGI"
+        }
+      ]
+    },
+    "authors": {
+      "author": [
+        {
+          "ce:given-name": "Guan-Hong",
+          "preferred-name": {
+            "ce:given-name": "Guan Hong",
+            "ce:initials": "G.H.",
+            "ce:surname": "Li",
+            "ce:indexed-name": "Li G.H."
+          },
+          "@seq": "1",
+          "ce:initials": "G.-H.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60004148",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60004148"
+          },
+          "ce:surname": "Li",
+          "@auid": "57223838318",
+          "author-url": "https://api.elsevier.com/content/author/author_id/57223838318",
+          "ce:indexed-name": "Li G.-H."
+        },
+        {
+          "ce:given-name": "Yong-Hui",
+          "preferred-name": {
+            "ce:given-name": "Yong Hui",
+            "ce:initials": "Y.H.",
+            "ce:surname": "Shi",
+            "ce:indexed-name": "Shi Y.H."
+          },
+          "@seq": "2",
+          "ce:initials": "Y.-H.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60001604",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60001604"
+          },
+          "ce:surname": "Shi",
+          "@auid": "8759293100",
+          "author-url": "https://api.elsevier.com/content/author/author_id/8759293100",
+          "ce:indexed-name": "Shi Y.-H."
+        },
+        {
+          "ce:given-name": "Huan",
+          "preferred-name": {
+            "ce:given-name": "Huan",
+            "ce:initials": "H.",
+            "ce:surname": "Liu",
+            "ce:indexed-name": "Liu H."
+          },
+          "@seq": "3",
+          "ce:initials": "H.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60001604",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60001604"
+          },
+          "ce:surname": "Liu",
+          "@auid": "57219213026",
+          "author-url": "https://api.elsevier.com/content/author/author_id/57219213026",
+          "ce:indexed-name": "Liu H."
+        },
+        {
+          "ce:given-name": "Guo-Wei",
+          "preferred-name": {
+            "ce:given-name": "Guo Wei",
+            "ce:initials": "G.W.",
+            "ce:surname": "Le",
+            "ce:indexed-name": "Le G.W."
+          },
+          "@seq": "4",
+          "ce:initials": "G.-W.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60001604",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60001604"
+          },
+          "ce:surname": "Le",
+          "@auid": "7005498505",
+          "author-url": "https://api.elsevier.com/content/author/author_id/7005498505",
+          "ce:indexed-name": "Le G.-W."
+        }
+      ]
+    }
+  }
+}

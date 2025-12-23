@@ -12,13 +12,14 @@ for n in to10():
 def two_way(token):
     print('Starting server...')
     while True:
-        token = yield f'{token=}'
-        print(f'Received request {token}')
+        feedback = yield f'{token=}'
+        token, message = feedback
+        print(f'Received request {token}: {message}')
 
 c = two_way(None)
 next(c)
 tokens = ['2023-11-20'] + list(range(1,11))
 for token in tokens:
     print(f'Sending request: {token}')
-    response = c.send(token)
+    response = c.send([token, f'hello {token}'])
     print(f'Response: {response}')

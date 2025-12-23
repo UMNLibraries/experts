@@ -1,0 +1,28 @@
+{'attempts_id': UUID('88e144c2-27cf-443e-8ecd-158b03955801'), 'attempt_number': 1, 'attempt_stage': 'start', 'time': 247141.561745651, 'method': 'GET', 'url': URL('https://api.elsevier.com/content/search/scopus?view=complete&query=EID%28%2284905474619%22%29')}
+{'attempts_id': UUID('88e144c2-27cf-443e-8ecd-158b03955801'), 'attempt_number': 1, 'attempt_stage': 'end', 'time': 247141.994991804, 'elapsed_time': 0.4332461529993452, 'result': <Success: <Response [200 OK]>>}
+{
+  "search-results": {
+    "opensearch:totalResults": "0",
+    "opensearch:startIndex": "0",
+    "opensearch:itemsPerPage": "0",
+    "opensearch:Query": {
+      "@role": "request",
+      "@searchTerms": "EID(\"84905474619\")",
+      "@startPage": "0"
+    },
+    "link": [
+      {
+        "@_fa": "true",
+        "@ref": "self",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=EID%28%2284905474619%22%29",
+        "@type": "application/json"
+      }
+    ],
+    "entry": [
+      {
+        "@_fa": "true",
+        "error": "Result set was empty"
+      }
+    ]
+  }
+}

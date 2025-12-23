@@ -1,0 +1,2112 @@
+{
+  "abstracts-retrieval-response": {
+    "item": {
+      "ait:process-info": {
+        "ait:status": {
+          "@state": "update",
+          "@type": "core",
+          "@stage": "S300"
+        },
+        "ait:date-delivered": {
+          "@day": "19",
+          "@timestamp": "2021-11-19T10:58:38.000038-05:00",
+          "@year": "2021",
+          "@month": "11"
+        },
+        "ait:date-sort": {
+          "@day": "01",
+          "@year": "2008",
+          "@month": "01"
+        }
+      },
+      "bibrecord": {
+        "head": {
+          "author-group": {
+            "affiliation": {
+              "city-group": "Winnipeg, MB R3T 2N2",
+              "country": "Canada",
+              "@afid": "60190885",
+              "@country": "can",
+              "organization": [
+                {
+                  "$": "University of Manitoba"
+                },
+                {
+                  "$": "Department of Human Nutritional Sciences"
+                },
+                {
+                  "$": "Richardson Centre for Functional Foods and Nutraceuticals"
+                }
+              ],
+              "affiliation-id": [
+                {
+                  "@afid": "60190885",
+                  "@dptid": "125422282"
+                },
+                {
+                  "@afid": "60009697"
+                }
+              ],
+              "@dptid": "125422282"
+            },
+            "author": [
+              {
+                "ce:given-name": "Rotimi E.",
+                "preferred-name": {
+                  "ce:given-name": "Rotimi E.",
+                  "ce:initials": "R.E.",
+                  "ce:surname": "Aluko",
+                  "ce:indexed-name": "Aluko R.E."
+                },
+                "@seq": "1",
+                "ce:initials": "R.E.",
+                "@_fa": "true",
+                "@type": "auth",
+                "ce:surname": "Aluko",
+                "@auid": "6603059584",
+                "ce:indexed-name": "Aluko R.E."
+              }
+            ]
+          },
+          "citation-title": "Determination of nutritional and bioactive properties of peptides in enzymatic pea, chickpea, and mung bean protein hydrolysates",
+          "abstracts": "Within the primary structure of many pea and mung bean proteins are peptide sequences that can potentially be used in the formulation of therapeutic products for the treatment and prevention of human diseases. However, these peptide sequences need protease treatments before they can be released free of the parent proteins. Unlike chemical hydrolysis, enzymatic treatment enables more efficient tailoring of peptide products without formation of toxic by-products or destruction of amino acids. This review provides information on current methods that have been used to convert inactive pea and mung bean proteins into bioactive peptides. It focuses on 3 main bioactive properties, such as inhibitions of (1) angiotensin converting enzyme (ACE) activity; (2) calmodulin (CaM)-dependent enzymes; and (3) copper-chelating activity. ACE is an established marker for hypertension, high levels of some CaM-dependent enzymes are risk factors for various human diseases including cancer and Alzheimer's disease, and high vascular copper concentrations may potentiate atherosclerosis. Also reviewed are the production and evaluation of activity of hypoallergenic peptides that may offer protection against anaphylactic reactions. The 3 main proteins discussed are chickpea, mung bean, and field pea.",
+          "correspondence": {
+            "affiliation": {
+              "city-group": "Winnipeg, MB R3T 2N2",
+              "country": "Canada",
+              "@country": "can",
+              "organization": [
+                {
+                  "$": "University of Manitoba"
+                },
+                {
+                  "$": "Department of Human Nutritional Sciences"
+                },
+                {
+                  "$": "Richardson Centre for Functional Foods and Nutraceuticals"
+                }
+              ]
+            },
+            "person": {
+              "ce:initials": "R. E.",
+              "ce:surname": "Aluko",
+              "ce:indexed-name": "Aluko R. E."
+            }
+          },
+          "citation-info": {
+            "citation-type": {
+              "@code": "cp"
+            },
+            "citation-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            },
+            "abstract-language": {
+              "@language": "English",
+              "@xml:lang": "eng"
+            }
+          },
+          "source": {
+            "website": {
+              "ce:e-address": {
+                "$": "https://academic.oup.com/jaoac/issue",
+                "@type": "email"
+              }
+            },
+            "translated-sourcetitle": {
+              "$": "Journal of AOAC International",
+              "@xml:lang": "eng"
+            },
+            "volisspag": {
+              "voliss": {
+                "@volume": "91",
+                "@issue": "4"
+              },
+              "pagerange": {
+                "@first": "947",
+                "@last": "956"
+              }
+            },
+            "@type": "j",
+            "sourcetitle": "Journal of AOAC International",
+            "publicationdate": {
+              "year": "2008",
+              "date-text": "July/August 2008"
+            },
+            "codencode": "JAINE",
+            "sourcetitle-abbrev": "J AOAC Int",
+            "@country": "usa",
+            "issn": {
+              "$": "10603271",
+              "@type": "print"
+            },
+            "publicationyear": {
+              "@first": "2008"
+            },
+            "publisher": {
+              "publishername": "AOAC International"
+            },
+            "@srcid": "23412"
+          },
+          "enhancement": {
+            "classificationgroup": {
+              "classifications": [
+                {
+                  "@type": "CPXCLASS",
+                  "classification": [
+                    {
+                      "classification-code": "461.6",
+                      "classification-description": "Medicine"
+                    },
+                    {
+                      "classification-code": "461.9",
+                      "classification-description": "Biology"
+                    },
+                    {
+                      "classification-code": "544.1",
+                      "classification-description": "Copper"
+                    },
+                    {
+                      "classification-code": "601.3",
+                      "classification-description": "Mechanisms"
+                    },
+                    {
+                      "classification-code": "804.1",
+                      "classification-description": "Organic Compounds"
+                    }
+                  ]
+                },
+                {
+                  "@type": "FLXCLASS",
+                  "classification": {
+                    "classification-code": "902",
+                    "classification-description": "FLUIDEX; Related Topics"
+                  }
+                },
+                {
+                  "@type": "ASJC",
+                  "classification": [
+                    {
+                      "$": "1602"
+                    },
+                    {
+                      "$": "1106"
+                    },
+                    {
+                      "$": "2304"
+                    },
+                    {
+                      "$": "1102"
+                    },
+                    {
+                      "$": "3004"
+                    }
+                  ]
+                },
+                {
+                  "@type": "SUBJABBR",
+                  "classification": [
+                    {
+                      "$": "CHEM"
+                    },
+                    {
+                      "$": "AGRI"
+                    },
+                    {
+                      "$": "ENVI"
+                    },
+                    {
+                      "$": "PHAR"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "item-info": {
+          "copyright": {
+            "$": "Copyright 2020 Elsevier B.V., All rights reserved.",
+            "@type": "Elsevier"
+          },
+          "dbcollection": [
+            {
+              "$": "CHEM"
+            },
+            {
+              "$": "CPX"
+            },
+            {
+              "$": "EMBIO"
+            },
+            {
+              "$": "MEDL"
+            },
+            {
+              "$": "SCOPUS"
+            },
+            {
+              "$": "Scopusbase"
+            }
+          ],
+          "history": {
+            "date-created": {
+              "@day": "19",
+              "@timestamp": "BST 09:16:50",
+              "@year": "2020",
+              "@month": "05"
+            }
+          },
+          "itemidlist": {
+            "itemid": [
+              {
+                "$": "352256279",
+                "@idtype": "PUI"
+              },
+              {
+                "$": "51249751",
+                "@idtype": "CAR-ID"
+              },
+              {
+                "$": "2008123036",
+                "@idtype": "CHEM"
+              },
+              {
+                "$": "20083611524277",
+                "@idtype": "CPX"
+              },
+              {
+                "$": "2008236974",
+                "@idtype": "EMBIO"
+              },
+              {
+                "$": "18727557",
+                "@idtype": "MEDL"
+              },
+              {
+                "$": "20101277065",
+                "@idtype": "SCOPUS"
+              },
+              {
+                "$": "50649094650",
+                "@idtype": "SCP"
+              },
+              {
+                "$": "50649094650",
+                "@idtype": "SGR"
+              }
+            ],
+            "ce:doi": "10.1093/jaoac/91.4.947"
+          }
+        },
+        "tail": {
+          "bibliography": {
+            "@refcount": "33",
+            "reference": [
+              {
+                "ref-fulltext": "Meisel, H. (2004) Biofactors 21, 55-61",
+                "@id": "1",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2004"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "16444386368",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "21"
+                    },
+                    "pagerange": {
+                      "@first": "55",
+                      "@last": "61"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Meisel",
+                        "ce:indexed-name": "Meisel H."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Biofactors"
+                }
+              },
+              {
+                "ref-fulltext": "Wu, J., & Ding, X. (2002) Food Res. Int. 35, 367-375",
+                "@id": "2",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2002"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0036219595",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "35"
+                    },
+                    "pagerange": {
+                      "@first": "367",
+                      "@last": "375"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Wu",
+                        "ce:indexed-name": "Wu J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "X.",
+                        "@_fa": "true",
+                        "ce:surname": "Ding",
+                        "ce:indexed-name": "Ding X."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Food Res. Int"
+                }
+              },
+              {
+                "ref-fulltext": "Chen, J-R., Okada, T., Muramoto, K., Suetsuna, K., & Yang, S-C. (2003) J. Food Biochem. 26, 543-554",
+                "@id": "3",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2003"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0037002214",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "26"
+                    },
+                    "pagerange": {
+                      "@first": "543",
+                      "@last": "554"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.-R.",
+                        "@_fa": "true",
+                        "ce:surname": "Chen",
+                        "ce:indexed-name": "Chen J.-R."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Okada",
+                        "ce:indexed-name": "Okada T."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Muramoto",
+                        "ce:indexed-name": "Muramoto K."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "K.",
+                        "@_fa": "true",
+                        "ce:surname": "Suetsuna",
+                        "ce:indexed-name": "Suetsuna K."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "S.-C.",
+                        "@_fa": "true",
+                        "ce:surname": "Yang",
+                        "ce:indexed-name": "Yang S.-C."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Food Biochem"
+                }
+              },
+              {
+                "ref-fulltext": "Mallikarjun Gouda, K.G., Gowda, L.R., Appu Rao, A.G., & Prakash, V. (2006) J. Agric. Food Chem. 54, 4568-4573",
+                "@id": "4",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2006"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "33746531279",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "54"
+                    },
+                    "pagerange": {
+                      "@first": "4568",
+                      "@last": "4573"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "K.G.",
+                        "@_fa": "true",
+                        "ce:surname": "Mallikarjun Gouda",
+                        "ce:indexed-name": "Mallikarjun Gouda K.G."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "L.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Gowda",
+                        "ce:indexed-name": "Gowda L.R."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A.G.",
+                        "@_fa": "true",
+                        "ce:surname": "Appu Rao",
+                        "ce:indexed-name": "Appu Rao A.G."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "V.",
+                        "@_fa": "true",
+                        "ce:surname": "Prakash",
+                        "ce:indexed-name": "Prakash V."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Agric. Food Chem"
+                }
+              },
+              {
+                "ref-fulltext": "Motoi, H., & Kodama, T. (2003) Nahrung/Food 47, 354-358",
+                "@id": "5",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2003"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0242467926",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "47"
+                    },
+                    "pagerange": {
+                      "@first": "354",
+                      "@last": "358"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Motoi",
+                        "ce:indexed-name": "Motoi H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Kodama",
+                        "ce:indexed-name": "Kodama T."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Nahrung/Food"
+                }
+              },
+              {
+                "ref-fulltext": "Suh, H.J., Whang, J.H., Kim, S., Bae, S.H., & Noh, D.O. (2003) Process Biochem. 38, 1239-1244",
+                "@id": "6",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2003"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0037679233",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "38"
+                    },
+                    "pagerange": {
+                      "@first": "1239",
+                      "@last": "1244"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H.J.",
+                        "@_fa": "true",
+                        "ce:surname": "Suh",
+                        "ce:indexed-name": "Suh H.J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Whang",
+                        "ce:indexed-name": "Whang J.H."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Kim",
+                        "ce:indexed-name": "Kim S."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "S.H.",
+                        "@_fa": "true",
+                        "ce:surname": "Bae",
+                        "ce:indexed-name": "Bae S.H."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "D.O.",
+                        "@_fa": "true",
+                        "ce:surname": "Noh",
+                        "ce:indexed-name": "Noh D.O."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Process Biochem"
+                }
+              },
+              {
+                "ref-fulltext": "Adsule, R.N., Kadam, S.S., & Salunkhe, D.K. (1986) Crit. Rev. Food Sci. Nutr. 25, 73-105",
+                "@id": "7",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1986"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0022960867",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "25"
+                    },
+                    "pagerange": {
+                      "@first": "73",
+                      "@last": "105"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "R.N.",
+                        "@_fa": "true",
+                        "ce:surname": "Adsule",
+                        "ce:indexed-name": "Adsule R.N."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "S.S.",
+                        "@_fa": "true",
+                        "ce:surname": "Kadam",
+                        "ce:indexed-name": "Kadam S.S."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "D.K.",
+                        "@_fa": "true",
+                        "ce:surname": "Salunkhe",
+                        "ce:indexed-name": "Salunkhe D.K."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Crit. Rev. Food Sci. Nutr"
+                }
+              },
+              {
+                "ref-fulltext": "Clemente, A., Vioque, J., Sanchez-Vioque, R., Pedroche, J., & Millan, F. (1999) J. Agric. Food Chem. 47, 3776-3781",
+                "@id": "8",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1999"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0032866519",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "47"
+                    },
+                    "pagerange": {
+                      "@first": "3776",
+                      "@last": "3781"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "A.",
+                        "@_fa": "true",
+                        "ce:surname": "Clemente",
+                        "ce:indexed-name": "Clemente A."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Vioque",
+                        "ce:indexed-name": "Vioque J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Sanchez-Vioque",
+                        "ce:indexed-name": "Sanchez-Vioque R."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Pedroche",
+                        "ce:indexed-name": "Pedroche J."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "F.",
+                        "@_fa": "true",
+                        "ce:surname": "Millan",
+                        "ce:indexed-name": "Millan F."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Agric. Food Chem"
+                }
+              },
+              {
+                "ref-fulltext": "Kaur, M., & Singh, N. (2007) Food Chem. 102, 366-374",
+                "@id": "9",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2007"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "33751526555",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "102"
+                    },
+                    "pagerange": {
+                      "@first": "366",
+                      "@last": "374"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Kaur",
+                        "ce:indexed-name": "Kaur M."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "N.",
+                        "@_fa": "true",
+                        "ce:surname": "Singh",
+                        "ce:indexed-name": "Singh N."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Food Chem"
+                }
+              },
+              {
+                "ref-fulltext": "Pedroche, J., Yust, M.M., Giron-Calle, J., Alaiz, M., Millan, F., & Vioque, J. (2002) J. Sci. Food Agric. 82, 960-965",
+                "@id": "10",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2002"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0036302694",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "82"
+                    },
+                    "pagerange": {
+                      "@first": "960",
+                      "@last": "965"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Pedroche",
+                        "ce:indexed-name": "Pedroche J."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Yust",
+                        "ce:indexed-name": "Yust M.M."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Giron-Calle",
+                        "ce:indexed-name": "Giron-Calle J."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Alaiz",
+                        "ce:indexed-name": "Alaiz M."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "F.",
+                        "@_fa": "true",
+                        "ce:surname": "Millan",
+                        "ce:indexed-name": "Millan F."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Vioque",
+                        "ce:indexed-name": "Vioque J."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Sci. Food Agric"
+                }
+              },
+              {
+                "ref-fulltext": "Li, G-H., Le, G-W., Liu, H., & Shi, Y-H. (2005) Food Sci. Tech. Int. 11, 281-287",
+                "@id": "11",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2005"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "24944554968",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "11"
+                    },
+                    "pagerange": {
+                      "@first": "281",
+                      "@last": "287"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "G.-H.",
+                        "@_fa": "true",
+                        "ce:surname": "Li",
+                        "ce:indexed-name": "Li G.-H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "G.-W.",
+                        "@_fa": "true",
+                        "ce:surname": "Le",
+                        "ce:indexed-name": "Le G.-W."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Liu",
+                        "ce:indexed-name": "Liu H."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "Y.-H.",
+                        "@_fa": "true",
+                        "ce:surname": "Shi",
+                        "ce:indexed-name": "Shi Y.-H."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Food Sci. Tech. Int"
+                }
+              },
+              {
+                "ref-fulltext": "Cushman, D.W., & Cheung, H.S. (1971) Biochem. Pharmacol. 20, 1637-1648",
+                "@id": "12",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1971"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0015083353",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "20"
+                    },
+                    "pagerange": {
+                      "@first": "1637",
+                      "@last": "1648"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "D.W.",
+                        "@_fa": "true",
+                        "ce:surname": "Cushman",
+                        "ce:indexed-name": "Cushman D.W."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "H.S.",
+                        "@_fa": "true",
+                        "ce:surname": "Cheung",
+                        "ce:indexed-name": "Cheung H.S."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Biochem. Pharmacol"
+                }
+              },
+              {
+                "ref-fulltext": "Wu, J.P., Aluko, R.E., & Muir, A.D. (2002) J. Chromatogr. A 950, 125-130",
+                "@id": "13",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2002"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0037087231",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "950"
+                    },
+                    "pagerange": {
+                      "@first": "125",
+                      "@last": "130"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.P.",
+                        "@_fa": "true",
+                        "ce:surname": "Wu",
+                        "ce:indexed-name": "Wu J.P."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "R.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Aluko",
+                        "ce:indexed-name": "Aluko R.E."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "A.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Muir",
+                        "ce:indexed-name": "Muir A.D."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Chromatogr. A"
+                }
+              },
+              {
+                "ref-fulltext": "Humiski, L., & Aluko, R.E. (2007) J. Food Sci. 72, S605-S611",
+                "@id": "14",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2007"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "35348862011",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "pages": "S605-S611",
+                    "voliss": {
+                      "@volume": "72"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "L.",
+                        "@_fa": "true",
+                        "ce:surname": "Humiski",
+                        "ce:indexed-name": "Humiski L."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "R.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Aluko",
+                        "ce:indexed-name": "Aluko R.E."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Food Sci"
+                }
+              },
+              {
+                "ref-fulltext": "Li, G-H., Wan. J-Z., L.c. G-W., & Shi. Y-H. (2006).J. Pept. Sci. 12. 509 514",
+                "@id": "15",
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "50649115062",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-text": "Li, G-H., Wan. J-Z., L.c. G-W., & Shi. Y-H. (2006).J. Pept. Sci. 12. 509 514"
+                }
+              },
+              {
+                "ref-fulltext": "Li, G-H., Liu, H., Shi, Y-H., & Lc, G-W. (2005). J. Pharm. Biomed Anal. 37, 219-224",
+                "@id": "16",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2005"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "13544276309",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "37"
+                    },
+                    "pagerange": {
+                      "@first": "219",
+                      "@last": "224"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "G.-H.",
+                        "@_fa": "true",
+                        "ce:surname": "Li",
+                        "ce:indexed-name": "Li G.-H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Liu",
+                        "ce:indexed-name": "Liu H."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "Y.-H.",
+                        "@_fa": "true",
+                        "ce:surname": "Shi",
+                        "ce:indexed-name": "Shi Y.-H."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "G.-W.",
+                        "@_fa": "true",
+                        "ce:surname": "Lc",
+                        "ce:indexed-name": "Lc G.-W."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Pharm. Biomed Anal"
+                }
+              },
+              {
+                "ref-fulltext": "Yust, M.M., Pedroche, J., Giron-Calle, J.. Alaiz, M.. Millan. F., & Vioquc, J. (2003) Food Chem. 81, 363-369",
+                "@id": "17",
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0037409169",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-text": "Yust, M.M., Pedroche, J., Giron-Calle, J.. Alaiz, M.. Millan. F., & Vioquc, J. (2003) Food Chem. 81, 363-369"
+                }
+              },
+              {
+                "ref-fulltext": "Vermeirsscn, V., Van Camp. J., Devos, L., & Verstraete, W. (2003) J. Agric. Food Chem. 51, 5680-5687",
+                "@id": "18",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2003"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0042835787",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "51"
+                    },
+                    "pagerange": {
+                      "@first": "5680",
+                      "@last": "5687"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "V.",
+                        "@_fa": "true",
+                        "ce:surname": "Vermeirsscn",
+                        "ce:indexed-name": "Vermeirsscn V."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Van Camp",
+                        "ce:indexed-name": "Van Camp J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "L.",
+                        "@_fa": "true",
+                        "ce:surname": "Devos",
+                        "ce:indexed-name": "Devos L."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "W.",
+                        "@_fa": "true",
+                        "ce:surname": "Verstraete",
+                        "ce:indexed-name": "Verstraete W."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Agric. Food Chem"
+                }
+              },
+              {
+                "ref-fulltext": "Vermeirssen, V., Van Camp, J., & Verstraete, W. (2002).J. Biochem. Biophys. Methods 51, 75-87",
+                "@id": "19",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2002"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0037017785",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "51"
+                    },
+                    "pagerange": {
+                      "@first": "75",
+                      "@last": "87"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "V.",
+                        "@_fa": "true",
+                        "ce:surname": "Vermeirssen",
+                        "ce:indexed-name": "Vermeirssen V."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Van Camp",
+                        "ce:indexed-name": "Van Camp J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "W.",
+                        "@_fa": "true",
+                        "ce:surname": "Verstraete",
+                        "ce:indexed-name": "Verstraete W."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Biochem. Biophys. Methods"
+                }
+              },
+              {
+                "ref-fulltext": "Li, G-H., Shi, Y-H., & Liu, H. (2006) Eur. Food Res. Technol. 222, 733-736",
+                "@id": "20",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2006"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "33644930319",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "222"
+                    },
+                    "pagerange": {
+                      "@first": "733",
+                      "@last": "736"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "G.-H.",
+                        "@_fa": "true",
+                        "ce:surname": "Li",
+                        "ce:indexed-name": "Li G.-H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "Y.-H.",
+                        "@_fa": "true",
+                        "ce:surname": "Shi",
+                        "ce:indexed-name": "Shi Y.-H."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Liu",
+                        "ce:indexed-name": "Liu H."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Eur. Food Res. Technol"
+                }
+              },
+              {
+                "ref-fulltext": "Roberts, P.R., Burney, J.D., Black, K.W., & Zaloga, G.P. (1999) Digestion 60, 332-337",
+                "@id": "21",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1999"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0033007311",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "60"
+                    },
+                    "pagerange": {
+                      "@first": "332",
+                      "@last": "337"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "P.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Roberts",
+                        "ce:indexed-name": "Roberts P.R."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.D.",
+                        "@_fa": "true",
+                        "ce:surname": "Burney",
+                        "ce:indexed-name": "Burney J.D."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "K.W.",
+                        "@_fa": "true",
+                        "ce:surname": "Black",
+                        "ce:indexed-name": "Black K.W."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "G.P.",
+                        "@_fa": "true",
+                        "ce:surname": "Zaloga",
+                        "ce:indexed-name": "Zaloga G.P."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Digestion"
+                }
+              },
+              {
+                "ref-fulltext": "Adler-Nissen, J. (1979) J. Agric: Food Chem. 27, 1256-1262",
+                "@id": "22",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1979"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0018536145",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "27"
+                    },
+                    "pagerange": {
+                      "@first": "1256",
+                      "@last": "1262"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Adler-Nissen",
+                        "ce:indexed-name": "Adler-Nissen J."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Agric: Food Chem"
+                }
+              },
+              {
+                "ref-fulltext": "Vermeirssen, V., Van Camp, J., & Verstraete, W. (2005).J. Sci. Food Agric. 85, 399-405",
+                "@id": "23",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2005"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "13444252962",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "85"
+                    },
+                    "pagerange": {
+                      "@first": "399",
+                      "@last": "405"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "V.",
+                        "@_fa": "true",
+                        "ce:surname": "Vermeirssen",
+                        "ce:indexed-name": "Vermeirssen V."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Van Camp",
+                        "ce:indexed-name": "Van Camp J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "W.",
+                        "@_fa": "true",
+                        "ce:surname": "Verstraete",
+                        "ce:indexed-name": "Verstraete W."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Sci. Food Agric"
+                }
+              },
+              {
+                "ref-fulltext": "Li, H., & Aluko, R.E. (2005) J. Nutr. Biochem. 16, 656-662",
+                "@id": "24",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2005"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "26844440677",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "16"
+                    },
+                    "pagerange": {
+                      "@first": "656",
+                      "@last": "662"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Li",
+                        "ce:indexed-name": "Li H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "R.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Aluko",
+                        "ce:indexed-name": "Aluko R.E."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Nutr. Biochem"
+                }
+              },
+              {
+                "ref-fulltext": "Cho, M.J., Vaghy. P.L., Kondo. R., Lee. S.H., Davis, J.P., Rehl. R., Heo, W.D.. & Johnson. J.D. (1998) Biochemistry 37, 15593-15597",
+                "@id": "25",
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0032506166",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-text": "Cho, M.J., Vaghy. P.L., Kondo. R., Lee. S.H., Davis, J.P., Rehl. R., Heo, W.D.. & Johnson. J.D. (1998) Biochemistry 37, 15593-15597"
+                }
+              },
+              {
+                "ref-fulltext": "Itano, T., Itano. R., & Penniston, J.T. (1980) Biochem. J. 189, 455-459",
+                "@id": "26",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1980"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019065883",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "189"
+                    },
+                    "pagerange": {
+                      "@first": "455",
+                      "@last": "459"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Itano",
+                        "ce:indexed-name": "Itano T."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "R.",
+                        "@_fa": "true",
+                        "ce:surname": "Itano",
+                        "ce:indexed-name": "Itano R."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "J.T.",
+                        "@_fa": "true",
+                        "ce:surname": "Penniston",
+                        "ce:indexed-name": "Penniston J.T."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Biochem. J"
+                }
+              },
+              {
+                "ref-fulltext": "Li, H., & Aluko. R.E. (2006) Int. J. Food Sci. Nutr. 57, 178-189",
+                "@id": "27",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2006"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "33745218251",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "57"
+                    },
+                    "pagerange": {
+                      "@first": "178",
+                      "@last": "189"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "H.",
+                        "@_fa": "true",
+                        "ce:surname": "Li",
+                        "ce:indexed-name": "Li H."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "R.E.",
+                        "@_fa": "true",
+                        "ce:surname": "Aluko",
+                        "ce:indexed-name": "Aluko R.E."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Int. J. Food Sci. Nutr"
+                }
+              },
+              {
+                "ref-fulltext": "Gaetke, L., & Chow, C.K. (2003) Toxicology 189, 147-163",
+                "@id": "28",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2003"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0037735344",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "189"
+                    },
+                    "pagerange": {
+                      "@first": "147",
+                      "@last": "163"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "L.",
+                        "@_fa": "true",
+                        "ce:surname": "Gaetke",
+                        "ce:indexed-name": "Gaetke L."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C.K.",
+                        "@_fa": "true",
+                        "ce:surname": "Chow",
+                        "ce:indexed-name": "Chow C.K."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Toxicology"
+                }
+              },
+              {
+                "ref-fulltext": "Megias, C., Pedroche, J., Yust, M.M., Giron-Calle, J., Alaiz, M., Millan, F., & Vioque, J. (2007) J. Agric. Food Chem. 55, 3949-3954",
+                "@id": "29",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2007"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "34249882505",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "55"
+                    },
+                    "pagerange": {
+                      "@first": "3949",
+                      "@last": "3954"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Megias",
+                        "ce:indexed-name": "Megias C."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Pedroche",
+                        "ce:indexed-name": "Pedroche J."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.M.",
+                        "@_fa": "true",
+                        "ce:surname": "Yust",
+                        "ce:indexed-name": "Yust M.M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Giron-Calle",
+                        "ce:indexed-name": "Giron-Calle J."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Alaiz",
+                        "ce:indexed-name": "Alaiz M."
+                      },
+                      {
+                        "@seq": "6",
+                        "ce:initials": "F.",
+                        "@_fa": "true",
+                        "ce:surname": "Millan",
+                        "ce:indexed-name": "Millan F."
+                      },
+                      {
+                        "@seq": "7",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Vioque",
+                        "ce:indexed-name": "Vioque J."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Agric. Food Chem"
+                }
+              },
+              {
+                "ref-fulltext": "Halliwell, B., Murcia. M.A., Chirico, S., & Arumona, O.I. (1995) Crit. Rev. Food Sci. Nutr. 35, 7-20",
+                "@id": "30",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1995"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0029180533",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "35"
+                    },
+                    "pagerange": {
+                      "@first": "7",
+                      "@last": "20"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Halliwell",
+                        "ce:indexed-name": "Halliwell B."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "M.A.",
+                        "@_fa": "true",
+                        "ce:surname": "Murcia",
+                        "ce:indexed-name": "Murcia M.A."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "S.",
+                        "@_fa": "true",
+                        "ce:surname": "Chirico",
+                        "ce:indexed-name": "Chirico S."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "O.I.",
+                        "@_fa": "true",
+                        "ce:surname": "Arumona",
+                        "ce:indexed-name": "Arumona O.I."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Crit. Rev. Food Sci. Nutr"
+                }
+              },
+              {
+                "ref-fulltext": "Li, Y, Jiang, B., Zhang, T., Mu, W., & Liu, J. (2008) Food Chem. 106, 444-450",
+                "@id": "31",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2008"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "34548284434",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "106"
+                    },
+                    "pagerange": {
+                      "@first": "444",
+                      "@last": "450"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "Y.",
+                        "@_fa": "true",
+                        "ce:surname": "Li",
+                        "ce:indexed-name": "Li Y."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "B.",
+                        "@_fa": "true",
+                        "ce:surname": "Jiang",
+                        "ce:indexed-name": "Jiang B."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "T.",
+                        "@_fa": "true",
+                        "ce:surname": "Zhang",
+                        "ce:indexed-name": "Zhang T."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "W.",
+                        "@_fa": "true",
+                        "ce:surname": "Mu",
+                        "ce:indexed-name": "Mu W."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "J.",
+                        "@_fa": "true",
+                        "ce:surname": "Liu",
+                        "ce:indexed-name": "Liu J."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Food Chem"
+                }
+              },
+              {
+                "ref-fulltext": "Ferreira, I.C.F.R., Baptista, P., Vilas-Boas, M., & Barros, L. (2007) Food Chem. 100, 1511-1516",
+                "@id": "32",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "2007"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "33746570173",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "100"
+                    },
+                    "pagerange": {
+                      "@first": "1511",
+                      "@last": "1516"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "I.C.F.R.",
+                        "@_fa": "true",
+                        "ce:surname": "Ferreira",
+                        "ce:indexed-name": "Ferreira I.C.F.R."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "P.",
+                        "@_fa": "true",
+                        "ce:surname": "Baptista",
+                        "ce:indexed-name": "Baptista P."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Vilas-Boas",
+                        "ce:indexed-name": "Vilas-Boas M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "L.",
+                        "@_fa": "true",
+                        "ce:surname": "Barros",
+                        "ce:indexed-name": "Barros L."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "Food Chem"
+                }
+              },
+              {
+                "ref-fulltext": "Hindi-Tamelikecht, F., Dauphin, C., Hamon, M., Grangaud, J.P., & Pradeau, D. (1997) J. Agric. Food Chem. 45, 4758-4762",
+                "@id": "33",
+                "ref-info": {
+                  "ref-publicationyear": {
+                    "@first": "1997"
+                  },
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0007253259",
+                      "@idtype": "SGR"
+                    }
+                  },
+                  "ref-volisspag": {
+                    "voliss": {
+                      "@volume": "45"
+                    },
+                    "pagerange": {
+                      "@first": "4758",
+                      "@last": "4762"
+                    }
+                  },
+                  "ref-authors": {
+                    "author": [
+                      {
+                        "@seq": "1",
+                        "ce:initials": "F.",
+                        "@_fa": "true",
+                        "ce:surname": "Hindi-Tamelikecht",
+                        "ce:indexed-name": "Hindi-Tamelikecht F."
+                      },
+                      {
+                        "@seq": "2",
+                        "ce:initials": "C.",
+                        "@_fa": "true",
+                        "ce:surname": "Dauphin",
+                        "ce:indexed-name": "Dauphin C."
+                      },
+                      {
+                        "@seq": "3",
+                        "ce:initials": "M.",
+                        "@_fa": "true",
+                        "ce:surname": "Hamon",
+                        "ce:indexed-name": "Hamon M."
+                      },
+                      {
+                        "@seq": "4",
+                        "ce:initials": "J.P.",
+                        "@_fa": "true",
+                        "ce:surname": "Grangaud",
+                        "ce:indexed-name": "Grangaud J.P."
+                      },
+                      {
+                        "@seq": "5",
+                        "ce:initials": "D.",
+                        "@_fa": "true",
+                        "ce:surname": "Pradeau",
+                        "ce:indexed-name": "Pradeau D."
+                      }
+                    ]
+                  },
+                  "ref-sourcetitle": "J. Agric. Food Chem"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "affiliation": {
+      "affiliation-city": "Winnipeg",
+      "@id": "60190885",
+      "affilname": "Richardson Centre for Functional Foods and Nutraceuticals",
+      "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60190885",
+      "affiliation-country": "Canada"
+    },
+    "coredata": {
+      "srctype": "j",
+      "eid": "2-s2.0-50649094650",
+      "dc:description": "Within the primary structure of many pea and mung bean proteins are peptide sequences that can potentially be used in the formulation of therapeutic products for the treatment and prevention of human diseases. However, these peptide sequences need protease treatments before they can be released free of the parent proteins. Unlike chemical hydrolysis, enzymatic treatment enables more efficient tailoring of peptide products without formation of toxic by-products or destruction of amino acids. This review provides information on current methods that have been used to convert inactive pea and mung bean proteins into bioactive peptides. It focuses on 3 main bioactive properties, such as inhibitions of (1) angiotensin converting enzyme (ACE) activity; (2) calmodulin (CaM)-dependent enzymes; and (3) copper-chelating activity. ACE is an established marker for hypertension, high levels of some CaM-dependent enzymes are risk factors for various human diseases including cancer and Alzheimer's disease, and high vascular copper concentrations may potentiate atherosclerosis. Also reviewed are the production and evaluation of activity of hypoallergenic peptides that may offer protection against anaphylactic reactions. The 3 main proteins discussed are chickpea, mung bean, and field pea.",
+      "pubmed-id": "18727557",
+      "prism:coverDate": "2008-01-01",
+      "prism:aggregationType": "Journal",
+      "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/50649094650",
+      "dc:creator": {
+        "author": [
+          {
+            "ce:given-name": "Rotimi E.",
+            "preferred-name": {
+              "ce:given-name": "Rotimi E.",
+              "ce:initials": "R.E.",
+              "ce:surname": "Aluko",
+              "ce:indexed-name": "Aluko R.E."
+            },
+            "@seq": "1",
+            "ce:initials": "R.E.",
+            "@_fa": "true",
+            "affiliation": {
+              "@id": "60190885",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60190885"
+            },
+            "ce:surname": "Aluko",
+            "@auid": "6603059584",
+            "author-url": "https://api.elsevier.com/content/author/author_id/6603059584",
+            "ce:indexed-name": "Aluko R.E."
+          }
+        ]
+      },
+      "link": [
+        {
+          "@_fa": "true",
+          "@rel": "self",
+          "@href": "https://api.elsevier.com/content/abstract/scopus_id/50649094650"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus",
+          "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=50649094650&origin=inward"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus-citedby",
+          "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=50649094650&origin=inward"
+        }
+      ],
+      "source-id": "23412",
+      "citedby-count": "71",
+      "prism:volume": "91",
+      "subtype": "cp",
+      "dc:title": "Determination of nutritional and bioactive properties of peptides in enzymatic pea, chickpea, and mung bean protein hydrolysates",
+      "openaccess": "1",
+      "prism:issn": "10603271",
+      "prism:issueIdentifier": "4",
+      "subtypeDescription": "Conference Paper",
+      "prism:publicationName": "Journal of AOAC International",
+      "prism:pageRange": "947-956",
+      "prism:endingPage": "956",
+      "openaccessFlag": "true",
+      "prism:doi": "10.1093/jaoac/91.4.947",
+      "prism:startingPage": "947",
+      "dc:identifier": "SCOPUS_ID:50649094650",
+      "dc:publisher": "AOAC International"
+    },
+    "idxterms": {
+      "mainterm": [
+        {
+          "$": "Alzheimer's disease",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Angiotensin-converting enzyme",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Bioactive properties",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Chemical hydrolysis",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Copper concentration",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Enzymatic treatments",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Evaluation of activity",
+          "@weight": "b",
+          "@candidate": "n"
+        },
+        {
+          "$": "Therapeutic products",
+          "@weight": "b",
+          "@candidate": "n"
+        }
+      ]
+    },
+    "language": {
+      "@xml:lang": "eng"
+    },
+    "authkeywords": null,
+    "subject-areas": {
+      "subject-area": [
+        {
+          "@_fa": "true",
+          "$": "Analytical Chemistry",
+          "@code": "1602",
+          "@abbrev": "CHEM"
+        },
+        {
+          "@_fa": "true",
+          "$": "Food Science",
+          "@code": "1106",
+          "@abbrev": "AGRI"
+        },
+        {
+          "@_fa": "true",
+          "$": "Environmental Chemistry",
+          "@code": "2304",
+          "@abbrev": "ENVI"
+        },
+        {
+          "@_fa": "true",
+          "$": "Agronomy and Crop Science",
+          "@code": "1102",
+          "@abbrev": "AGRI"
+        },
+        {
+          "@_fa": "true",
+          "$": "Pharmacology",
+          "@code": "3004",
+          "@abbrev": "PHAR"
+        }
+      ]
+    },
+    "authors": {
+      "author": [
+        {
+          "ce:given-name": "Rotimi E.",
+          "preferred-name": {
+            "ce:given-name": "Rotimi E.",
+            "ce:initials": "R.E.",
+            "ce:surname": "Aluko",
+            "ce:indexed-name": "Aluko R.E."
+          },
+          "@seq": "1",
+          "ce:initials": "R.E.",
+          "@_fa": "true",
+          "affiliation": {
+            "@id": "60190885",
+            "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60190885"
+          },
+          "ce:surname": "Aluko",
+          "@auid": "6603059584",
+          "author-url": "https://api.elsevier.com/content/author/author_id/6603059584",
+          "ce:indexed-name": "Aluko R.E."
+        }
+      ]
+    }
+  }
+}

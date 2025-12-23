@@ -1,0 +1,634 @@
+{
+  "abstracts-retrieval-response": {
+    "item": {
+      "bibrecord": {
+        "item-info": {
+          "history": {
+            "date-created": {
+              "@day": "27",
+              "@timestamp": "BST 09:15:01",
+              "@year": "2021",
+              "@month": "09"
+            }
+          }
+	},
+        "tail": {
+          "bibliography": {
+            "@refcount": "60",
+            "reference": [
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "64349115740",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "33748750527",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "38749090899",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017696932",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019136209",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0018614873",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0018600670",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "84887399153",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "34249289704",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0029583178",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "70349430938",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0021215560",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0021062922",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0031738098",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0021811872",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0030606673",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "27744516236",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "77957674664",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0018068188",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0025790578",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0033611305",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019977566",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "36849082448",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0021840653",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0021350233",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0026485521",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0022879443",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0031709570",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0035142087",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "58149520312",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "77952744201",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0016481815",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0020363237",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017143229",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "65649129982",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0042664072",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017119520",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0022491873",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0004268574",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "69749127975",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "15444369213",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017664068",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0023263192",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019449167",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0018072125",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019979314",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017889854",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0023841222",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0031736808",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0023107578",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "77749277164",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0020076423",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": [
+                      {
+                        "$": "e25006",
+                        "@idtype": "ARTNUM"
+                      },
+                      {
+                        "$": "81155153943",
+                        "@idtype": "SGR"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "34548158293",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "48749113401",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0019182431",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0028076991",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "79960608008",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "0017059521",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              },
+              {
+                "ref-info": {
+                  "refd-itemidlist": {
+                    "itemid": {
+                      "$": "84857258987",
+                      "@idtype": "SGR"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "coredata": {
+      "eid": "2-s2.0-84924664029"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+thaw(self.headers)={'Accept': 'application/json', 'Accept-Charset': 'utf-8'}
+{'attempts_id': UUID('4819e12f-9108-4467-99b0-170dcea24846'), 'attempt_number': 1, 'attempt_stage': 'start', 'time': 1016422.278776018, 'method': 'GET', 'url': URL('https://api.elsevier.com/content/abstract/scopus_id/84905474619?view=FULL')}
+{'attempts_id': UUID('4819e12f-9108-4467-99b0-170dcea24846'), 'attempt_number': 1, 'attempt_stage': 'end', 'time': 1016424.441747756, 'elapsed_time': 2.1629717380274087, 'result': <Success: <Response [404 Not Found]>>}
+Headers([('date', 'Mon, 22 Apr 2024 19:08:47 GMT'), ('content-type', 'application/json;charset=UTF-8'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('allow', 'GET'), ('vary', 'Origin'), ('vary', 'Access-Control-Request-Method'), ('vary', 'Access-Control-Request-Headers'), ('x-els-apikey', 'c8072a32711666abee937548c8faa415'), ('x-els-insttoken', '17cfc02d7777667c75721d281af85a18'), ('x-els-reqid', 'bf9a4971952cc8f0'), ('x-els-resourceversion', 'default'), ('x-els-status', 'RESOURCE_NOT_FOUND - The resource specified cannot be found.'), ('x-els-transid', 'e5c84e6b1dbe75ed'), ('x-ratelimit-limit', '100000'), ('x-ratelimit-remaining', '97012'), ('x-ratelimit-reset', '1714032910'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=SOG.UHMrUfb5WKWj2CEGADWwcXCCJ8vF6gZ9BesJRys-1713812927-1.0.1.1-ctIs2mCNJ1Czs5uZdsdU9Ka5CIQggugRdwN_e421QlGHkZ8DCy7erKEPjTH9xSHrPEKfAwc8RshE54We_U5tiA; path=/; expires=Mon, 22-Apr-24 19:38:47 GMT; domain=.elsevier.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8787e77e5ee726d7-MSP'), ('content-encoding', 'gzip')])
+{
+  "service-error": {
+    "status": {
+      "statusCode": "RESOURCE_NOT_FOUND",
+      "statusText": "The resource specified cannot be found."
+    }
+  }
+}

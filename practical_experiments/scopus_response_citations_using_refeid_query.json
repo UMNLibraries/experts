@@ -1,0 +1,172 @@
+{
+    "search-results": {
+        "opensearch:totalResults": "2",
+        "opensearch:startIndex": "0",
+        "opensearch:itemsPerPage": "2",
+        "opensearch:Query": {
+            "@role": "request",
+            "@searchTerms": "REFEID(2-s2.0-85042408922)",
+            "@startPage": "0"
+        },
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=REFEID%282-s2.0-85042408922%29",
+                "@type": "application/json"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "first",
+                "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=REFEID%282-s2.0-85042408922%29",
+                "@type": "application/json"
+            }
+        ],
+        "entry": [
+            {
+                "@_fa": "true",
+                "link": [
+                    {
+                        "@_fa": "true",
+                        "@ref": "self",
+                        "@href": "https://api.elsevier.com/content/abstract/scopus_id/85129777911"
+                    },
+                    {
+                        "@_fa": "true",
+                        "@ref": "author-affiliation",
+                        "@href": "https://api.elsevier.com/content/abstract/scopus_id/85129777911?field=author,affiliation"
+                    },
+                    {
+                        "@_fa": "true",
+                        "@ref": "scopus",
+                        "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85129777911&origin=inward"
+                    },
+                    {
+                        "@_fa": "true",
+                        "@ref": "scopus-citedby",
+                        "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85129777911&origin=inward"
+                    }
+                ],
+                "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85129777911",
+                "dc:identifier": "SCOPUS_ID:85129777911",
+                "eid": "2-s2.0-85129777911",
+                "dc:title": "Characteristics of alcohol recovery narratives: Systematic review and narrative synthesis",
+                "dc:creator": "Subhani M.",
+                "prism:publicationName": "PLoS ONE",
+                "prism:eIssn": "19326203",
+                "prism:volume": "17",
+                "prism:issueIdentifier": "5 May",
+                "prism:pageRange": null,
+                "prism:coverDate": "2022-05-01",
+                "prism:coverDisplayDate": "May 2022",
+                "prism:doi": "10.1371/journal.pone.0268034",
+                "citedby-count": "4",
+                "affiliation": [
+                    {
+                        "@_fa": "true",
+                        "affilname": "University of Nottingham Medical School",
+                        "affiliation-city": "Nottingham",
+                        "affiliation-country": "United Kingdom"
+                    },
+                    {
+                        "@_fa": "true",
+                        "affilname": "Nottingham University Hospitals NHS Trust",
+                        "affiliation-city": "Nottingham",
+                        "affiliation-country": "United Kingdom"
+                    }
+                ],
+                "pubmed-id": "35511789",
+                "prism:aggregationType": "Journal",
+                "subtype": "re",
+                "subtypeDescription": "Review",
+                "article-number": "e0268034",
+                "source-id": "10600153309",
+                "openaccess": "1",
+                "openaccessFlag": true,
+                "freetoread": {
+                    "value": [
+                        {
+                            "$": "all"
+                        },
+                        {
+                            "$": "publisherfullgold"
+                        },
+                        {
+                            "$": "repository"
+                        },
+                        {
+                            "$": "repositoryvor"
+                        }
+                    ]
+                },
+                "freetoreadLabel": {
+                    "value": [
+                        {
+                            "$": "All Open Access"
+                        },
+                        {
+                            "$": "Gold"
+                        },
+                        {
+                            "$": "Green"
+                        }
+                    ]
+                }
+            },
+            {
+                "@_fa": "true",
+                "link": [
+                    {
+                        "@_fa": "true",
+                        "@ref": "self",
+                        "@href": "https://api.elsevier.com/content/abstract/scopus_id/85053261436"
+                    },
+                    {
+                        "@_fa": "true",
+                        "@ref": "author-affiliation",
+                        "@href": "https://api.elsevier.com/content/abstract/scopus_id/85053261436?field=author,affiliation"
+                    },
+                    {
+                        "@_fa": "true",
+                        "@ref": "scopus",
+                        "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85053261436&origin=inward"
+                    },
+                    {
+                        "@_fa": "true",
+                        "@ref": "scopus-citedby",
+                        "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85053261436&origin=inward"
+                    }
+                ],
+                "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85053261436",
+                "dc:identifier": "SCOPUS_ID:85053261436",
+                "eid": "2-s2.0-85053261436",
+                "dc:title": "Aboriginal Women\u2019s Experiences With Intimate Partner Sexual Violence and The Dangerous Lives They Live As a Result of Victimization",
+                "dc:creator": "Guggisberg M.",
+                "prism:publicationName": "Journal of Aggression, Maltreatment and Trauma",
+                "prism:issn": "10926771",
+                "prism:eIssn": "1545083X",
+                "prism:volume": "28",
+                "prism:issueIdentifier": "2",
+                "prism:pageRange": "186-204",
+                "prism:coverDate": "2019-02-07",
+                "prism:coverDisplayDate": "7 February 2019",
+                "prism:doi": "10.1080/10926771.2018.1508106",
+                "citedby-count": "10",
+                "affiliation": [
+                    {
+                        "@_fa": "true",
+                        "affilname": "CQUniversity Australia",
+                        "affiliation-city": "Rockhampton",
+                        "affiliation-country": "Australia"
+                    }
+                ],
+                "prism:aggregationType": "Journal",
+                "subtype": "ar",
+                "subtypeDescription": "Article",
+                "source-id": "15373",
+                "openaccess": "0",
+                "openaccessFlag": false
+            }
+        ]
+    }
+}

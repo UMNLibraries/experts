@@ -1,0 +1,73 @@
+{
+  "abstracts-retrieval-response": {
+    "affiliation": {
+      "affiliation-city": "Pamplona",
+      "affilname": "Universidad P\u00fablica de Navarra",
+      "affiliation-country": "Spain"
+    },
+    "coredata": {
+      "srctype": "j",
+      "prism:issueIdentifier": "4",
+      "eid": "2-s2.0-0344097508",
+      "prism:coverDate": "1998-12-01",
+      "prism:aggregationType": "Journal",
+      "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/0344097508",
+      "subtypeDescription": "Article",
+      "dc:creator": {
+        "author": [
+          {
+            "preferred-name": {
+              "ce:given-name": "R.",
+              "ce:initials": "R.",
+              "ce:surname": "Alonso",
+              "ce:indexed-name": "Alonso R."
+            },
+            "@seq": "1",
+            "ce:initials": "R.",
+            "@_fa": "true",
+            "affiliation": {
+              "@id": "60033019",
+              "@href": "https://api.elsevier.com/content/affiliation/affiliation_id/60033019"
+            },
+            "ce:surname": "Alonso",
+            "@auid": "7201754144",
+            "author-url": "https://api.elsevier.com/content/author/author_id/7201754144",
+            "ce:indexed-name": "Alonso R."
+          }
+        ]
+      },
+      "link": [
+        {
+          "@_fa": "true",
+          "@rel": "self",
+          "@href": "https://api.elsevier.com/content/abstract/scopus_id/0344097508"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus",
+          "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=0344097508&origin=inward"
+        },
+        {
+          "@_fa": "true",
+          "@rel": "scopus-citedby",
+          "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=0344097508&origin=inward"
+        }
+      ],
+      "prism:publicationName": "Food Chemistry",
+      "source-id": "24039",
+      "pii": "S0308814698000375",
+      "citedby-count": "175",
+      "prism:volume": "63",
+      "subtype": "ar",
+      "prism:pageRange": "505-512",
+      "dc:title": "Effects of extrusion and conventional processing methods on protein and antinutritional factor contents in pea seeds",
+      "prism:endingPage": "512",
+      "openaccess": "0",
+      "openaccessFlag": "false",
+      "prism:doi": "10.1016/S0308-8146(98)00037-5",
+      "prism:issn": "03088146",
+      "prism:startingPage": "505",
+      "dc:identifier": "SCOPUS_ID:0344097508"
+    }
+  }
+}

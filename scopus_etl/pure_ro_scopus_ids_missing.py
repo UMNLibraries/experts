@@ -1,0 +1,83 @@
+import dotenv_switch.auto
+
+from datetime import datetime
+import json
+
+from experts_dw import db, scopus_json
+
+from experts.api.scopus import \
+    Client as scopus_client, \
+    ResponseParser as r_parser, \
+    AbstractResponseBodyParser as arb_parser
+
+scopus_ids_sql = '''
+WITH authored_scopus_ids AS (
+SELECT
+  rojt.scopus_id
+FROM
+  pure_json_research_output_524 ro,
+  JSON_TABLE(ro.json_document, '$'
+    COLUMNS (
+      scopus_id        PATH '$.externalId',
+      uuid             PATH '$.uuid',
+      external_source  PATH '$.externalIdSource',
+      ro_title         PATH '$.title.value',
+      ro_type          PATH '$.type.uri',
+      NESTED PATH '$.publicationStatuses[*]'
+        COLUMNS (
+          ro_year PATH '$.publicationDate.year',
+          ro_current PATH '$.current',
+          ro_status PATH '$.publicationStatus.uri'
+        )
+    )) rojt
+WHERE JSON_EXISTS(ro.json_document, '$.uuid')
+  AND rojt.external_source = 'Scopus'
+  AND rojt.ro_type LIKE '/dk/atira/pure/researchoutput/researchoutputtypes/contributiontojournal/%'
+  AND rojt.ro_current = 'true'
+  AND TO_DATE(rojt.ro_year, 'YYYY') > TO_DATE('2021-06-30', 'YYYY-MM-DD')
+  AND rojt.ro_status = '/dk/atira/pure/researchoutput/status/published'
+)
+SELECT distinct asi.scopus_id
+FROM authored_scopus_ids asi
+LEFT JOIN scopus_json_abstract sja 
+ON asi.scopus_id = sja.scopus_id
+WHERE sja.scopus_id IS NULL
+'''
+
+#scopus_ids_sql = 'SELECT scopus_id FROM scopus_authored_abstracts_to_download'
+
+with db.cx_oracle_connection() as db_session, scopus_client() as scopus_session:
+    select_cursor = db_session.cursor()
+    select_cursor.execute(scopus_ids_sql)
+    columns = [col[0] for col in select_cursor.description]
+    select_cursor.rowfactory = lambda *args: dict(zip(columns, args))
+
+    insert_cursor = db_session.cursor()
+    while True:
+        rows = select_cursor.fetchmany(1000)
+        if not rows:
+            break
+        scopus_ids = [row['SCOPUS_ID'] for row in rows]
+        
+        documents_to_insert = [
+            {
+                'scopus_id': arb_parser.scopus_id(body),
+                'scopus_created': arb_parser.date_created(body),
+                'scopus_modified': arb_parser.date_created(body),
+                'inserted': datetime.now(),
+                'updated': datetime.now(),
+                'json_document': json.dumps(body),
+            }
+            for body in scopus_session.get_many_abstracts_by_scopus_id(
+                scopus_ids=scopus_ids,
+            ) | r_parser.responses_to_bodies
+        ]
+    
+        scopus_json.insert_documents(
+           insert_cursor,
+           documents=list(documents_to_insert),
+           collection_api_name='abstract',
+           relation='authored',
+           staging=True,
+        )
+        db_session.commit()

@@ -1,0 +1,22 @@
+{
+  "abstracts-retrieval-response": {
+    "item": {
+      "bibrecord": {
+        "item-info": {
+          "history": {
+            "date-created": {
+              "@day": "18",
+              "@timestamp": "BST 11:57:22",
+              "@year": "2017",
+              "@month": "09"
+            }
+          }
+	},
+        "tail": null
+      }
+    },
+    "coredata": {
+      "eid": "2-s2.0-49949145584"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "abstract-citations-response": {
+    "h-index": "1",
+    "identifier-legend": {
+      "identifier": [
+        {
+          "@_fa": "true",
+          "dc:identifier": "SCOPUS_ID:84876222028",
+          "prism:doi": "10.1016/j.cell.2013.03.036",
+          "pii": "S0092867413003930",
+          "scopus_id": "84876222028"
+        }
+      ]
+    },
+    "citeInfoMatrix": {
+      "citeInfoMatrixXML": {
+        "citationMatrix": {
+          "citeInfo": [
+            {
+              "@_fa": "true",
+              "dc:identifier": "SCOPUS_ID:84876222028",
+              "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84876222028",
+              "dc:title": "Selective inhibition of tumor oncogenes by disruption of super-enhancers",
+              "author": [
+                {
+                  "@_fa": "true",
+                  "initials": null,
+                  "index-name": null,
+                  "surname": null,
+                  "authid": null,
+                  "author-url": "https://api.elsevier.com/content/author/author_id/"
+                }
+              ],
+              "citationType": {
+                "@code": "ar",
+                "$": "Article"
+              },
+              "sort-year": "2013",
+              "sortTitle": "Cell",
+              "prism:volume": "153",
+              "prism:issueIdentifier": "2",
+              "prism:startingPage": "320",
+              "prism:endingPage": "334",
+              "prism:issn": "0092-8674",
+              "pcc": "1671",
+              "cc": [
+                {
+                  "$": "202"
+                },
+                {
+                  "$": "175"
+                },
+                {
+                  "$": "93"
+                }
+              ],
+              "lcc": "0",
+              "rangeCount": "470",
+              "rowTotal": "2141"
+            }
+          ]
+        }
+      }
+    },
+    "citeColumnTotalXML": {
+      "citeCountHeader": {
+        "prevColumnHeading": "previous",
+        "columnHeading": [
+          {
+            "$": "2023"
+          },
+          {
+            "$": "2024"
+          },
+          {
+            "$": "2025"
+          }
+        ],
+        "laterColumnHeading": "later",
+        "prevColumnTotal": "1671",
+        "columnTotal": [
+          {
+            "$": "202"
+          },
+          {
+            "$": "175"
+          },
+          {
+            "$": "93"
+          }
+        ],
+        "laterColumnTotal": "0",
+        "rangeColumnTotal": "470",
+        "grandTotal": "2141"
+      }
+    }
+  }
+}

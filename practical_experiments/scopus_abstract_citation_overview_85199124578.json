@@ -1,0 +1,10 @@
+{'attempts_id': UUID('99224a0b-fa96-40d6-bc6c-c488ff485f0f'), 'attempt_number': 1, 'attempt_stage': 'start', 'time': 68666.170823288, 'method': 'GET', 'url': URL('https://api.elsevier.com/content/abstract/citations?citation=exclude-self&scopus_id=85199124578')}
+{'attempts_id': UUID('99224a0b-fa96-40d6-bc6c-c488ff485f0f'), 'attempt_number': 1, 'attempt_stage': 'end', 'time': 68666.75772849, 'elapsed_time': 0.5869052019988885, 'result': <Success: <Response [403 Forbidden]>>}
+{
+  "service-error": {
+    "status": {
+      "statusCode": "AUTHENTICATION_ERROR",
+      "statusText": "Requestor configuration settings insufficient for access to this resource."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{'attempts_id': UUID('4814c5a5-7aca-4207-a51a-f08861918df8'), 'attempt_number': 1, 'attempt_stage': 'start', 'time': 84090.129684147, 'method': 'GET', 'url': URL('https://api.elsevier.com/content/abstract/scopus_id/85135871123?view=FULL')}
+{'attempts_id': UUID('4814c5a5-7aca-4207-a51a-f08861918df8'), 'attempt_number': 1, 'attempt_stage': 'end', 'time': 84090.667485016, 'elapsed_time': 0.5378008690022398, 'result': <Success: <Response [404 Not Found]>>}
+{
+  "service-error": {
+    "status": {
+      "statusCode": "RESOURCE_NOT_FOUND",
+      "statusText": "The resource specified cannot be found."
+    }
+  }
+}

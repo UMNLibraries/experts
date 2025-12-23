@@ -1,0 +1,329 @@
+{'attempts_id': UUID('f274dff0-e11f-473f-aea1-c1a5408ae18f'), 'attempt_number': 1, 'attempt_stage': 'start', 'time': 247560.040131981, 'method': 'GET', 'url': URL('https://api.elsevier.com/content/search/scopus?query=DOI%2810.1016%2Fj.cell.2013.03.036%29&view=complete')}
+{'attempts_id': UUID('f274dff0-e11f-473f-aea1-c1a5408ae18f'), 'attempt_number': 1, 'attempt_stage': 'end', 'time': 247560.63537802, 'elapsed_time': 0.5952460390108172, 'result': <Success: <Response [200 OK]>>}
+{
+  "search-results": {
+    "opensearch:totalResults": "1",
+    "opensearch:startIndex": "0",
+    "opensearch:itemsPerPage": "1",
+    "opensearch:Query": {
+      "@role": "request",
+      "@searchTerms": "DOI(10.1016/j.cell.2013.03.036)",
+      "@startPage": "0"
+    },
+    "link": [
+      {
+        "@_fa": "true",
+        "@ref": "self",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=DOI%2810.1016%2Fj.cell.2013.03.036%29&view=complete",
+        "@type": "application/json"
+      },
+      {
+        "@_fa": "true",
+        "@ref": "first",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=DOI%2810.1016%2Fj.cell.2013.03.036%29&view=complete",
+        "@type": "application/json"
+      }
+    ],
+    "entry": [
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/84876222028"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/84876222028?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84876222028&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84876222028&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0092867413003930"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84876222028",
+        "dc:identifier": "SCOPUS_ID:84876222028",
+        "eid": "2-s2.0-84876222028",
+        "dc:title": "Selective inhibition of tumor oncogenes by disruption of super-enhancers",
+        "dc:creator": "Lov\u00e9n J.",
+        "prism:publicationName": "Cell",
+        "prism:issn": "00928674",
+        "prism:eIssn": "10974172",
+        "prism:volume": "153",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": "320-334",
+        "prism:coverDate": "2013-04-11",
+        "prism:coverDisplayDate": "11 April 2013",
+        "prism:doi": "10.1016/j.cell.2013.03.036",
+        "pii": "S0092867413003930",
+        "dc:description": "Chromatin regulators have become attractive targets for cancer therapy, but it is unclear why inhibition of these ubiquitous regulators should have gene-specific effects in tumor cells. Here, we investigate how inhibition of the widely expressed transcriptional coactivator BRD4 leads to selective inhibition of the MYC oncogene in multiple myeloma (MM). BRD4 and Mediator were found to co-occupy thousands of enhancers associated with active genes. They also co-occupied a small set of exceptionally large super-enhancers associated with genes that feature prominently in MM biology, including the MYC oncogene. Treatment of MM tumor cells with the BET-bromodomain inhibitor JQ1 led to preferential loss of BRD4 at super-enhancers and consequent transcription elongation defects that preferentially impacted genes with super-enhancers, including MYC. Super-enhancers were found at key oncogenic drivers in many other tumor cells. These observations have implications for the discovery of cancer therapeutics directed at components of super-enhancers in diverse tumor types. \u00a9 2013 Elsevier Inc.",
+        "citedby-count": "2262",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affiliation-url": "https://api.elsevier.com/content/affiliation/affiliation_id/60022195",
+            "afid": "60022195",
+            "affilname": "Massachusetts Institute of Technology",
+            "affiliation-city": "Cambridge",
+            "affiliation-country": "United States"
+          },
+          {
+            "@_fa": "true",
+            "affiliation-url": "https://api.elsevier.com/content/affiliation/affiliation_id/60014334",
+            "afid": "60014334",
+            "affilname": "Dana-Farber Cancer Institute",
+            "affiliation-city": "Boston",
+            "affiliation-country": "United States"
+          },
+          {
+            "@_fa": "true",
+            "affiliation-url": "https://api.elsevier.com/content/affiliation/affiliation_id/60002746",
+            "afid": "60002746",
+            "affilname": "Harvard Medical School",
+            "affiliation-city": "Boston",
+            "affiliation-country": "United States"
+          },
+          {
+            "@_fa": "true",
+            "affiliation-url": "https://api.elsevier.com/content/affiliation/affiliation_id/60019356",
+            "afid": "60019356",
+            "affilname": "Whitehead Institute",
+            "affiliation-city": "Cambridge",
+            "affiliation-country": "United States"
+          },
+          {
+            "@_fa": "true",
+            "affiliation-url": "https://api.elsevier.com/content/affiliation/affiliation_id/60029652",
+            "afid": "60029652",
+            "affilname": "Cold Spring Harbor Laboratory",
+            "affiliation-city": "Cold Spring Harbor",
+            "affiliation-country": "United States"
+          }
+        ],
+        "pubmed-id": "23582323",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author-count": {
+          "@limit": "100",
+          "$": "9"
+        },
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/14052292900",
+            "authid": "14052292900",
+            "authname": "Lov\u00e9n J.",
+            "surname": "Lov\u00e9n",
+            "given-name": "Jakob",
+            "initials": "J.",
+            "afid": [
+              {
+                "@_fa": "true",
+                "$": "60019356"
+              }
+            ]
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/15047902800",
+            "authid": "15047902800",
+            "authname": "Hoke H.A.",
+            "surname": "Hoke",
+            "given-name": "Heather A.",
+            "initials": "H.A.",
+            "afid": [
+              {
+                "@_fa": "true",
+                "$": "60019356"
+              },
+              {
+                "@_fa": "true",
+                "$": "60022195"
+              }
+            ]
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/36010847800",
+            "authid": "36010847800",
+            "authname": "Lin C.Y.",
+            "surname": "Lin",
+            "given-name": "Charles Y.",
+            "initials": "C.Y.",
+            "afid": [
+              {
+                "@_fa": "true",
+                "$": "60019356"
+              },
+              {
+                "@_fa": "true",
+                "$": "60022195"
+              },
+              {
+                "@_fa": "true",
+                "$": "60014334"
+              }
+            ]
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58372399800",
+            "authid": "58372399800",
+            "authname": "Lau A.",
+            "surname": "Lau",
+            "given-name": "Ashley",
+            "initials": "A.",
+            "afid": [
+              {
+                "@_fa": "true",
+                "$": "60019356"
+              },
+              {
+                "@_fa": "true",
+                "$": "60022195"
+              }
+            ]
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/16033463000",
+            "authid": "16033463000",
+            "authname": "Orlando D.A.",
+            "surname": "Orlando",
+            "given-name": "David A.",
+            "initials": "D.A.",
+            "afid": [
+              {
+                "@_fa": "true",
+                "$": "60019356"
+              }
+            ]
+          },
+          {
+            "@_fa": "true",
+            "@seq": "6",
+            "author-url": "https://api.elsevier.com/content/author/author_id/8685299800",
+            "authid": "8685299800",
+            "authname": "Vakoc C.R.",
+            "surname": "Vakoc",
+            "given-name": "Christopher R.",
+            "initials": "C.R.",
+            "afid": [
+              {
+                "@_fa": "true",
+                "$": "60029652"
+              }
+            ]
+          },
+          {
+            "@_fa": "true",
+            "@seq": "7",
+            "author-url": "https://api.elsevier.com/content/author/author_id/10243379500",
+            "authid": "10243379500",
+            "authname": "Bradner J.E.",
+            "surname": "Bradner",
+            "given-name": "James E.",
+            "initials": "J.E.",
+            "afid": [
+              {
+                "@_fa": "true",
+                "$": "60014334"
+              },
+              {
+                "@_fa": "true",
+                "$": "60002746"
+              }
+            ]
+          },
+          {
+            "@_fa": "true",
+            "@seq": "8",
+            "author-url": "https://api.elsevier.com/content/author/author_id/7501439491",
+            "authid": "7501439491",
+            "authname": "Lee T.I.",
+            "surname": "Lee",
+            "given-name": "Tong Ihn",
+            "initials": "T.I.",
+            "afid": [
+              {
+                "@_fa": "true",
+                "$": "60019356"
+              }
+            ]
+          },
+          {
+            "@_fa": "true",
+            "@seq": "9",
+            "author-url": "https://api.elsevier.com/content/author/author_id/7405926028",
+            "authid": "7405926028",
+            "authname": "Young R.A.",
+            "surname": "Young",
+            "given-name": "Richard A.",
+            "initials": "R.A.",
+            "afid": [
+              {
+                "@_fa": "true",
+                "$": "60019356"
+              },
+              {
+                "@_fa": "true",
+                "$": "60022195"
+              }
+            ]
+          }
+        ],
+        "source-id": "18434",
+        "fund-acr": "NIH",
+        "fund-no": "CA146445",
+        "fund-sponsor": "National Institutes of Health",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "repository"
+            },
+            {
+              "$": "repositoryvor"
+            },
+            {
+              "$": "repositoryam"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Green"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

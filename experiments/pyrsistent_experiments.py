@@ -74,6 +74,10 @@ def m(**kwargs):
     """
     return pmap(kwargs)
 
+class IntSet(pyrsistent.CheckedPSet):
+    __type__ = int
+
+int_set = IntSet([1,2,'a'])
 
 #m1 = ValidatedPMap({'a': 1, 'b': 2})
 #m1 = ValidatedPMap.pmap({'a': 1, 'b': 2})

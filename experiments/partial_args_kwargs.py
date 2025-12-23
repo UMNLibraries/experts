@@ -15,6 +15,12 @@ def build_request_by_offset(request_function, resource_path, *args, params:PMap,
         return partial_request(params=params.update({'offset':offset}))
     return request_by_offset
 
+def build_request_by_resource_path_id(request_function, collection, *args, params:PMap, **kwargs):
+    partial_request = partial(request_function, *args, params=params, **kwargs)
+    def request_by_resource_path_id(resource_id:str):
+        return partial_request(f'{collection}/resource_id/{resource_id}')
+    return request_by_resource_path_id
+
 get_by_offset = build_request_by_offset(get, 'persons', params=m(size=100), config=m(foo='bar'))
 get_by_offset(10)
 # resource_path='persons', params=pmap({'offset': 10, 'size': 100}), config=pmap({'foo': 'bar'})
@@ -22,3 +28,8 @@ get_by_offset(10)
 post_by_offset = build_request_by_offset(post, 'research-outputs', 42, params=m(size=1000), json=m(search='naughton'), config=m(kung='foo'))
 post_by_offset(0)
 # resource_path='research-outputs', answer=42, params=pmap({'offset': 0, 'size': 1000}), json=pmap({'search': 'naughton'}), config=pmap({'kung': 'foo'})
+
+get_by_resource_path_id = build_request_by_resource_path_id(get, 'abstract', params=m(size=100), config=m(foo='bar'))
+get_by_resource_path_id('8010')
+# resource_path='persons', params=pmap({'offset': 10, 'size': 100}), config=pmap({'foo': 'bar'})
+
