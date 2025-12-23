@@ -6,23 +6,38 @@ from functools import reduce
 from threading import Thread
 from queue import Queue
 
-from experts_dw import db, scopus_json, pure_json_collection_meta
+from returns.result import Success, Failure
+
+from experts_dw import db, scopus_json
 from experts_dw.scopus_json_collection_meta import \
     get_collection_meta_by_local_name
 
 from experts.api import scopus
 from experts.api.scopus import \
-    ScopusIds
+    ScopusIds, \
+    CitationRequestResponseFailure, \
+    CitationRequestResponseValidationError, \
+    CitationRequestNonresponseFailure
 
 def producer(queue: Queue, scopus_client: scopus.Client, scopus_ids: ScopusIds) -> None:
-    for assorted_results in scopus_client.get_assorted_abstracts_by_scopus_id(scopus_ids):
+    probably_defunct_scopus_ids_list = []
+
+    for assorted_results in scopus_client.get_assorted_citations_by_scopus_ids(scopus_ids):
+        probably_defunct_scopus_ids_list += list(assorted_results.success.probably_defunct_scopus_ids)
+        queue.put(assorted_results)
+
+    # Download only the probably defunct Scopus IDs, to verify that they really return 404s:
+    probably_defunct_scopus_ids_set, _ = ScopusIds.factory(
+        probably_defunct_scopus_ids_list
+    )
+    for assorted_results in scopus_client.get_assorted_citations_by_scopus_ids(probably_defunct_scopus_ids_set):
         queue.put(assorted_results)
 
 def consumer(queue: Queue, db_session) -> None:
     select_cursor = db_session.cursor()
     meta = get_collection_meta_by_local_name(
         cursor=select_cursor,
-        local_name='abstract',
+        local_name='citation',
     )
     insert_cursor = db_session.cursor()
 
@@ -31,18 +46,20 @@ def consumer(queue: Queue, db_session) -> None:
 
         documents_to_insert = [
             {
-                'scopus_id': result.requested_scopus_id, # or result.record.scopus_id
-                'scopus_created': result.date_created,
-                'scopus_modified': result.last_modified,
+                'scopus_id': record.scopus_id,
+                'scopus_created': record.sort_year,
+                'scopus_modified': record.sort_year,
                 'inserted': datetime.now(),
                 'updated': datetime.now(),
-                'json_document': result.response.text, # or result.record.json_dumps()
+                'json_document': record.json_dumps(),
             }
-            for result in assorted_results.success
+            for record in assorted_results.success.single_records
         ]
 
         scopus_json.insert_documents(
            insert_cursor,
+           # TODO: Do we need list() here? Isn't it already a list?
+           #documents=list(documents_to_insert),
            documents=documents_to_insert,
            meta=meta,
            staging=True,
@@ -57,7 +74,15 @@ def consumer(queue: Queue, db_session) -> None:
         # log errors for scopus ids in error list
         # TODO: Where to log these? Log file, db, or both?
         for result in assorted_results.error:
-            # TODO: Maybe update the following to handle different types of errors?
+#            match result:
+#                case Failure(CitationRequestResponseValidationError() as validation_error_result):
+#                    print(f'{validation_error_result.requested_scopus_ids=}: {validation_error_result.validation_error=}')
+#                case Failure(CitationRequestResponseFailure() as response_failure):
+#                    print(f'{response_failure.requested_scopus_ids=}: {response_failure.response.text=}')
+#                case Failure(CitationRequestNonresponseFailure() as nonresponse_failure):
+#                    print(f'{nonresponse_failure.requested_scopus_ids=}: {nonresponse_failure.exception=}')
+#                case _:
+#                    print(f'{result=}')
             print(f'{result=}')
 
         db_session.commit()
@@ -74,44 +99,38 @@ with db.cx_oracle_connection() as db_session, scopus.Client() as scopus_client:
         cursor=select_cursor,
         local_name='citation',
     )
-    pure_ro_meta = pure_json_collection_meta.get_collection_meta_by_local_name(
-        cursor=select_cursor,
-        api_version='524',
-        local_name='research_output',
-    )
 
     insert_cursor = db_session.cursor()
-    scopus_json.update_abstract_to_download(
+    scopus_json.update_citation_to_download(
         cursor=insert_cursor,
         abstract_meta=abstract_meta,
         citation_meta=citation_meta,
-        pure_ro_meta=pure_ro_meta,
     )
 
     scopus_ids, invalid_scopus_ids = ScopusIds.factory(
         scopus_json.scopus_ids_to_download(
             select_cursor,
-            meta=abstract_meta,
+            meta=citation_meta,
         ),
     )
     # TODO: Handle any invalid_scopus_ids
 
     queue = Queue()
-    # The consumer loads raw json abstracts into the staging table...
     consumer = Thread(target=consumer, args=(queue, db_session), daemon=True)
     consumer.start()
-
-    # ... which are fed to the consumer from the producer, which downloads abstracts
-    # using the scopus api:
     producer = Thread(target=producer, args=(queue, scopus_client, scopus_ids))
     producer.start()
 
     producer.join()
     queue.join()
 
+    meta = get_collection_meta_by_local_name(
+        cursor=insert_cursor,
+        local_name='citation',
+    )
     scopus_json.load_documents_from_staging(
         insert_cursor,
-        meta=abstract_meta,
+        meta=citation_meta,
     )
 
     db_session.commit()
