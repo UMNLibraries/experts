@@ -21,7 +21,7 @@ with db.cx_oracle_connection() as db_session, scopus.Client() as scopus_client:
         local_name='citation',
     )
     select_cursor.execute(scopus_ids_sql)
-        
+
     # cx_Oracle columns definition:
     columns = [col[0] for col in select_cursor.description]
     # oracledb columns definition:
@@ -34,7 +34,7 @@ with db.cx_oracle_connection() as db_session, scopus.Client() as scopus_client:
 
     insert_cursor = db_session.cursor()
 
-    for assorted_results in client.get_assorted_citations_by_scopus_ids(scopus_ids):    
+    for assorted_results in client.get_assorted_citations_by_scopus_ids(scopus_ids):
 
         documents_to_insert = [
             {
@@ -43,11 +43,11 @@ with db.cx_oracle_connection() as db_session, scopus.Client() as scopus_client:
                 'scopus_modified': record.sort_year,
                 'inserted': datetime.now(),
                 'updated': datetime.now(),
-                'json_document': json.dumps(record),
+                'json_document': record.json_dumps(),
             }
             for record in assorted_results.success.single_records
         ]
-    
+
         scopus_json.insert_documents(
            insert_cursor,
            # TODO: Do we need list() here? Isn't it already a list?
@@ -61,7 +61,7 @@ with db.cx_oracle_connection() as db_session, scopus.Client() as scopus_client:
         # Note: This may leave some defunct scopus ids in the to-download list. Verify later
         # by attempting to download them one-by-one.
 
-        # add defunct abstract scopus ids to defunct abstract list 
+        # add defunct abstract scopus ids to defunct abstract list
         insert_defunct_scopus_ids_sql = f'''
             INSERT /*+ ignore_row_on_dupkey_index(scopus_abstract_defunct(scopus_id)) */
             INTO scopus_citation_defunct
