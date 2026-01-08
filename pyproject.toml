@@ -4,6 +4,7 @@ version = "0.0.0"
 description = "Integration applications for Experts@Minnesota"
 authors = ["David Naughton","John Barneson"]
 license = "MIT"
+packages = [{include = "experts", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
