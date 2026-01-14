@@ -99,15 +99,15 @@ def run() -> None:
 
         queue = Queue()
         # The consumer loads raw json abstracts into the staging table...
-        consumer = Thread(target=consumer, args=(queue, db_session), daemon=True)
-        consumer.start()
+        consumer_thread = Thread(target=consumer, args=(queue, db_session), daemon=True)
+        consumer_thread.start()
 
         # ... which are fed to the consumer from the producer, which downloads abstracts
         # using the scopus api:
-        producer = Thread(target=producer, args=(queue, scopus_client, scopus_ids))
-        producer.start()
+        producer_thread = Thread(target=producer, args=(queue, scopus_client, scopus_ids))
+        producer_thread.start()
 
-        producer.join()
+        producer_thread.join()
         queue.join()
 
         scopus_json.load_documents_from_staging(

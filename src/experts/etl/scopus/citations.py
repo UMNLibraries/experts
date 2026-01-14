@@ -104,12 +104,12 @@ def run() -> None:
         # TODO: Handle any invalid_scopus_ids
 
         queue = Queue()
-        consumer = Thread(target=consumer, args=(queue, db_session), daemon=True)
-        consumer.start()
-        producer = Thread(target=producer, args=(queue, scopus_client, scopus_ids))
-        producer.start()
+        consumer_thread = Thread(target=consumer, args=(queue, db_session), daemon=True)
+        consumer_thread.start()
+        producer_thread = Thread(target=producer, args=(queue, scopus_client, scopus_ids))
+        producer_thread.start()
 
-        producer.join()
+        producer_thread.join()
         queue.join()
 
         meta = get_collection_meta_by_local_name(
