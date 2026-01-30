@@ -27,7 +27,7 @@ if (log_file := os.environ.get('EXPERTS_ETL_LOG_FILE', None)):
     logger_args.append(log_file)
     # These values can be passed to logger.add only if the sink is a file:
     logger_params.update({
-        'rotation':    os.environ.get('EXPERTS_ETL_LOG_ROTATION', '1 day'),
+        'rotation':    os.environ.get('EXPERTS_ETL_LOG_ROTATION', '1 month'),
         'retention':   os.environ.get('EXPERTS_ETL_LOG_RETENTION', '1 year'),
         'compression': os.environ.get('EXPERTS_ETL_LOG_COMPRESSION', 'gz'),
     })
@@ -63,9 +63,12 @@ def scopus(_all, abstracts, citations):
         citations = True
     if abstracts:
         from experts.etl.scopus import abstracts
-        #abstracts.main()
+        logger.info('Starting abstracts...')
         abstracts.run()
+        logger.info('...abstracts done.')
     if citations:
         from experts.etl.scopus import citations
-        #citations.main()
+        logger.info('Starting citaitons...')
         citations.run()
+        logger.info('...citaitons done.')
+    logger.info('...scopus done.')        
