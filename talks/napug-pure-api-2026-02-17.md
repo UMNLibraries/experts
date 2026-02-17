@@ -71,8 +71,11 @@ For a breakout session at the 2026-02-17 North American Pure Users Group meeting
 ## UMN
 * We support the entire University, not just a single school, college, or department
 * Record counts
-  * 386250 Research Outputs
-  * 67804 Persons
-  * 1323 Organizational Units
-  * 722077 External Persons
-  * 281543 External Organizations
+| Count   | Collection/record type |
+|---------|------------------------|
+| 386250  | Research Outputs       |
+| 67804   | Persons                |
+| 1323    | Organizational Units   |
+| 722077  | External Persons       |
+| 281543  | External Organizations |
+|---------|------------------------|
