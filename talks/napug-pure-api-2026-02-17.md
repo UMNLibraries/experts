@@ -93,13 +93,16 @@ In Pure Core/Back end, under __Administrator > Pure API__:
 | 281543  | External Organizations |
 
 * Due to those high record counts, we try to incrementally update our local database
-  with only created and modified records since our last update. Given the strangeness
-  described above, it may be better to just download all records every time instead,
-  if your record counts make that practical.
+  with only created and modified records since our last update. We also perform set
+  operations on many records at once, and make heavy use of asynchrony and concurrency.
+  * Given the strangeness described above, it may be better to just download all
+    records every time instead, if your record counts make that practical.
 * ELT > ETL
   * ETL (Extract, Transform, and Load) is the more traditional approach
   * Given the volume, complexity, and strangeness of the Pure data,
     as described above, we load raw JSON Pure records into Oracle, and
     transform only the small fraction of data we need for reports, using
-    the [Oracle JSON API](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/adjsn/json-in-oracle-database.html).
+    the [Oracle JSON API](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/adjsn/json-in-oracle-database.html),
+    which is based on [JSONPath](https://en.wikipedia.org/wiki/JSONPath).
   * Example reports: https://github.com/UMNLibraries/experts_dw/tree/main/reports
+    * Newest, soon to become materialized views: https://github.com/UMNLibraries/experts_dw/blob/main/reports/collection_analysis_reports_combined.sql
