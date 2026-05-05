@@ -1,120 +1,40 @@
-from datetime import date, datetime
-
-from functools import reduce
-import importlib
-
-from uuid import UUID
-
-import httpx
 import pytest
-from pyrsistent import m, pmap
-from returns.result import Result, Success, Failure
+from pyrsistent import thaw
 
-from experts.api.pure.ws import Record, UUIDStr
+from experts.api.pure.ws import CollectionNames, Schema, Schemas, Version, Versions, VersionNotFound
 
-from experts.api.pure.ws import \
-    CollectionNameNotFound, \
-    RequestResult, \
-    RequestByUUIDSuccess, \
-    RequestByUUIDFailure, \
-    RequestByUUIDResponseDefunct, \
-    RequestByUUIDNonresponseFailure, \
-    InvalidRequestByUUID, \
-    Record
+# This is the last and only Pure Web Services schema version:
+version = '524'
+schemas = Schemas()
 
-#from experts.api.scopus import \
-#    AbstractAssortedResults, \
-#    AbstractRequestResult, \
-#    AbstractRequestSuccess, \
-#    AbstractRequestFailure, \
-#    AbstractRequestResponseDefunct, \
-#    AbstractRecord, \
-#    CitationAssortedResults, \
-#    CitationRequestResult, \
-#    CitationRequestSuccess, \
-#    CitationRequestFailure, \
-#    CitationRequestResponseDefunct, \
-#    CitationMaybeMultiRecord, \
-#    CitationSingleRecord, \
-#    ScopusId, \
-#    ScopusIds, \
-#    CitationRequestScopusIds
+def test_versions():
+    assert isinstance(schemas.versions, Versions)
 
-@pytest.mark.integration
-def test_low_level_retrieval(client):
-    collection = 'persons'
-    uuid = '01edf3d8-7e44-4dfa-bec4-8e3472965e1f'
-    params=m()
+    # Comparisons involving thawed pyrsistent collection types will work...
+    assert thaw(schemas.versions) == [version]
+    # ... but so will comparisons involving pyrsistent types directly:
+    assert schemas.versions == [version]
+    assert version in schemas.versions
 
-    match client.get(f'{collection}/{uuid}', params=params):
-        case Success(response):
-            assert response.status_code == 200
-        case Failure(exception_should_not_happen):
-            raise exception_should_not_happen
+    assert isinstance(schemas.latest_version, Version)
+    assert schemas.latest_version == version
 
-    match Record.factory(response.json()):
-        case Success(record):
-            assert record.uuid == uuid
-        case Failure(exception_should_not_happen):
-            raise exception_should_not_happen
+    assert not schemas.version_exists('bogus')
 
-    bogus_uuid = '000000000000'
-    match client.get(f'{collection}/{bogus_uuid}', params=params):
-        case Success(response_for_nonexistent_uuid):
-            assert response_for_nonexistent_uuid.status_code == 404
-        case Failure(unexpected_failure):
-            raise Exception(f'This is not the expected failure result for a non-existent uuid: {unexpected_failure}')
+    with pytest.raises(VersionNotFound):
+        schemas.load(version='bogus')
 
-@pytest.mark.integration
-def test_get_abstract_by_scopus_id(client):
-    uuid = UUIDStr('01edf3d8-7e44-4dfa-bec4-8e3472965e1f')
+def test_schema():
+    schema = schemas.load(version=version)
+    assert isinstance(schema, Schema)
+    assert isinstance(schema.version, Version)
+    assert schema.version == version
 
-    #abstract_request_result = client.get_abstract_by_scopus_id(scopus_id)
-    #assert isinstance(abstract_request_result, AbstractRequestResult)
-    # The above commented-out code generates the following error:
-    # TypeError: Subscripted generics cannot be used with class and instance checks
-    #match abstract_request_result:
-
-    match client.get_by_uuid('persons', uuid=uuid):
-        #case Success(AbstractRequestSuccess(result)):
-        # The above commented-out code generates the following error:
-        # TypeError: AbstractRequestSuccess() accepts 0 positional sub-patterns (1 given) 
-
-        #case Success(AbstractRequestSuccess()) as result:
-        # The above commented-out code generates the following error:
-        # AttributeError: 'Success' object has no attribute 'ratelimit'
-
-        # The following does not work: No cases match!
-        #case AbstractRequestSuccess() as result:
-
-        # The following works!
-        case Success(RequestByUUIDSuccess() as result):
-            assert result.response.status_code == 200
-
-            assert isinstance(result.record, Record)
-            #assert str(result.requested_uuid) == str(result.record.uuid) == str(uuid)
-            assert result.requested_uuid == result.record.uuid_str == uuid
-        case Failure(RequestByUUIDFailure() as should_not_happen):
-            raise Exception(f'Request for uuid {uuid} failed: {should_not_happen}')
-        case _:
-            raise Exception(f'WTF? The above two cases should be the only possible cases.')
-
-    match client.get_by_uuid('bogus', uuid=uuid):
-        case Failure(InvalidRequestByUUID() as expected):
-            assert isinstance(expected.exception, CollectionNameNotFound)
-        case Success(RequestByUUIDSuccess() as should_not_happen):
-            raise Exception(f'Request for uuid {uuid} from colleciton "bogus" succeeded: {should_not_happen}')
-        case _:
-            raise Exception(f'WTF? The above exception should have been thrown before anything else happened.')
-
-    match client.get_by_uuid('research-outputs', uuid=uuid):
-        case Failure(RequestByUUIDResponseDefunct() as expected):
-            # The person uuid we've been requesting should not exist in the research-outputs collection:
-            assert result.requested_uuid == uuid
-        case Success(RequestByUUIDSuccess() as should_not_happen):
-            raise Exception(f'Request for person uuid {uuid} from colleciton "research-outputs" succeeded: {should_not_happen}')
-        case _:
-            raise Exception(f'WTF? The above exception should have been the only possible error.')
+    #print(f'{schema.tags=}')
+    collection_names = schema.collection_names
+    assert isinstance(collection_names, CollectionNames)
+    assert schema.collection_name_exists('persons')
+    assert not schema.collection_name_exists('bogus')
 
 #@pytest.mark.integration
 #def test_get_abstract_by_scopus_id(client):

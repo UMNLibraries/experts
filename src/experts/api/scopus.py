@@ -9,11 +9,12 @@ import re
 import traceback
 
 # Previously we imported Self from typing, but we don't need it since we import annotations from __future__.
+# Mapping and Sequence appear to be unused...
 from typing import Any, Callable, Iterable, Iterator, Mapping, MutableMapping, Sequence
 
 import uuid
 
-import attrs
+import attrs # This doesn't appear to be used directly.
 from attrs import Factory, field, frozen, validators
 
 import dateutil
@@ -23,11 +24,12 @@ import jsonpath_ng.ext as jp
 
 from pycific.validated import ValidatedPMap, ValidatedPMapSpec, ValidatedStr
 
+# CheckedPMap, freeze, s, v, and pvector appear to be unused
 from pyrsistent import CheckedPMap, CheckedPSet, CheckedPVector, PRecord, field as pfield, freeze, thaw, m, pmap, s, v, pvector
-from pyrsistent.typing import PMap, PSet
+from pyrsistent.typing import PMap, PSet # PSet appears to be unused
 
-import returns
-from returns.result import Result, Success, Failure, safe
+import returns # This doesn't appear to be used directly
+from returns.result import Result, Success, Failure, safe # safe appears to be unused
 
 from experts.api import common
 from experts.api.common import \
@@ -37,6 +39,7 @@ from experts.api.common import \
     manage_request_attempts, \
     RequestParams, \
     RequestResult, \
+    # These two appear unused:
     ResponseBody, \
     ResponseBodyItem
 

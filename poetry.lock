@@ -932,13 +932,13 @@ files = [
 
 [[package]]
 name = "pycific"
-version = "0.4.0"
+version = "0.5.0"
 description = "Pacific python programming via validation and immutability"
 optional = false
 python-versions = ">=3.12,<4.0"
 groups = ["main"]
 files = [
-    {file = "pycific-0.4.0.tar.gz", hash = "sha256:779203a6c81338499872ecafd0da6b4bd25b440199153e134b1cca14ff0c1630"},
+    {file = "pycific-0.5.0.tar.gz", hash = "sha256:fd8ac22910fcb6c3066573446f5b5e2c715698b4673528da6edfbeef09651d5e"},
 ]
 
 [package.dependencies]
@@ -948,7 +948,7 @@ returns = ">=0.26.0,<0.27.0"
 
 [package.source]
 type = "url"
-url = "https://github.com/UMNLibraries/pycific/raw/main/dist/pycific-0.4.0.tar.gz"
+url = "https://github.com/UMNLibraries/pycific/raw/main/dist/pycific-0.5.0.tar.gz"
 
 [[package]]
 name = "pycparser"
@@ -1489,4 +1489,4 @@ dev = ["black (>=19.3b0) ; python_version >= \"3.6\"", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "79686e8e291e2b07d087f4a0d2b672866afa6748dc8691112b3ba0e405151e50"
+content-hash = "c334da4c14e70a4cdb5e6fecf3bac23d38dd04ad74935923ac0646f75e553810"
