@@ -3,22 +3,21 @@ from datetime import date, datetime
 from functools import reduce
 import importlib
 
-from uuid import UUID
-
 import httpx
 import pytest
 from pyrsistent import m, pmap
 from returns.result import Result, Success, Failure
 
-from experts.api.pure.ws import Record, UUIDStr
+from experts.api.pure.ws import Record, UUIDStr, UUIDStrs
 
 from experts.api.pure.ws import \
     CollectionNameNotFound, \
     RequestResult, \
-    RequestByUUIDSuccess, \
-    RequestByUUIDFailure, \
-    RequestByUUIDResponseDefunct, \
-    RequestByUUIDNonresponseFailure, \
+    GetByUUIDSuccess, \
+    GetByUUIDFailure, \
+    GetByUUIDResponseDefunct, \
+    GetByUUIDNonresponseFailure, \
+    GetByUUIDAssortedResults, \
     InvalidRequestByUUID, \
     Record
 
@@ -66,7 +65,7 @@ def test_low_level_retrieval(client):
             raise Exception(f'This is not the expected failure result for a non-existent uuid: {unexpected_failure}')
 
 @pytest.mark.integration
-def test_get_abstract_by_scopus_id(client):
+def test_get_by_uuid(client):
     uuid = UUIDStr('01edf3d8-7e44-4dfa-bec4-8e3472965e1f')
 
     #abstract_request_result = client.get_abstract_by_scopus_id(scopus_id)
@@ -88,13 +87,13 @@ def test_get_abstract_by_scopus_id(client):
         #case AbstractRequestSuccess() as result:
 
         # The following works!
-        case Success(RequestByUUIDSuccess() as result):
+        case Success(GetByUUIDSuccess() as result):
             assert result.response.status_code == 200
 
             assert isinstance(result.record, Record)
             #assert str(result.requested_uuid) == str(result.record.uuid) == str(uuid)
             assert result.requested_uuid == result.record.uuid_str == uuid
-        case Failure(RequestByUUIDFailure() as should_not_happen):
+        case Failure(GetByUUIDFailure() as should_not_happen):
             raise Exception(f'Request for uuid {uuid} failed: {should_not_happen}')
         case _:
             raise Exception(f'WTF? The above two cases should be the only possible cases.')
@@ -102,19 +101,76 @@ def test_get_abstract_by_scopus_id(client):
     match client.get_by_uuid('bogus', uuid=uuid):
         case Failure(InvalidRequestByUUID() as expected):
             assert isinstance(expected.exception, CollectionNameNotFound)
-        case Success(RequestByUUIDSuccess() as should_not_happen):
+        case Success(GetByUUIDSuccess() as should_not_happen):
             raise Exception(f'Request for uuid {uuid} from colleciton "bogus" succeeded: {should_not_happen}')
         case _:
             raise Exception(f'WTF? The above exception should have been thrown before anything else happened.')
 
     match client.get_by_uuid('research-outputs', uuid=uuid):
-        case Failure(RequestByUUIDResponseDefunct() as expected):
+        case Failure(GetByUUIDResponseDefunct() as expected):
             # The person uuid we've been requesting should not exist in the research-outputs collection:
             assert result.requested_uuid == uuid
-        case Success(RequestByUUIDSuccess() as should_not_happen):
+        case Success(GeByUUIDSuccess() as should_not_happen):
             raise Exception(f'Request for person uuid {uuid} from colleciton "research-outputs" succeeded: {should_not_happen}')
         case _:
             raise Exception(f'WTF? The above exception should have been the only possible error.')
+
+@pytest.mark.integration
+def test_get_many_by_uuid(client):
+    # This person_uuid is a valid UUID, but should return 404 when requested from research-outputs:
+    person_uuid = '01edf3d8-7e44-4dfa-bec4-8e3472965e1f'
+
+    uuids, invalid_uuids = UUIDStrs.factory([
+        '67449a76-d0a7-4c96-bb8a-f2f1354edcd0',
+        '08022eda-3b2f-4e2b-b067-5f98aed8b1a5',
+        'd17f9cfc-b6f9-4a66-962d-97e1f47b0622',
+        '5c73d044-9ee6-4ad5-8cb6-b235b24db339',
+        'b50c1bbc-63bb-4398-b89d-8817d3fdd752',
+        person_uuid,
+    ])
+
+    for result in client.get_many_by_uuid('research-outputs', uuids=uuids):
+        match result:
+            case Success(GetByUUIDSuccess() as success_result):
+                assert success_result.response.status_code == 200
+                assert success_result.requested_uuid == success_result.record.uuid_str
+            case Failure(GetByUUIDResponseDefunct() as defunct_result):
+                assert defunct_result.response.status_code == 404
+                assert defunct_result.requested_uuid == UUIDStr(person_uuid)
+            case _:
+                raise Exception(f'WTF? The above two cases should be the only possible cases.')
+
+@pytest.mark.integration
+def test_get_assorted_by_uuid_results(client):
+    # This person_uuid is a valid UUID, but should return 404 when requested from research-outputs:
+    person_uuids = ['01edf3d8-7e44-4dfa-bec4-8e3472965e1f']
+    research_output_uuids = [
+        '67449a76-d0a7-4c96-bb8a-f2f1354edcd0',
+        '08022eda-3b2f-4e2b-b067-5f98aed8b1a5',
+        'd17f9cfc-b6f9-4a66-962d-97e1f47b0622',
+        '5c73d044-9ee6-4ad5-8cb6-b235b24db339',
+        'b50c1bbc-63bb-4398-b89d-8817d3fdd752',
+    ]
+    requested_uuids = research_output_uuids + person_uuids
+    uuids, invalid_uuids = UUIDStrs.factory(requested_uuids)
+
+    for assorted_results in client.get_assorted_by_uuid_results('research-outputs', uuids=uuids):
+        assert isinstance(assorted_results, GetByUUIDAssortedResults)
+        #assert assorted_results.requested_uuids == set(requested_scopus_ids)
+        assert assorted_results.requested_uuids == uuids
+
+        assert len(assorted_results.success) == len(research_output_uuids)
+        assert assorted_results.success.requested_uuids == set(research_output_uuids)
+        for success_result in assorted_results.success:
+            assert success_result.response.status_code == 200
+            assert success_result.requested_uuid == success_result.record.uuid_str
+
+        assert len(assorted_results.defunct) == len(person_uuids)
+        assert assorted_results.defunct.requested_uuids == set(person_uuids)
+        for defunct_result in assorted_results.defunct:
+            assert defunct_result.response.status_code == 404
+
+        assert len(assorted_results.error) == 0
 
 #@pytest.mark.integration
 #def test_get_abstract_by_scopus_id(client):

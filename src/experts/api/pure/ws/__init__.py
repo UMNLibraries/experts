@@ -4,6 +4,7 @@ from typing_extensions import NotRequired, TypedDict
 
 from datetime import date, datetime
 import dateutil
+from itertools import batched
 from functools import cached_property, reduce, partial
 
 import json
@@ -22,7 +23,7 @@ import httpx
 from pipe import Pipe
 
 from pydantic import Field
-from pyrsistent import field as pfield, freeze, thaw, m, pmap, v, PRecord, pvector, PVector, CheckedPVector
+from pyrsistent import field as pfield, freeze, thaw, m, pmap, v, CheckedPSet, PRecord, pvector, PVector, CheckedPVector
 #from pyrsistent.typing import PMap, PVector
 
 import returns # This doesn't appear to be used directly
@@ -54,6 +55,42 @@ class UUIDStr(ValidatedStr):
         except Exception as e:
             raise ValueError(f'Attempt to validate input "{value}" failed during UUIDStr instantiation')
         return self
+
+# This type alias is just to make our code self-documenting
+InvalidUUIDStr = Any
+
+class UUIDStrs(CheckedPSet):
+    '''Used for sets of defunct records, etc'''
+    __type__ = UUIDStr
+
+    @classmethod
+    def union(cls, *uuids:Iterable[UUIDStr]) -> UUIDStrs:
+        # The built-in set().union function doesn't seem to work with CheckedPSets
+        # and multiple set arguments, so we make it work here as a class method.
+        # Each argument after `cls` must be an iterable containing validated
+        # instances of ScopusID.
+        return UUIDStrs(
+            set().union(*uuids)
+        )
+
+    @classmethod
+    def validate_uuids(cls, uuids:Iterable[str|UUIDStr]) -> tuple[set[UUIDStr], set[InvalidUUIDStr]]:
+        valid_uuids = set()
+        invalid_uuids = set()
+        for uuid in uuids:
+            match UUIDStr.factory(uuid):
+                case Success(valid_uuid):
+                    valid_uuids.add(valid_uuid)
+                case Failure(Exception):
+                    invalid_uuids.add(uuid)
+        return (valid_uuids, invalid_uuids)
+
+    @classmethod
+    def factory(cls, uuids:Iterable[str|UUIDStr]) -> tuple[UUIDStrs, set[InvalidUUIDStr]]:
+        if isinstance(uuids, cls):
+            return (uuids, set())
+        valid_uuids, invalid_uuids = cls.validate_uuids(uuids)
+        return (cls(valid_uuids), invalid_uuids)
 
 class Versions(CheckedPVector):
     __type__ = Version
@@ -160,6 +197,9 @@ class Record(ValidatedPMap):
         return dateutil.parser.parse(self.info.modifiedDate)
 
 
+class Records(CheckedPVector):
+    __type__ = Record
+
 class RequestResponse(PRecord):
     response = pfield(
         type=httpx.Response,
@@ -175,19 +215,99 @@ class RequestResponse(PRecord):
 # Alias to help make code self-documenting:
 RequestSuccess = RequestResponse
 
-class RequestByUUIDSuccess(RequestSuccess):
+class GetByUUIDSuccess(RequestSuccess):
     requested_uuid = pfield(type=UUIDStr, mandatory=True)
     record = pfield(type=Record, mandatory=True)
 
-# Why are these record-level attributes in the request response?
-# Maybe because last_modified is in the response headers?
-#    @property
-#    def date_created(self) -> date:
-#        return self.record.date_created
-#
-#    @property
-#    def last_modified(self) -> datetime:
-#        return dateutil.parser.parse(self.response.headers['last-modified'])
+class MultiRecordResultMixin:
+    @property
+    def records(self) -> Records:
+        return Records(
+            [Record(item) for item in self.response.body.items]
+        )
+
+    @property
+    def returned_uuids(self) -> UUIDStrs:
+        return UUIDStrs(
+            [record.uuid_str for record in self.records]
+        )
+        
+
+class GetManyRecordsByUUIDsSuccess(RequestSuccess, MultiRecordResultMixin):
+    requested_uuids = pfield(type=UUIDStrs, mandatory=True)
+
+    @property
+    def probably_defunct_uuids(self) -> UUIDStrs:
+        '''If there are some defunct UUIDs in the set of those requested,
+        they will not appear in the response. We capture those here, so we can
+        identify them, maybe test them to ensure the Pure WS API returns a 404.
+        '''
+        return UUIDStrs(
+            self.requested_uuids - self.returned_uuids
+        )
+
+class GetManyRecordsByUUIDsFailure(RequestFailure):
+    requested_uuids = pfield(type=UUIDStrs, mandatory=True)
+
+GetManyRecordsByUUIDsResult = Result[GetManyRecordsByUUIDsSuccess, GetManyRecordsByUUIDsFailure]
+
+class GetManyRecordsByUUIDsResponseFailure(GetManyRecordsByUUIDsFailure, RequestResponse):
+    pass
+
+class GetManyRecordsByUUIDsResponseValidationError(GetManyRecordsByUUIDsResponseFailure):
+    exception = pfield(type=Exception, mandatory=True, serializer=exception_serializer)
+
+class GetManyRecordsByUUIDsResponseDefunct(GetManyRecordsByUUIDsResponseFailure):
+    pass
+
+class GetManyRecordsByUUIDsNonresponseFailure(GetManyRecordsByUUIDsFailure):
+    exception = pfield(type=Exception, mandatory=True, serializer=exception_serializer)
+
+
+class GetManyRecordsByUUIDsResultsMixin:
+    @property
+    def requested_uuids(self) -> UUIDStrs:
+        return UUIDStrs.union(
+            *[result.requested_uuids for result in self]
+        )
+
+class GetManyRecordsByUUIDsSuccessResults(CheckedPVector, GetManyRecordsByUUIDsResultMixin):
+    __type__ = GetManyrecordsByUUIDsSuccess
+
+    @property
+    def records(self) -> list[CitationSingleRecord]:
+        return reduce(
+            lambda list1, list2: list1 + list2,
+            # Each call to single_records will return a list, so we need to
+            # reduce the following list of lists into a single list:
+            [result.record.single_records for result in self],
+            []
+        )
+        
+    @property
+    def single_record_scopus_ids(self) -> ScopusIds:
+        return ScopusIds(
+            [record.scopus_id for record in self.single_records]
+        )
+        
+    returned_scopus_ids = single_record_scopus_ids
+
+    @property
+    def probably_defunct_scopus_ids(self) -> ScopusIds:
+        '''If there are some defunct Scopus IDs in the set of those requested,
+        they will not appear in the response. We capture those here, so we can
+        identify them, maybe test them to ensure the Scopus API returns a 404.
+        '''
+        return ScopusIds(
+            self.requested_scopus_ids - self.returned_scopus_ids
+        )
+
+
+class GetManyRecordsByUUIDsDefunctResults(CheckedPVector, CitationResultsMixin):
+    __type__ = GetManyRecordsByUUIDsResponseDefunct
+
+class GetManyRecordsByUUIDsErrorResults(CheckedPVector, CitationResultsMixin):
+    __type__ = GetManyRecordsByUUIDsFailure
 
 class RequestFailure(PRecord):
     def serialize(self) -> dict:
@@ -203,25 +323,78 @@ exception_serializer = lambda _format, ex: {
     'traceback': traceback.format_exception(ex),
 }
 
-class RequestByUUIDFailure(RequestFailure):
+class GetByUUIDFailure(RequestFailure):
     requested_uuid = pfield(type=UUIDStr, mandatory=True)
 
-RequestByUUIDResult = Result[RequestByUUIDSuccess, RequestByUUIDFailure]
+GetByUUIDResult = Result[GetByUUIDSuccess, GetByUUIDFailure]
 
-class RequestByUUIDResponseFailure(RequestByUUIDFailure, RequestResponse):
+class GetByUUIDResponseFailure(GetByUUIDFailure, RequestResponse):
     pass
 
-class RequestByUUIDResponseValidationError(RequestByUUIDResponseFailure):
+class GetByUUIDResponseValidationError(GetByUUIDResponseFailure):
     exception = pfield(type=Exception, mandatory=True, serializer=exception_serializer)
 
-class RequestByUUIDResponseDefunct(RequestByUUIDResponseFailure):
+class GetByUUIDResponseDefunct(GetByUUIDResponseFailure):
     pass
 
-class RequestByUUIDNonresponseFailure(RequestByUUIDFailure):
+class GetByUUIDNonresponseFailure(GetByUUIDFailure):
     exception = pfield(type=Exception, mandatory=True, serializer=exception_serializer)
 
 # Alias to help make code self-documenting:
-InvalidRequestByUUID = RequestByUUIDNonresponseFailure
+InvalidRequestByUUID = GetByUUIDNonresponseFailure
+
+class GetByUUIDResultsMixin:
+    @property
+    def requested_uuids(self) -> UUIDStrs:
+        return UUIDStrs(
+            [result.requested_uuid for result in self]
+        )
+
+class GetByUUIDSuccessResults(CheckedPVector, GetByUUIDResultsMixin):
+    __type__ = GetByUUIDSuccess
+
+class GetByUUIDDefunctResults(CheckedPVector, GetByUUIDResultsMixin):
+    __type__ = GetByUUIDResponseDefunct
+
+class GetByUUIDErrorResults(CheckedPVector, GetByUUIDResultsMixin):
+    __type__ = GetByUUIDFailure
+
+# Final data structure of multiple results, e.g. concurrent requests for 1000 abstracts:
+class GetByUUIDAssortedResults(PRecord):
+    success = pfield(type=GetByUUIDSuccessResults)
+    defunct = pfield(type=GetByUUIDDefunctResults)
+    error = pfield(type=GetByUUIDErrorResults)
+
+    @property
+    def requested_uuids(self) -> UUIDStrs:
+        return UUIDStrs.union(
+            self.success.requested_uuids, self.defunct.requested_uuids, self.error.requested_uuids
+        )
+
+class GetByUUIDResultAssorter:
+    @staticmethod
+    def classify(accumulator: MutableMapping, result: GetByUUIDResult) -> MutableMapping:
+        match result:
+            case Success(GetByUUIDSuccess() as success_result):
+                accumulator['success'].append(success_result)
+            case Failure(GetByUUIDResponseDefunct() as defunct_result):
+                accumulator['defunct'].append(defunct_result)
+            case Failure(GetByUUIDFailure() as error_result):
+                accumulator['error'].append(error_result)
+        return accumulator
+
+    @staticmethod
+    def assort(results: Iterator[GetByUUIDResult]) -> GetByUUIDAssortedResults:
+        assorted = reduce(
+            GetByUUIDResultAssorter.classify,
+            results,
+            {'success': [], 'defunct': [], 'error': []}
+        )
+        return GetByUUIDAssortedResults(
+            success=GetByUUIDSuccessResults(assorted['success']),
+            defunct=GetByUUIDDefunctResults(assorted['defunct']),
+            error=GetByUUIDErrorResults(assorted['error']),
+        )
 
 @frozen(kw_only=True)
 class Client:
@@ -346,9 +519,10 @@ class Client:
         collection_name:str,
         *args,
         uuid:UUIDStr,
+        # TODO: Should this be of type RequestParams?
         params=m(),
         **kwargs
-    ) -> RequestByUUIDResult:
+    ) -> GetByUUIDResult:
         if not self.schema.collection_name_exists(collection_name):
             return Failure(
                 InvalidRequestByUUID(
@@ -373,7 +547,7 @@ class Client:
                         match Record.factory(response.json()):
                             case Success(record):
                                 return Success(
-                                    RequestByUUIDSuccess(
+                                    GetByUUIDSuccess(
                                         requested_uuid=uuid,
                                         response=response,
                                         record=record,
@@ -381,7 +555,7 @@ class Client:
                                 )
                             case Failure(exception):
                                 return Failure(
-                                    RequestByUUIDResponseValidationError(
+                                    GetByUUIDResponseValidationError(
                                         requested_uuid=uuid,
                                         response=response,
                                         exception=exception,
@@ -389,25 +563,63 @@ class Client:
                                 )
                     case 404:
                         return Failure(
-                            RequestByUUIDResponseDefunct(
+                            GetByUUIDResponseDefunct(
                                 requested_uuid=uuid,
                                 response=response,
                             )
                         )
                     case _:
                         return Failure(
-                            RequestByUUIDResponseFailure(
+                            GetByUUIDResponseFailure(
                                 requested_uuid=uuid,
                                 response=response,
                             )
                         )
             case Failure(exception):
                 return Failure(
-                    RequestByUUIDNonresponseFailure(
+                    GetByUUIDNonresponseFailure(
                         requested_uuid=uuid,
                         exception=exception,
                     )
                 )
+
+    def get_many_by_uuid(
+        self,
+        collection_name:str,
+        uuids:UUIDStrs,
+        params=m(),
+    ) -> Iterator[GetByUUIDResult]:
+        partial_request = partial(
+            self.get_by_uuid,
+            collection_name,
+            params=params,
+        )
+        def request_by_uuid(uuid:UUIDStr):
+            return partial_request(uuid=uuid)
+
+        for result in common.request_many_by_identifier(
+            request_by_identifier_function = request_by_uuid,
+            identifiers = uuids,
+        ):
+            yield result
+
+    def get_assorted_by_uuid_results(
+        self,
+        collection_name:str,
+        uuids:UUIDStrs,
+        params=m(),
+        batch_size: int = 1000,
+        assorter = GetByUUIDResultAssorter,
+    ) -> Iterator[GetByUUIDAssortedResults]:
+        for results in batched(
+            self.get_many_by_uuid(
+                collection_name,
+                uuids=uuids,
+                params=params,
+            ),
+            batch_size,
+        ):
+            yield assorter.assort(results)
 
 #class ResponseBodyParser:
 #    @staticmethod
