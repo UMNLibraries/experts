@@ -121,4 +121,6 @@ def run() -> None:
             meta=citation_meta,
         )
 
+        scopus_json.refresh_and_compile_collections_analysis_cited(insert_cursor)
+
         db_session.commit()

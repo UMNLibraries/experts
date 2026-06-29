@@ -115,4 +115,6 @@ def run() -> None:
             meta=abstract_meta,
         )
 
+        scopus_json.refresh_and_compile_collections_analysis_authored(insert_cursor)
+
         db_session.commit()
