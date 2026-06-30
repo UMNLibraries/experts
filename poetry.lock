@@ -455,13 +455,13 @@ url = "https://github.com/UMNLibraries/dotenv_switch/raw/master/dist/dotenv_swit
 
 [[package]]
 name = "experts_dw"
-version = "10.15.0"
+version = "10.15.1"
 description = "Tools for working with the Experts@Minnesota Data Warehouse."
 optional = false
 python-versions = ">=3.12,<4.0"
 groups = ["main"]
 files = [
-    {file = "experts_dw-10.15.0.tar.gz", hash = "sha256:5a48f51c47245470262a6984107ddf9fc5c2fbbfb18e2acbe743e92f1038c649"},
+    {file = "experts_dw-10.15.1.tar.gz", hash = "sha256:9d098b14b6e89976dcd3e9c52b3756a6ce9d53837e0a69fc5ed8dc2cf45c4ecf"},
 ]
 
 [package.dependencies]
@@ -475,7 +475,7 @@ sqlparse = ">=0.4.2,<0.5.0"
 
 [package.source]
 type = "url"
-url = "https://github.com/UMNLibraries/experts_dw/raw/main/dist/experts_dw-10.15.0.tar.gz"
+url = "https://github.com/UMNLibraries/experts_dw/raw/main/dist/experts_dw-10.15.1.tar.gz"
 
 [[package]]
 name = "h11"
@@ -1489,4 +1489,4 @@ dev = ["black (>=19.3b0) ; python_version >= \"3.6\"", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "a5fe81e6dcc8d11fed782abc947d678ae41859ea9dde0302a78912c4528edad6"
+content-hash = "d0f1c449a6c78b9e15318d1cbc05ad58a9350ce8f10e0597eee67fce36354a46"
