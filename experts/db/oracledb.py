@@ -4,6 +4,13 @@ import os
 
 @contextmanager
 def connection():
+    """Yields an Oracle DB connection using environment-based credentials.
+
+    This connection strategy does not require a tnsnames.ora configuration file.
+
+    Yields:
+        An open oracledb connection.
+    """
     # Note that this approach to making a connection should not
     # require a tnsnames.ora config file.
     un=os.environ.get('EXPERTS_DB_USER')

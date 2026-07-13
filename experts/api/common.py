@@ -172,6 +172,19 @@ def retryable(
     retryable_status_codes:PVector[int],
     retryable_errors:tuple[Type[Exception]],
 ) -> bool:
+    """Determines whether a request result should be retried.
+
+    Args:
+        result: A returns.Result containing either an httpx.Response or an
+            exception.
+        retryable_status_codes: HTTP status codes considered transient and
+            eligible for retry.
+        retryable_errors: Exception types considered transient and eligible for
+            retry.
+
+    Returns:
+        True when the result indicates a retryable failure condition.
+    """
     if is_successful(result):
         response = result.unwrap()
         if (response.status_code in retryable_status_codes):
@@ -186,6 +199,12 @@ def retryable(
            return False
 
 def default_retryable():
+       """Builds the default retry predicate used by API clients.
+
+       Returns:
+           A partially applied callable that evaluates request results against
+           default retryable status codes and network/timeout exceptions.
+       """
        return partial(
             retryable,
             retryable_status_codes=v(429, 500, 502, 503, 504),
@@ -193,6 +212,14 @@ def default_retryable():
         )
 
 def default_next_wait_interval(wait_interval: int):
+    """Computes the next wait interval for retries.
+
+    Args:
+        wait_interval: The current wait interval in seconds.
+
+    Returns:
+        The next wait interval in seconds using quadratic backoff.
+    """
     return wait_interval**2
 
 # TODO: This needs work. Need to remove the context, at least.
@@ -206,6 +233,16 @@ def attempt_request(
     httpx_client: httpx.Client,
     prepared_request: httpx.Request,
 ) -> RequestResult:
+    """Sends a prepared request and captures exceptions as a Result.
+
+    Args:
+        httpx_client: The httpx client used to send the request.
+        prepared_request: A fully prepared request object.
+
+    Returns:
+        A returns.Result wrapping either the httpx.Response or the raised
+        exception.
+    """
     return httpx_client.send(prepared_request)
 
 def manage_request_attempts(
@@ -218,6 +255,22 @@ def manage_request_attempts(
     attempt_number: int = 1,
     wait_interval: int = 2,
 ) -> RequestResult:
+    """Executes a request with recursive retry behavior.
+
+    Args:
+        httpx_client: The httpx client used to send requests.
+        prepared_request: A fully prepared request object.
+        retryable: Predicate that decides whether a result should be retried.
+        next_wait_interval: Function that computes the next wait interval.
+        max_attempts: Maximum number of attempts before returning.
+        attempts_id: Identifier used for correlating attempt logs.
+        attempt_number: Current attempt number, starting at 1.
+        wait_interval: Current wait interval in seconds before the next retry.
+
+    Returns:
+        The final request result after success, non-retryable failure, or
+        reaching max_attempts.
+    """
     start_time = time.perf_counter()
     if __debug__:
         print({
@@ -263,8 +316,17 @@ def request_many_by_identifier(
     identifiers: Iterator,
     max_workers: int = 4
 ) -> Iterator[RequestResult]:
-    '''
-    '''
+    """Requests many resources concurrently by identifier.
+
+    Args:
+        request_by_identifier_function: Callable that takes one identifier and
+            returns a request result.
+        identifiers: Identifiers to submit to the request function.
+        max_workers: Maximum number of worker threads.
+
+    Yields:
+        Request results as individual futures complete.
+    """
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         results = [
@@ -281,6 +343,17 @@ def request_many_by_offset(
     response_parser: OffsetResponseParser,
     first_offset: int = 0,
 ) -> Iterator[httpx.Response]:
+    """Requests offset-paginated responses beginning at a given offset.
+
+    Args:
+        request_by_offset_function: Callable that accepts an offset and returns
+            a request result.
+        response_parser: Parser that extracts pagination metadata.
+        first_offset: Starting offset.
+
+    Yields:
+        Successful httpx responses for each requested page.
+    """
     first_result = request_by_offset_function(first_offset)
     if not is_successful(first_result):
         # TODO: log failure. Maybe pass in a logger?
@@ -318,6 +391,17 @@ def request_many_by_token(
     response_parser: TokenResponseParser,
     token: str,
 ) -> Iterator[httpx.Response]:
+    """Requests token-paginated responses until no additional pages remain.
+
+    Args:
+        request_by_token_function: Callable that accepts a token and returns a
+            request result.
+        response_parser: Parser that extracts token and continuation metadata.
+        token: Initial token value.
+
+    Yields:
+        Successful httpx responses in sequence until pagination ends.
+    """
     while(True):
         result = request_by_token_function(token)
         if not is_successful(result):

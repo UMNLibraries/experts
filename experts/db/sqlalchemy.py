@@ -13,6 +13,14 @@ if oracle_libs_path:
 default_db_name = 'hotel'
 
 def url(db_name=default_db_name):
+    """Builds the SQLAlchemy Oracle connection URL from environment variables.
+
+    Args:
+        db_name: Logical DB name placeholder retained for compatibility.
+
+    Returns:
+        An oracle+cx_oracle SQLAlchemy URL string.
+    """
     # db_name must be the generic part of the service name,
     # without the (tst|prd).oit suffix, e.g. 'dwe' or 'hotel'.
     url = 'oracle+cx_oracle://{}:"{}"@{}:{}/?service_name={}'.format(
@@ -25,6 +33,14 @@ def url(db_name=default_db_name):
     return url
 
 def engine(db_name=default_db_name):
+    """Creates a SQLAlchemy engine for the configured Oracle service.
+
+    Args:
+        db_name: Logical DB name placeholder retained for compatibility.
+
+    Returns:
+        A configured SQLAlchemy Engine instance.
+    """
     return create_engine(
         url(db_name),
         max_identifier_length=128
@@ -32,6 +48,13 @@ def engine(db_name=default_db_name):
 
 @contextmanager
 def cx_oracle_connection():
+    """Yields a cx_Oracle connection using environment-based credentials.
+
+    This connection strategy does not require a tnsnames.ora configuration file.
+
+    Yields:
+        An open cx_Oracle connection.
+    """
     # Note that this approach to making a connection should not
     # require a tnsnames.ora config file.
     yield cx_Oracle.connect(
@@ -43,6 +66,17 @@ def cx_oracle_connection():
 
 @contextmanager
 def session(db_name=default_db_name):
+    """Yields a transactional SQLAlchemy session and manages commit lifecycle.
+
+    Args:
+        db_name: Logical DB name placeholder retained for compatibility.
+
+    Yields:
+        An mptt-enabled SQLAlchemy session.
+
+    Raises:
+        Exception: Re-raises any exception after rolling back the session.
+    """
     # Original:
     #Session = sessionmaker()
     # mptt docs:

@@ -16,6 +16,14 @@ iso_8601_format = '%Y-%m-%dT%H:%M:%S.%f%z'
 
 @functools.lru_cache(maxsize=None)
 def api_versions(cursor):
+    """Returns all known Pure API versions from collection metadata.
+
+    Args:
+        cursor: Database cursor used to execute metadata queries.
+
+    Returns:
+        A list of distinct API version values.
+    """
     cursor.execute('SELECT DISTINCT(api_version) FROM pure_json_collection_meta')
     return [row[0] for row in cursor.fetchall()]
 
@@ -32,6 +40,14 @@ class InvalidApiVersion(ValueError, ExpertsDbException):
 F = TypeVar('F', bound=Callable[..., Any])
 
 def function_call_logger(func: F) -> F:
+    """Decorator that logs function calls and return values in debug mode.
+
+    Args:
+        func: Function to wrap.
+
+    Returns:
+        Wrapped function with debug call logging.
+    """
     @functools.wraps(func)
     def wrapper_function_call_logger(*args, **kwargs):
         if __debug__:
@@ -45,6 +61,14 @@ def function_call_logger(func: F) -> F:
     return cast(F, wrapper_function_call_logger)
 
 def function_time_logger(func: F) -> F:
+    """Decorator that logs function execution time in debug mode.
+
+    Args:
+        func: Function to wrap.
+
+    Returns:
+        Wrapped function with debug timing logging.
+    """
     @functools.wraps(func)
     def wrapper_function_time_logger(*args, **kwargs):
         if __debug__:
@@ -63,7 +87,7 @@ def validate_api_version(func: F) -> F:
     Args:
         func: The function to be wrapped.
 
-    Return:
+    Returns:
         The wrapped function.
 
     Raises:
@@ -85,6 +109,15 @@ def validate_api_version(func: F) -> F:
 @functools.lru_cache(maxsize=None)
 @validate_api_version
 def collection_local_names_for_api_version(cursor, *, api_version):
+    """Returns valid local collection names for a Pure API version.
+
+    Args:
+        cursor: Database cursor used to execute metadata queries.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Local collection names for the requested API version.
+    """
     cursor.execute(
         'SELECT DISTINCT(local_name) FROM pure_json_collection_meta where api_version = :api_version',
         {'api_version': api_version}
@@ -94,6 +127,15 @@ def collection_local_names_for_api_version(cursor, *, api_version):
 @functools.lru_cache(maxsize=None)
 @validate_api_version
 def collection_family_system_names_for_api_version(cursor, *, api_version):
+    """Returns valid family system collection names for an API version.
+
+    Args:
+        cursor: Database cursor used to execute metadata queries.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Family system names for the requested API version.
+    """
     cursor.execute(
         'SELECT DISTINCT(family_system_name) FROM pure_json_collection_meta where api_version = :api_version',
         {'api_version': api_version}
@@ -103,6 +145,15 @@ def collection_family_system_names_for_api_version(cursor, *, api_version):
 @functools.lru_cache(maxsize=None)
 @validate_api_version
 def collection_api_names_for_api_version(cursor, *, api_version):
+    """Returns valid API collection names for a Pure API version.
+
+    Args:
+        cursor: Database cursor used to execute metadata queries.
+        api_version: Pure API version identifier.
+
+    Returns:
+        API collection names for the requested API version.
+    """
     cursor.execute(
         'SELECT DISTINCT(api_name) FROM pure_json_collection_meta where api_version = :api_version',
         {'api_version': api_version}
@@ -112,6 +163,16 @@ def collection_api_names_for_api_version(cursor, *, api_version):
 @functools.lru_cache(maxsize=None)
 @validate_api_version
 def collection_local_name_for_api_name(cursor, *, collection_api_name, api_version):
+    """Resolves local collection name from an API collection name.
+
+    Args:
+        cursor: Database cursor used to execute metadata queries.
+        collection_api_name: API collection name.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Matching local collection name, or None when no match exists.
+    """
     cursor.execute(
         'SELECT local_name FROM pure_json_collection_meta WHERE api_name = :api_name AND api_version = :api_version',
         {'api_name': collection_api_name, 'api_version': api_version}
@@ -125,6 +186,16 @@ def collection_local_name_for_api_name(cursor, *, collection_api_name, api_versi
 @functools.lru_cache(maxsize=None)
 @validate_api_version
 def collection_local_name_for_family_system_name(cursor, *, collection_family_system_name, api_version):
+    """Resolves local collection name from a family system name.
+
+    Args:
+        cursor: Database cursor used to execute metadata queries.
+        collection_family_system_name: Family system collection name.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Matching local collection name, or None when no match exists.
+    """
     cursor.execute(
         'SELECT local_name FROM pure_json_collection_meta WHERE family_system_name = :family_system_name AND api_version = :api_version',
         {'family_system_name': collection_family_system_name, 'api_version': api_version}
@@ -138,6 +209,16 @@ def collection_local_name_for_family_system_name(cursor, *, collection_family_sy
 @functools.lru_cache(maxsize=None)
 @validate_api_version
 def collection_family_system_name_for_local_name(cursor, *, collection_local_name, api_version):
+    """Resolves family system name from a local collection name.
+
+    Args:
+        cursor: Database cursor used to execute metadata queries.
+        collection_local_name: Local collection name.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Matching family system name, or None when no match exists.
+    """
     cursor.execute(
         'SELECT family_system_name FROM pure_json_collection_meta WHERE local_name = :local_name AND api_version = :api_version',
         {'local_name': collection_local_name, 'api_version': api_version}
@@ -151,6 +232,16 @@ def collection_family_system_name_for_local_name(cursor, *, collection_local_nam
 @functools.lru_cache(maxsize=None)
 @validate_api_version
 def collection_api_name_for_local_name(cursor, *, collection_local_name, api_version):
+    """Resolves API collection name from a local collection name.
+
+    Args:
+        cursor: Database cursor used to execute metadata queries.
+        collection_local_name: Local collection name.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Matching API collection name, or None when no match exists.
+    """
     cursor.execute(
         'SELECT api_name FROM pure_json_collection_meta WHERE local_name = :local_name AND api_version = :api_version',
         {'local_name': collection_local_name, 'api_version': api_version}
@@ -180,7 +271,7 @@ class InvalidCollectionLocalName(ValueError, ExpertsDbException):
         )
 
 class InvalidCollectionApiName(ValueError, ExpertsDbException):
-    '''Raised when an Pure API collection name is invalid for a given API version.'''
+    '''Raised when a Pure API collection name is invalid for a given API version.'''
     def __init__(self, *args, collection_api_name, api_version, **kwargs):
         super().__init__(
             f'Invalid collection_api_name "{collection_api_name}" for api_version "{api_version}"',
@@ -189,7 +280,7 @@ class InvalidCollectionApiName(ValueError, ExpertsDbException):
         )
 
 class InvalidCollectionFamilySystemName(ValueError, ExpertsDbException):
-    '''Raised when an Pure API family system name is invalid for a given API version.'''
+    '''Raised when a Pure API family system name is invalid for a given API version.'''
     def __init__(self, *args, collection_family_system_name, api_version, **kwargs):
         super().__init__(
             f'Invalid collection_family_system_name "{collection_family_system_name}" for api_version "{api_version}"',
@@ -199,17 +290,17 @@ class InvalidCollectionFamilySystemName(ValueError, ExpertsDbException):
 
 def validate_collection_names(func: F) -> F:
     '''A decorator wrapper that ensures that collection_local_name,
-    collection_api_name, and collection_system_name all exist in kwargs, are valid,
+    collection_api_name, and collection_family_system_name all exist in kwargs, are valid,
     and consistent with each other.
 
     Args:
         func: The function to be wrapped.
 
-    Return:
+    Returns:
         The wrapped function.
 
     Raises:
-        MissingCollectionName: If none of the various ``collectiion_*`` names
+        MissingCollectionName: If none of the various ``collection_*`` names
             is in kwargs.
         InvalidCollectionLocalName: If the ``collection_local_name`` is not
             found for the given ``api_version``.
@@ -268,6 +359,15 @@ def validate_collection_names(func: F) -> F:
 # Notice that this function has no validation. We recommend calling it only
 # from other functions in this module that do have parameter validation.
 def get_change_table_name(*, api_version, history=False):
+    """Builds the Pure JSON change table name for an API version.
+
+    Args:
+        api_version: Pure API version identifier.
+        history: Whether to return the corresponding history table name.
+
+    Returns:
+        Change table name, optionally suffixed with _history.
+    """
     change_table_name = f'pure_json_change_{api_version}'
     if history:
         return change_table_name + '_history'
@@ -276,6 +376,16 @@ def get_change_table_name(*, api_version, history=False):
 # Notice that this function has no validation. We recommend calling it only
 # from other functions in this module that do have parameter validation.
 def get_collection_table_name(*, api_version, collection_local_name, staging=False):
+    """Builds a Pure JSON collection table name.
+
+    Args:
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name segment.
+        staging: Whether to return the staging table name.
+
+    Returns:
+        Collection table name, optionally suffixed with _staging.
+    """
     collection_table_name = f'pure_json_{collection_local_name}_{api_version}'
     if staging:
         return collection_table_name + '_staging'
@@ -293,6 +403,20 @@ def document_exists(
     collection_family_system_name=None,
     staging=False
 ):
+    """Checks whether a document UUID exists in a target collection table.
+
+    Args:
+        cursor: Database cursor used to execute queries.
+        uuid: Document UUID to look up.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+        staging: Whether to check the staging collection table.
+
+    Returns:
+        True when at least one matching document exists; otherwise False.
+    """
     collection_table_name = get_collection_table_name(
         api_version=api_version,
         collection_local_name=collection_local_name,
@@ -319,6 +443,19 @@ def insert_sql(
     collection_family_system_name=None,
     staging=False
 ):
+    """Builds insert SQL for a collection table with duplicate-key ignore hint.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+        staging: Whether to target the staging collection table.
+
+    Returns:
+        Parameterized Oracle insert SQL string.
+    """
     collection_table_name = get_collection_table_name(
         api_version=api_version,
         collection_local_name=collection_local_name,
@@ -361,6 +498,17 @@ def insert_document(
     collection_family_system_name=None,
     staging=False
 ):
+    """Inserts one document into the resolved collection table.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        document: Single document bind mapping.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+        staging: Whether to insert into the staging table.
+    """
     sql = insert_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -381,6 +529,17 @@ def insert_documents(
     collection_family_system_name=None,
     staging=False
 ):
+    """Bulk-inserts many documents into the resolved collection table.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        documents: Iterable of document bind mappings.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+        staging: Whether to insert into the staging table.
+    """
     sql = insert_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -395,6 +554,15 @@ def max_change_history_inserted_date(
     *,
     api_version
 ):
+    """Returns the most recent inserted timestamp in change history.
+
+    Args:
+        cursor: Database cursor used to execute queries.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Maximum inserted timestamp from the change history table.
+    """
     change_history_table_name = get_change_table_name(
         api_version=api_version,
         history=True
@@ -410,6 +578,15 @@ def max_change_inserted_date(
     *,
     api_version
 ):
+    """Returns the most recent inserted timestamp in change staging.
+
+    Args:
+        cursor: Database cursor used to execute queries.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Maximum inserted timestamp from the change table.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -425,6 +602,16 @@ def max_pure_version_for_change_history_uuid(
     uuid,
     api_version
 ):
+    """Returns the highest pure_version for a UUID in change history.
+
+    Args:
+        cursor: Database cursor used to execute queries.
+        uuid: Document UUID.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Highest pure_version value for the UUID in history.
+    """
     change_history_table_name = get_change_table_name(
         api_version=api_version,
         history=True
@@ -442,6 +629,16 @@ def max_pure_version_for_change_uuid(
     uuid,
     api_version
 ):
+    """Returns the highest pure_version for a UUID in the change table.
+
+    Args:
+        cursor: Database cursor used to execute queries.
+        uuid: Document UUID.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Highest pure_version value for the UUID.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -459,6 +656,17 @@ def change_document_exists(
     pure_version,
     api_version
 ):
+    """Checks whether a UUID/version change row exists.
+
+    Args:
+        cursor: Database cursor used to execute queries.
+        uuid: Document UUID.
+        pure_version: Pure object version.
+        api_version: Pure API version identifier.
+
+    Returns:
+        True when a matching change row exists; otherwise False.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -480,6 +688,17 @@ def change_history_exists(
     pure_version,
     api_version
 ):
+    """Checks whether a UUID/version history row exists.
+
+    Args:
+        cursor: Database cursor used to execute queries.
+        uuid: Document UUID.
+        pure_version: Pure object version.
+        api_version: Pure API version identifier.
+
+    Returns:
+        True when a matching history row exists; otherwise False.
+    """
     change_history_table_name = get_change_table_name(
         api_version=api_version,
         history=True
@@ -500,6 +719,15 @@ def insert_change_sql(
     *,
     api_version
 ):
+    """Builds insert SQL for the change table.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+
+    Returns:
+        Parameterized Oracle insert SQL string for change rows.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -530,6 +758,13 @@ def insert_change_documents(
     documents,
     api_version
 ):
+    """Bulk-inserts change rows into the change table.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        documents: Iterable of change bind mappings.
+        api_version: Pure API version identifier.
+    """
     sql = insert_change_sql(
         cursor,
         api_version=api_version
@@ -547,6 +782,19 @@ def delete_documents_based_on_changes_sql(
     collection_family_system_name=None,
     staging=False
 ):
+    """Builds SQL to delete collection documents marked as DELETE changes.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+        staging: Unused compatibility parameter.
+
+    Returns:
+        Delete SQL that removes rows matching DELETE changes.
+    """
     # Not bothering to check for max(pure_version) here because historically
     # DELETEs have always been the max version.
     collection_table_name = get_collection_table_name(
@@ -578,6 +826,16 @@ def delete_documents_based_on_changes(
     collection_family_system_name=None,
     staging=False
 ):
+    """Deletes collection rows whose UUIDs are marked as DELETE changes.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+        staging: Unused compatibility parameter.
+    """
     sql = delete_documents_based_on_changes_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -596,6 +854,19 @@ def insert_change_deletes_history_sql(
     collection_family_system_name=None,
     staging=False
 ):
+    """Builds SQL to merge DELETE change rows into change history.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+        staging: Unused compatibility parameter.
+
+    Returns:
+        Merge SQL for history insertion of DELETE change rows.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -636,6 +907,16 @@ def insert_change_deletes_history(
     collection_family_system_name=None,
     staging=False
 ):
+    """Merges DELETE change rows into the change history table.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+        staging: Unused compatibility parameter.
+    """
     sql = insert_change_deletes_history_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -653,6 +934,18 @@ def delete_change_deletes_sql(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Builds SQL to remove DELETE rows from the change table.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Returns:
+        Delete SQL for change rows of type DELETE.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -675,6 +968,16 @@ def delete_change_deletes(
     collection_family_system_name=None,
     staging=False
 ):
+    """Deletes DELETE rows from the change table.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+        staging: Unused compatibility parameter.
+    """
     sql = delete_change_deletes_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -692,6 +995,21 @@ def process_change_deletes(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Processes DELETE changes in one transaction.
+
+    This removes affected documents, archives DELETE changes to history, and
+    then removes processed DELETE rows from the change table.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Raises:
+        Exception: Re-raises any exception after rolling back the transaction.
+    """
     connection = cursor.connection
     connection.begin()
 
@@ -729,6 +1047,18 @@ def insert_change_history_matching_previous_uuids_sql(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Builds SQL to archive changes matching previous UUID references.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Returns:
+        Merge SQL that copies matching change rows into history.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -784,6 +1114,15 @@ def insert_change_history_matching_previous_uuids(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Archives changes whose UUIDs match previous UUID links in documents.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+    """
     sql = insert_change_history_matching_previous_uuids_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -801,6 +1140,18 @@ def delete_changes_matching_previous_uuids_sql(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Builds SQL to delete changes matching previous UUID references.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Returns:
+        Delete SQL for matching change rows.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -839,6 +1190,15 @@ def delete_changes_matching_previous_uuids(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Deletes changes that match previous UUID links in documents.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+    """
     sql = delete_changes_matching_previous_uuids_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -856,6 +1216,18 @@ def process_changes_matching_previous_uuids(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Archives then deletes changes matching previous UUID links.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Raises:
+        Exception: Re-raises any exception after rolling back the transaction.
+    """
     connection = cursor.connection
     connection.begin()
 
@@ -887,6 +1259,15 @@ def truncate_staging(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Truncates the staging table for the resolved collection.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+    """
     collection_staging_table_name = get_collection_table_name(
         api_version=api_version,
         collection_local_name=collection_local_name,
@@ -904,6 +1285,18 @@ def distinct_change_uuids_for_collection(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Returns distinct change UUIDs for a specific collection family.
+
+    Args:
+        cursor: Database cursor used to execute queries.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Returns:
+        Distinct UUID values from the change table for the collection family.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -923,6 +1316,18 @@ def insert_change_history_matching_staging_sql(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Builds SQL to archive changes whose UUIDs are in staging.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Returns:
+        Merge SQL for archiving matching change rows.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -967,6 +1372,15 @@ def insert_change_history_matching_staging(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Archives changes whose UUIDs are present in staging.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+    """
     sql = insert_change_history_matching_staging_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -984,6 +1398,18 @@ def delete_changes_matching_staging_sql(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Builds SQL to delete changes whose UUIDs are in staging.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Returns:
+        Delete SQL for matching staged UUIDs.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -1011,6 +1437,15 @@ def delete_changes_matching_staging(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Deletes changes whose UUIDs are present in staging.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+    """
     sql = delete_changes_matching_staging_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -1028,6 +1463,18 @@ def process_changes_matching_staging(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Archives then deletes changes that match staging UUIDs.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Raises:
+        Exception: Re-raises any exception after rolling back the transaction.
+    """
     connection = cursor.connection
     connection.begin()
 
@@ -1059,6 +1506,18 @@ def merge_documents_from_staging_sql(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Builds SQL to upsert latest staging documents into base collection.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Returns:
+        Merge SQL that updates newer rows and inserts missing rows.
+    """
     collection_table_name = get_collection_table_name(
         api_version=api_version,
         collection_local_name=collection_local_name
@@ -1102,6 +1561,15 @@ def merge_documents_from_staging(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Merges latest staging documents into the base collection table.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+    """
     sql = merge_documents_from_staging_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -1119,6 +1587,18 @@ def delete_documents_matching_previous_uuids_sql(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Builds SQL to delete rows superseded by previous UUID links.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Returns:
+        Delete SQL for rows whose UUID appears in previousUuids.
+    """
     collection_table_name = get_collection_table_name(
         api_version=api_version,
         collection_local_name=collection_local_name
@@ -1154,6 +1634,15 @@ def delete_documents_matching_previous_uuids(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Deletes rows whose UUID appears in any previousUuids array.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+    """
     sql = delete_documents_matching_previous_uuids_sql(
         cursor,
         collection_local_name=collection_local_name,
@@ -1171,6 +1660,21 @@ def load_documents_from_staging(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Loads staging documents into base table in one transaction.
+
+    This merges staged rows, removes rows matched by previous UUID links, and
+    truncates the staging table.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Raises:
+        Exception: Re-raises any exception after rolling back the transaction.
+    """
     connection = cursor.connection
     connection.begin()
 
@@ -1211,6 +1715,20 @@ def delete_documents_matching_uuids_sql(
     collection_family_system_name=None,
     staging=False
 ):
+    """Builds SQL to delete collection rows matching explicit UUIDs.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        uuids: UUIDs to remove.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+        staging: Unused compatibility parameter.
+
+    Returns:
+        Parameterized delete SQL with dynamic UUID bind variables.
+    """
     collection_table_name = get_collection_table_name(
         api_version=api_version,
         collection_local_name=collection_local_name
@@ -1234,6 +1752,16 @@ def delete_documents_matching_uuids(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Deletes collection rows matching explicit UUIDs.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        uuids: UUIDs to remove.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+    """
     sql = delete_documents_matching_uuids_sql(
         cursor,
         uuids=uuids,
@@ -1253,6 +1781,19 @@ def insert_change_history_matching_uuids_sql(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Builds SQL to archive changes matching explicit UUIDs.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        uuids: UUIDs used to select change rows.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Returns:
+        Merge SQL for inserting matching rows into change history.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -1292,6 +1833,16 @@ def insert_change_history_matching_uuids(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Archives changes matching explicit UUIDs into history.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        uuids: UUIDs used to select change rows.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+    """
     sql = insert_change_history_matching_uuids_sql(
         cursor,
         uuids=uuids,
@@ -1311,6 +1862,19 @@ def delete_changes_matching_uuids_sql(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Builds SQL to delete change rows matching explicit UUIDs.
+
+    Args:
+        cursor: Database cursor used for validation context.
+        uuids: UUIDs used to select change rows.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Returns:
+        Parameterized delete SQL with dynamic UUID bind variables.
+    """
     change_table_name = get_change_table_name(
         api_version=api_version
     )
@@ -1333,6 +1897,16 @@ def delete_changes_matching_uuids(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Deletes change rows matching explicit UUIDs.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        uuids: UUIDs used to select change rows.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+    """
     sql = delete_changes_matching_uuids_sql(
         cursor,
         uuids=uuids,
@@ -1352,6 +1926,22 @@ def delete_documents_and_changes_matching_uuids(
     collection_api_name=None,
     collection_family_system_name=None
 ):
+    """Deletes collection rows and corresponding change rows in one transaction.
+
+    This deletes target collection documents, archives matching changes into
+    history, and removes those changes from the change table.
+
+    Args:
+        cursor: Database cursor used to execute statements.
+        uuids: UUIDs used to target documents and change rows.
+        api_version: Pure API version identifier.
+        collection_local_name: Local collection name.
+        collection_api_name: API collection name alternative.
+        collection_family_system_name: Family system name alternative.
+
+    Raises:
+        Exception: Re-raises any exception after rolling back the transaction.
+    """
     connection = cursor.connection
     connection.begin()
 
