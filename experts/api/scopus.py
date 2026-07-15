@@ -1,4 +1,6 @@
 # See https://peps.python.org/pep-0655/#usage-in-python-3-11
+"""Scopus API client, response parsers, and result classification helpers."""
+
 from __future__ import annotations
 from typing_extensions import NotRequired, TypedDict
 from datetime import date, datetime
@@ -41,10 +43,14 @@ ScopusId = str # Are these always 11 digits?
 ScopusIdRequestResult = tuple[ScopusId, RequestResult]
 
 class SuccessResponse(PRecord):
+    """Container for a successful Scopus response payload and headers."""
+
     headers = pfield(type=httpx.Headers)
     body = pfield(type=Json)
 
 class SuccessResponses(CheckedPMap):
+    """Mapping of Scopus ID to successful response payload."""
+
     __key_type__ = ScopusId
     __value_type__ = SuccessResponse
 
@@ -53,15 +59,21 @@ class ScopusIds(CheckedPSet):
     __type__ = ScopusId
 
 class ErrorResult(PRecord):
+    """Container for request exception or non-success HTTP response."""
+
     exception = pfield(type=(Exception, type(None)))
     response = pfield(type=(httpx.Response, type(None)))
 
 class ErrorResults(CheckedPMap):
+    """Mapping of Scopus ID to request error information."""
+
     __key_type__ = ScopusId
     __value_type__ = ErrorResult
 
 # Final data structure of multiple results, e.g. concurrent requests for 1000 abstracts:
 class AssortedResults(PRecord):
+    """Final grouped result set for many Scopus abstract requests."""
+
     success = pfield(type=SuccessResponses)
     defunct = pfield(type=ScopusIds)
     error = pfield(type=ErrorResults)
@@ -76,6 +88,8 @@ class AssortedResults(PRecord):
         return ScopusIds(list(self.success.keys()) + list(self.defunct) + list(self.error.keys()))
 
 class ScopusIdRequestResultAssorter:
+    """Utility for grouping Scopus request results into typed buckets."""
+
     @staticmethod
     def classify(accumulator: dict, request_result: ScopusIdRequestResult) -> dict:
         """Classifies one Scopus request result into aggregation buckets.
@@ -124,6 +138,8 @@ class ScopusIdRequestResultAssorter:
         )
 
 class ResponseParser:
+    """Helpers that parse Scopus HTTP responses into iterable-friendly shapes."""
+
     @staticmethod
     def body(response:httpx.Response) -> ResponseBody:
         """Parses a Scopus HTTP response body as JSON.
@@ -163,6 +179,8 @@ class ResponseParser:
             yield (response.headers, response.json())
 
 class ResponseHeadersParser:
+    """Helpers that parse Scopus rate-limit and metadata response headers."""
+
     def ratelimit(headers:httpx.Headers) -> int:
         """Extracts the rate-limit ceiling from response headers.
 
@@ -215,6 +233,8 @@ class ResponseHeadersParser:
 #    any documentation and type annotation benefits we would get from it.
 
 class AbstractResponseBodyParser():
+    """Extractors for key fields from Scopus abstract response bodies."""
+
     @staticmethod
     def eid(body: ResponseBody) -> str:
         """Extracts the EID from an abstract response body.
@@ -369,6 +389,8 @@ def single_citation_overview(*, identifiers, cite_info, column_heading):
     }
 
 class CitationOverviewResponseBodyParser():
+    """Parsers for Scopus citation-overview response body subrecords."""
+
     @staticmethod
     def identifier_subrecords(body: ResponseBody) -> Iterator:
         """Extracts identifier subrecords from a citation overview body.
@@ -434,6 +456,8 @@ class CitationOverviewResponseBodyParser():
 
 @frozen(kw_only=True)
 class Client:
+    """Configurable Scopus HTTP client with retry and bulk request helpers."""
+
 #    '''Common client configuration and behavior. Used by most functions.
 #
 #    Most attributes have defaults and are not required. Only ``domain`` and

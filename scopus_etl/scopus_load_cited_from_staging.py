@@ -1,3 +1,5 @@
+"""Loads cited Scopus documents from staging into base JSON tables."""
+
 import dotenv_switch.auto
 
 from datetime import datetime

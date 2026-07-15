@@ -1,3 +1,5 @@
+"""Merges staged Scopus documents into base tables without full load workflow."""
+
 import dotenv_switch.auto
 
 from datetime import datetime

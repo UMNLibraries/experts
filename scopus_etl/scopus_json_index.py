@@ -1,3 +1,5 @@
+"""Prints generated Scopus JSON insert SQL for index/hint inspection."""
+
 import dotenv_switch.auto
 
 from experts_dw import db, scopus_json

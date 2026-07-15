@@ -1,3 +1,5 @@
+"""Pure JSON table utilities for metadata lookup, SQL builders, and load flows."""
+
 from datetime import datetime
 import functools
 import json

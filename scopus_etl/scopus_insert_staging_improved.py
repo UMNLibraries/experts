@@ -1,3 +1,5 @@
+"""Inserts downloaded Scopus abstracts into staging using improved batching."""
+
 import dotenv_switch.auto
 
 from datetime import datetime

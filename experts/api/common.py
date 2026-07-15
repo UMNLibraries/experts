@@ -1,3 +1,5 @@
+"""Shared request, retry, and pagination utilities for API client modules."""
+
 from collections import namedtuple
 import concurrent.futures
 from contextlib import contextmanager
@@ -36,6 +38,8 @@ OffsetResponseBody = Mapping
 OffsetResponseBody_contra = TypeVar('OffsetResponseBody_contra', bound=OffsetResponseBody, contravariant=True)
 
 class OffsetResponseBodyParser(Protocol, Generic[OffsetResponseBody_contra]):
+    """Protocol for parsing offset-paginated response body mappings."""
+
     @staticmethod
     def total_items(response:OffsetResponseBody_contra) -> int:
         ...
@@ -55,6 +59,8 @@ class OffsetResponseBodyParser(Protocol, Generic[OffsetResponseBody_contra]):
 # Do we need the Generic in this case?
 #class OffsetResponseParser(Protocol, Generic[httpxResponse_contra]):
 class OffsetResponseParser(Protocol):
+    """Protocol for parsing offset-paginated HTTP responses."""
+
     @staticmethod
     def total_items(response:httpx.Response) -> int:
         ...
@@ -75,6 +81,8 @@ TokenResponseBody = Mapping
 TokenResponseBody_contra = TypeVar('TokenResponseeBody_contra', bound=TokenResponseBody, contravariant=True)
 
 class TokenResponseBodyParser(Protocol, Generic[TokenResponseBody_contra]):
+    """Protocol for parsing token-paginated response body mappings."""
+
 # Not all APIs have this:
 #    @staticmethod
 #    def total_items(response:TokenResponseBody_contra) -> int:
@@ -98,6 +106,8 @@ class TokenResponseBodyParser(Protocol, Generic[TokenResponseBody_contra]):
 # Do we need the Generic in this case?
 #class TokenResponseParser(Protocol, Generic[httpxResponse_contra]):
 class TokenResponseParser(Protocol):
+    """Protocol for parsing token-paginated HTTP responses."""
+
     @staticmethod
     def items_per_page(response:httpx.Response) -> int:
         ...

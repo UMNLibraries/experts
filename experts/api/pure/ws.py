@@ -1,4 +1,6 @@
 # See https://peps.python.org/pep-0655/#usage-in-python-3-11
+"""Pure Web Services API client plus response parsing helpers."""
+
 from __future__ import annotations
 from typing_extensions import NotRequired, TypedDict
 
@@ -29,6 +31,8 @@ from experts.api.common import \
     ResponseBodyItem
 
 class ResponseBodyParser:
+    """Helpers for extracting item lists from parsed response bodies."""
+
     @staticmethod
     # TODO: Create a better type!
     def items(body:ResponseBody) -> list[ResponseBodyItem]:
@@ -57,6 +61,8 @@ class ResponseBodyParser:
                 yield item
 
 class ResponseParser:
+    """Helpers for parsing HTTP responses into body/item iterables."""
+
     @staticmethod
     def body(response:httpx.Response) -> ResponseBody:
         """Parses an HTTP response body as JSON.
@@ -112,17 +118,23 @@ class ResponseParser:
 OffsetRequestParams = PMap
 
 class PageInformation(TypedDict):
+    """Pagination metadata for offset-based Pure WS responses."""
+
     size: int
     offset: int
 
 # WSDataSetListResult in the Pure Web Services Swagger JSON schema
 class OffsetResponseBody(TypedDict):
+    """Typed shape for WSDataSetListResult response bodies."""
+
     count: int
     pageInformation: PageInformation
     navigationLinks: Iterable[Mapping]
     items: NotRequired[Iterable[Mapping]]
 
 class OffsetResponseBodyParser(ResponseBodyParser):
+    """Parsers for offset pagination fields in response bodies."""
+
     @staticmethod
     def total_items(body:OffsetResponseBody) -> int:
         """Extracts total available items for offset pagination.
@@ -160,6 +172,8 @@ class OffsetResponseBodyParser(ResponseBodyParser):
         return int(body['pageInformation']['offset'])
 
 class OffsetResponseParser(ResponseParser):
+    """Parsers for offset pagination fields in HTTP responses."""
+
     @staticmethod
     def total_items(response:httpx.Response) -> int:
         """Extracts total available items from an offset response."""
@@ -183,6 +197,8 @@ class OffsetResponseParser(ResponseParser):
 
 # WSChangeListResult in the Pure Web Services Swagger JSON schema
 class TokenResponseBody(TypedDict):
+    """Typed shape for WSChangeListResult response bodies."""
+
     count: int
     resumptionToken: str
     moreChanges: bool
@@ -190,6 +206,8 @@ class TokenResponseBody(TypedDict):
     items: NotRequired[Iterable[Mapping]]
 
 class TokenResponseBodyParser(ResponseBodyParser):
+    """Parsers for token pagination fields in response bodies."""
+
     @staticmethod
     def items_per_page(body:TokenResponseBody) -> int:
         """Extracts item count for a token-page response body.
@@ -227,6 +245,8 @@ class TokenResponseBodyParser(ResponseBodyParser):
         return body['resumptionToken']
 
 class TokenResponseParser(ResponseParser):
+    """Parsers for token pagination fields in HTTP responses."""
+
     @staticmethod
     def items_per_page(response:httpx.Response) -> int:
         """Extracts item count from a token-based response."""
@@ -250,6 +270,8 @@ class TokenResponseParser(ResponseParser):
 
 @frozen(kw_only=True)
 class Client:
+    """Configurable Pure WS HTTP client with retry and pagination helpers."""
+
     '''Common client configuration and behavior. Used by most functions.
 
     Most attributes have defaults and are not required. Only ``domain`` and

@@ -1,3 +1,5 @@
+"""Downloads authored Scopus abstracts using IDs sourced from Pure RO data."""
+
 import dotenv_switch.auto
 
 from datetime import datetime

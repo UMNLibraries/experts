@@ -1,3 +1,5 @@
+"""Downloads cited Scopus abstracts and inserts them into staging tables."""
+
 import dotenv_switch.auto
 
 from datetime import datetime
